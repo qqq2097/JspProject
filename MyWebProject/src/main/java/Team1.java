@@ -13,4 +13,6 @@ public class Team1 {
 >>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 String jongminnnn;
 
+제바아아아아앙알~~~~~~~~~~~~~~~
+
 }
