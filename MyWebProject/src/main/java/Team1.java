@@ -21,4 +21,6 @@ String jongminnnn;
 >>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 String jongmin22222222;
 
+String jongmin="제발돼라 제바라ㅏㄹ아아아알";
+
 }
