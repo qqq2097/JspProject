@@ -6,4 +6,6 @@ public class Team1 {
 	String eunbi22;
 	String test;
 	String num;
+	
+	int i=0;
 }
