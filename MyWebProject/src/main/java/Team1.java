@@ -15,4 +15,6 @@ String jongminnnn;
 	String hello;
 String jongmin22222222;
 
+String jongmin="제발돼라 제바라ㅏㄹ아아아알";
+
 }
