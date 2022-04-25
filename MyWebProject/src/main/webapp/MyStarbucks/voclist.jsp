@@ -10,7 +10,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 </style>
 
@@ -25,7 +25,8 @@ div.top{
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href=''"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='
+      '"></span>
       <span onclick=""> > My Starbucks</span>
 </div>
 
