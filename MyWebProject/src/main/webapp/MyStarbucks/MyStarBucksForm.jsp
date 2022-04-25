@@ -63,7 +63,7 @@ button.btnbun{
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("MyStarbucks/image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 span.toptitle{
    
@@ -187,7 +187,7 @@ $(function(){
 <div class="left">
    <span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My 리워드</span>
    <br>
-   <img alt="" src="MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
+   <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
 </div>
 
 <div class="leftsu">

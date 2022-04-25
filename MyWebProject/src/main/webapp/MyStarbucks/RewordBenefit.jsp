@@ -41,7 +41,7 @@ div.threeone{
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("MyStarbucks/image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
@@ -77,13 +77,25 @@ li.mylist{
    border-radius: 100px;
    cursor: pointer;
 }
-span.formbtn1,span.formbtn2,span.formbtn3{
+span.formbtn1{
    border-radius: 100%;
-   background: green;
+   background: #32CD32;
    color: #fff;
-   margin-left: 50px;
+   margin-left: 80px;
 }
 
+span.formbtn2{
+   border-radius: 100%;
+   background: #32CD32;
+   color: #fff;
+   margin-left: 370px;
+}
+span.formbtn3{
+   border-radius: 100%;
+   background: #32CD32;
+   color: #fff;
+   margin-left: 380px;
+}
 </style>
 </head>
 
@@ -199,27 +211,27 @@ $(function(){
    <div class="onetitle" style="margin-left: 100px; margin-top: 100px;  width: 600px; background: #F5F5F5;">스타벅스 리워드 (Starbucks Rewards)란?
    <span class="glyphicon glyphicon-menu-down formbtn1"></span></div>
       
-      <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 50px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
-          <li style="margin-left: 70px;">스타벅스 리워드는 스타벅스를 사랑해주시는 고객님을 위해 별을 적립하여 혜택으로 돌려드리는 특별한 리워드 프로그램입니다.</li>
-          <li style="margin-left: 70px;">스타벅스를 즐기는 최고의 방법, 스타벅스 카드를 등록하고 스타벅스 리워드 혜택을 누려보세요.   </li>
+      <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 100px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
+          <li style="margin-left: 100px;">스타벅스 리워드는 스타벅스를 사랑해주시는 고객님을 위해 별을 적립하여 혜택으로 돌려드리는 특별한 리워드 프로그램입니다.</li>
+          <li style="margin-left: 100px;">스타벅스를 즐기는 최고의 방법, 스타벅스 카드를 등록하고 스타벅스 리워드 혜택을 누려보세요.   </li>
        </ul>
 </div>
 
 <div class="two">
-   <div class="twotitle" style="margin-left: 100px;  width: 600px;">스타벅스 별이란?
+   <div class="twotitle" style="margin-left: 100px;  width: 600px; margin-top: 30px; border: 1px solid #F5F5F5;">스타벅스 별이란?
    <span class="glyphicon glyphicon-menu-down formbtn2"></span></div>
-   <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 50px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
-          <li style="margin-left: 70px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
-          <li style="margin-left: 70px;">적립된 별★은 스타벅스 리워드 (Starbucks Rewards) 프로그램을 통해 다양한 혜택으로 돌려드립니다.</li>
+   <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 130px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
+          <li style="margin-left: 130px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
+          <li style="margin-left: 130px;">적립된 별★은 스타벅스 리워드 (Starbucks Rewards) 프로그램을 통해 다양한 혜택으로 돌려드립니다.</li>
           <br>
-          <li style="margin-left: 70px; color: gray; font-size: 9pt;">- 별 ★ 의 유효기간은 1년이며, 유효기간이 지나면 별★이 사라집니다.</li>
+          <li style="margin-left: 130px; color: gray; font-size: 9pt;">- 별 ★ 의 유효기간은 1년이며, 유효기간이 지나면 별★이 사라집니다.</li>
          <br>
    
-   <b style="font-size: 15pt; color: green;margin-left: 50px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
+   <b style="font-size: 15pt; color: green;margin-left: 100px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
    <br>       
-             <img alt="" src="MyStarbucks/image/ms04.png" style="margin-left: 50px;">
-             <img alt="" src="MyStarbucks/image/ms05.png">
-             <img alt="" src="MyStarbucks/image/ms06.png">
+             <img alt="" src="../../MyStarbucks/image/ms04.png" style="margin-left: 50px;">
+             <img alt="" src="../../MyStarbucks/image/ms05.png">
+             <img alt="" src="../../MyStarbucks/image/ms06.png">
              <div class="welcome">
                 <span  style="margin-left: 90px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
                 <span  style="margin-left: 190px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>
@@ -240,12 +252,12 @@ $(function(){
 </div>
 
 <div class="three">
-   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F5F5F5;">회원 등급별 혜택
+   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F5F5F5; margin-top: 30px; ">회원 등급별 혜택
    <span class="glyphicon glyphicon-menu-down formbtn3"></span></div>
    <ul class="subthree">
-      <img alt="" src="MyStarbucks/image/ms08.png">
-      <img alt="" src="MyStarbucks/image/ms09.png">
-      <img alt="" src="MyStarbucks/image/ms10.png">
+      <img alt="" src="../../MyStarbucks/image/ms08.png">
+      <img alt="" src="../../MyStarbucks/image/ms09.png">
+      <img alt="" src="../../MyStarbucks/image/ms10.png">
       <br>
       <span  style="margin-left: 100px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
        <span  style="margin-left: 230px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>

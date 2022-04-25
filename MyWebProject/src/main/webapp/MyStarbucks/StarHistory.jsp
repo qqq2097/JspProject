@@ -13,7 +13,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("MyStarbucks/image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
