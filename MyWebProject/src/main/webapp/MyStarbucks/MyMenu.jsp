@@ -106,14 +106,14 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li><a href="RewordBenefit.jsp" required="login">· 리워드 및 혜택</a></li>
-            <li><a href="StarHistory.jsp" required="login">· 별 히스토리</a></li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -126,6 +126,10 @@ $(function(){
             <li><a href="" required="login">· 회원 탈퇴</a></li>
             <li><a href="" required="login">· 비밀번호 변경</a></li>
          </ul>
+      </li>
+      
+      <li class="mylist">
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
       </li>
    </ul>
 
@@ -140,7 +144,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > My 메뉴</span>
 </div>
 

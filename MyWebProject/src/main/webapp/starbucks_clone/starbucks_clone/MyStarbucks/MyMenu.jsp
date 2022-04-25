@@ -49,7 +49,17 @@ li.mylist{
    border-radius: 100px;
    cursor: pointer;
 }
+button.checkbtn:hover {
+   background: green;
+   color: #fff;
+   font-style: inherit;
+   font-weight: bold;
+   text-decoration: underline;
+   
+}
 </style>
+
+
 <script type="text/javascript">
 $(function(){
    
@@ -82,8 +92,10 @@ $(function(){
 });
 </script>
 
+
 </head>
 <body>
+
 <!--  메뉴창  -->
 <div class="container">
             
@@ -94,14 +106,14 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
+            <li><a href="RewordBenefit.jsp" required="login">· 리워드 및 혜택</a></li>
+            <li><a href="StarHistory.jsp" required="login">· 별 히스토리</a></li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -123,61 +135,53 @@ $(function(){
 
 </div>
 
+
 <!-- top div -->
 <div class="top">
    <br><br><br><br>
-   <span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
+   <span class="toptitle">&nbsp;&nbsp; My 메뉴</span>
    
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
-      <span onclick=""> > My Starbucks > 별 히스토리</span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='MyStarBucksForm.jsp'"></span>
+      <span onclick=""> > My Starbucks > My 메뉴</span>
 </div>
 
-<div class=" first">
-<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px;" >
+<div style="margin-left: 100px; margin-top: 100px;">
+   <img alt="" src="image/ms11.png">
+</div>
+
+<div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
+   <button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn"> 나만의 음료</button>
+   <button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn"> 나만의 푸드</button>
+   <button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn"> 나만의 상품</button>
+</div>
+
+
+<div class="mymenulist">
+   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
    <tr>
-      <td align="center">사용 가능한 별</td>
-      
-      <td align="center">총 누적 별</td>
+      <th>
+         <input type="checkbox" id="chbox">         
+      </th>
+      <th>No</th>
+      <th>음료명</th>
+      <th>퍼스널 옵션</th>
+      <th>등록일</th>
    </tr>
    
    <tr>
-      <td align="center">1</td>
-      <td align="center">1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
    </tr>
-</table>
-</div>
-
-<div class="second" style="width : 700px; height: 50px; margin-left: 100px; margin-top: 100px; background: #DCDCDC; text-align: center;">
-
-   <br>
-   기간별&nbsp;&nbsp;| 
-   <input type="radio" id="onemonth" name="radioone" checked="checked">1개월
-   <input type="radio" id="oneyear" name="radioone">1년
-   &nbsp;&nbsp;&nbsp;&nbsp;
-   일자별 &nbsp;&nbsp;
-   <input type="date">~
-   <input type="date">
-   <input type="button" style="width : 50px; background: #C0C0C0; color:#fff;" value="검색" >
-   <br>
-   
-   
-</div>
-   
-<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;">
-   <table class="table table-border">
-      <th align="center">No</th>
-      <th align="center">카드번호</th>
-      <th align="center">적립별</th>
-      <th align="center">구분</th>
-      <th align="center">매장명</th>
-      <th align="center">적립일</th>
-      
    
    </table>
+   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
 </div>
-
 </body>
 </html>
