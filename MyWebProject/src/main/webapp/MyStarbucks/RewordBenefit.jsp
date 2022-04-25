@@ -96,6 +96,16 @@ span.formbtn3{
    color: #fff;
    margin-left: 380px;
 }
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
+}
 </style>
 </head>
 
@@ -227,25 +237,25 @@ $(function(){
           <li style="margin-left: 130px; color: gray; font-size: 9pt;">- 별 ★ 의 유효기간은 1년이며, 유효기간이 지나면 별★이 사라집니다.</li>
          <br>
    
-   <b style="font-size: 15pt; color: green;margin-left: 100px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
+   <b style="font-size: 15pt; color: green;margin-left: 130px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
    <br>       
              <img alt="" src="../../MyStarbucks/image/ms04.png" style="margin-left: 50px;">
              <img alt="" src="../../MyStarbucks/image/ms05.png">
              <img alt="" src="../../MyStarbucks/image/ms06.png">
              <div class="welcome">
-                <span  style="margin-left: 90px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
+                <span  style="margin-left: 140px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
                 <span  style="margin-left: 190px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>
-                <span  style="margin-left: 210px; font-weight: bold; font-size: 15pt; color: #b8860b;"> Gold Level </span>
+                <span  style="margin-left: 215px; font-weight: bold; font-size: 15pt; color: #b8860b;"> Gold Level </span>
                 <br>
-                <span style="margin-left: 60px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
-                <span style="margin-left: 130px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
-                <span style="margin-left: 150px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
+                <span style="margin-left: 120px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
+                <span style="margin-left: 150px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
+                <span style="margin-left: 180px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
              
           <br>
           <br>
           <br>
-          <li style="margin-left: 30px; color: gray; font-size: 9pt;">- 각 레벨 진입은 해당 등급조건을 충족한 익일부터 적용됩니다.</li>
-          <li style="margin-left: 30px; color: gray; font-size: 9pt;">- Welcome level이 된 후 별을 모은 시점부터 1년 안에 30개의 별을 모으시면 Gold level로 승급되며,<br>
+          <li style="margin-left: 100px; color: gray; font-size: 9pt;">- 각 레벨 진입은 해당 등급조건을 충족한 익일부터 적용됩니다.</li>
+          <li style="margin-left: 100px; color: gray; font-size: 9pt;">- Welcome level이 된 후 별을 모은 시점부터 1년 안에 30개의 별을 모으시면 Gold level로 승급되며,<br>
            &nbsp;&nbsp; 승급한 날짜로부터 1년간 별 30개를 추가 적립하시면Gold Level이 1년 연장됩니다.</li>
    </ul>
     
@@ -263,9 +273,9 @@ $(function(){
        <span  style="margin-left: 230px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>
        <span  style="margin-left: 250px; font-weight: bold; font-size: 15pt; color: #b8860b;"> Gold Level </span>
        <br>
-       <span style="margin-left: 65px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
-       <span style="margin-left: 175px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
-       <span style="margin-left: 190px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
+       <span style="margin-left: 80px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
+       <span style="margin-left: 190px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
+       <span style="margin-left: 210px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
                 
       
       <table style="width: 1050px; height: 500px; border: 1px solid black;  margin-left: 20px; text-align: left;">

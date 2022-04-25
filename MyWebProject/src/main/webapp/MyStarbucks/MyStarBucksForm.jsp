@@ -29,7 +29,7 @@ div.left{
    position : absolute;
    left : 100px;
    top : 300px;
-   border : 1px solid gray;
+   background : #F5F5F5;
    width : 300px;
    height : 200px;
 }
@@ -38,7 +38,7 @@ div.right{
    position : absolute;
    left : 450px;
    top : 300px;
-   border : 1px solid gray;
+   background : #F5F5F5;
    width : 300px;
    height : 200px;
 }
@@ -94,6 +94,15 @@ div.leftsu{
    font-size: 40pt;
    font-weight: bold;
 
+}
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
 }
 
 </style>

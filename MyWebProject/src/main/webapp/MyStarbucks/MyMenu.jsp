@@ -57,6 +57,16 @@ button.checkbtn:hover {
    text-decoration: underline;
    
 }
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
+}
 </style>
 
 

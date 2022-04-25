@@ -49,6 +49,16 @@ li.mylist{
    border-radius: 100px;
    cursor: pointer;
 }
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
+}
 </style>
 <script type="text/javascript">
 $(function(){
