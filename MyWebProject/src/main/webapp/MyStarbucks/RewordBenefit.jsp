@@ -41,7 +41,7 @@ div.threeone{
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("image/ms03.jpg");
+   background-image: url("MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
@@ -217,9 +217,9 @@ $(function(){
    
    <b style="font-size: 15pt; color: green;margin-left: 50px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
    <br>       
-             <img alt="" src="image/ms04.png" style="margin-left: 50px;">
-             <img alt="" src="image/ms05.png">
-             <img alt="" src="image/ms06.png">
+             <img alt="" src="MyStarbucks/image/ms04.png" style="margin-left: 50px;">
+             <img alt="" src="MyStarbucks/image/ms05.png">
+             <img alt="" src="MyStarbucks/image/ms06.png">
              <div class="welcome">
                 <span  style="margin-left: 90px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
                 <span  style="margin-left: 190px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>
@@ -243,9 +243,9 @@ $(function(){
    <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F5F5F5;">회원 등급별 혜택
    <span class="glyphicon glyphicon-menu-down formbtn3"></span></div>
    <ul class="subthree">
-      <img alt="" src="image/ms08.png">
-      <img alt="" src="image/ms09.png">
-      <img alt="" src="image/ms10.png">
+      <img alt="" src="MyStarbucks/image/ms08.png">
+      <img alt="" src="MyStarbucks/image/ms09.png">
+      <img alt="" src="MyStarbucks/image/ms10.png">
       <br>
       <span  style="margin-left: 100px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
        <span  style="margin-left: 230px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>

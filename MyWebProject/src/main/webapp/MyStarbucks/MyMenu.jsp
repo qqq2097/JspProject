@@ -13,7 +13,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("image/ms03.jpg");
+   background-image: url("MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
@@ -149,7 +149,7 @@ $(function(){
 </div>
 
 <div style="margin-left: 100px; margin-top: 100px;">
-   <img alt="" src="image/ms11.png">
+   <img alt="" src="MyStarbucks/image/ms11.png">
 </div>
 
 <div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
