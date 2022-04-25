@@ -40,6 +40,13 @@
   <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/style.css" />
 	
 <style type="text/css">
+	li{
+		list-style: disc;
+		margin-bottom: 6px;
+	}
+	ul{
+		padding-left: 30px;
+	}
 	button{
 		padding-right: 18px;
 		padding-left: 18px;
@@ -49,45 +56,40 @@
 	}
 	.line{border-bottom: 1px solid #C1C1C1;}
 	.linesq{border:1px solid #C1C1C1;}
-	.mem_agreeMent + label{
-    position: relative;
+	
+input[class="mem_agreeMent"]{
+     display: none;  
 }
-.mem_agreeMent_cb input[type="checkbox"].mem_agreeMent{
-    display: none;
-}
-.mem_agreeMent_cb input[type="checkbox"].mem_agreeMent + label:after { /* 체크 마크 */
-    position: absolute;
-    align-content:center;
-    left: 0px;
-    content: '✔'; /* 체크 마크 ASCii 문자 */
-    font-size: 1.5em;
-    line-height: 0.8;
-    color: #fff;
-    transition: all;
-    display: inline-block;
-}
-.mem_agreeMent_cb input[type="checkbox"].mem_agreeMent + label:before { /* 체크박스 배경 */
-    display: inline-block;
-    content:' ';
+
+.cb{
+	display: inline-block;
+	position:relative;
     width: 2.2em; 
     height: 2.2em;
     border: 2px solid #eee;
     background-color: #eee;
     border-radius: 50%;
     margin: 0 5px -6px 0;
+    font-size: 1.4em;
 }
-
-
-[type="checkbox"]:checked.mem_agreeMent + label:after { /* 체크 상태 - 불투명에 크기 1 */
-
-    background-color: #006236;
-    display: inline-block;   
-    width: 1.5em; 
-    height: 1.5em;
-    font-size: 1em;
-    border: 2px solid #0B610B;
-    border-radius: 50%;
+input[type="checkbox"] + label:before { /* 체크 마크 */
+    position: relative;
+    align-content:center;
+    left: 0px;
+    content: '✔';
+     /* 체크 마크 ASCii 문자 */
+    font-size: 2em;
+    line-height: 0.8;
+    color: #fff;
+    transition: all;
+    display: inline-block;
     
+}
+input[class="mem_agreeMent"]:checked +label {
+	
+    border: 2px solid #006236;
+    background-color: #006236;
+  
 }
 </style>
 
@@ -109,12 +111,12 @@
       			<td colspan="2" style="padding-top:20px;padding-bottom:20px; text-align:center; color:gray; font-size: 2.5em;" class="line"><a>회원가입 약관 동의 및 본인인증단계입니다.</a></td>
       		</tr>
       		<tr>
-      			<td style="font-size: 2em;padding-left: 20px; padding-top: 20px;">
+      			<td style="font-size: 2em;padding-left: 20px; padding-top: 20px;  ">
       				<b>홈페이지 이용약관 동의</b><b style="color:#006236;">(필수)</b></td>
-      			<td align="right" style="padding-top: 40px;">
+      			<td align="right" style="padding-right:50px; padding-bottom:10px;">
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent" id="mem_agreeMent" value="2" class="mem_agreeMent">
-				    <label for="mem_agreeMent"></label>
+				    <input type="checkbox" checked="checked"  name="mem_agreeMent1" id="mem_agreeMent1" value="2" class="mem_agreeMent">
+				    <label for="mem_agreeMent1"  class="cb"></label>
 				</div>
     			</td>
       		</tr>
@@ -130,11 +132,11 @@
       			<td style="font-size: 2em;padding-left: 20px; padding-top: 40px;">
       				<b>개인정보 수집 및 이용동의</b><b style="color:#006236;">(필수)</b>
       			</td>
-      			<td align="right" style="padding-top: 40px;">
+      			<td align="right" style="padding-right:50px;padding-bottom:10px;">
 <!--체크박스 이름 바꾸기 -->      			
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent" id="mem_agreeMent" value="2" class="mem_agreeMent">
-				    <label for="mem_agreeMent"></label>
+				    <input type="checkbox" name="mem_agreeMent2" id="mem_agreeMent2" value="2" class="mem_agreeMent">
+				    <label for="mem_agreeMent2" class="cb"></label>
 				</div>
       			</td>
       		</tr>
@@ -149,11 +151,11 @@
       			<td style="font-size: 2em;padding-left: 20px; padding-top: 40px;">
       				<b>E-mail 및 SMS 광고성 정보 수신동의</b><b style="color:#006236;">(선택)</b>
       			</td>
-      			<td align="right" style="padding-top: 40px;">
+      			<td align="right"  style="padding-right:50px;padding-bottom:10px;">
 <!--체크박스 이름 바꾸기 -->   
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent" id="mem_agreeMent" value="2" class="mem_agreeMent">
-				    <label for="mem_agreeMent"></label>
+				    <input type="checkbox" name="mem_agreeMent3" id="mem_agreeMent3" value="2" class="mem_agreeMent">
+				    <label for="mem_agreeMent3"  class="cb"></label>
 				</div>
       			</td>
       		</tr>
@@ -166,20 +168,20 @@
       			<td style="font-size: 2em;padding-left: 20px; padding-top: 40px;">
       				<b>회원가입 유의사항</b><b style="color:#006236;">(선택)</b>
       			</td>
-      			<td align="right" style="padding-top: 40px;">
+      			<td align="right"  style="padding-right:50px;padding-bottom:10px; ">
 <!--체크박스 이름 바꾸기 -->   
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent" id="mem_agreeMent" value="2" class="mem_agreeMent">
-				    <label for="mem_agreeMent"></label>
+				    <input type="checkbox" name="mem_agreeMent4" id="mem_agreeMent4" value="2" class="mem_agreeMent">
+				    <label for="mem_agreeMent4"  class="cb"></label>
 				</div>
       			</td>
       		</tr>
       		<tr>
       			<td colspan="2"style="padding-top: 20px;padding-left: 20px; ">
-      				<ul style="font-size: 2em; padding-bottom: 5px; list-style-type: circle;" >
-      				  <li style="padding-bottom: 5px;">●반드시 회원님 명의로 된 휴대폰, 아이핀을 이용해주세요.</li>
-      				  <li style="padding-bottom: 5px;">●타인의 개인정보를 도용하여 가입할 경우 향후 적발 시 서비스 이용제한 및 법적 제재를 받으실 수 있습니다.</li>
-      				  <li style="padding-bottom: 5px;">●스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
+      				<ul class = "noticelist"style="font-size: 1.7em; padding-bottom: 5px; list-style-type: circle;" >
+      				  <li style="padding-bottom: 5px;">반드시 회원님 명의로 된 휴대폰, 아이핀을 이용해주세요.</li>
+      				  <li style="padding-bottom: 5px;">타인의 개인정보를 도용하여 가입할 경우 향후 적발 시 서비스 이용제한 및 법적 제재를 받으실 수 있습니다.</li>
+      				  <li style="padding-bottom: 5px;">스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
       				</ul>
       			</td>
       		</tr>
@@ -197,11 +199,11 @@
 			      		</tr>
 			      		<tr>
 			      			<td align="center" style="padding-top: 40px;font-size: 2em;"><b>휴대폰 인증</b></td>
-			      			<td align="center" style="padding-top: 40px;font-size: 2em;"><b>아이핀(i-PIN)인증</b></td>
+			      			<td align="center" style="padding-top: 40px;font-size: 2em;"><b>이메일(E-MAIL) 인증</b></td>
 			      		</tr>
 			      		<tr>
 			      			<td align="center" style="font-size: 1.4em;padding-top: 10px;"><a>본인 명의의 핸드폰을 통해 인증합니다.</a></td>
-			      			<td align="center" style="font-size: 1.4em;padding-top: 10px;"><a>가입한 아이핀 ID를 통해 인증합니다.</a></td>
+			      			<td align="center" style="font-size: 1.4em;padding-top: 10px;"><a>본인 명의의 이메일을 통해 인증합니다.</a></td>
 			      		</tr>
 			      		<tr>
 			      			<td align="center" style="font-size: 1.4em; padding-top: 10px;">
@@ -227,9 +229,10 @@
       		
       	</div>
       </form>
+<script type="text/javascript">
 
+</script>
   
-  <script src="../starbucks_clone/starbucks_clone/assets/js/menuHoverHandler.js"></script>
 </body>
 
 </html>

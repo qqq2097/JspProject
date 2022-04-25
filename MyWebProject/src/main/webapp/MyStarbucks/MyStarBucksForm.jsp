@@ -174,7 +174,7 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
 
