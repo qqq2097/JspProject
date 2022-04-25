@@ -41,7 +41,7 @@ div.threeone{
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("../../image/ms03.jpg");
+   background-image: url("image/ms03.jpg");
 }
 
 div.topsub{
@@ -154,7 +154,7 @@ $(function(){
          
          <ul class="sub1">   
             <li onclick="RewordBenefit.jsp"><a href="" required="login">· 리워드 및 혜택</a></li>
-            <li><a href="StarHistroy.jsp" required="login">· 별 히스토리</a></li>
+            <li><a href="StarHistory.jsp" required="login">· 별 히스토리</a></li>
             
          </ul>
       </li>

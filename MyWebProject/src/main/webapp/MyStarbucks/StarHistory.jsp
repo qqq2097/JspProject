@@ -95,7 +95,7 @@ $(function(){
          
          <ul class="sub1">   
             <li><a href="RewordBenefit.jsp" required="login">· 리워드 및 혜택</a></li>
-            <li><a href="StarHistroy.jsp" required="login">· 별 히스토리</a></li>
+            <li><a href="StarHistory.jsp" required="login">· 별 히스토리</a></li>
             
          </ul>
       </li>
