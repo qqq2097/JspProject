@@ -7,6 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -32,6 +38,7 @@ div.left{
    background : #F5F5F5;
    width : 300px;
    height : 200px;
+   border-radius: 20px;
 }
 
 div.right{
@@ -41,6 +48,7 @@ div.right{
    background : #F5F5F5;
    width : 300px;
    height : 200px;
+   border-radius: 20px;
 }
 button.btnre{
    background-color: #deb887;

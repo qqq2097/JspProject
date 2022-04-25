@@ -6,6 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -75,6 +81,9 @@ $(function(){
    
    $(".sub1").hide();
    $(".sub2").hide();
+   $(".mymenulist").hide();
+   $(".myfoodlist").hide();
+   $(".mysangpumlist").hide();
    
    $(".mytitle1").click(function(){
       
@@ -99,6 +108,32 @@ $(function(){
       $(".sub1").hide();
    
    });
+   
+   
+   
+   $("#drinkbtn").click(function(){
+	      
+	   $(".mymenulist").toggle("fast");
+	   $(".myfoodlist").hide();
+	   $(".mysangpumlist").hide();
+	   
+	   });
+   
+   $("#foodbtn").click(function(){
+	      
+	   $(".mymenulist").hide();
+	   $(".myfoodlist").toggle("fast");
+	   $(".mysangpumlist").hide();
+	   
+	   });
+   
+   $("#sangpumbtn").click(function(){
+	      
+	   $(".mymenulist").hide();
+	   $(".myfoodlist").hide();
+	   $(".mysangpumlist").toggle("fast");
+	   
+	   });
 });
 </script>
 
@@ -163,9 +198,9 @@ $(function(){
 </div>
 
 <div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
-   <button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn"> 나만의 음료</button>
-   <button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn"> 나만의 푸드</button>
-   <button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn"> 나만의 상품</button>
+   <button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn" id="drinkbtn"> 나만의 음료</button>
+   <button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn" id="foodbtn"> 나만의 푸드</button>
+   <button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn" id="sangpumbtn"> 나만의 상품</button>
 </div>
 
 
@@ -178,6 +213,58 @@ $(function(){
       <th>No</th>
       <th>음료명</th>
       <th>퍼스널 옵션</th>
+      <th>등록일</th>
+   </tr>
+   
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   
+   </table>
+   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+</div>
+
+<div class="myfoodlist">
+   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   <tr>
+      <th>
+         <input type="checkbox" id="chbox">         
+      </th>
+      <th>No</th>
+      <th>푸드명</th>
+      <th>워밍 옵션</th>
+      <th>메뉴 추</th>
+      <th>등록일</th>
+   </tr>
+   
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   
+   </table>
+   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+</div>
+
+<div class="mysangpumlist">
+   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   <tr>
+      <th>
+         <input type="checkbox" id="chbox">         
+      </th>
+      <th>No</th>
+      <th>상품명</th>
+      <th>그라인드 옵션</th>
       <th>등록일</th>
    </tr>
    
