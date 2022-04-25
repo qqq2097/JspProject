@@ -55,6 +55,26 @@ background-image: none;
 background-size: auto 68%;
 }
 
+.btn_suggestion_inquiry{
+border-radius: 3px;
+height: 28px;
+width: 136px;
+background: #e2c383;
+border: 1px solid #bb9f65;
+
+}
+
+.btn_suggestion_inquiry a{
+display: block;
+font-size: 12px;
+font-weight: bold;
+height: 28px;
+line-height: 28px;
+text-align: center;
+width: 141px;
+color: #222;
+}
+
 </style>
 
 </head>
@@ -79,6 +99,7 @@ background-size: auto 68%;
 <section class="mysuggestion">
 	<dl class="suggestion">
 	<h2>귀한 말씀 들려 주십시오. 작은 소리도 듣겠습니다.</h2>
+	<br>
 	<dd>스타벅스에서는 고객 여러분의 즐겁고 행복한 시간을 위해 정성을 다하고 있습니다.<br>만족스러운 서비스였는지, 불만스러운 점은 없으셨는지 귀한 의견을 들려주시기 바랍니다.<br>보다 나은 서비스로 보답하겠습니다.
 	<br><br><br><b style="color: #666666; padding: 0px 0px 0px 12xp;">※고객의 소리 운영시간 : 09:00 ~ 18:00 (연중 무휴)</b></dd>
 	</dl>
