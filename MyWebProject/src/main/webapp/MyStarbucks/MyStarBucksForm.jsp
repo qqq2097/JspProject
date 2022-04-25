@@ -63,7 +63,7 @@ button.btnbun{
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("MyStarbucks/image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 span.toptitle{
    
@@ -165,7 +165,7 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
 
@@ -187,7 +187,7 @@ $(function(){
 <div class="left">
    <span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My 리워드</span>
    <br>
-   <img alt="" src="MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
+   <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
 </div>
 
 <div class="leftsu">
