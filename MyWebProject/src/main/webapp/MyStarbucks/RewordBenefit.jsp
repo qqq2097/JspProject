@@ -71,6 +71,10 @@ span.toptitle{
 }
 
 div.container{
+	position : absolute;
+	right: 395px;
+}
+div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -151,19 +155,19 @@ $(function(){
    
    $(".formbtn1").click(function(){
       
-      $(".onetitle").next().toggle("fast");
+      $(".onetitle").next().toggle("slow");
       
    });
    
    $(".formbtn2").click(function(){
       
-      $(".twotitle").next().toggle("fast");
+      $(".twotitle").next().toggle("slow");
       
    });
    
    $(".formbtn3").click(function(){
       
-      $(".threetitle").next().toggle("fast");
+      $(".threetitle").next().toggle("slow");
       
    });
 });
@@ -173,7 +177,7 @@ $(function(){
 
 <!--  메뉴창  -->
 <div class="container">
-            
+    <div class="menuul">        
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -204,10 +208,10 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
-
+  </div>
 </div>
 
 
@@ -224,7 +228,7 @@ $(function(){
 
 
 <div class="one">
-   <div class="onetitle" style="margin-left: 100px; margin-top: 100px;  width: 600px; background: #F5F5F5;">스타벅스 리워드 (Starbucks Rewards)란?
+   <div class="onetitle" style="margin-left: 100px; margin-top: 100px;  width: 600px; background: #F9F9F9;">스타벅스 리워드 (Starbucks Rewards)란?
    <span class="glyphicon glyphicon-menu-down formbtn1"></span></div>
       
       <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 100px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
@@ -234,7 +238,7 @@ $(function(){
 </div>
 
 <div class="two">
-   <div class="twotitle" style="margin-left: 100px;  width: 600px; margin-top: 30px; border: 1px solid #F5F5F5;">스타벅스 별이란?
+   <div class="twotitle" style="margin-left: 100px;  width: 600px; margin-top: 30px; border: 1px solid #F9F9F9;">스타벅스 별이란?
    <span class="glyphicon glyphicon-menu-down formbtn2"></span></div>
    <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 130px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
           <li style="margin-left: 130px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
@@ -268,7 +272,7 @@ $(function(){
 </div>
 
 <div class="three">
-   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F5F5F5; margin-top: 30px; ">회원 등급별 혜택
+   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F9F9F9; margin-top: 30px; ">회원 등급별 혜택
    <span class="glyphicon glyphicon-menu-down formbtn3"></span></div>
    <ul class="subthree">
       <img alt="" src="../../MyStarbucks/image/ms08.png">
@@ -284,35 +288,44 @@ $(function(){
        <span style="margin-left: 210px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
                 
       
-      <table style="width: 1050px; height: 500px; border: 1px solid black;  margin-left: 20px; text-align: left;">
+      <table style="width: 1050px; height: 500px; border: 1px solid black;  margin-left: 20px; text-align: center;">
          <tr>
             <td>
                
-                  - 스타벅스 카드로 음료 구매 시, Free Extra 1개 제공<br>
-                  - 회원 가입 후 첫 구매 시, 익일 웰컴 첫 구매 무료 음료 쿠폰 제공<br>
-                  - 기능 설정 후 스타벅스 카드로 결제 시, 현금영수증 자동 발행<br>
+                  - 스타벅스 카드로 음료 구매 시, Free <br>Extra 1개 제공<br>
+                  - 회원 가입 후 첫 구매 시, 익일 웰컴 첫 구<br>매 무료 음료 쿠폰 제공<br>
+                  - 기능 설정 후 스타벅스 카드로 결제 시,<br> 현금영수증 자동 발행<br>
                   - 분실 신고 시점의 카드 잔액 보호<br>
-                  - 자동 충전 5만원 이상 설정 후, 자동 충전 발생 시마다 익일 BOGO e-쿠폰 제공(충전 금액 합산은 적용되지 않습니다.)
+                  - 자동 충전 5만원 이상 설정 후, 자동 충전<br> 발생 시마다 익일 BOGO e-쿠폰 제공<br>(충전 금액 합산은 적용되지 않습니다.)
                
             </td>
             
             <td>
                
-               - 스타벅스 카드로 음료 구매 시, Free Extra 1개 제공<br>
-               - 회원 가입 후 첫 구매 시, 익일 웰컴 첫 구매 무료 음료 쿠폰 제공<br>
-               - 기능 설정 후 스타벅스 카드로 결제 시, 현금영수증 자동 발행<br>
-               - 분실 신고 시점의 카드 잔액 보호<br>
-               - 자동 충전 5만원 이상 설정 후, 자동 충전 발생 시마다 익일 BOGO e-쿠폰 제공(충전 금액 합산은 적용되지 않습니다.)
+               <b>Welcome Level 혜택 모두 포함</b><br>
+
+				(웰컴 첫 구매 무료 음료 쿠폰 제외)<br>
+
+				- 생일 축하 무료 음료 e-쿠폰 제공<br>
+				- 스타벅스 리저브™ 원두 구매 시, 스타<br>벅스 리저브™ 음료 or 카페 아메리카노<br>(Hot/Iced) e-쿠폰 제공<br>
+				※ 단, 결제수단 변경 및 교환 거래, 임직<br>원 할인 또는 e-Gift Item 구매 시 미제<br>공<br>
+				※ 카페 아메리카노 (Hot/Iced) e-쿠폰<br>은 디카페인, ½ 디카페인, 블론드 원두로<br>도 변경하여 사용 가능<br>
+				- 250g원두 or 12개입 VIA 구매 시, 카<br>페 아메리카노(Hot/Iced) e-쿠폰 제공<br>
+				※ 단, 결제수단 변경 및 교환 거래, 임직<br>원 할인 또는 e-Gift Item 구매 시 미제<br>공<br>
+				※ 카페 아메리카노 (Hot/Iced) e-쿠폰<br>은 디카페인, ½ 디카페인, 블론드 원두로<br>도 변경하여 사용 가능<br>
+				- 티바나 패키지 티 구매 시, 풀 리프 티<br>(Hot/Iced) e-쿠폰 제공<br>
+				※ 단, 결제수단 변경 및 교환 거래, 임직<br>원 할인 또는 e-Gift Item 구매 시 미제<br>공<br>
+				- Beverage BOGO e-쿠폰(이벤트 진<br>행 시 발급)<br>
+				- 회원 전용 이벤트
             </td>
             
             
             <td>
                
-               - 스타벅스 카드로 음료 구매 시, Free Extra 1개 제공<br>
-               - 회원 가입 후 첫 구매 시, 익일 웰컴 첫 구매 무료 음료 쿠폰 제공<br>
-               - 기능 설정 후 스타벅스 카드로 결제 시, 현금영수증 자동 발행<br>
-               - 분실 신고 시점의 카드 잔액 보호<br>
-               - 자동 충전 5만원 이상 설정 후, 자동 충전 발생 시마다 익일 BOGO e-쿠폰 제공(충전 금액 합산은 적용되지 않습니다.)
+              	<b>Green Level 혜택 모두 포함</b><br>
+				- 나만의 Gold Card 발급<br>
+				- 별 ★ 12개 적립 시마다 무료 음료 쿠폰 제공<br>
+				- Personalized Offer e-쿠폰 제공
             </td>
             
          </tr>

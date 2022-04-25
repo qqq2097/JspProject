@@ -43,6 +43,10 @@ span.toptitle{
 }
 
 div.container{
+	position : absolute;
+	right: 395px;
+}
+div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -143,7 +147,7 @@ $(function(){
 
 <!--  메뉴창  -->
 <div class="container">
-            
+   <div class="menuul">        
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -174,10 +178,10 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
-
+ </div>
 </div>
 
 
@@ -238,12 +242,10 @@ $(function(){
       <th>No</th>
       <th>푸드명</th>
       <th>워밍 옵션</th>
-      <th>메뉴 추</th>
       <th>등록일</th>
    </tr>
    
    <tr>
-      <td></td>
       <td></td>
       <td></td>
       <td></td>
