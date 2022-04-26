@@ -18,8 +18,8 @@
 	color: #808080;
 	margin-left: 800px;
 	
-	}
 	
+	}
 	
 	div.container{
 	
@@ -30,7 +30,7 @@
 		background-repeat: no-repeat;
 	}
 	
-	 div.subject1 img{
+	 div.subject1 div.flavor img{
 		margin-top: 50px;
 		margin-left: 120px;
 		cursor: pointer;
@@ -41,7 +41,7 @@
 	}
 	
 	
-	div.subject2 img{
+	div.subject2 div.feel img{
 		margin-top: 30px;
 		margin-left: 210px;
 		cursor: pointer;
@@ -52,7 +52,7 @@
 	}
 	
 	
-	div.subject3 img{
+	div.subject3 div.strength img{
 		margin-top: 30px;
 		margin-left: 210px;
 		cursor: pointer;
@@ -61,8 +61,72 @@
 	div.strength span{
 		float: left;
 	}
+	
+	@keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        to {
+            opacity: 3;
+            transform: translateZ(0);
+        }
+    }
+ 
+    .flavor span{
+        position: relative;
+        animation: fadeInUp 2s;
+    }
+     .feel span{
+        position: relative;
+        animation: fadeInUp 2s;
+    }
+    
+     .strength span{
+        position: relative;
+        animation: fadeInUp 2s;
+    }
+    
 
 </style>
+<script type="text/javascript">
+
+	$(function () {
+		
+		/* 첫 화면 구현 */
+		$(".subject2").hide();
+		$(".subject3").hide();
+	
+		/* 첫째 카테고리 선택시 */
+		$(".flavor span img").click(function() {
+		
+		$(".subject1").hide();
+		$(".subject2").show("slow");
+		
+	});
+		
+		/* 둘째 카테고리 선택시 */
+		$(".feel span img").click(function() {
+			
+			$(".subject2").hide();
+			$(".subject3").show("slow");
+			
+		});
+	
+		
+		/* 셋째 카테고리 선택시 resultform으로 이동 */
+		$(".feel span img").click(function() {
+			
+			$(".subject2").hide();
+			$(".subject3").show("slow");
+			
+		});
+	
+	
+	});
+
+</script>
+
 </head>
 <body>
 
@@ -85,7 +149,7 @@
 <div class="container">
 <div class="image">
 	<div class="subject1">
-		<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png" style="margin-left: 530px;">
+		<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png" style="margin-left: 530px; margin-top: 30px;">
 		<div class="flavor">
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_짭짤.png"><br><br><b style="margin-left: 210px;">짭짤한 맛</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_과일.png"><br><br><b style="margin-left: 210px;">과일 맛</b> </span>
@@ -96,7 +160,7 @@
 	</div>
 	
 <div class="subject2">
-		<img alt="" src="../../MyFavoriteCoffee/image/2_어떤느낌.png" style="margin-left: 540px; margin-top: 50px;">
+		<img alt="" src="../../MyFavoriteCoffee/image/2_어떤느낌.png" style="margin-left: 540px; margin-top: 80px;">
 		<div class="feel">
 			<span > <img alt="" src="../../MyFavoriteCoffee/image/2_상쾌한느낌.png"><br><br><b style="margin-left: 293px;">상쾌한 느낌</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/2_부드러운느낌.png"><br><br><b style="margin-left: 293px;">부드러운 느낌</b> </span>
@@ -107,7 +171,7 @@
 	</div>
 	
 	  <div class="subject3">	
-		<img alt="" src="../../MyFavoriteCoffee/image/3_어떤강도.png" style="margin-left: 540px; margin-top: 50px;">
+		<img alt="" src="../../MyFavoriteCoffee/image/3_어떤강도.png" style="margin-left: 540px; margin-top: 80px;">
 		<div class="strength">
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/3_은은하고부드러움.png"><br><br><b style="margin-left: 270px;">은은하고 부드러움</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/3_미디엄으로균형잡힘.png"><br><br><b style="margin-left: 270px;">미디엄으로 균형 잡힘</b> </span>
@@ -116,7 +180,7 @@
 		
 	</div> 
 	
-	
+		
 </div>
 </div>
 </body>
