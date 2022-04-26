@@ -53,6 +53,9 @@
 		padding-top: 7px;
 		padding-bottom: 7px;
 		border-radius: 2px;
+		background-color: #0B610B; 
+		border: 1px solid #0B610B; 
+		color: white;
 	}
 	.line{border-bottom: 1px solid #C1C1C1;}
 	.linesq{border:1px solid #C1C1C1;}
@@ -115,7 +118,7 @@ input[class="mem_agreeMent"]:checked +label {
       				<b>홈페이지 이용약관 동의</b><b style="color:#006236;">(필수)</b></td>
       			<td align="right" style="padding-right:50px; padding-bottom:10px;">
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" checked="checked"  name="mem_agreeMent1" id="mem_agreeMent1" value="2" class="mem_agreeMent">
+				    <input type="checkbox"  name="agreeMent" id="mem_agreeMent1" value="2" class="mem_agreeMent">
 				    <label for="mem_agreeMent1"  class="cb"></label>
 				</div>
     			</td>
@@ -135,7 +138,7 @@ input[class="mem_agreeMent"]:checked +label {
       			<td align="right" style="padding-right:50px;padding-bottom:10px;">
 <!--체크박스 이름 바꾸기 -->      			
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent2" id="mem_agreeMent2" value="2" class="mem_agreeMent">
+				    <input type="checkbox" name="agreeMent" id="mem_agreeMent2" value="2" class="mem_agreeMent">
 				    <label for="mem_agreeMent2" class="cb"></label>
 				</div>
       			</td>
@@ -154,7 +157,7 @@ input[class="mem_agreeMent"]:checked +label {
       			<td align="right"  style="padding-right:50px;padding-bottom:10px;">
 <!--체크박스 이름 바꾸기 -->   
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent3" id="mem_agreeMent3" value="2" class="mem_agreeMent">
+				    <input type="checkbox" name="agreeMent" id="mem_agreeMent3" value="3" class="mem_agreeMent">
 				    <label for="mem_agreeMent3"  class="cb"></label>
 				</div>
       			</td>
@@ -171,8 +174,8 @@ input[class="mem_agreeMent"]:checked +label {
       			<td align="right"  style="padding-right:50px;padding-bottom:10px; ">
 <!--체크박스 이름 바꾸기 -->   
       			<div class="mem_agreeMent_cb">
-				    <input type="checkbox" name="mem_agreeMent4" id="mem_agreeMent4" value="2" class="mem_agreeMent">
-				    <label for="mem_agreeMent4"  class="cb"></label>
+				    <input type="checkbox" name="agreeMent" id="mem_agreeMent4" value="4" class="mem_agreeMent">
+				    <label for="mem_agreeMent4" id="mem_agreeMent4"  class="cb"></label>
 				</div>
       			</td>
       		</tr>
@@ -207,10 +210,10 @@ input[class="mem_agreeMent"]:checked +label {
 			      		</tr>
 			      		<tr>
 			      			<td align="center" style="font-size: 1.4em; padding-top: 10px;">
-			      				<button style="background-color: #0B610B; border: 1px solid #0B610B; color: white;"><b>인증하기</b></button>
+			      				<button class="hbtn"onclick="openHp()" ><b>인증하기</b></button>
 			      			</td>
 			      			<td align="center" style="font-size: 1.4em; padding-top: 10px;">
-			      				<button style="background-color: #0B610B; border: 1px solid #0B610B; color: white;"><b>인증하기</b></button>
+			      				<button class="ebtn"onclick="openEmail()" ><b>인증하기</b></button>
 			      			</td>
 			      		</tr>
 			      		<tr style="height:30px;">
@@ -231,6 +234,51 @@ input[class="mem_agreeMent"]:checked +label {
       </form>
 <script type="text/javascript">
 
+
+function openHp() {
+	var value = document.getElementsByName("agreeMent");
+	var cnt=0;
+	if(value[0].checked && value[1].checked ){
+			cnt=2;
+	}
+	else{
+		cnt=-5;
+	}
+	for(var i=2;i<value.length;i++){
+		if(value[i].checked){
+			cnt++;
+		}
+	}
+	if(cnt>=2){
+		window.open('memberphonecheck.jsp',"","left=100px,top=100px,width=500ps,height=300px");
+	}
+	else{
+		alert("필수 동의를 선택하세요.");
+	}
+	
+}
+function openEmail() {
+	
+	var value = document.getElementsByName("agreeMent");
+	var cnt=0;
+	if(value[0].checked && value[1].checked ){
+			cnt=2;
+	}
+	else{
+		cnt=-4;
+	}
+	for(var i=2;i<value.length;i++){
+		if(value[i].checked){
+			cnt++;
+		}
+	}
+	if(cnt>=2){
+		window.open('memberemailcheck.jsp',"","left=100px,top=100px,width=500ps,height=300px");
+	}
+	else{
+		alert("필수 동의를 선택하세요.");
+	}
+}
 </script>
   
 </body>

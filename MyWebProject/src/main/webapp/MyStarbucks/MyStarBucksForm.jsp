@@ -7,11 +7,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
 <style type="text/css">
 div.container{
+	position : absolute;
+	
+	right: 395px;
+}
+
+div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -29,18 +41,20 @@ div.left{
    position : absolute;
    left : 100px;
    top : 300px;
-   border : 1px solid gray;
+   background : #F5F5F5;
    width : 300px;
    height : 200px;
+   border-radius: 20px;
 }
 
 div.right{
    position : absolute;
    left : 450px;
    top : 300px;
-   border : 1px solid gray;
+   background : #F5F5F5;
    width : 300px;
    height : 200px;
+   border-radius: 20px;
 }
 button.btnre{
    background-color: #deb887;
@@ -95,6 +109,15 @@ div.leftsu{
    font-weight: bold;
 
 }
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
+}
 
 </style>
 
@@ -134,7 +157,7 @@ $(function(){
 
 <!--  메뉴창  -->
 <div class="container">
-            
+<div class="menuul">    
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -165,10 +188,10 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
-
+</div>
 </div>
 
 <!-- top div -->
@@ -198,7 +221,7 @@ $(function(){
 <div class="right">
    <span>님은<br>현재  이십니다.</span>
    <br><br>
-   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+   <button type="button" class="btn btn-default btnre" style="width : 130px;   margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
    <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
    <br>
    <button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>

@@ -6,6 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -37,6 +43,10 @@ span.toptitle{
 }
 
 div.container{
+	position : absolute;
+	right: 395px;
+}
+div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -48,6 +58,16 @@ li.mylist{
    width : 300px;
    border-radius: 100px;
    cursor: pointer;
+}
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
 }
 </style>
 <script type="text/javascript">
@@ -86,7 +106,7 @@ $(function(){
 <body>
 <!--  메뉴창  -->
 <div class="container">
-            
+        <div class="menuul">   
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -117,10 +137,10 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
-
+</div>
 </div>
 
 <!-- top div -->
@@ -171,7 +191,6 @@ $(function(){
       <th align="center">No</th>
       <th align="center">카드번호</th>
       <th align="center">적립별</th>
-      <th align="center">구분</th>
       <th align="center">매장명</th>
       <th align="center">적립일</th>
       
