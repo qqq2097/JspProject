@@ -24,10 +24,11 @@
 	div.container{
 	
 		width: 100%;
-		height: 167	0px;
+		height: 100%;
 		background-image: url("../../MyFavoriteCoffee/image/background.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
+		
 	}
 	
 	 div.subject1 div.flavor img{
@@ -75,16 +76,16 @@
  
     .flavor span{
         position: relative;
-        animation: fadeInUp 2s;
+        animation: fadeInUp 1.5s;
     }
      .feel span{
         position: relative;
-        animation: fadeInUp 2s;
+        animation: fadeInUp 1.5s;
     }
     
      .strength span{
         position: relative;
-        animation: fadeInUp 2s;
+        animation: fadeInUp 1.5s;
     }
     
 
@@ -115,10 +116,9 @@
 	
 		
 		/* 셋째 카테고리 선택시 resultform으로 이동 */
-		$(".feel span img").click(function() {
+		$(".strength span img").click(function() {
 			
-			$(".subject2").hide();
-			$(".subject3").show("slow");
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform.jsp';
 			
 		});
 	
@@ -132,7 +132,7 @@
 
 <!-- title -->	
 <div class="title" >
-	<img alt="" src="../../MyFavoriteCoffee/image/Title.jpg" >
+	<img alt="" src="../../MyFavoriteCoffee/image/Title.jpg" style="background-color: transparent;">
 	<span>  
 		<img alt="" src="../../MyFavoriteCoffee/image/home.png" style="cursor: pointer;" onclick="location.href='../starbucks_clone/index.jsp'">
 		<img alt="" src="../../MyFavoriteCoffee/image/arrow.png">
@@ -141,7 +141,7 @@
 		<b>나와 어울리는 커피</b>
 	 </span>
 	<br><br>
-	여러분에게 잘 맞는 커피를 찾기 위한 3가지 질문입니다.
+	<b style="color: #808080; font-size: 1.3em;">여러분에게 잘 맞는 커피를 찾기 위한 3가지 질문입니다.</b>
 
 </div>
 
@@ -182,6 +182,7 @@
 	
 		
 </div>
+
 </div>
 </body>
 </html>
