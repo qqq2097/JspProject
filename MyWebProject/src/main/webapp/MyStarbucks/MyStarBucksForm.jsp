@@ -19,6 +19,7 @@
 <style type="text/css">
 div.container{
 	position : fixed;
+	
 	width:100%;
 	
 }
