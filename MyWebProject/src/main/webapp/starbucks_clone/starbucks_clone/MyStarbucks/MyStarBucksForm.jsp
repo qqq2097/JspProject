@@ -6,6 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <!-- 폰트 -->
 <link
   href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
@@ -16,42 +17,7 @@
 <title>Insert title here</title>
 
 <style type="text/css">
-div.top{
-   width : 100%;
-   height : 200px;
-   background-image: url("../../MyStarbucks/image/ms03.jpg");
-}
-
-div.topsub{
-   position : absolute;
-   width : 300px;
-   height : 100px;
-   
-   top : 170px;
-   left : 1000px;
-   color: #fff;
-   
-   font-size: 15pt;
-}
-span.toptitle{
-   
-   color: #fff;
-   font-size: 20pt;
-   font-weight: bold;
-   top: 200px;
-   
-}
-
 div.container{
-<<<<<<< HEAD
-   position : fixed;
-   width:100%;
-=======
-	position : absolute;
-	right: 395px;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
-}
-div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -65,16 +31,90 @@ li.mylist{
    cursor: pointer;
 }
 
+div.left{
+   position : absolute;
+   left : 100px;
+   top : 300px;
+   background : #F5F5F5;
+   width : 300px;
+   height : 200px;
+   border-radius: 20px;
+}
+
+div.right{
+   position : absolute;
+   left : 450px;
+   top : 300px;
+   background : #F5F5F5;
+   width : 300px;
+   height : 200px;
+   border-radius: 20px;
+}
+button.btnre{
+   background-color: #deb887;
+   font-weight: bold;
+   color: black;
+}
+
+button.btnsu{
+   background-color: black;
+   font-weight: bold;
+   color: #fff;
+}
+
+button.btnbun{
+   background-color: #a9a9a9;
+   font-weight: bold;
+   color: #fff;
+}
+
+div.top{
+   width : 100%;
+   height : 200px;
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
+}
+span.toptitle{
+   
+   color: #fff;
+   font-size: 30pt;
+   font-weight: bold;
+   top: 200px;
+   
+}
+
+div.topsub{
+   position : absolute;
+   width : 300px;
+   height : 100px;
+   
+   top : 170px;
+   left : 1000px;
+   color: #fff;
+   
+   font-size: 15pt;
+}
+div.leftsu{
+   position : absolute;
+   width : 100px;
+   height: 100px;
+   top : 360px;
+   left : 230px;
+   font-size: 40pt;
+   font-weight: bold;
+
+}
 ul.sub1{
-   font-size: 0.6em;
-   text-align: center;
+	font-size: 0.6em;
+	text-align: center;
 }
 
 ul.sub2{
-   font-size: 0.6em;
-   text-align: center;
+	font-size: 0.6em;
+	text-align: center;
 }
+
 </style>
+
 <script type="text/javascript">
 $(function(){
    
@@ -106,12 +146,12 @@ $(function(){
    });
 });
 </script>
-
 </head>
 <body>
+
 <!--  메뉴창  -->
 <div class="container">
-        <div class="menuul">   
+            
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -142,66 +182,46 @@ $(function(){
       </li>
       
       <li class="mylist">
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
-</div>
+
 </div>
 
 <!-- top div -->
 <div class="top">
    <br><br><br><br>
-   <span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
+   <span class="toptitle">&nbsp;&nbsp; My Starbucks</span>
    
 </div>
 
 <div class="topsub">
       <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
-      <span onclick=""> > My Starbucks > 별 히스토리</span>
+      <span onclick=""> > My Starbucks</span>
 </div>
 
-<div class=" first">
-<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px;" >
-   <tr>
-      <td align="center">사용 가능한 별</td>
-      
-      <td align="center">총 누적 별</td>
-   </tr>
-   
-   <tr>
-      <td align="center">1</td>
-      <td align="center">1</td>
-   </tr>
-</table>
-</div>
-
-<div class="second" style="width : 700px; height: 50px; margin-left: 100px; margin-top: 100px; background: #DCDCDC; text-align: center;">
-
+<!-- left div -->
+<div class="left">
+   <span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My 리워드</span>
    <br>
-   기간별&nbsp;&nbsp;| 
-   <input type="radio" id="onemonth" name="radioone" checked="checked">1개월
-   <input type="radio" id="oneyear" name="radioone">1년
-   &nbsp;&nbsp;&nbsp;&nbsp;
-   일자별 &nbsp;&nbsp;
-   <input type="date">~
-   <input type="date">
-   <input type="button" style="width : 50px; background: #C0C0C0; color:#fff;" value="검색" >
+   <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
+</div>
+
+<div class="leftsu">
+   <span>3</span>
+</div>
+
+<!-- right div -->
+<div class="right">
+   <span>님은<br>현재  이십니다.</span>
+   <br><br>
+   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
    <br>
-   
-   
-</div>
-   
-<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;">
-   <table class="table table-border">
-      <th align="center">No</th>
-      <th align="center">카드번호</th>
-      <th align="center">적립별</th>
-      <th align="center">매장명</th>
-      <th align="center">적립일</th>
-      
-   
-   </table>
-</div>
+   <button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
+   <button type="button" class="btn btn-default btnbun" style="width : 130px; margin-top: 10px;">비밀번호 변경</button>
+</div>      
+
 
 </body>
 </html>

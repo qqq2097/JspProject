@@ -2,7 +2,7 @@ package StarBucksDto;
 
 import java.sql.Timestamp;
 
-public class rewordDto {
+public class RewordDto {
 
 	private String num;
 	private String cardnum;

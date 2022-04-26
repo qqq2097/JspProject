@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+Email
 <%
 String key = request.getParameter("key");//처음 호출시 null
 if(key==null){
