@@ -250,7 +250,7 @@ function openHp() {
 		}
 	}
 	if(cnt>=2){
-		window.open('memberphonecheck.jsp',"","left=100px,top=100px,width=500ps,height=300px");
+		window.open('memberphonecheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
 	}
 	else{
 		alert("필수 동의를 선택하세요.");
@@ -273,7 +273,7 @@ function openEmail() {
 		}
 	}
 	if(cnt>=2){
-		window.open('memberemailcheck.jsp',"","left=100px,top=100px,width=500ps,height=300px");
+		window.open('memberemailcheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
 	}
 	else{
 		alert("필수 동의를 선택하세요.");
