@@ -19,6 +19,7 @@
 <style type="text/css">
 div.container{
 	position : absolute;
+	
 	right: 395px;
 }
 
