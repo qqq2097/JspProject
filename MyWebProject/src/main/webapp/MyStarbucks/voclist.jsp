@@ -173,6 +173,14 @@ cursor: pointer;
 color: black;
 }
 
+
+.ms_nav > ul > li > ul > li > a  {
+color: #444;
+display: block;
+font-size: 12px;
+padding: 6px 0 6px 15px;
+width: 205px;
+}
 .tabcontainer{
 position: relative;
 left: 60px;
@@ -205,7 +213,7 @@ $(function () {
 	$(".sub2").hide();
 	
 	$(".ms_nav > ul>li>a").click(function () {
-		$(this).next().show();
+		$(this).next().toggle("fast");
 	});
 
 	
@@ -388,22 +396,22 @@ $(document).ready(function(){
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="">My 리워드<span class="sbox_arrow_down1"></span></a>
+			<a href="#">My 리워드<span class="sbox_arrow_down1"></span></a>
 			<ul class="sub1">
-				<li><a href="" required="login" >· 리워드 및 혜택</a></li>
-				<li><a href="" required="login">· 별 히스토리</a></li>
+				<li><a href="#" required="login" >· 리워드 및 혜택</a></li>
+				<li><a href="#" required="login">· 별 히스토리</a></li>
 			</ul>
 		</li>
 		
 		<li class="msRnb_btn"><a href="/my/my_menu.do" required="login">My 메뉴</a></li>
-		<li><a href="" required="login">My 고객의 소리</a></li>
+		<li><a href="#" required="login">My 고객의 소리</a></li>
 		
 		<li>
-			<a href="">개인정보관리<span class="sbox_arrow_down2"></span></a>
+			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
 			<ul class="sub2">
-				<li><a href="" required="login">· 개인정보확인 및 수정</a></li>
-				<li><a href="" required="login">· 회원 탈퇴</a></li>
-				<li><a href="" required="login">· 비밀번호 변경</a></li>
+				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
+				<li><a href="#" required="login">· 회원 탈퇴</a></li>
+				<li><a href="#" required="login">· 비밀번호 변경</a></li>
 			</ul>
 		</li>
 	</ul>
