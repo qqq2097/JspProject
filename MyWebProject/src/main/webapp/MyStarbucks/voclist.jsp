@@ -11,6 +11,51 @@
 <title>Insert title here</title>
 <style type="text/css">
 
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: flex;
+
+}
+
+ul.tabs li{
+  display: inline-block;
+	background: white;
+	color: black;
+	text-align: center;
+	padding: 10px 15px;
+	cursor: pointer;
+	
+}
+
+ul.tabs li.current{
+	background: #006633;
+	color: white;
+}
+
+.tab-content{
+  display: none;
+	background: white;
+	padding: 12px;
+}
+
+.tab-content.current{
+	display: inherit;
+}
+
+li.tab-link.current, li.tab-link {
+display: block;
+width: 208px;
+height: 40px;
+line-height: 17px;
+color: #fff;
+border: 0;
+}
+
+
+
+
 div.top{
    width : 100%;
    height : 200px;
@@ -89,7 +134,7 @@ color: #222;
 float: right;
 position: relative;
 right: 60px;
-bottom: 235px;
+bottom: 410px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
@@ -126,6 +171,13 @@ cursor: pointer;
 color: black;
 }
 
+.tabcontainer{
+position: relative;
+left: 60px;
+width: 1100px;
+height: 174px;
+}
+
 </style>
 
 
@@ -134,8 +186,25 @@ $(function () {
 	$(".sub1").hide();
 	$(".sub2").hide();
 	
+	$(".ms_nav > ul>li>a").click(function () {
+		$(this).next().show();
+	});
 
 	
+});
+
+$(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
 });
 
 </script>
@@ -172,7 +241,31 @@ $(function () {
 </div>
 
 
+<div class="tabcontainer">
+<!-- 탭 메뉴 상단 시작 -->
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">전체</li>
+		<li class="tab-link" data-tab="tab-2">접수 완료</li>
+		<li class="tab-link" data-tab="tab-3">답변 완료</li>
+	</ul>
+	
+<!-- 탭 메뉴 상단 끝 -->
+<!-- 탭 메뉴 내용 시작 -->
+	<div id="tab-1" class="tab-content current">
+    <h1>탭 메뉴 1 내용입니다.</h1>
+    
+	</div>
+	<div id="tab-2" class="tab-content">
+  <h1>  탭 메뉴 2 내용입니다.  </h1>
 
+	</div>
+	<div id="tab-3" class="tab-content">
+  <h1>  탭 메뉴 3 내용입니다.  </h1>
+
+
+<!-- 탭 메뉴 내용 끝 -->
+</div>
+</div>
 
 
 
