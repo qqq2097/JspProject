@@ -265,7 +265,7 @@ function openEmail() {
 			cnt=2;
 	}
 	else{
-		cnt=-5;
+		cnt=-4;
 	}
 	for(var i=2;i<value.length;i++){
 		if(value[i].checked){
