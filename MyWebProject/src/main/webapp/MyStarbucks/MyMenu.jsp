@@ -43,8 +43,9 @@ span.toptitle{
 }
 
 div.container{
-	position : absolute;
-	right: 395px;
+	position : fixed;
+	width:100%;
+	
 }
 div.menuul{
    position : absolute;

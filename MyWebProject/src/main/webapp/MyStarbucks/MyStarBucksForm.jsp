@@ -18,9 +18,9 @@
 
 <style type="text/css">
 div.container{
-	position : absolute;
+	position : fixed;
+	width:100%;
 	
-	right: 395px;
 }
 
 div.menuul{
