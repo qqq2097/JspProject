@@ -167,8 +167,8 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=StarHistory.jsp'">· 별 히스토리</li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>

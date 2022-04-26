@@ -1,6 +1,3 @@
-<%@page import="StarBucksDto.RewordDto"%>
-<%@page import="java.util.List"%>
-<%@page import="StarBucksDao.RewordDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -46,9 +43,8 @@ span.toptitle{
 }
 
 div.container{
-	position : fixed;
-	width:100%;
-	
+   position : fixed;
+   width:100%;
 }
 div.menuul{
    position : absolute;
@@ -65,13 +61,13 @@ li.mylist{
 }
 
 ul.sub1{
-	font-size: 0.6em;
-	text-align: center;
+   font-size: 0.6em;
+   text-align: center;
 }
 
 ul.sub2{
-	font-size: 0.6em;
-	text-align: center;
+   font-size: 0.6em;
+   text-align: center;
 }
 </style>
 <script type="text/javascript">
@@ -107,7 +103,6 @@ $(function(){
 </script>
 
 </head>
-
 <body>
 <!--  메뉴창  -->
 <div class="container">
@@ -135,20 +130,18 @@ $(function(){
             
          </div>
          <ul class="sub2">
-            <li><a href="">· 개인정보확인 및 수정</a></li>
-            <li><a href="">· 회원 탈퇴</a></li>
-            <li><a href="">· 비밀번호 변경</a></li>
+            <li><a href="" required="login">· 개인정보확인 및 수정</a></li>
+            <li><a href="" required="login">· 회원 탈퇴</a></li>
+            <li><a href="" required="login">· 비밀번호 변경</a></li>
          </ul>
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
 </div>
 </div>
-
-
 
 <!-- top div -->
 <div class="top">
@@ -195,19 +188,15 @@ $(function(){
    
 <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;">
    <table class="table table-border">
-   <tr>
       <th align="center">No</th>
       <th align="center">카드번호</th>
       <th align="center">적립별</th>
       <th align="center">매장명</th>
       <th align="center">적립일</th>
       
-   </tr>
+   
    </table>
 </div>
-
-
-
 
 </body>
 </html>
