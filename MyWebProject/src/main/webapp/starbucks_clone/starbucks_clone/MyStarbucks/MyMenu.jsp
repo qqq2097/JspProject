@@ -19,7 +19,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("../../MyStarbucks/image/ms03.jpg");
+   background-image: url("image/ms03.jpg");
 }
 
 div.topsub{
@@ -43,17 +43,6 @@ span.toptitle{
 }
 
 div.container{
-<<<<<<< HEAD
-	position : fixed;
-	width:100%;
-	
-	
-=======
-	position : absolute;
-	right: 395px;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
-}
-div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -154,7 +143,7 @@ $(function(){
 
 <!--  메뉴창  -->
 <div class="container">
-   <div class="menuul">        
+            
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -162,8 +151,8 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
+            <li><a href="index.jsp?main=MyStarbucks/RewordBenefit.jsp">· 리워드 및 혜택</a></li>
+            <li><a href="index.jsp?main=MyStarbucks/StarHistory.jsp">· 별 히스토리</a></li>
             
          </ul>
       </li>
@@ -185,10 +174,10 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
       </li>
    </ul>
- </div>
+
 </div>
 
 
@@ -200,7 +189,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > My 메뉴</span>
 </div>
 
@@ -249,10 +238,12 @@ $(function(){
       <th>No</th>
       <th>푸드명</th>
       <th>워밍 옵션</th>
+      <th>메뉴 추</th>
       <th>등록일</th>
    </tr>
    
    <tr>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>

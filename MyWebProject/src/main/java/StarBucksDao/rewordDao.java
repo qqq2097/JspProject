@@ -7,44 +7,39 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Vector;
 
-import StarBucksDto.rewordDto;
+import StarBucksDto.RewordDto;
 import mysql.db.DbConnect;
 
-public class rewordDao {
+public class RewordDao {
 
 	DbConnect db=new DbConnect();
 	
-	
-	//리스트 출력
-	public List<rewordDto> getAllReword()
+	public List<RewordDto> getList(int start,int perpage)
 	{
-	
-		List<rewordDto> list=new Vector<rewordDto>();
+		List<RewordDto> list=new Vector<RewordDto>();
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
-	
-		String sql="select * from reword order by num";
 		
+		String sql="select * from reword order by num desc limit ?,?";
 		try {
 			pstmt=conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, perpage);
 			rs=pstmt.executeQuery();
 			
 			while(rs.next())
 			{
-				rewordDto dto=new rewordDto();
-				
-				
+				RewordDto dto=new RewordDto();
 				dto.setNum(rs.getString("num"));
 				dto.setCardnum(rs.getString("cardnum"));
 				dto.setStarcnt(rs.getInt("starcnt"));
 				dto.setStoreaddr(rs.getString("storeaddr"));
 				dto.setBuyday(rs.getTimestamp("buyday"));
 				
-				
 				list.add(dto);
-				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -56,4 +51,5 @@ public class rewordDao {
 		
 		return list;
 	}
+	
 }

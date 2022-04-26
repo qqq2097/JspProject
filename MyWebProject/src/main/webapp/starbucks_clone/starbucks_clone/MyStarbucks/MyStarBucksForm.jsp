@@ -18,18 +18,6 @@
 
 <style type="text/css">
 div.container{
-<<<<<<< HEAD
-	position : fixed;
-	
-	width:100%;
-=======
-	position : absolute;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
-	
-	right: 395px;
-}
-
-div.menuul{
    position : absolute;
    left : 1000px;
    top : 300px;
@@ -163,7 +151,7 @@ $(function(){
 
 <!--  메뉴창  -->
 <div class="container">
-<div class="menuul">    
+            
    <ul>
       <li class="mylist">
          <div class="mytitle1" align="center">My 리워드
@@ -172,11 +160,7 @@ $(function(){
          
          <ul class="sub1">   
             <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-<<<<<<< HEAD
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarHistory.jsp'">· 별 히스토리</li>
-=======
             <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
             
          </ul>
       </li>
@@ -201,7 +185,7 @@ $(function(){
       	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
-</div>
+
 </div>
 
 <!-- top div -->
@@ -231,7 +215,7 @@ $(function(){
 <div class="right">
    <span>님은<br>현재  이십니다.</span>
    <br><br>
-   <button type="button" class="btn btn-default btnre" style="width : 130px;   margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
    <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
    <br>
    <button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
