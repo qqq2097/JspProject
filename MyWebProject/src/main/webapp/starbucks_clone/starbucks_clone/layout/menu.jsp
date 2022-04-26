@@ -66,7 +66,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">나와 어울리는 커피 찾기</a></h4>
+                    <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
                   </li>
                   
                 </ul>
