@@ -210,10 +210,10 @@ input[class="mem_agreeMent"]:checked +label {
 			      		</tr>
 			      		<tr>
 			      			<td align="center" style="font-size: 1.4em; padding-top: 10px;">
-			      				<button class="hbtn"onclick="openHp()" ><b>인증하기</b></button>
+			      				<button class="hbtn"onclick="openHp()" ><b> 인증하기 </b></button>
 			      			</td>
 			      			<td align="center" style="font-size: 1.4em; padding-top: 10px;">
-			      				<button class="ebtn"onclick="openEmail()" ><b>인증하기</b></button>
+			      				<button class="ebtn"onclick="openEmail()" ><b> 인증하기 </b></button>
 			      			</td>
 			      		</tr>
 			      		<tr style="height:30px;">
