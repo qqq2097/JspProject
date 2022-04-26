@@ -16,6 +16,8 @@ ul.tabs{
 	padding: 0px;
 	list-style: none;
 	display: flex;
+	border: 0.2px solid #d3d3d3;
+
 
 }
 
@@ -133,7 +135,7 @@ color: #222;
 .ms_nav {
 float: right;
 position: relative;
-right: 60px;
+right: 100px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;
@@ -184,8 +186,24 @@ color: black;
 .tabcontainer{
 position: relative;
 left: 60px;
-width: 1100px;
+width: 600px;
 height: 174px;
+}
+
+table.suggestion_use_info_tbl{
+border-top: 1px solid #333;
+position: relative;
+font-size: 9px;
+text-align: center;
+width: 1100px;
+right: 10px;
+}
+
+table.suggestion_use_info_tbl thead tr th{
+border-bottom: 1px solid #333;
+color: #222;
+height: 40px;
+vertical-align: middle;
 }
 
 </style>
@@ -259,19 +277,100 @@ $(document).ready(function(){
 		<li class="tab-link" data-tab="tab-2">접수 완료</li>
 		<li class="tab-link" data-tab="tab-3">답변 완료</li>
 	</ul>
-	
+	<br>
 <!-- 탭 메뉴 상단 끝 -->
 <!-- 탭 메뉴 내용 시작 -->
-	<div id="tab-1" class="tab-content current">
-    <h1>탭 메뉴 1 내용입니다.</h1>
+	<div id="tab-1" class="tab-content current" >
+    		<!-- 전체 -->
+										<!-- (고객의 소리) 목록 -->
+										<table class="suggestion_use_info_tbl"  summary="고객의 소리 구분, 분야, 제목, 첨부파일, 작성일, 답변여부에 대한 테이블">
+											<colgroup>
+												<col width="50">
+												
+												<col width="350">
+												<col width="113">
+												<col width="113">
+												<col width="204">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="en" scope="col">No</th>
+													
+													<th scope="col">제목</th>
+													<th scope="col">작성일</th>
+													<th scope="col">답변예정일</th>
+													<th scope="col">답변여부</th>
+												</tr>
+											</thead>
+											
+											<tbody id="all">	
+											
+											</tbody>
+										</table>
+    
+    
+    
+    </table>
     
 	</div>
 	<div id="tab-2" class="tab-content">
-  <h1>  탭 메뉴 2 내용입니다.  </h1>
+  		<!-- 전체 -->
+										<!-- (고객의 소리) 목록 -->
+										<table class="suggestion_use_info_tbl" summary="고객의 소리 구분, 분야, 제목, 첨부파일, 작성일, 답변여부에 대한 테이블">
+							
+											<colgroup>
+												<col width="50">
+												
+												<col width="350">
+												<col width="113">
+												<col width="113">
+												<col width="204">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="en" scope="col">No</th>
+													
+													<th scope="col">제목</th>
+													<th scope="col">작성일</th>
+													<th scope="col">답변예정일</th>
+													<th scope="col">답변여부</th>
+												</tr>
+											</thead>
+											
+											<tbody id="all">	
+											
+											</tbody>
+										</table>
 
 	</div>
 	<div id="tab-3" class="tab-content">
-  <h1>  탭 메뉴 3 내용입니다.  </h1>
+  		<!-- 전체 -->
+										<!-- (고객의 소리) 목록 -->
+										<table class="suggestion_use_info_tbl" summary="고객의 소리 구분, 분야, 제목, 첨부파일, 작성일, 답변여부에 대한 테이블">
+										
+											<colgroup>
+												<col width="50">
+												
+												<col width="350">
+												<col width="113">
+												<col width="113">
+												<col width="204">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="en" scope="col">No</th>
+													
+													<th scope="col">제목</th>
+													<th scope="col">작성일</th>
+													<th scope="col">답변예정일</th>
+													<th scope="col">답변여부</th>
+												</tr>
+											</thead>
+											
+											<tbody id="all">	
+											
+											</tbody>
+										</table>
 
 
 <!-- 탭 메뉴 내용 끝 -->
