@@ -32,7 +32,7 @@
     <div class="header-background">
       <header id="header" class="header clearfix">
         <h1 class="header-heading">
-          <a href="index.html" title="메인 화면으로 이동합니다.">스타벅스</a>
+          <a href="index.jsp" title="메인 화면으로 이동합니다.">스타벅스</a>
         </h1>
         <nav class="utility clearfix">
           <h2 class="a11y-hidden">멤버 메뉴</h2>
@@ -46,7 +46,7 @@
           <h2 class="a11y-hidden">메인 메뉴</h2>
           <ul class="menu clearfix">
             <li class="menu-item">
-              <h3 class="sub-menu-heading"><a href="index.jsp?main=sangpum/coffee.jsp" class="menu-heading">COFFEE</a></h3>
+              <h3 class="sub-menu-heading"><a href="index.jsp?main=../../sangpum/coffee.jsp" class="menu-heading">COFFEE</a></h3>
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>

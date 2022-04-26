@@ -25,7 +25,6 @@
 
 <style type="text/css">
 div.layout {
-	border: 0px solid gray;
 	position: absolute;
 }
 div.menu {
@@ -38,9 +37,8 @@ div.main {
 }
 div.footerinfo {
 	width: 100%;
-	height: 450px;
-	top: 3780px;
-	background-color: 2c2a29;
+	height: 500px;
+	top: 3790px;
 }
 </style>
 </head>

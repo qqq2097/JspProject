@@ -22,16 +22,18 @@
   <link rel="stylesheet" href="../assets/css/normalize.css" />
   <link rel="stylesheet" href="../assets/css/reset.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+
 </head>
 <body>
-<div class="footer-background">
+<!-- 푸터 -->
+    <div class="footer-background">
       <h2 class="a11y-hidden">footer</h2>
       <footer class="footer">
-        <ul class="footer-list">
-          <li class="footer-list-item">
+        <ul class="footer-list" style="margin-bottom: 100px;">
+          <li class="footer-list-item" style="float: left;">
             <h3><a href="#">COMPANY</a></h3>
             <ul>
-              <li><a  href="#">한눈에보기</a></li>
+              <li><a href="#">한눈에보기</a></li>
               <li><a href="#">스타벅스 사명</a></li>
               <li><a href="#">스타벅스 소개</a></li>
               <li><a href="#">국내 뉴스룸</a></li>
@@ -39,20 +41,20 @@
               <li><a href="#">블로벌 뉴스룸</a></li>
             </ul>
           </li>
-          <li class="footer-list-item">
+          <li class="footer-list-item" style="float: left;">
             <h3><a href="#">CORPORATE SALES</a></h3>
             <ul>
               <li><a href="#">단체 및 기업 구매 안내</a></li>
             </ul>
           </li>
-          <li class="footer-list-item">
+          <li class="footer-list-item" style="float: left;">
             <h3><a href="#">PARTNERSHIP</a></h3>
             <ul>
               <li><a href="#">신규 입점 제의</a></li>
               <li><a href="#">협력 고객사 등록신청</a></li>
             </ul>
           </li>
-          <li class="footer-list-item">
+          <li class="footer-list-item" style="float: left;">
             <h3><a href="#">ONLINE COMMUNITY</a></h3>
             <ul>
               <li><a href="#">페이스북</a></li>
@@ -81,6 +83,8 @@
               <li><span>2016 한국 최고의 직장 톱 10 본상</span></li>
             </ul>
           </aside>
+        </div>
+        <div style="height: 50px;">
         </div>
         <ul class="corp">
           <li><a href="#">개인정보처리방침</a></li>
