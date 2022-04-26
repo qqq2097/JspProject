@@ -156,14 +156,14 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
+            <li onclick="location.href='index.jsp?main=MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=MyStarbucks/MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -179,7 +179,7 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
  </div>
@@ -194,7 +194,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > My 메뉴</span>
 </div>
 

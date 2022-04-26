@@ -14,6 +14,8 @@ public class RewordDao {
 
 	DbConnect db=new DbConnect();
 	
+	
+	//리스트 출력
 	public List<RewordDto> getList(int start,int perpage)
 	{
 		List<RewordDto> list=new Vector<RewordDto>();
@@ -51,5 +53,7 @@ public class RewordDao {
 		
 		return list;
 	}
+	
+	
 	
 }
