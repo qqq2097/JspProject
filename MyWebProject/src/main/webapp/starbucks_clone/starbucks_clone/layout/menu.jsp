@@ -50,7 +50,7 @@
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
-                    <h4><a href="#">스타벅스 원두</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/coffee.jsp">스타벅스 원두</a></h4>
                     <ul>
                       <li><a>블론드 로스트</a></li>
                       <li><a>미디엄 로스트</a></li>
@@ -58,7 +58,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">스타벅스 비아</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/coffee2.jsp">스타벅스 비아</a></h4>
                     <ul>
                       <li><a>미디엄 로스트</a></li>
                       <li><a>다크 로스트</a></li>
@@ -77,9 +77,9 @@
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
-                    <h4><a href="#">에스프레소</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/esspresso.jsp">에스프레소</a></h4>
                     <ul>
-                      <li><a>에스프레소 마키아또</a></li>
+                      <li><a>에스프레소</a></li>
                       <li><a>아메리카노</a></li>
                       <li><a>카푸치노</a></li>
                       <li><a>라떼</a></li>
