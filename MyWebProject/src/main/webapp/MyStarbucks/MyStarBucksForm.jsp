@@ -18,10 +18,15 @@
 
 <style type="text/css">
 div.container{
+<<<<<<< HEAD
 	position : fixed;
 	
 	width:100%;
+=======
+	position : absolute;
+>>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 	
+	right: 395px;
 }
 
 div.menuul{
@@ -120,8 +125,6 @@ ul.sub2{
 	text-align: center;
 }
 
-
-
 </style>
 
 <script type="text/javascript">
@@ -169,7 +172,11 @@ $(function(){
          
          <ul class="sub1">   
             <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+<<<<<<< HEAD
             <li onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarHistory.jsp'">· 별 히스토리</li>
+=======
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
+>>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
             
          </ul>
       </li>
@@ -230,9 +237,6 @@ $(function(){
    <button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
    <button type="button" class="btn btn-default btnbun" style="width : 130px; margin-top: 10px;">비밀번호 변경</button>
 </div>      
-
-
-
 
 
 </body>
