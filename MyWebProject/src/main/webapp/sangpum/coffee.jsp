@@ -36,8 +36,8 @@ h1 {
 	font-weight: bold;
 	font-family: 'Noto Sans', sans-serif;
 }
-.btn1, .btn2{
-	font-size: 14pt;
+.btn1{
+	font-size: 13pt;
 	font-family: 'Noto Sans', sans-serif;
 	color: white;
 	width: 220px;
@@ -94,54 +94,160 @@ $(function() {
 	
 	/* 체크박스 필터 */
 	
-	function hide() {
+	function hide()
+	{
 		$(".blondtb").hide()
 	    $(".mediumtb").hide()
 	    $(".darktb").hide()
 	}
 	
-	$(document).on('change', '#cbox', function() {
+	function show()
+	{
+		$(".blondtb").show()
+		$(".mediumtb").show()
+    	$(".darktb").show()
+	}
+	
+	function checked() {
+		$("input:checkbox[name='all']").prop("checked",true)
+		$("input:checkbox[name='chk2']").prop("checked",false)
+		$("input:checkbox[name='chk3']").prop("checked",false)
+		$("input:checkbox[name='chk4']").prop("checked",false)
+	}
+	
+	$(document).on('change', '#cbox', function()
+	{
+
+		hide()
 		
-		if ($(this).attr("class")=='cbx1') {
-			if($(this).is(":checked")){
-				$("input:checkbox[name='chk2']").prop("checked",false)
-				$("input:checkbox[name='chk3']").prop("checked",false)
-				$("input:checkbox[name='chk4']").prop("checked",false)
-				$(".blondtb").show()
-				$(".mediumtb").show()
-			    $(".darktb").show()
-			}else {
-				hide()
-			}
-		}else if ($(this).attr("class")=='cbx2') {
-			if($(this).is(":checked")){
+		/* 블론드 로스트 체크박스 */
+		if ($(this).attr("class")=='cbx2')
+		{
+			if($(this).is(":checked"))
+			{
 				$("input:checkbox[name='all']").prop("checked",false)
-				$("input:checkbox[name='chk3']").prop("checked",false)
-				$("input:checkbox[name='chk4']").prop("checked",false)
-				hide()
 				$(".blondtb").show()
-			}else {
+				
+				if ($(".cbx3").is(":checked") && $(".cbx4").is(":checked")) 
+				{
+					checked()
+					show()
+				}
+				else if($(".cbx3").is(":checked"))
+				{
+					$(".blondtb").show()
+					$(".mediumtb").show()
+				}
+				else if ($(".cbx4").is(":checked"))
+				{
+					$(".blondtb").show()
+				    $(".darktb").show()
+				} 
+				
+			}
+			else
+			{
 				$(".blondtb").hide()
+				
+				if ($(".cbx3").is(":checked") && $(".cbx4").is(":checked")) 
+				{
+					$(".mediumtb").show()
+				    $(".darktb").show()
+				}
+				else if($(".cbx3").is(":checked"))
+				{
+					$(".mediumtb").show()
+				}else if ($(".cbx4").is(":checked"))
+				{
+				    $(".darktb").show()
+				} 
+				
 			}
-		}else if ($(this).attr("class")=='cbx3') {
-			if($(this).is(":checked")){
+		}
+		/* 미디엄 로스트 체크박스 */
+		else if ($(this).attr("class")=='cbx3')
+		{
+			if($(this).is(":checked"))
+			{
 				$("input:checkbox[name='all']").prop("checked",false)
-				$("input:checkbox[name='chk2']").prop("checked",false)
-				$("input:checkbox[name='chk4']").prop("checked",false)
-				hide()
 				$(".mediumtb").show()
-			}else {
-				$(".mediumtb").hide()
+				
+				if ($(".cbx2").is(":checked") && $(".cbx4").is(":checked")) 
+				{
+					checked()
+					show()
+				}
+				else if($(".cbx2").is(":checked"))
+				{
+					$(".blondtb").show()
+					$(".mediumtb").show()
+				}
+				else if ($(".cbx4").is(":checked")) 
+				{
+					$(".mediumtb").show()
+				    $(".darktb").show()
+				} 
 			}
-		}else if ($(this).attr("class")=='cbx4') {
-			if($(this).is(":checked")){
+			else 
+			{
+				$(".mediumtb").hide()
+				
+				if ($(".cbx2").is(":checked") && $(".cbx4").is(":checked")) 
+				{
+					$(".blondtb").show()
+				    $(".darktb").show()
+				}
+				else if($(".cbx2").is(":checked"))
+				{
+					$(".blondtb").show()
+				}
+				else if ($(".cbx4").is(":checked"))
+				{
+				    $(".darktb").show()
+				} 
+			}
+		}
+		/* 다크 로스트 체크박스 */
+		else if ($(this).attr("class")=='cbx4')
+		{
+			if($(this).is(":checked"))
+			{
 				$("input:checkbox[name='all']").prop("checked",false)
-				$("input:checkbox[name='chk2']").prop("checked",false)
-				$("input:checkbox[name='chk3']").prop("checked",false)
-				hide()
 				$(".darktb").show()
-			}else {
+				
+				if ($(".cbx2").is(":checked") && $(".cbx3").is(":checked")) 
+				{
+					checked()
+					show()
+				}
+				else if($(".cbx2").is(":checked"))
+				{
+					$(".blondtb").show()
+					$(".darktb").show()
+				}
+				else if ($(".cbx3").is(":checked")) 
+				{
+					$(".mediumtb").show()
+				    $(".darktb").show()
+				} 
+			}
+			else 
+			{
 				$(".darktb").hide()
+
+				if ($(".cbx2").is(":checked") && $(".cbx3").is(":checked")) 
+				{
+					$(".blondtb").show()
+				    $(".mediumtb").show()
+				}
+				else if($(".cbx2").is(":checked"))
+				{
+					$(".blondtb").show()
+				}
+				else if ($(".cbx3").is(":checked")) 
+				{
+				    $(".mediumtb").show()
+				} 
 			}
 		}
 	}) /* 체크박스 필터 end */
@@ -166,7 +272,7 @@ $(function() {
 	  <br>
 	  <div>
 	    <button type="button" class="btn1" value="원두">스타벅스 원두</button>
-	    <button type="button" class="btn2" value="비아">스타벅스 비아</button>
+	    <button type="button" class="btn2" value="비아" onclick="location.href='index.jsp?main=../../sangpum/coffee2.jsp'">스타벅스 비아</button>
 	  </div>
 	  <br>
 	  <br>
