@@ -45,7 +45,7 @@
           <h2 class="a11y-hidden">메인 메뉴</h2>
           <ul class="menu clearfix">
             <li class="menu-item">
-              <h3 class="sub-menu-heading"><a href="#" class="menu-heading">COFFEE</a></h3>
+              <h3 class="sub-menu-heading"><a href="index.jsp?main=sangpum/coffee.jsp" class="menu-heading">COFFEE</a></h3>
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
@@ -176,7 +176,7 @@
     </div>
     
 
-  <script src="../assets/js/menuHoverHandler.js"></script>
+  <script src="assets/js/menuHoverHandler.js"></script>
 </body>
 
 </html>
