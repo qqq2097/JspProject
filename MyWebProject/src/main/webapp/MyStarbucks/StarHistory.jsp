@@ -6,6 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -13,7 +19,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
@@ -48,6 +54,16 @@ li.mylist{
    width : 300px;
    border-radius: 100px;
    cursor: pointer;
+}
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
 }
 </style>
 <script type="text/javascript">
@@ -94,14 +110,14 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li><a href="RewordBenefit.jsp" required="login">· 리워드 및 혜택</a></li>
-            <li><a href="StarHistroy.jsp" required="login">· 별 히스토리</a></li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -115,6 +131,10 @@ $(function(){
             <li><a href="" required="login">· 비밀번호 변경</a></li>
          </ul>
       </li>
+      
+      <li class="mylist">
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      </li>
    </ul>
 
 </div>
@@ -127,7 +147,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > 별 히스토리</span>
 </div>
 

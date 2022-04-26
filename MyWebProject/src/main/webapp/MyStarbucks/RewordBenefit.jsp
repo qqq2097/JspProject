@@ -6,6 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
@@ -41,7 +47,7 @@ div.threeone{
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("../../image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
@@ -77,13 +83,35 @@ li.mylist{
    border-radius: 100px;
    cursor: pointer;
 }
-span.formbtn1,span.formbtn2,span.formbtn3{
+span.formbtn1{
    border-radius: 100%;
-   background: green;
+   background: #32CD32;
    color: #fff;
-   margin-left: 50px;
+   margin-left: 80px;
 }
 
+span.formbtn2{
+   border-radius: 100%;
+   background: #32CD32;
+   color: #fff;
+   margin-left: 370px;
+}
+span.formbtn3{
+   border-radius: 100%;
+   background: #32CD32;
+   color: #fff;
+   margin-left: 380px;
+}
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
+}
 </style>
 </head>
 
@@ -152,15 +180,15 @@ $(function(){
             
          </div>
          
-         <ul class="sub1">   
-            <li onclick="RewordBenefit.jsp"><a href="" required="login">· 리워드 및 혜택</a></li>
-            <li><a href="StarHistroy.jsp" required="login">· 별 히스토리</a></li>
+        <ul class="sub1">   
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -174,6 +202,10 @@ $(function(){
             <li><a href="" required="login">· 비밀번호 변경</a></li>
          </ul>
       </li>
+      
+      <li class="mylist">
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
+      </li>
    </ul>
 
 </div>
@@ -186,7 +218,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span style="font-size: 13pt;" onclick=""> > My Starbucks > 리워드 및 혜택</span>
 </div>
 
@@ -195,61 +227,61 @@ $(function(){
    <div class="onetitle" style="margin-left: 100px; margin-top: 100px;  width: 600px; background: #F5F5F5;">스타벅스 리워드 (Starbucks Rewards)란?
    <span class="glyphicon glyphicon-menu-down formbtn1"></span></div>
       
-      <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 50px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
-          <li style="margin-left: 70px;">스타벅스 리워드는 스타벅스를 사랑해주시는 고객님을 위해 별을 적립하여 혜택으로 돌려드리는 특별한 리워드 프로그램입니다.</li>
-          <li style="margin-left: 70px;">스타벅스를 즐기는 최고의 방법, 스타벅스 카드를 등록하고 스타벅스 리워드 혜택을 누려보세요.   </li>
+      <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 100px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
+          <li style="margin-left: 100px;">스타벅스 리워드는 스타벅스를 사랑해주시는 고객님을 위해 별을 적립하여 혜택으로 돌려드리는 특별한 리워드 프로그램입니다.</li>
+          <li style="margin-left: 100px;">스타벅스를 즐기는 최고의 방법, 스타벅스 카드를 등록하고 스타벅스 리워드 혜택을 누려보세요.   </li>
        </ul>
 </div>
 
 <div class="two">
-   <div class="twotitle" style="margin-left: 100px;  width: 600px;">스타벅스 별이란?
+   <div class="twotitle" style="margin-left: 100px;  width: 600px; margin-top: 30px; border: 1px solid #F5F5F5;">스타벅스 별이란?
    <span class="glyphicon glyphicon-menu-down formbtn2"></span></div>
-   <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 50px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
-          <li style="margin-left: 70px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
-          <li style="margin-left: 70px;">적립된 별★은 스타벅스 리워드 (Starbucks Rewards) 프로그램을 통해 다양한 혜택으로 돌려드립니다.</li>
+   <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 130px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
+          <li style="margin-left: 130px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
+          <li style="margin-left: 130px;">적립된 별★은 스타벅스 리워드 (Starbucks Rewards) 프로그램을 통해 다양한 혜택으로 돌려드립니다.</li>
           <br>
-          <li style="margin-left: 70px; color: gray; font-size: 9pt;">- 별 ★ 의 유효기간은 1년이며, 유효기간이 지나면 별★이 사라집니다.</li>
+          <li style="margin-left: 130px; color: gray; font-size: 9pt;">- 별 ★ 의 유효기간은 1년이며, 유효기간이 지나면 별★이 사라집니다.</li>
          <br>
    
-   <b style="font-size: 15pt; color: green;margin-left: 50px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
+   <b style="font-size: 15pt; color: green;margin-left: 130px;">별★을 모아 등급별 특별한 혜택을 누리세요!</b>
    <br>       
-             <img alt="" src="image/ms04.png" style="margin-left: 50px;">
-             <img alt="" src="image/ms05.png">
-             <img alt="" src="image/ms06.png">
+             <img alt="" src="../../MyStarbucks/image/ms04.png" style="margin-left: 50px;">
+             <img alt="" src="../../MyStarbucks/image/ms05.png">
+             <img alt="" src="../../MyStarbucks/image/ms06.png">
              <div class="welcome">
-                <span  style="margin-left: 90px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
+                <span  style="margin-left: 140px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
                 <span  style="margin-left: 190px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>
-                <span  style="margin-left: 210px; font-weight: bold; font-size: 15pt; color: #b8860b;"> Gold Level </span>
+                <span  style="margin-left: 215px; font-weight: bold; font-size: 15pt; color: #b8860b;"> Gold Level </span>
                 <br>
-                <span style="margin-left: 60px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
-                <span style="margin-left: 130px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
-                <span style="margin-left: 150px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
+                <span style="margin-left: 120px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
+                <span style="margin-left: 150px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
+                <span style="margin-left: 180px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
              
           <br>
           <br>
           <br>
-          <li style="margin-left: 30px; color: gray; font-size: 9pt;">- 각 레벨 진입은 해당 등급조건을 충족한 익일부터 적용됩니다.</li>
-          <li style="margin-left: 30px; color: gray; font-size: 9pt;">- Welcome level이 된 후 별을 모은 시점부터 1년 안에 30개의 별을 모으시면 Gold level로 승급되며,<br>
+          <li style="margin-left: 100px; color: gray; font-size: 9pt;">- 각 레벨 진입은 해당 등급조건을 충족한 익일부터 적용됩니다.</li>
+          <li style="margin-left: 100px; color: gray; font-size: 9pt;">- Welcome level이 된 후 별을 모은 시점부터 1년 안에 30개의 별을 모으시면 Gold level로 승급되며,<br>
            &nbsp;&nbsp; 승급한 날짜로부터 1년간 별 30개를 추가 적립하시면Gold Level이 1년 연장됩니다.</li>
    </ul>
     
 </div>
 
 <div class="three">
-   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F5F5F5;">회원 등급별 혜택
+   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F5F5F5; margin-top: 30px; ">회원 등급별 혜택
    <span class="glyphicon glyphicon-menu-down formbtn3"></span></div>
    <ul class="subthree">
-      <img alt="" src="image/ms08.png">
-      <img alt="" src="image/ms09.png">
-      <img alt="" src="image/ms10.png">
+      <img alt="" src="../../MyStarbucks/image/ms08.png">
+      <img alt="" src="../../MyStarbucks/image/ms09.png">
+      <img alt="" src="../../MyStarbucks/image/ms10.png">
       <br>
       <span  style="margin-left: 100px; font-weight: bold; font-size: 15pt; color: black;"> Welcome Level </span>
        <span  style="margin-left: 230px; font-weight: bold; font-size: 15pt; color: green;"> Green Level </span>
        <span  style="margin-left: 250px; font-weight: bold; font-size: 15pt; color: #b8860b;"> Gold Level </span>
        <br>
-       <span style="margin-left: 65px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
-       <span style="margin-left: 175px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
-       <span style="margin-left: 190px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
+       <span style="margin-left: 80px; font-weight: bold; font-size: 12pt;">스타벅스 카드를 최초 등록 시</span>
+       <span style="margin-left: 190px; font-weight: bold; font-size: 12pt;">별★을 5개 모았을 경우</span>
+       <span style="margin-left: 210px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
                 
       
       <table style="width: 1050px; height: 500px; border: 1px solid black;  margin-left: 20px; text-align: left;">

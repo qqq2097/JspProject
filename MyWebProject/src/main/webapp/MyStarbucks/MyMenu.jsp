@@ -6,6 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -13,7 +19,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("image/ms03.jpg");
+   background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
 div.topsub{
@@ -57,6 +63,16 @@ button.checkbtn:hover {
    text-decoration: underline;
    
 }
+
+ul.sub1{
+	font-size: 0.6em;
+	text-align: center;
+}
+
+ul.sub2{
+	font-size: 0.6em;
+	text-align: center;
+}
 </style>
 
 
@@ -65,6 +81,9 @@ $(function(){
    
    $(".sub1").hide();
    $(".sub2").hide();
+   $(".mymenulist").hide();
+   $(".myfoodlist").hide();
+   $(".mysangpumlist").hide();
    
    $(".mytitle1").click(function(){
       
@@ -89,6 +108,32 @@ $(function(){
       $(".sub1").hide();
    
    });
+   
+   
+   
+   $("#drinkbtn").click(function(){
+	      
+	   $(".mymenulist").toggle("fast");
+	   $(".myfoodlist").hide();
+	   $(".mysangpumlist").hide();
+	   
+	   });
+   
+   $("#foodbtn").click(function(){
+	      
+	   $(".mymenulist").hide();
+	   $(".myfoodlist").toggle("fast");
+	   $(".mysangpumlist").hide();
+	   
+	   });
+   
+   $("#sangpumbtn").click(function(){
+	      
+	   $(".mymenulist").hide();
+	   $(".myfoodlist").hide();
+	   $(".mysangpumlist").toggle("fast");
+	   
+	   });
 });
 </script>
 
@@ -106,14 +151,14 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li><a href="RewordBenefit.jsp" required="login">· 리워드 및 혜택</a></li>
-            <li><a href="StarHistroy.jsp" required="login">· 별 히스토리</a></li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -126,6 +171,10 @@ $(function(){
             <li><a href="" required="login">· 회원 탈퇴</a></li>
             <li><a href="" required="login">· 비밀번호 변경</a></li>
          </ul>
+      </li>
+      
+      <li class="mylist">
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="">고객의 소리</div>
       </li>
    </ul>
 
@@ -140,18 +189,18 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > My 메뉴</span>
 </div>
 
 <div style="margin-left: 100px; margin-top: 100px;">
-   <img alt="" src="../../image/ms11.png">
+   <img alt="" src="../../MyStarbucks/image/ms11.png">
 </div>
 
 <div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
-   <button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn"> 나만의 음료</button>
-   <button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn"> 나만의 푸드</button>
-   <button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn"> 나만의 상품</button>
+   <button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn" id="drinkbtn"> 나만의 음료</button>
+   <button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn" id="foodbtn"> 나만의 푸드</button>
+   <button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn" id="sangpumbtn"> 나만의 상품</button>
 </div>
 
 
@@ -164,6 +213,58 @@ $(function(){
       <th>No</th>
       <th>음료명</th>
       <th>퍼스널 옵션</th>
+      <th>등록일</th>
+   </tr>
+   
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   
+   </table>
+   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+</div>
+
+<div class="myfoodlist">
+   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   <tr>
+      <th>
+         <input type="checkbox" id="chbox">         
+      </th>
+      <th>No</th>
+      <th>푸드명</th>
+      <th>워밍 옵션</th>
+      <th>메뉴 추</th>
+      <th>등록일</th>
+   </tr>
+   
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+   
+   </table>
+   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+</div>
+
+<div class="mysangpumlist">
+   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   <tr>
+      <th>
+         <input type="checkbox" id="chbox">         
+      </th>
+      <th>No</th>
+      <th>상품명</th>
+      <th>그라인드 옵션</th>
       <th>등록일</th>
    </tr>
    

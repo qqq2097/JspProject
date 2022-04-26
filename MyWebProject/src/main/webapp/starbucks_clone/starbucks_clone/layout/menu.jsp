@@ -38,7 +38,7 @@
           <h2 class="a11y-hidden">멤버 메뉴</h2>
           <ul class="utility-list clearfix" style="margin-left: 500px;">
             <li><a href="#">Sign In</a></li>
-            <li><a href="#">My Starbuck</a></li>
+            <li onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"><a>My Starbuck</a></li>
           </ul>
         </nav>
         <nav class="navigation">
