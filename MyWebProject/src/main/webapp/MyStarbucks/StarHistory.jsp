@@ -1,3 +1,7 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="StarBucksDto.rewordDto"%>
+<%@page import="java.util.List"%>
+<%@page import="StarBucksDao.rewordDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,12 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<!-- 폰트 -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
-  rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -103,6 +102,14 @@ $(function(){
 </script>
 
 </head>
+
+<%
+ rewordDao dao=new rewordDao();
+ List<rewordDto> list=dao.getAllReword();
+ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+
+ int no=1;
+%>
 <body>
 <!--  메뉴창  -->
 <div class="container">
@@ -188,13 +195,26 @@ $(function(){
    
 <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;">
    <table class="table table-border">
+   	<tr>
       <th align="center">No</th>
       <th align="center">카드번호</th>
       <th align="center">적립별</th>
       <th align="center">매장명</th>
-      <th align="center">적립일</th>
-      
+      <th align="center">적립일</th>     
+   </tr>
    
+   <%
+   for(rewordDto dto:list)
+   {%>
+	   <tr>
+	   	<td><%=no++ %></td>
+	   	<td><%=dto.getCardnum() %></td>
+	   	<td><%=dto.getStarcnt() %></td>
+	   	<td><%=dto.getStoreaddr() %></td>
+	   	<td><%=sdf.format(dto.getBuyday()) %></td>
+	   </tr>
+   <%}
+   %>
    </table>
 </div>
 
