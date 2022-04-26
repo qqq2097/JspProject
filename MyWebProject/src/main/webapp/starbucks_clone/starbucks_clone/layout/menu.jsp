@@ -46,7 +46,7 @@
           <h2 class="a11y-hidden">메인 메뉴</h2>
           <ul class="menu clearfix">
             <li class="menu-item">
-              <h3 class="sub-menu-heading"><a href="index.jsp?main=../../sangpum/coffee.jsp" class="menu-heading">COFFEE</a></h3>
+              <h3 class="sub-menu-heading"><a class="menu-heading">COFFEE</a></h3>
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
@@ -73,7 +73,7 @@
               </div>
             </li>
             <li class="menu-item">
-              <h3 class="sub-menu-heading"><a href="#" class="menu-heading">BEVERAGE</a></h3>
+              <h3 class="sub-menu-heading"><a class="menu-heading">BEVERAGE</a></h3>
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
@@ -87,7 +87,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">프라푸치노</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/frappuccino.jsp">프라푸치노</a></h4>
                     <ul>
                       <li><a>에스프레소 프라푸치노</a></li>
                       <li><a>프라푸치노</a></li>
@@ -95,7 +95,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">스타벅스 피지오</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/fizzio.jsp">스타벅스 피지오</a></h4>
                     <ul>
                       <li><a>블랙 티 레모네이드</a></li>
                       <li><a>쿨 라임</a></li>
@@ -107,11 +107,11 @@
             </li>
               
               <li class="menu-item">
-              <h3 class="sub-menu-heading"><a href="#" class="menu-heading">FOOD</a></h3>
+              <h3 class="sub-menu-heading"><a class="menu-heading">FOOD</a></h3>
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
-                    <h4><a href="#">브레드</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/bread.jsp">브레드</a></h4>
                     <ul>
                       <li><a>파이</a></li>
                       <li><a>베이글</a></li>
@@ -119,19 +119,17 @@
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">케이크</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/cake.jsp">케이크</a></h4>
                     <ul>
                       <li><a>케이크</a></li>
                       <li><a>롤</a></li>
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">샌드위치 & 샐러드</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/sandsal.jsp">샌드위치 & 샐러드</a></h4>
                     <ul>
                       <li><a>밀 박스</a></li>
                       <li><a>샌드위치</a></li>
-                      <li><a>치아바타</a></li>
-                      <li><a>베이글</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -144,25 +142,24 @@
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
-                    <h4><a href="#">머그</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/mug.jsp">머그</a></h4>
                     <ul>
                       <li><a>시즌한정</a></li>
                       <li><a>세트</a></li>
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">텀블러</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/tumbler.jsp">텀블러</a></h4>
                     <ul>
                       <li><a>플라스틱 텀블러</a></li>
                       <li><a>스테인리스 텀블러</a></li>
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="#">액세서리</a></h4>
+                    <h4><a href="index.jsp?main=../../sangpum/acc.jsp">액세서리</a></h4>
                     <ul>
                       <li><a>에코백</a></li>
                       <li><a>파우치</a></li>
-                      <li><a>아이스 박스</a></li>
                       <li><a>장우산 & 양우산</a></li>
                     </ul>
                   </li>

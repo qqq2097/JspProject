@@ -46,8 +46,17 @@ $(function() {
 
 				hide()
 				
+				if ($(this).attr("class")=='cbx1')
+				{
+					if($(this).is(":checked"))
+					{
+						checked()
+						show()
+					}
+				}
+				
 				/* 에스프레소 체크박스 */
-				if ($(this).attr("class")=='cbx2')
+				else if ($(this).attr("class")=='cbx2')
 				{
 					if($(this).is(":checked"))
 					{
@@ -611,10 +620,10 @@ $(function() {
 						    $(".lattetb").show()
 						    $(".mochatb").show()
 						}
-						else if ($(".cbx2").is(":checked") && $(".cbx3").is(":checked") && $(".cbx5").is(":checked")) {
+						else if ($(".cbx2").is(":checked") && $(".cbx3").is(":checked") && $(".cbx4").is(":checked")) {
 							$(".esspressotb").show()
 						    $(".americanotb").show()
-						    $(".lattetb").show()
+						    $(".cappuccinotb").show()
 						}
 						else if ($(".cbx2").is(":checked") && $(".cbx3").is(":checked") && $(".cbx6").is(":checked")) {
 							$(".esspressotb").show()

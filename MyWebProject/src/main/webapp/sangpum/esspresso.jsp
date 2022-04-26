@@ -29,7 +29,7 @@
 	  <br>
 	  <div>
 	    <button type="button" class="btn1">카테고리</button>
-	    <button type="button" class="btn2">테마</button>
+	    <button type="button" class="btn2" onclick="location.href='index.jsp?main=../../sangpum/theme.jsp'">테마</button>
 	  </div>
 	  <br>
 	  <br>

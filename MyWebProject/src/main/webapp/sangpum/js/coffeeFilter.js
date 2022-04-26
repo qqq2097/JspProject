@@ -35,13 +35,23 @@ $(function() {
 		$("input:checkbox[name='chk4']").prop("checked",false)
 	}
 	
+	
 	$(document).on('change', '#cbox', function()
 	{
 
 		hide()
 		
+		if ($(this).attr("class")=='cbx1')
+		{
+			if($(this).is(":checked"))
+			{
+				checked()
+				show()
+			}
+		}
+		
 		/* 블론드 로스트 체크박스 */
-		if ($(this).attr("class")=='cbx2')
+		else if ($(this).attr("class")=='cbx2')
 		{
 			if($(this).is(":checked"))
 			{
