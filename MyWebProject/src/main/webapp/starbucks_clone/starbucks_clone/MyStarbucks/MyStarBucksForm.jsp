@@ -167,14 +167,14 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=StarHistory.jsp'">· 별 히스토리</li>
+            <li onclick="location.href='index.jsp?main=MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
+            <li onclick="location.href='index.jsp?main=MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
             
          </ul>
       </li>
       
       <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=MyStarbucks/MyMenu.jsp'">My 메뉴</div>
          
       </li>
       
@@ -190,7 +190,7 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
+      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
 </div>
@@ -204,7 +204,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks</span>
 </div>
 
@@ -223,8 +223,8 @@ $(function(){
 <div class="right">
    <span>님은<br>현재  이십니다.</span>
    <br><br>
-   <button type="button" class="btn btn-default btnre" style="width : 130px;   margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
-   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
+   <button type="button" class="btn btn-default btnre" style="width : 130px;   margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=MyStarbucks/StarHistory.jsp'">별 히스토리</button>
    <br>
    <button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
    <button type="button" class="btn btn-default btnbun" style="width : 130px; margin-top: 10px;">비밀번호 변경</button>

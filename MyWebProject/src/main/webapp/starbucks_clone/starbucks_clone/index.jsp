@@ -34,7 +34,6 @@ div.menu {
 }
 div.main {
 	width: 100%;
-	height: 3700px;
 	top: 120px;
 }
 div.footerinfo {
@@ -57,7 +56,6 @@ if(request.getParameter("main")!=null){
 <body>
 <div class="layout menu">
   <jsp:include page="layout/menu.jsp"/>
-  <script src="assets/js/menuHoverHandler.js"></script>
 </div>
 <div class="layout footerinfo">
   <jsp:include page="layout/footerinfo.jsp"/>
