@@ -19,7 +19,7 @@
 div.top{
    width : 100%;
    height : 200px;
-   background-image: url("../../MyStarbucks/image/ms03.jpg");
+   background-image: url("image/ms03.jpg");
 }
 
 div.topsub{
@@ -151,8 +151,8 @@ $(function(){
          </div>
          
          <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
+            <li><a href="index.jsp?main=MyStarbucks/RewordBenefit.jsp">· 리워드 및 혜택</a></li>
+            <li><a href="index.jsp?main=MyStarbucks/StarHistory.jsp">· 별 히스토리</a></li>
             
          </ul>
       </li>
@@ -189,7 +189,7 @@ $(function(){
 </div>
 
 <div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
+      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > My 메뉴</span>
 </div>
 
