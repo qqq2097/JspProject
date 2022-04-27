@@ -244,22 +244,23 @@ $(document).ready(function(){
 });
 
 function categoryChange(e) {
-	var a =["리워드(혜택)", "회원정보"]; //회원 선택시
-	var b =["결제수단", "결제내역","취소/환불/교환"]; //결제/환불 선택
-	var c =["제품/상품", "이물", "기프트", "네이버 스마트 스토어"]; //음료/푸드/상품 선택시
-	var d=["매장 정보", "매장 운영", "파트너"]; //매장 선택시
-	var e =["딜리버리"]; //배달 선택시
-	var f =["일반", "프리퀀시"] //이벤트/프로모션 선택시
-	var g =["앱(App)/홈페이지", "고객센터"] //기타 선택시
+	var a =["중분류","리워드(혜택)", "회원정보"]; //회원 선택시
+	var b =["중분류","결제수단", "결제내역","취소/환불/교환"]; //결제/환불 선택
+	var c =["중분류","제품/상품", "이물", "기프트", "네이버 스마트 스토어"]; //음료/푸드/상품 선택시
+	var d=["중분류", "매장 정보", "매장 운영", "파트너"]; //매장 선택시
+	var h =["중분류", "딜리버리"]; //배달 선택시
+	var f =["중분류","일반", "프리퀀시"] //이벤트/프로모션 선택시
+	var g =["중분류", "앱(App)/홈페이지", "고객센터"] //기타 선택시
 	var target=document.getElementById("CD_VOC_CAUSE_2");
 
 	if(e.value=="ver1") var choice=a;
 	else if(e.value=="ver2") var choice=b;
 	else if(e.value=="ver3") var choice=c;
 	else if(e.value=="ver4") var choice = d;
-	else if(e.value=="ver5") var choice=e;
+	else if(e.value=="ver5") var choice=h;
 	else if(e.value=="ver6") var choice=f;
 	else if(e.value=="ver7") var choice = g;
+	
 	
 	target.options.length = 0;
 	
@@ -373,9 +374,9 @@ function categoryChange(e) {
 													</p>
 													&nbsp;&nbsp;
 													<p class="cate_sel_wrap3">
-														<label>중분류</label>&nbsp;
+														<label for="CD_VOC_CAUSE_2">중분류</label>&nbsp;
 														<select name="CD_VOC_CAUSE_2" id="CD_VOC_CAUSE_2" >
-														<option>중분류</option>
+														<option value>중분류</option>
 							
 														</select>
 													</p>
