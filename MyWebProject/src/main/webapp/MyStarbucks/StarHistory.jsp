@@ -1,5 +1,6 @@
-<%@page import="StarBucksDao.RewordDao"%>
 <%@page import="StarBucksDto.RewordDto"%>
+<%@page import="java.util.Vector"%>
+<%@page import="StarBucksDao.RewordDao"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -42,13 +43,9 @@ span.toptitle{
 }
 
 div.container{
-<<<<<<< HEAD
+
    position : fixed;
    width:100%;
-=======
-	position : absolute;
-	right: 395px;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 }
 div.menuul{
    position : absolute;
@@ -83,7 +80,7 @@ bottom: 410px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
-margin-top: 500px;
+margin-top: -300px;
 }
 
 .ms_nav > ul{
@@ -164,52 +161,14 @@ $(function(){
 
 </head>
 
-<%
- RewordDao dao=new RewordDao();
- List<RewordDto> list=dao.getAllReword();
- SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 
- int no=1;
-%>
 <body>
-<!--  메뉴창  -->
-<div class="container">
-        <div class="menuul">   
-   <ul>
-      <li class="mylist">
-         <div class="mytitle1" align="center">My 리워드
-            
-         </div>
-         
-         <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
-            
-         </ul>
-      </li>
-      
-      <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
-         
-      </li>
-      
-      <li class="mylist">
-         <div class="mytitle3" align="center">개인정보 관리
-            
-         </div>
-         <ul class="sub2">
-            <li><a href="" required="login">· 개인정보확인 및 수정</a></li>
-            <li><a href="" required="login">· 회원 탈퇴</a></li>
-            <li><a href="" required="login">· 비밀번호 변경</a></li>
-         </ul>
-      </li>
-      
-      <li class="mylist">
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
-      </li>
-   </ul>
-</div>
-</div>
+<%
+	RewordDao dao=new RewordDao();
+	List<RewordDto> list=dao.getAllRewords();
+ 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+%>
+        
 
 <!-- top div -->
 <div class="top">
@@ -217,7 +176,6 @@ $(function(){
    <span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
    
 </div>
-
 <div class="topsub">
       <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > 별 히스토리</span>
@@ -255,27 +213,33 @@ $(function(){
 </div>
    
 <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;">
-   <table class="table table-border">
+   <table class="table table-bordered">
    	<tr>
-      <th align="center">No</th>
-      <th align="center">카드번호</th>
-      <th align="center">적립별</th>
-      <th align="center">매장명</th>
-      <th align="center">적립일</th>     
+      <th align="center"> No</th>
+      <th align="center"> 카드번호</th>
+      <th align="center"> 적립별</th>
+      <th align="center"> 매장명</th>
+      <th align="center"> 적립일</th>     
    </tr>
    
-   <%
-   for(RewordDto dto:list)
-   {%>
+   
+    <%
+   for(int i=0;i<list.size();i++)
+   {
+	   RewordDto dto=list.get(i);
+	   %>
 	   <tr>
-	   	<td><%=no++ %></td>
+	   	<td><%=i+1 %></td>
 	   	<td><%=dto.getCardnum() %></td>
 	   	<td><%=dto.getStarcnt() %></td>
 	   	<td><%=dto.getStoreaddr() %></td>
 	   	<td><%=sdf.format(dto.getBuyday()) %></td>
 	   </tr>
    <%}
-   %>
+   %> 
+   
+   
+  
    </table>
 </div>
 

@@ -220,13 +220,14 @@ $(function(){
    <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
 </div>
 
+<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
 <div class="leftsu">
    <span>3</span>
 </div>
 
 <!-- right div -->
 <div class="right">
-   <span>님은<br>현재  이십니다.</span>
+   <span><% %>님은<br>현재  이십니다.</span>
    <br><br>
    <button type="button" class="btn btn-default btnre" style="width : 130px;   margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
    <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>

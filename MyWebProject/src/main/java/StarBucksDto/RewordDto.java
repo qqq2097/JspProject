@@ -11,7 +11,6 @@ public class RewordDto {
 	private Timestamp buyday;
 	
 	
-	
 	public String getNum() {
 		return num;
 	}
@@ -42,6 +41,12 @@ public class RewordDto {
 	public void setBuyday(Timestamp buyday) {
 		this.buyday = buyday;
 	}
+	@Override
+	public String toString() {
+		return "RewordDto [num=" + num + ", cardnum=" + cardnum + ", starcnt=" + starcnt + ", storeaddr=" + storeaddr
+				+ ", buyday=" + buyday + "]";
+	}
+	
 	
 	
 	

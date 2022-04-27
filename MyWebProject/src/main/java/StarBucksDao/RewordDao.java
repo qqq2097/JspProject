@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
+import java.sql.Statement;
 import java.util.Vector;
 
 import StarBucksDto.RewordDto;
@@ -14,19 +14,42 @@ public class RewordDao {
 
 	DbConnect db=new DbConnect();
 	
-	public List<RewordDto> getAllReword()
+	public void insertReword(RewordDto dto)
 	{
-		List<RewordDto> list=new Vector<RewordDto>();
-		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
-		ResultSet rs=null;
 		
-		String sql="select * from reword order by num desc";
+		String sql="insert into reword values (null,?,?,?,now())";
 		
 		try {
-			pstmt=conn.prepareStatement(sql);	
-			rs=pstmt.executeQuery();
+			pstmt=conn.prepareStatement(sql);
+			
+			pstmt.setString(1, dto.getCardnum());
+			pstmt.setInt(2, dto.getStarcnt());
+			pstmt.setString(3, dto.getStoreaddr());
+			
+			pstmt.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+	}
+	
+	public Vector<RewordDto> getAllRewords()
+	{
+		Vector<RewordDto> list=new Vector<RewordDto>();
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from reword";
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
 			
 			while(rs.next())
 			{
@@ -44,11 +67,9 @@ public class RewordDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			db.dbClose(rs, pstmt, conn);
+			db.dbClose(rs, stmt, conn);
 		}
-		
 		
 		return list;
 	}
-	
 }
