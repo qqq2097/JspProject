@@ -15,35 +15,35 @@ public class DbConnect {
    static final String MYSQL_URL="jdbc:mysql://webservice.c8yhcip2pbxe.ap-northeast-2.rds.amazonaws.com:3306/webservice";
    
    
-   //������
+   //占쏙옙占쏙옙占쏙옙
    public DbConnect() {
 
       try {
          Class.forName(MYSQLDRIVER);
       } catch (ClassNotFoundException e) {
          // TODO Auto-generated catch block
-         System.out.println("MySql ����̹� ����: "+e.getMessage());
+         System.out.println("MySql 占쏙옙占쏙옙譴占� 占쏙옙占쏙옙: "+e.getMessage());
       }
    }
    
    
    
-   //��������
+   //占쏙옙占쏙옙占쏙옙占쏙옙
    public Connection getConnection()
    {
       Connection conn=null;
       
       try {
-         conn=DriverManager.getConnection(MYSQL_URL, "admin", "as1215as!");
+         conn=DriverManager.getConnection(MYSQL_URL, "root", "12345678");
       } catch (SQLException e) {
-         System.out.println("Mysql�������: "+e.getMessage());
+         System.out.println("Mysql占쏙옙占쏙옙占쏙옙占�: "+e.getMessage());
          e.printStackTrace();
       }
       
       return conn;
    }
    
-   //close �޼��� �� 4��,�����ε� �޼���
+   //close 占쌨쇽옙占쏙옙 占쏙옙 4占쏙옙,占쏙옙占쏙옙占싸듸옙 占쌨쇽옙占쏙옙
    public void dbClose(ResultSet rs,Statement stmt,Connection conn)
    {
       

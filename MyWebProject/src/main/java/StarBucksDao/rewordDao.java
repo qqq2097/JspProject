@@ -14,7 +14,7 @@ public class RewordDao {
 
 	DbConnect db=new DbConnect();
 	
-	public List<RewordDto> getList(int start,int perpage)
+	public List<RewordDto> getAllReword()
 	{
 		List<RewordDto> list=new Vector<RewordDto>();
 		
@@ -22,17 +22,16 @@ public class RewordDao {
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from reword order by num desc limit ?,?";
+		String sql="select * from reword order by num desc";
+		
 		try {
-			pstmt=conn.prepareStatement(sql);
-			
-			pstmt.setInt(1, start);
-			pstmt.setInt(2, perpage);
+			pstmt=conn.prepareStatement(sql);	
 			rs=pstmt.executeQuery();
 			
 			while(rs.next())
 			{
 				RewordDto dto=new RewordDto();
+				
 				dto.setNum(rs.getString("num"));
 				dto.setCardnum(rs.getString("cardnum"));
 				dto.setStarcnt(rs.getInt("starcnt"));

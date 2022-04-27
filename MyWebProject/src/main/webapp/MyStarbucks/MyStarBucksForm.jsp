@@ -17,31 +17,8 @@
 <title>Insert title here</title>
 
 <style type="text/css">
-div.container{
-<<<<<<< HEAD
-	position : fixed;
-	
-	width:100%;
-=======
-	position : absolute;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
-	
-	right: 395px;
-}
 
-div.menuul{
-   position : absolute;
-   left : 1000px;
-   top : 300px;
-   font-size: 17pt;
-}
 
-li.mylist{
-   border: 1px solid gray;
-   width : 300px;
-   border-radius: 100px;
-   cursor: pointer;
-}
 
 div.left{
    position : absolute;
@@ -125,6 +102,80 @@ ul.sub2{
 	text-align: center;
 }
 
+
+/*네비*/
+.ms_nav {
+float: right;
+position: relative;
+right: 100px;
+bottom: 410px;
+font-weight: blod;
+width: 220px;
+margin-bottom: 90px;
+margin-top: 500px;
+}
+
+.ms_nav > ul{
+border-top: 2px solid #222;
+}
+
+nav ul, li {list-style: none;}
+li{display: list-item;
+text-align: -webkit-match-parent;}
+
+.ms_nav >ul>li {
+border-bottom: 1px solid #ddd;
+width: 220px;
+}
+
+.ms_nav > ul>li>a {
+color: #444;
+display: block;
+font-size: 14px;
+padding: 20px 30px 20px 15px;
+position: relative;
+width: 175px;
+}
+
+a{
+margin: 0;
+text-decoration: none;
+vertical-align: baseline;
+background: transparent;
+cursor: pointer;
+color: black;
+}
+
+
+.ms_nav > ul > li > ul > li > a  {
+color: #444;
+display: block;
+font-size: 12px;
+padding: 6px 0 6px 15px;
+width: 205px;
+}
+.tabcontainer{
+position: relative;
+left: 60px;
+width: 600px;
+height: 174px;
+}
+
+table.suggestion_use_info_tbl{
+border-top: 1px solid #333;
+position: relative;
+font-size: 9px;
+text-align: center;
+width: 1100px;
+right: 10px;
+}
+
+table.suggestion_use_info_tbl thead tr th{
+border-bottom: 1px solid #333;
+color: #222;
+height: 40px;
+vertical-align: middle;
+}
 </style>
 
 <script type="text/javascript">
@@ -133,76 +184,22 @@ $(function(){
    $(".sub1").hide();
    $(".sub2").hide();
    
-   $(".mytitle1").click(function(){
-      
-      $(this).next().toggle("fast");
-      $(".sub2").hide();
-      
-      
-      
-   });
-   
-   $(".mytitle2").click(function(){
-      
-      $(this).next().toggle("fast");
-      $(".sub1").hide();
-      $(".sub2").hide();
-   });
    
    
-   $(".mytitle3").click(function(){
-      
-      $(this).next().toggle("fast");
-      $(".sub1").hide();
+   $(".ms_nav > ul>li>a").click(function () {
+		$(this).next().toggle("fast");
+	});
    
-   });
+   
+  
+   
 });
 </script>
 </head>
 <body>
 
-<!--  메뉴창  -->
-<div class="container">
-<div class="menuul">    
-   <ul>
-      <li class="mylist">
-         <div class="mytitle1" align="center">My 리워드
-            
-         </div>
-         
-         <ul class="sub1">   
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">· 리워드 및 혜택</li>
-<<<<<<< HEAD
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarHistory.jsp'">· 별 히스토리</li>
-=======
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">· 별 히스토리</li>
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
-            
-         </ul>
-      </li>
-      
-      <li class="mylist">   
-         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/MyMenu.jsp'">My 메뉴</div>
-         
-      </li>
-      
-      <li class="mylist">
-         <div class="mytitle3" align="center">개인정보 관리
-            
-         </div>
-         <ul class="sub2">
-            <li><a href="" required="login">· 개인정보확인 및 수정</a></li>
-            <li><a href="" required="login">· 회원 탈퇴</a></li>
-            <li><a href="" required="login">· 비밀번호 변경</a></li>
-         </ul>
-      </li>
-      
-      <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
-      </li>
-   </ul>
-</div>
-</div>
+
+
 
 <!-- top div -->
 <div class="top">
@@ -239,5 +236,29 @@ $(function(){
 </div>      
 
 
+
+<nav class="ms_nav" id="msRnb">					
+	<ul>
+		<li>
+			<a href="#">My 리워드<span class="sbox_arrow_down1"></span></a>
+			<ul class="sub1">
+				<li><a href="index.jsp?main=../../MyStarbucks/RewordBenefit.jsp" required="login" >· 리워드 및 혜택</a></li>
+				<li><a href="index.jsp?main=../../MyStarbucks/StarHistory.jsp" required="login">· 별 히스토리</a></li>
+			</ul>
+		</li>
+		
+		<li class="msRnb_btn"><a href="index.jsp?main=../../MyStarbucks/MyMenu.jsp" required="login">My 메뉴</a></li>
+		<li><a href="index.jsp?main=../../MyStarbucks/voclist.jsp" required="login">My 고객의 소리</a></li>
+		
+		<li>
+			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
+			<ul class="sub2">
+				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
+				<li><a href="#" required="login">· 회원 탈퇴</a></li>
+				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
 </body>
 </html>

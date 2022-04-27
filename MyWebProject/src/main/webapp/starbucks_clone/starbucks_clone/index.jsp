@@ -28,6 +28,7 @@ div.layout {
 	position: absolute;
 }
 div.menu {
+	
 	width: 100%;
 	height: 183px;
 }
