@@ -1,3 +1,4 @@
+<%@page import="StarBucksDao.memberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ String key = request.getParameter("key");//처음 호출시 null
 if(key==null){
 %>
 	<div style="margin:10px 30px;">
-	<form action="memberphonecheck.jsp.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
+	<form action="memberphonecheck.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
 		<p align="center"><img src="memberaddimg1.PNG" style="border:1px solid red;"></p>
 		<p width ="100%" height="50px;" style="text-align: center;border: 1px solid red;"><b style="font-size: 2em;color:gray;">전화번호를 입력하세요.</b></p>
 		<br>
@@ -36,10 +37,35 @@ if(key==null){
 </div>
 <%
 }else{
+	String hp = request.getParameter("hp1")+"-"+request.getParameter("hp2")+"-"+request.getParameter("hp3");
+	memberDao dao = new memberDao();
+	boolean b = dao.checkHp(hp);
+	if(b){
 	%>
-	
+		<script type="text/javascript">
+			alert("이미 가입된 핸드폰 번호 입니다");
+			location.href = "memberphonecheck.jsp";
+		</script>
 	<%
+	}
+	else{
+	%>
+		<h3 class="alert alert-success"><%=hp %>은 사용 가능한 핸드폰 번호 입니다.</h3>
+		<button type="button" class="btn btn-warning btn-sm" id="btnuse"
+		style="margin-left: 200px;" hp="<%=hp %>" onclick="goBack('<%=hp%>')">사용하기</button>
+		<button type="button" class="btn btn-danger btn-sm"
+		onclick="location.href='memberphonecheck.jsp'">다시하기</button>
+	<%
+	}
 }
 %>
+<script type="text/javascript">
+	function goBack(hp){
+		
+		opener.location.href="memberAdd_2.jsp?hp="+hp;
+		window.close();
+		
+	}
+</script>
 </body>
 </html>
