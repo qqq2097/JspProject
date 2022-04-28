@@ -2,15 +2,15 @@ package data.dto;
 
 public class SangpumDto {
 	
-	private int snum;
+	private String snum;
 	private String sname;
-	private int sprice;
+	private String sprice;
 	private String imgsrc;
 	
-	public int getSnum() {
+	public String getSnum() {
 		return snum;
 	}
-	public void setSnum(int snum) {
+	public void setSnum(String snum) {
 		this.snum = snum;
 	}
 	public String getSname() {
@@ -19,10 +19,10 @@ public class SangpumDto {
 	public void setSname(String sname) {
 		this.sname = sname;
 	}
-	public int getSprice() {
+	public String getSprice() {
 		return sprice;
 	}
-	public void setSprice(int sprice) {
+	public void setSprice(String sprice) {
 		this.sprice = sprice;
 	}
 	public String getImgsrc() {

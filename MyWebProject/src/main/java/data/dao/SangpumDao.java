@@ -32,9 +32,9 @@ public class SangpumDao {
 			
 			while (rs.next()) {
 				SangpumDto dto=new SangpumDto();
-				dto.setSnum(rs.getInt("snum"));
+				dto.setSnum(rs.getString("snum"));
 				dto.setSname(rs.getString("sname"));
-				dto.setSprice(rs.getInt("sprice"));
+				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
 				
 				list.add(dto);
@@ -68,9 +68,9 @@ public class SangpumDao {
 			
 			while (rs.next()) {
 				SangpumDto dto=new SangpumDto();
-				dto.setSnum(rs.getInt("snum"));
+				dto.setSnum(rs.getString("snum"));
 				dto.setSname(rs.getString("sname"));
-				dto.setSprice(rs.getInt("sprice"));
+				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
 				
 				list.add(dto);
@@ -100,9 +100,9 @@ public class SangpumDao {
 			rs=stmt.executeQuery(sql);
 			
 			if(rs.next()) {
-				dto.setSnum(rs.getInt("snum"));
+				dto.setSnum(rs.getString("snum"));
 				dto.setSname(rs.getString("sname"));
-				dto.setSprice(rs.getInt("sprice"));
+				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
 			}
 			
@@ -116,6 +116,58 @@ public class SangpumDao {
 		return dto;
 	}
 	
+	public void insertMybeverage(SangpumDto dto) {
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		
+		String sql="insert into mybeverage values(null,?,?,?)";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getSname());
+			pstmt.setString(2, dto.getSprice());
+			pstmt.setString(3, dto.getImgsrc());
+			pstmt.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+	}
+	
+	public List<SangpumDto> mybeverageList(){
+		List<SangpumDto> list=new Vector<SangpumDto>();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mybeverage";
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				SangpumDto dto=new SangpumDto();
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+				
+				list.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return list;
+	}
 	
 	
 	public List<SangpumDto> getfoodList(int start,int end){
@@ -135,9 +187,9 @@ public class SangpumDao {
 			
 			while (rs.next()) {
 				SangpumDto dto=new SangpumDto();
-				dto.setSnum(rs.getInt("snum"));
+				dto.setSnum(rs.getString("snum"));
 				dto.setSname(rs.getString("sname"));
-				dto.setSprice(rs.getInt("sprice"));
+				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
 				
 				list.add(dto);
@@ -148,6 +200,89 @@ public class SangpumDao {
 			e.printStackTrace();
 		} finally {
 			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return list;
+	}
+	
+	public SangpumDto getfoodData(String num) {
+		SangpumDto dto=new SangpumDto();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from food where snum="+num;
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return dto;
+	}
+	
+	public void insertMyfood(SangpumDto dto) {
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		
+		String sql="insert into myfood values(null,?,?,?)";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getSname());
+			pstmt.setString(2, dto.getSprice());
+			pstmt.setString(3, dto.getImgsrc());
+			pstmt.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+	}
+	
+	public List<SangpumDto> myfoodList(){
+		List<SangpumDto> list=new Vector<SangpumDto>();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from myfood";
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				SangpumDto dto=new SangpumDto();
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+				
+				list.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, stmt, conn);
 		}
 		
 		return list;
@@ -170,9 +305,9 @@ public class SangpumDao {
 			
 			while (rs.next()) {
 				SangpumDto dto=new SangpumDto();
-				dto.setSnum(rs.getInt("snum"));
+				dto.setSnum(rs.getString("snum"));
 				dto.setSname(rs.getString("sname"));
-				dto.setSprice(rs.getInt("sprice"));
+				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
 				
 				list.add(dto);
@@ -187,5 +322,91 @@ public class SangpumDao {
 		
 		return list;
 	}
+	
+
+	
+	public SangpumDto getgoodsData(String num) {
+		SangpumDto dto=new SangpumDto();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from goods where snum="+num;
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return dto;
+	}
+	
+	public void insertMygoods(SangpumDto dto) {
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		
+		String sql="insert into mygoods values(null,?,?,?)";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, dto.getSname());
+			pstmt.setString(2, dto.getSprice());
+			pstmt.setString(3, dto.getImgsrc());
+			pstmt.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+	}
+	
+	public List<SangpumDto> mygoodsList(){
+		List<SangpumDto> list=new Vector<SangpumDto>();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mygoods";
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				SangpumDto dto=new SangpumDto();
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+				
+				list.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return list;
+	}
+	
 	
 }

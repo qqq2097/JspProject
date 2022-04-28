@@ -72,7 +72,10 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
+	             
 	           </div>
 	         </div>
 	         <br>
@@ -104,7 +107,9 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
 	         <br>
@@ -136,7 +141,9 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
 	         <br>
@@ -168,7 +175,9 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
 	         <br>
@@ -188,7 +197,9 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
 	         <br>
@@ -220,7 +231,9 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
 	         <br>
@@ -240,7 +253,9 @@
 	         <br>
 	         <div class="img">
 	           <div class="roastimg">
-	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
 	         <br>
