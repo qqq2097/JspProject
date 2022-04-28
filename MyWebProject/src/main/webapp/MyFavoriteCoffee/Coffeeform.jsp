@@ -221,7 +221,7 @@ $(function () {
 					<li>
 						<dl>
 							<dt><img alt="" src="../../MyFavoriteCoffee/image/2_부드러운느낌.png"></dt>			
-							<dd><b>부드러운 느낌</b></dd>
+							<dd><b>부드러운 느낌222222</b></dd>
 						</dl>					
 					</li>
 					<li>
