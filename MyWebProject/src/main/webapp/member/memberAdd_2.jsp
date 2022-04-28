@@ -101,6 +101,7 @@ input[class="mem_agreeMent"]:checked +label {/*클릭하면 배경 색상 변경
 
 
 $(function() {
+	setDateBox();//파일 시작 전에 연도,월,일 표시 함수 실행.
 	var myemail = $("#email").val();//email 값 읽어오기
 	var myhp = $("#hpnum").val();//hp값 읽어오기
 	if(myhp==""){
@@ -117,11 +118,6 @@ $(function() {
 	
 });
 
-$(document).ready(function(){  
-	setDateBox();
-	
-		
-});//파일 시작 전에 연도,월,일 표시 함수 실행.
 
   // select box 연도 , 월 표시
   function setDateBox() {
@@ -143,7 +139,6 @@ $(document).ready(function(){
     for (var i = 1; i <= 12; i++) {
       $("#month").append("<option value='" + i + "'>" + i + " 월" + "</option>");
     }
-
     // 일 뿌려주기(1일부터 31일)
     var day;
     $("#day").append("<option value=''>일</option>");
@@ -153,19 +148,22 @@ $(document).ready(function(){
 
   } 
   
-/*  
+ 
 function check() {
 	var myid= $("input[name=id]").val();
 	var pass1 = $("input[name=pass1]").val();
 	var pass2 = $("input[name=pass2]").val();
 	var name = $("input[name=name]").val();
 	var hp =$("input[name=hpnum]").val();
-//	var mybirthday =   $("select[name=myyear]").val();+"-"+ $("select[name=mymonth]").val()+"-"+ $("select[name=myday]").val();
+	var mybirthday =$("select[name=myyear]").val()+"-"+$("select[name=mymonth]").val()+"-"+$("select[name=myday]").val();
 	var email =  $("input[name=email]").val();
 	var nickname =  $("input[name=nickname]").val();
 	
-	var reg = /[^0123456789-]+/g;//숫자와- 입력하는 정규식 
-	console.log(birthday);
+	var reghp =  /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;//숫자와- 입력하는 정규식 
+	var regemail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+	
+	
+	console.log(mybirthday);
 	if(myid==""){
 		alert("아이디를 입력하세요");
 		document.getElementById("myid").focus();
@@ -192,30 +190,35 @@ function check() {
 		return false;
 	}
 	
-	 if(birthday==""){
+	  if(mybirthday=="--"){
 		alert("생일을 입력하세요");
 		document.getElementById("year").focus();
 		return false;
-	} 
+	}  
 	if(hp==""){
 		alert("핸드폰 번호를 입력하세요");
 		document.getElementById("hpnum").focus();
 		return false;
 	}
-	if(!reg.test(hp)){
-		alert("핸드폰 번호는 숫자와 - 로 입력해주세요.");
+	 if(!reghp.test(hp)){
+		alert("핸드폰 번호는 ###-####-####의 형식으로 입력해주세요.");
 		document.getElementById("hpnum").focus();
 		return false;
-	}
+	} 
 	if(email==""){
-		alert("핸드폰 번호를 입력하세요");
+		alert("EMAIL를 입력하세요");
 		document.getElementById("email").focus();
 		return false;
 	}
-	 
-return false;
+	if(!regemail.test(email)){
+		alert("EMAIL은 ---@--- 형식으로 입력해주세요.");
+		document.getElementById("email").focus();
+		return false;
+	}  
+return true;
 }
-*/
+//데이터 추가 전 필수 항목 비어있는지 확인
+
 </script>  
 
 </head>
@@ -254,12 +257,12 @@ if(hp==null){
       		</tr>
       		<tr>
       			<td class="line">
-      				<input type="text" id="pass1" name="pass1" style="width:95%;height:50px;font-size:2em; margin: 20px 20px 20px 20px;" placeholder="  비밀번호">
+      				<input type="password" id="pass1" name="pass1" style="width:95%;height:50px;font-size:2em; margin: 20px 20px 20px 20px;" placeholder="  비밀번호">
       			</td>
       		</tr>
       		<tr>
       			<td>
-      				<input type="text" id="pass2" name ="pass2"style="width:95%;height:50px;font-size:2em; margin: 20px 20px 20px 20px;" placeholder="  비밀번호 확인">
+      				<input type="password" id="pass2" name ="pass2"style="width:95%;height:50px;font-size:2em; margin: 20px 20px 20px 20px;" placeholder="  비밀번호 확인">
       			</td>
       		</tr>
       		

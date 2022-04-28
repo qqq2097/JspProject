@@ -18,6 +18,7 @@ String key = request.getParameter("key");//처음 호출시 null
 
 if(key==null){
 %>
+	<div style="height: 80px;"></div>
 	<div style="margin:10px 30px;">
 	<form action="memberemailcheck.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
 		<p align="center"><img src="memberaddimg1.PNG" ></p>

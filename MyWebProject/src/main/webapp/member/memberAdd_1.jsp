@@ -98,7 +98,7 @@ input[class="mem_agreeMent"]:checked +label {
 
 </head>
 <body>
-
+	<div style="height: 130px;"></div>
  	     
       <form action="" method="post" class="form-inline" onsubmit="return check(this)" name="mfrm">
       	<div align="center">
@@ -107,7 +107,7 @@ input[class="mem_agreeMent"]:checked +label {
       		<table class="table table-bordered" style="width:70%; border: 1px solid #C1C1C1;">
       		<tr>
 	      		<td colspan="2" align="center" style="padding-top:20px;">
-	      			<img src="memberaddimg1.PNG">
+	      			<img src="../../member/memberaddimg1.PNG">
       			</td>
       		</tr>
       		<tr>
@@ -197,8 +197,8 @@ input[class="mem_agreeMent"]:checked +label {
       			<td colspan="2" align="center">
 	      			 <table style="border: 1px solid #C1C1C1;" width="80%" height="200px;" >
 	      			 	<tr>
-			      			<td align="center" style="width: 50%;padding-top: 20px;"><img src="phoneicon.PNG"></td>
-			      			<td align="center" style="width: 50%;padding-top: 20px;"><img src="ipinicon.PNG"></td>
+			      			<td align="center" style="width: 50%;padding-top: 20px;"><img src="../../member/phoneicon.PNG"></td>
+			      			<td align="center" style="width: 50%;padding-top: 20px;"><img src="../../member/ipinicon.PNG"></td>
 			      		</tr>
 			      		<tr>
 			      			<td align="center" style="padding-top: 40px;font-size: 2em;"><b>휴대폰 인증</b></td>
@@ -251,7 +251,7 @@ function openHp() {
 		}
 	}
 	if(cnt>=2){
-		window.open('memberphonecheck.jsp',"","left=100px,top=100px,width=600px,height=500px");
+		window.open('../../member/memberphonecheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
 	}
 	else{
 		alert("필수 동의를 선택하세요.");
@@ -274,7 +274,7 @@ function openEmail() {
 		}
 	}
 	if(cnt>=2){
-		window.open('memberemailcheck.jsp',"","left=100px,top=100px,width=600px,height=500px");
+		window.open('../../member/memberemailcheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
 	}
 	else{
 		alert("필수 동의를 선택하세요.");

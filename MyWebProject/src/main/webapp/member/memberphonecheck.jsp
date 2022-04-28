@@ -15,10 +15,11 @@
 String key = request.getParameter("key");//처음 호출시 null
 if(key==null){
 %>
+	<div style="height: 80px;"></div>
 	<div style="margin:10px 30px;">
 	<form action="memberphonecheck.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
-		<p align="center"><img src="memberaddimg1.PNG" style="border:1px solid red;"></p>
-		<p width ="100%" height="50px;" style="text-align: center;border: 1px solid red;"><b style="font-size: 2em;color:gray;">전화번호를 입력하세요.</b></p>
+		<p align="center"><img src="memberaddimg1.PNG"></p>
+		<p width ="100%" height="50px;" style="text-align: center;"><b style="font-size: 2em;color:gray;">전화번호를 입력하세요.</b></p>
 		<br>
 		<select size="1" name="hp1">
 			<option value="010">010</option>

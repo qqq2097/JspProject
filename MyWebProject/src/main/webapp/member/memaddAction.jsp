@@ -35,7 +35,7 @@ dto.getEmail();
 
 dao.insertMember(dto);
 
-response.sendRedirect("memberAdd_1.jsp");
+response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp");
 %>
 </body>
 </html>
