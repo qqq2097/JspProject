@@ -24,7 +24,9 @@ String birthday = request.getParameter("myyear")+"-"+request.getParameter("mymon
 String hp = request.getParameter("hpnum");
 String email = request.getParameter("email");
 String nickname = request.getParameter("nickname");
-		
+	
+boolean idf = dao.checkID(id);
+if(idf==false){
 dto.setId(id);
 dto.setPass(pass);
 dto.setName(name);
@@ -36,6 +38,13 @@ dto.getEmail();
 dao.insertMember(dto);
 
 response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp");
+}
+else{
+	out.println("<script>");
+	out.println("alert('ID가 중복됩니다. 다른 아이디를 입력해주세요.')");
+	out.println("window.history.back()");
+	out.println("</script>");
+}
 %>
 </body>
 </html>
