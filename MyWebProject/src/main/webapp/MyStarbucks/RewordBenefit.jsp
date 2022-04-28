@@ -15,6 +15,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+
+div.container
+{
+	position: inherit;
+}
+
 div.onetitle{
    font-size: 20pt;
    font-weight: bold;   
@@ -121,7 +127,7 @@ ul.sub2{
 .ms_nav {
 float: right;
 position: relative;
-right: 100px;
+left : 100px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;
@@ -231,20 +237,19 @@ $(function(){
 <body>
 
 
-
+<div class="container">
 
 <div class="top">
    <br><br><br><br>
    <span class="toptitle">&nbsp;&nbsp;리워드 및 혜택</span>
-   
-</div>
-
-<div class="topsub">
+  
+	<div class="topsub">
       <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span style="font-size: 13pt;" onclick=""> > My Starbucks > 리워드 및 혜택</span>
+	</div>
 </div>
 
-
+<div class="mid">
 <div class="one">
    <div class="onetitle" style="margin-left: 100px; margin-top: 100px;  width: 600px; background: #F9F9F9;">스타벅스 리워드 (Starbucks Rewards)란?
    <span class="glyphicon glyphicon-menu-down formbtn1"></span></div>
@@ -352,6 +357,7 @@ $(function(){
       </table>
    </ul>
 </div>
+</div>
 
 <nav class="ms_nav" id="msRnb">					
 	<ul>
@@ -376,5 +382,6 @@ $(function(){
 		</li>
 	</ul>
 </nav>
+</div>
 </body>
 </html>

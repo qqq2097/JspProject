@@ -16,6 +16,13 @@
 <title>Insert title here</title>
 
 <style type="text/css">
+
+div.container
+{
+	position: inherit;
+}
+
+
 div.top{
    width : 100%;
    height : 200px;
@@ -42,23 +49,7 @@ span.toptitle{
    
 }
 
-div.container{
-<<<<<<< HEAD
-	position : fixed;
-	width:100%;
-	
-	
-=======
-	position : absolute;
-	right: 395px;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
-}
-div.menuul{
-   position : absolute;
-   left : 1000px;
-   top : 300px;
-   font-size: 17pt;
-}
+
 
 li.mylist{
    border: 1px solid gray;
@@ -208,104 +199,109 @@ $(function(){
 
 
 
-
+<div class="container">
 <!-- top div -->
 <div class="top">
-   <br><br><br><br>
-   <span class="toptitle">&nbsp;&nbsp; My 메뉴</span>
-   
-</div>
+  	  <br><br><br><br>
+   	  <span class="toptitle">&nbsp;&nbsp; My 메뉴</span>
 
-<div class="topsub">
+	<div class="topsub">
       <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks > My 메뉴</span>
+	</div>
 </div>
 
-<div style="margin-left: 100px; margin-top: 100px;">
-   <img alt="" src="../../MyStarbucks/image/ms11.png">
+<div class="mid">
+	<div style="margin-left: 100px; margin-top: 100px;">
+   		<img alt="" src="../../MyStarbucks/image/ms11.png">
+	</div>
+
+	<div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
+   		<button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn" id="drinkbtn"> 나만의 음료</button>
+   		<button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn" id="foodbtn"> 나만의 푸드</button>
+   		<button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn" id="sangpumbtn"> 나만의 상품</button>
+	</div>
+
+
+
+
+	<div class="mymenulist">
+   		<table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   		<tr>
+     		 <th>
+        		 <input type="checkbox" id="chbox">         
+     		 </th>
+     		 <th>No</th>
+    		  <th>음료명</th>
+    		  <th>퍼스널 옵션</th>
+    		  <th>등록일</th>
+  	   </tr>
+   
+   		<tr>
+      		<td></td>
+      		<td></td>
+      		<td></td>
+      		<td></td>
+      		<td></td>
+   		</tr>
+   
+  	</table>
+   		<input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   		<input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+	</div>
+
+	<div class="myfoodlist">
+   		<table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   		<tr>
+     		 <th>
+        		 <input type="checkbox" id="chbox">         
+      		</th>
+      		<th>No</th>
+      		<th>푸드명</th>
+     		 <th>워밍 옵션</th>
+      		<th>등록일</th>
+  		 </tr>
+   
+   		<tr>
+      		<td></td>
+      		<td></td>
+      		<td></td>
+     		 <td></td>
+     		 <td></td>
+  		 </tr>
+   
+   		</table>
+   		<input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   		<input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+	</div>
+
+	<div class="mysangpumlist">
+   		<table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+  		 <tr>
+    		  <th>
+     		    <input type="checkbox" id="chbox">         
+     		 </th>		
+     		 <th>No</th>
+     		 <th>상품명</th>
+      		<th>그라인드 옵션</th>
+      		<th>등록일</th>
+  		 </tr>
+   
+ 		  <tr>
+   		   <td></td>
+   		   <td></td>
+  		    <td></td>
+  		    <td></td>
+  		    <td></td>
+  		  </tr>
+   
+   		</table>
+  		 	<input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
+   			<input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
+	</div>
+
 </div>
 
-<div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
-   <button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn" id="drinkbtn"> 나만의 음료</button>
-   <button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn" id="foodbtn"> 나만의 푸드</button>
-   <button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn" id="sangpumbtn"> 나만의 상품</button>
-</div>
-
-
-<div class="mymenulist">
-   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
-   <tr>
-      <th>
-         <input type="checkbox" id="chbox">         
-      </th>
-      <th>No</th>
-      <th>음료명</th>
-      <th>퍼스널 옵션</th>
-      <th>등록일</th>
-   </tr>
-   
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   
-   </table>
-   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
-   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
-</div>
-
-<div class="myfoodlist">
-   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
-   <tr>
-      <th>
-         <input type="checkbox" id="chbox">         
-      </th>
-      <th>No</th>
-      <th>푸드명</th>
-      <th>워밍 옵션</th>
-      <th>등록일</th>
-   </tr>
-   
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   
-   </table>
-   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
-   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
-</div>
-
-<div class="mysangpumlist">
-   <table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
-   <tr>
-      <th>
-         <input type="checkbox" id="chbox">         
-      </th>
-      <th>No</th>
-      <th>상품명</th>
-      <th>그라인드 옵션</th>
-      <th>등록일</th>
-   </tr>
-   
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   
-   </table>
-   <input type="button" class="btn btn-default btn-sm" value="전체선택" style="margin-left: 120px; font-weight: bold;">
-   <input type="button" class="btn btn-default btn-sm" value="선택삭제" style="font-weight: bold;">
-</div>
 
 <nav class="ms_nav" id="msRnb">					
 	<ul>
@@ -330,5 +326,7 @@ $(function(){
 		</li>
 	</ul>
 </nav>
+
+</div>
 </body>
 </html>

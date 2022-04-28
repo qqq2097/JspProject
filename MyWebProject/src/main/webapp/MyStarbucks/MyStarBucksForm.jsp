@@ -7,18 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<!-- 폰트 -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
-  rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
 <style type="text/css">
 
-
+div.container
+{
+	position: inherit;
+}
 
 div.left{
    position : absolute;
@@ -58,6 +56,7 @@ button.btnbun{
 }
 
 div.top{
+ 
    width : 100%;
    height : 200px;
    background-image: url("../../MyStarbucks/image/ms03.jpg");
@@ -65,6 +64,7 @@ div.top{
 span.toptitle{
    
    color: #fff;
+   
    font-size: 30pt;
    font-weight: bold;
    top: 200px;
@@ -77,7 +77,7 @@ div.topsub{
    height : 100px;
    
    top : 170px;
-   left : 1000px;
+   left : 800px;
    color: #fff;
    
    font-size: 15pt;
@@ -199,43 +199,44 @@ $(function(){
 <body>
 
 
-
-
 <!-- top div -->
+<div class="container">
+
+
 <div class="top">
    <br><br><br><br>
    <span class="toptitle">&nbsp;&nbsp; My Starbucks</span>
-   
-</div>
 
-<div class="topsub">
+	<div class="topsub">
       <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
       <span onclick=""> > My Starbucks</span>
+	</div>
 </div>
 
 <!-- left div -->
-<div class="left">
-   <span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My 리워드</span>
-   <br>
-   <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
-</div>
+<div class="mid">
+	<div class="left">
+   		<span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My 리워드</span>
+   		<br>
+  		 <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
+	</div>
 
-<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
-<div class="leftsu">
-   <span>3</span>
-</div>
+	<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
+	<div class="leftsu">
+   		<span>3</span>
+	</div>
 
 <!-- right div -->
-<div class="right">
-   <span><% %>님은<br>현재  이십니다.</span>
-   <br><br>
-   <button type="button" class="btn btn-default btnre" style="width : 130px;   margin-left: 20px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
-   <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
-   <br>
-   <button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
-   <button type="button" class="btn btn-default btnbun" style="width : 130px; margin-top: 10px;">비밀번호 변경</button>
-</div>      
-
+	<div class="right">
+   		<span>님은<br>현재  이십니다.</span>
+   		<br><br>
+   		<button type="button" class="btn btn-default btnre" style="width : 130px; margin-left: 20px;  margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+  		 <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
+   		<br>
+   		<button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
+   		<button type="button" class="btn btn-default btnbun" style="width : 130px; margin-top: 10px;">비밀번호 변경</button>
+	</div>      
+</div>
 
 
 <nav class="ms_nav" id="msRnb">					
@@ -261,5 +262,7 @@ $(function(){
 		</li>
 	</ul>
 </nav>
+
+</div>
 </body>
 </html>

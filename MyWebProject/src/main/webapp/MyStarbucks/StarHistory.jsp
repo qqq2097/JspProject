@@ -16,6 +16,12 @@
 <title>Insert title here</title>
 
 <style type="text/css">
+
+div.container
+{
+	position: inherit;
+}
+
 div.top{
    width : 100%;
    height : 200px;
@@ -23,10 +29,9 @@ div.top{
 }
 
 div.topsub{
-   position : absolute;
+   position: absolute;
    width : 300px;
    height : 100px;
-   
    top : 170px;
    left : 1000px;
    color: #fff;
@@ -42,17 +47,7 @@ span.toptitle{
    
 }
 
-div.container{
 
-   position : fixed;
-   width:100%;
-}
-div.menuul{
-   position : absolute;
-   left : 1000px;
-   top : 300px;
-   font-size: 17pt;
-}
 
 li.mylist{
    border: 1px solid gray;
@@ -75,7 +70,6 @@ ul.sub2{
 .ms_nav {
 float: right;
 position: relative;
-right: 100px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;
@@ -145,16 +139,52 @@ height: 40px;
 vertical-align: middle;
 }
 </style>
+
+<%
+	RewordDao dao=new RewordDao();
+	List<RewordDto> list=dao.getAllRewords();
+	//List<RewordDto> list2=dao.RadioOne();
+	//List<RewordDto> list3=dao.RadioTwo();
+	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+%>
 <script type="text/javascript">
 $(function(){
    
    $(".sub1").hide();
    $(".sub2").hide();
+   $("#tb2").hide();
+   $("#tb3").hide();
    
    $(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
 	});
    
+   
+   
+   $("#search").click(function(){
+	   
+	   //alert(1);
+	   var d1=$("#date1").val();
+	   var d2=$("#date2").val();
+	   
+	   
+   });
+   
+   $("#onemonth").click(function(){
+	   
+	   //alert(1);
+	   $("#tb1").hide();
+	   $("#tb3").hide();
+	   $("#tb2").show();	   
+   });
+   
+	$("#oneyear").click(function(){
+	   
+	   //alert(1);
+	   $("#tb1").hide();
+	   $("#tb2").hide();
+	   $("#tb3").show();	   
+   });
    
 });
 </script>
@@ -163,85 +193,153 @@ $(function(){
 
 
 <body>
-<%
-	RewordDao dao=new RewordDao();
-	List<RewordDto> list=dao.getAllRewords();
- 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-%>
+
         
-
+<div class="container">
 <!-- top div -->
-<div class="top">
-   <br><br><br><br>
-   <span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
+	<div class="top">
+   		<br><br><br><br>
+   		<span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
    
-</div>
-<div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
-      <span onclick=""> > My Starbucks > 별 히스토리</span>
-</div>
 
-<div class=" first">
-<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px;" >
-   <tr>
-      <td align="center">사용 가능한 별</td>
-      
-      <td align="center">총 누적 별</td>
-   </tr>
-   
-   <tr>
-      <td align="center">1</td>
-      <td align="center">1</td>
-   </tr>
-</table>
-</div>
+		<div class="topsub">
+      		<span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
+      		<span onclick=""> > My Starbucks > 별 히스토리</span>
+		</div>
+	</div>
 
-<div class="second" style="width : 700px; height: 50px; margin-left: 100px; margin-top: 100px; background: #DCDCDC; text-align: center;">
 
-   <br>
-   기간별&nbsp;&nbsp;| 
-   <input type="radio" id="onemonth" name="radioone" checked="checked">1개월
-   <input type="radio" id="oneyear" name="radioone">1년
-   &nbsp;&nbsp;&nbsp;&nbsp;
-   일자별 &nbsp;&nbsp;
-   <input type="date">~
-   <input type="date">
-   <input type="button" style="width : 50px; background: #C0C0C0; color:#fff;" value="검색" >
-   <br>
+	<div class="mid">
+		<div class="first">
+		<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px;" >
+   			<tr>
+      			<td align="center">사용 가능한 별</td>
+      			<td align="center">총 누적 별</td>
+   			</tr>
+   
+   			<tr>
+      			<td align="center">1</td>
+      			<td align="center">1</td>
+   	 		</tr>
+	 	</table>
+		</div>
+
+		<div class="second" style="width : 700px; height: 50px; margin-left: 100px; margin-top: 100px; background: #DCDCDC; text-align: center;">
+
+   			<br>
+   			기간별&nbsp;&nbsp;| 
+   			<input type="radio" id="onemonth" name="radioone">1개월
+   			<input type="radio" id="oneyear" name="radioone">1년
+   			&nbsp;&nbsp;&nbsp;&nbsp;
+   			일자별 &nbsp;&nbsp;
+   			<input type="date" name="date1" id="date1" required="required">~
+   			<input type="date" name="date2" id="date2" required="required">
+   			<input type="button" style="width : 50px; background: #C0C0C0; color:#fff;" value="검색" id="search">
+   			<br>
    
    
-</div>
+		</div>
    
-<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;">
-   <table class="table table-bordered">
-   	<tr>
-      <th align="center"> No</th>
-      <th align="center"> 카드번호</th>
-      <th align="center"> 적립별</th>
-      <th align="center"> 매장명</th>
-      <th align="center"> 적립일</th>     
-   </tr>
+		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb1">
+   		<table class="table table-bordered" >
+   		<caption>전체</caption>
+   			<tr>
+      			<th align="center"> No</th>
+      			<th align="center"> 카드번호</th>
+      			<th align="center"> 적립별</th>
+     			<th align="center"> 매장명</th>
+      			<th align="center"> 적립일</th>     
+   			</tr>
    
    
-    <%
-   for(int i=0;i<list.size();i++)
-   {
-	   RewordDto dto=list.get(i);
-	   %>
-	   <tr>
-	   	<td><%=i+1 %></td>
-	   	<td><%=dto.getCardnum() %></td>
-	   	<td><%=dto.getStarcnt() %></td>
-	   	<td><%=dto.getStoreaddr() %></td>
-	   	<td><%=sdf.format(dto.getBuyday()) %></td>
-	   </tr>
-   <%}
-   %> 
+   			 <%
+   				
+   				for(int i=0;i<list.size();i++)
+   				{
+	   				RewordDto dto=list.get(i);
+	  			 %>
+	   				<tr>
+	   					<td><%=i+1 %></td>
+	   					<td><%=dto.getCardnum() %></td>
+	   					<td><%=dto.getStarcnt() %></td>
+	   					<td><%=dto.getStoreaddr() %></td>
+	   					<td><%=sdf.format(dto.getBuyday()) %></td>
+	  				 </tr>
+   					<%}
+   						%> 
    
    
   
-   </table>
-</div>
+   		</table>
+		</div>
+		
+		<%-- <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb2">
+   		<table class="table table-bordered" >
+   		<caption>1개월</caption>
+   			<tr>
+      			<th align="center"> No</th>
+      			<th align="center"> 카드번호</th>
+      			<th align="center"> 적립별</th>
+     			<th align="center"> 매장명</th>
+      			<th align="center"> 적립일</th>     
+   			</tr>
+   
+   
+   			 <%
+   				
+   				for(int i=0;i<list2.size();i++)
+   				{
+	   				RewordDto dto=list2.get(i);
+	  			 %>
+	   				<tr>
+	   					<td><%=i+1 %></td>
+	   					<td><%=dto.getCardnum() %></td>
+	   					<td><%=dto.getStarcnt() %></td>
+	   					<td><%=dto.getStoreaddr() %></td>
+	   					<td><%=sdf.format(dto.getBuyday()) %></td>
+	  				 </tr>
+   					<%}
+   						%> 
+   
+   
+  
+   		</table>
+		</div> --%>
+		
+		<%-- <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb3">
+   		<table class="table table-bordered" >
+   		<caption>전체</caption>
+   			<tr>
+      			<th align="center"> No</th>
+      			<th align="center"> 카드번호</th>
+      			<th align="center"> 적립별</th>
+     			<th align="center"> 매장명</th>
+      			<th align="center"> 적립일</th>     
+   			</tr>
+   
+   
+   			 <%
+   				
+   				for(int i=0;i<list3.size();i++)
+   				{
+	   				RewordDto dto=list3.get(i);
+	  			 %>
+	   				<tr>
+	   					<td><%=i+1 %></td>
+	   					<td><%=dto.getCardnum() %></td>
+	   					<td><%=dto.getStarcnt() %></td>
+	   					<td><%=dto.getStoreaddr() %></td>
+	   					<td><%=sdf.format(dto.getBuyday()) %></td>
+	  				 </tr>
+   					<%}
+   						%> 
+   
+   
+  
+   		</table>
+		</div> --%>
+
+		</div>
 
 <nav class="ms_nav" id="msRnb">					
 	<ul>
@@ -267,5 +365,6 @@ $(function(){
 	</ul>
 </nav>
 
+</div>
 </body>
 </html>
