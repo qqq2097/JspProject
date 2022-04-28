@@ -19,6 +19,13 @@ div.top {
 	background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
+div.footerinfo{
+top: 1500px;
+width: 100%;
+height: 500px;
+
+}
+
 div.topsub {
 	color: #fff;
 	font-size: 15pt;
