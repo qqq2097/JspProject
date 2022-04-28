@@ -98,7 +98,7 @@ input[class="mem_agreeMent"]:checked +label {
 
 </head>
 <body>
- 
+
  	     
       <form action="" method="post" class="form-inline" onsubmit="return check(this)" name="mfrm">
       	<div align="center">
@@ -229,9 +229,10 @@ input[class="mem_agreeMent"]:checked +label {
      
       	</div>
       	<div style="height: 130px;">
-      		
+      		<input type="hidden" name="key">
       	</div>
       </form>
+    
 <script type="text/javascript">
 
 
@@ -250,7 +251,7 @@ function openHp() {
 		}
 	}
 	if(cnt>=2){
-		window.open('memberphonecheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
+		window.open('memberphonecheck.jsp',"","left=100px,top=100px,width=600px,height=500px");
 	}
 	else{
 		alert("필수 동의를 선택하세요.");
@@ -273,12 +274,13 @@ function openEmail() {
 		}
 	}
 	if(cnt>=2){
-		window.open('memberemailcheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
+		window.open('memberemailcheck.jsp',"","left=100px,top=100px,width=600px,height=500px");
 	}
 	else{
 		alert("필수 동의를 선택하세요.");
 	}
 }
+
 </script>
   
 </body>
