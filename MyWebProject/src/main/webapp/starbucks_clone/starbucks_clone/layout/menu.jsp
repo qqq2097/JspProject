@@ -37,7 +37,7 @@
         <nav class="utility clearfix">
           <h2 class="a11y-hidden">멤버 메뉴</h2>
           <ul class="utility-list clearfix" style="margin-left: 500px;">
-            <li><a href="#">Sign In</a></li>
+            <li><a href="index.jsp?main=../../member/loginform.jsp">Sign In</a></li>
             <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp">My Starbuck</a></li>
             <!--  onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'" -->
           </ul>
