@@ -69,8 +69,7 @@
 <<<<<<< HEAD
                     <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
 =======
-                    <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+                  
                   </li>
                   
                 </ul>
