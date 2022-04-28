@@ -1,3 +1,7 @@
+<%@page import="data.dto.VoclistDto"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.List"%>
+<%@page import="data.dao.VoclistDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -238,6 +242,57 @@ $(document).ready(function(){
 
 
 </head>
+<%
+//로그인 상태 확인 후 입력폼 나타내기
+//String longinok =(String) session.getAttribute("loginok");
+
+VoclistDao dao = new VoclistDao();
+
+//페이징처리에 필요한 변수
+int totalCount; //총글수
+int totalPage; //총 페이지수
+int startPage; //각블럭의 시작페이지
+int endPage; //각블럭의 끝페이지
+int start; //각페이지의 시작번호
+int perPage=3; //한페이지에 보여질 글 갯수
+int perBlock=5; //한블럭당 보여지는 페이지 개수
+int currentPage; //현재페이지 번호
+
+int no;
+
+//총갯수
+totalCount=dao.getTotalCount();
+
+//현재 페이지번호 읽기(단 null일경우는 1페이지로 설정)
+if(request.getParameter("currentPage")==null)
+	currentPage=1;
+else
+	currentPage=Integer.parseInt(request.getParameter("currentPage"));
+
+//총페이지 개수구하기
+totalPage=totalCount/perPage+(totalCount%perPage==0?0:1);
+
+//각블럭의 시작페이지
+//예:현재페이지가 3인경우 startpage=1,endpage= 5
+//현재페이지가 6인경우 startpage=6,endpage= 10
+startPage=(currentPage-1)/perBlock*perBlock+1;
+endPage=startPage+perBlock-1;
+
+//만약 총페이지가 8 -2번째블럭: 6-10 ..이럴경우는 endpage가 8로 수정되어야함
+if(endPage>totalPage)
+	endPage=totalPage;
+
+//각페이지에서 불러올 시작번호
+start=(currentPage-1)*perPage;
+
+//각페이지에서 필요한 게시글 가져오기
+List<VoclistDto>list=dao.getList(start, perPage);
+no = totalCount-(currentPage-1)*perPage;
+SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+%>
+
+
+
 <body>
 
 <!-- top div -->
@@ -299,6 +354,36 @@ $(document).ready(function(){
 													<th scope="col">답변예정일</th>
 													<th scope="col">답변여부</th>
 												</tr>
+												
+												<%
+												if(totalCount ==0){
+													%>
+													<tr height="40">
+													<td colspan="5" align="center">
+													<b>등록된 게시글이 없습니다</b>
+													</td>
+													</tr>
+												<%}else {
+													for(VoclistDto dto:list){%>
+													<tr>
+													<td align="center"><%=no-- %></td>
+													<td>
+													<a href="#">
+													<%=dto.getSubject() %></a>
+													</td>
+										
+													<td><%=sdf.format(dto.getWriteday()) %></td> 
+													
+													</tr>
+													
+												<%}
+												}
+												
+												
+												
+												%>
+												
+												
 											</thead>
 											
 											<tbody id="all">	
@@ -421,6 +506,44 @@ $(document).ready(function(){
 					
 					
 	
-					
+		<!-- 페이징처리 -->
+
+<div style="width: 600px; text-align: center;">
+  <ul class="pagination">
+  	
+  	<%
+  	//이전
+  	if(startPage>1)
+  	{%>
+  		<li>
+  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=startPage-1%>">이전</a>
+  		</li>
+  	<%}
+  	
+  	for(int pp=startPage;pp<=endPage;pp++)
+  	{
+  		if(pp==currentPage)
+  		{%>
+  			<li class="active">
+  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
+  			</li>
+  		<%}else{%>
+  			<li >
+  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
+  			</li>
+  		<%}
+  	}
+  	
+  	//다음
+  	if(endPage<totalPage)
+  	{%>
+  		<li>
+  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=endPage+1%>">다음</a>
+  		</li>
+  	<%}
+  	%>
+  	
+  </ul>
+</div>			
 </body>
 </html>

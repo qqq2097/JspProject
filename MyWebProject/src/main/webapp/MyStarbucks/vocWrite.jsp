@@ -233,6 +233,19 @@ $(function () {
 	$(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
 	});
+	
+	
+	//이메일 선택 이벤트
+	$("#mail").change(function(){
+		
+		if($(this).val()=='_')
+		{
+		  $("#DS_CSTMR_EMAIL2").val(''); //지정된메일 지우기
+		}else
+		{
+			$("#DS_CSTMR_EMAIL2").val($(this).val());
+		}
+});
 
 	
 });
@@ -508,7 +521,7 @@ function fnCopy(){
 							name="DS_CSTMR_EMAIL2" type="text" value='' required="required">&nbsp;
 						<p class="mail_sel_wrap">
 							&nbsp; <label for="mail">직접입력</label> <select id="mail">
-								<option selected="selected" value="">직접입력</option>
+								<option selected="selected" value="_">직접입력</option>
 								<option value="naver.com">naver.com</option>
 								<option value="gmail.com">gmail.com</option>
 								<option value="nate.com">nate.com</option>
@@ -632,7 +645,7 @@ function fnCopy(){
 
 	<div class="voc_info_input_btns">
 		<ul>
-			<li class="voc_info_input_btn1"><a href="#none" onclick="">고객의
+			<li class="voc_info_input_btn1"><a href="#" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의
 					소리 등록 하기</a></li>
 		</ul>
 	</div>
