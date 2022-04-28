@@ -11,7 +11,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-
 <title>Insert title here</title>
 <style type="text/css">
 
@@ -209,6 +208,12 @@ height: 40px;
 vertical-align: middle;
 }
 
+table.suggestion_use_info_tbl tr td{
+border-bottom: 1px solid #d3d3d3;
+border-collapse: collapse;
+}
+
+
 </style>
 
 
@@ -365,15 +370,16 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													</tr>
 												<%}else {
 													for(VoclistDto dto:list){%>
-													<tr>
+										
+													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
 													<td>
-													<a href="#">
+													<a href="#" style="color: #666;">
 													<%=dto.getSubject() %></a>
 													</td>
 										
-													<td><%=sdf.format(dto.getWriteday()) %></td> 
-													
+													<td style="color: #666;"><%=sdf.format(dto.getWriteday()) %></td> 
+													<td style="color: #666;"><%=dto.getExpectwriteday() %><td>
 													</tr>
 													
 												<%}

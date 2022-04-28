@@ -50,7 +50,7 @@ VoclistDao dao=new VoclistDao();
 //insert
 dao.insertVoc(dto);
 
-//방명록리스트로 이동
+//
 response.sendRedirect("../index.jsp?main=MyStarBucks/voclist.jsp");
 
 }catch(Exception e){

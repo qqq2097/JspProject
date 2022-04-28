@@ -1,5 +1,6 @@
 package data.dto;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class VoclistDto {
@@ -12,7 +13,17 @@ public class VoclistDto {
 	private String content;
 	private String photo;
 	private Timestamp writeday;
+	private Date Expectwriteday;
 	
+	
+	
+	
+	public Date getExpectwriteday() {
+		return Expectwriteday;
+	}
+	public void setExpectwriteday(Date expectwriteday) {
+		Expectwriteday = expectwriteday;
+	}
 	public Timestamp getWriteday() {
 		return writeday;
 	}

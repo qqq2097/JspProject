@@ -99,6 +99,7 @@ public class VoclistDao {
 					dto.setContent(rs.getString("content"));
 					dto.setPhoto(rs.getString("photo"));
 					dto.setWriteday(rs.getTimestamp("writeday"));
+					dto.setExpectwriteday(rs.getDate("expectwriteday"));
 					
 					list.add(dto);
 				}

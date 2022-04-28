@@ -364,7 +364,7 @@ function fnCopy(){
 
 </head>
 <body>
-
+<form action="MyStarbucks/vocaction.jsp" method="post">
 	<!-- top div -->
 	<div class="top">
 		<br> <br> <br> <br> <span class="toptitle">&nbsp;&nbsp;
@@ -651,6 +651,6 @@ function fnCopy(){
 	</div>
 
 
-
+</form>
 </body>
 </html>
