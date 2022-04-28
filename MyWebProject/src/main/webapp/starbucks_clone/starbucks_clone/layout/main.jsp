@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<div  style="background-color: gold;">
+<div style="background-color: gold;">
 <section id="visual" class="visual">
           <h2 class="a11y-hidden">새로운 음료 추천</h2>
           <p class="visual__slogan">

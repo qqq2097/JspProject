@@ -38,14 +38,15 @@
           <h2 class="a11y-hidden">멤버 메뉴</h2>
           <ul class="utility-list clearfix" style="margin-left: 500px;">
             <li><a href="#">Sign In</a></li>
-            <li onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"><a>My Starbuck</a></li>
+            <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp">My Starbuck</a></li>
+            <!--  onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'" -->
           </ul>
         </nav>
         <nav class="navigation">
           <h2 class="a11y-hidden">메인 메뉴</h2>
           <ul class="menu clearfix">
             <li class="menu-item">
-              <h3 class="sub-menu-heading"><a href="#" class="menu-heading">COFFEE</a></h3>
+              <h3 class="sub-menu-heading"><a href="index.jsp?main=sangpum/coffee.jsp" class="menu-heading">COFFEE</a></h3>
               <div class="sub-menu-box">
                 <ul class="sub-menu">
                   <li>
@@ -65,7 +66,7 @@
                     </ul>
                   </li>
                   <li>
-                    <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
+                    <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform2.jsp">나와 어울리는 커피 찾기</a></h4>
                   </li>
                   
                 </ul>
@@ -176,7 +177,7 @@
     </div>
     
 
-  <script src="../assets/js/menuHoverHandler.js"></script>
+  <script src="assets/js/menuHoverHandler.js"></script>
 </body>
 
 </html>

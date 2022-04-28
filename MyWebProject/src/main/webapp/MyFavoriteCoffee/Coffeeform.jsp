@@ -24,7 +24,7 @@
 	div.container{
 	
 		width: 100%;
-		height: 100%;
+		height: 167 0px;
 		background-image: url("../../MyFavoriteCoffee/image/background.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 	}
 	
 	 div.subject1 div.flavor img{
-		margin-top: 50px;
+		margin-top: 70px;
 		margin-left: 120px;
 		cursor: pointer;
 	}
@@ -94,11 +94,11 @@
 
 	$(function () {
 		
-		/* 첫 화면 구현 */
+		
 		$(".subject2").hide();
 		$(".subject3").hide();
 	
-		/* 첫째 카테고리 선택시 */
+	
 		$(".flavor span img").click(function() {
 		
 		$(".subject1").hide();
@@ -106,7 +106,7 @@
 		
 	});
 		
-		/* 둘째 카테고리 선택시 */
+	
 		$(".feel span img").click(function() {
 			
 			$(".subject2").hide();
@@ -115,7 +115,7 @@
 		});
 	
 		
-		/* 셋째 카테고리 선택시 resultform으로 이동 */
+		
 		$(".strength span img").click(function() {
 			
 			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform.jsp';
@@ -123,7 +123,7 @@
 		});
 	
 	
-	});
+	}); 
 
 </script>
 
@@ -146,15 +146,15 @@
 </div>
 
 
-<div class="container">
+<div class="container" style="margin-top: 30px;">
 <div class="image">
 	<div class="subject1">
-		<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png" style="margin-left: 530px; margin-top: 30px;">
+		<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png" style="margin-left: 530px; margin-top: 80px;">
 		<div class="flavor">
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_짭짤.png"><br><br><b style="margin-left: 210px;">짭짤한 맛</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_과일.png"><br><br><b style="margin-left: 210px;">과일 맛</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_고소.png"><br><br><b style="margin-left: 210px;">고소 맛</b> </span>
-			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_달콤함(캐러멜).png"><br><br><b style="margin-left: 210px;">달콤한(캐러맬) 맛</b> </span>
+			<span> <img alt="" src="../../MyFavoriteCoffee/image/1_달콤함(캐러멜).png"><br><br><b style="margin-left: 190px;">달콤한(캐러맬) 맛</b> </span>
 		</div>
 		
 	</div>
@@ -162,7 +162,7 @@
 <div class="subject2">
 		<img alt="" src="../../MyFavoriteCoffee/image/2_어떤느낌.png" style="margin-left: 540px; margin-top: 80px;">
 		<div class="feel">
-			<span > <img alt="" src="../../MyFavoriteCoffee/image/2_상쾌한느낌.png"><br><br><b style="margin-left: 293px;">상쾌한 느낌</b> </span>
+			<span> <img alt="" src="../../MyFavoriteCoffee/image/2_상쾌한느낌.png"><br><br><b style="margin-left: 293px;">상쾌한 느낌</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/2_부드러운느낌.png"><br><br><b style="margin-left: 293px;">부드러운 느낌</b> </span>
 			<span> <img alt="" src="../../MyFavoriteCoffee/image/2_오랫동안여운이남는느낌.png"><br><br><b style="margin-left: 293px;">오랫동안 여운이 남는 느낌</b> </span>
 			

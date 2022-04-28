@@ -43,8 +43,8 @@ span.toptitle{
 }
 
 div.container{
-	position : absolute;
-	right: 395px;
+   position : fixed;
+   width:100%;
 }
 div.menuul{
    position : absolute;
@@ -61,13 +61,13 @@ li.mylist{
 }
 
 ul.sub1{
-	font-size: 0.6em;
-	text-align: center;
+   font-size: 0.6em;
+   text-align: center;
 }
 
 ul.sub2{
-	font-size: 0.6em;
-	text-align: center;
+   font-size: 0.6em;
+   text-align: center;
 }
 </style>
 <script type="text/javascript">
@@ -137,7 +137,7 @@ $(function(){
       </li>
       
       <li class="mylist">
-      	<div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
+         <div class="mytitle2" align="center" style="left : 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의 소리</div>
       </li>
    </ul>
 </div>
