@@ -13,7 +13,7 @@
 <body>
 <%
 //세션으로부터 db저장할 id
-String myid=(String)session.getAttribute("myid");
+//String myid=(String)session.getAttribute("myid");
 
 //실제경로
 String realPath=getServletContext().getRealPath("/save");
@@ -29,7 +29,7 @@ multi=new MultipartRequest(request,realPath,uploadSize,"utf-8",
 
 //request아니고 multi로 모든 폼데이터 읽어온다
 String email= multi.getParameter("DS_CSTMR_EMAIL1")+"@"+multi.getParameter("DS_CSTMR_EMAIL2");
-String phonenum = multi.getParameter("phone2")+"-"+multi.getParameter("phone3");
+String phonenum = multi.getParameter("phone1")+"-"+multi.getParameter("phone2")+"-"+multi.getParameter("phone3");
 String subject = multi.getParameter("DS_VOC_TITLE");
 String content=multi.getParameter("DS_VOC_CN");
 String photo=multi.getFilesystemName("file_nm1"); //""안에 form name값 
@@ -37,7 +37,7 @@ String photo=multi.getFilesystemName("file_nm1"); //""안에 form name값
 
 //dto에 저장
 VoclistDto dto=new VoclistDto();
-dto.setMyid(myid);
+//dto.setMyid(myid);
 dto.setEmail(email);
 dto.setPhonenum(phonenum);
 dto.setSubject(subject);
@@ -51,7 +51,7 @@ VoclistDao dao=new VoclistDao();
 dao.insertVoc(dto);
 
 //
-response.sendRedirect("../index.jsp?main=MyStarBucks/voclist.jsp");
+response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../MyStarbucks/voclist.jsp");
 
 }catch(Exception e){
 	

@@ -217,8 +217,8 @@ img {
 	width: 64px;
 }
 
-.voc_info_input_btn1 {
-	background: #e2c383;
+.mybtn {
+background: #e2c383;
 	border: 1px solid #bb9f65;
 	color: #222;
 	height: 28px;
@@ -228,7 +228,10 @@ img {
 	position: relative;
 	left: 750px;
 	top: 19px;
+	font-weight: bold;
 }
+
+
 </style>
 
 
@@ -253,6 +256,8 @@ $(function () {
 			$("#DS_CSTMR_EMAIL2").val($(this).val());
 		}
 });
+	
+
 
 	
 });
@@ -371,7 +376,7 @@ function fnCopy(){
 
 </head>
 <body>
-<form action="MyStarbucks/vocaction.jsp" method="post">
+<form action="../../MyStarbucks/vocaction.jsp" method="post" enctype="multipart/form-data">
 	<!-- top div -->
 	<div class="top">
 		<br> <br> <br> <br> <span class="toptitle">&nbsp;&nbsp;
@@ -564,7 +569,7 @@ function fnCopy(){
 			<tr>
 				<th scope="row">이용 매장<img alt="필수입력"
 					src="//image.istarbucks.co.kr/common/img/common/bullet_star_red.gif"></th>
-				<!-- 20210809 수정 -->
+				
 				<td>
 					<div class="tbl_radio_wrap">
 						<input id="HOW1" name="how" checked="checked" type="radio"
@@ -626,13 +631,10 @@ function fnCopy(){
 						<div class="file_wrap" id="file_wrap1">
 							<input class="voc_file_input" id="fileName1" readonly type="text">
 							<div class="voc_file_btn">
-								<br> <input class="voc_file_input_btn" type="button"
-									value="찾아보기"> <input class="voc_file_input_hidden"
+								<br> <input class="voc_file_input_hidden"
 									onchange="document.getElementById('fileName1').value = this.value;"
 									type="file" name="file_nm1" id="file_nm1">
 							</div>
-							<a class="file_add" href="javascript:void(0);"
-								onClick="$voc.fileInsert(); return false;">더하기 </a>
 						</div>
 
 					</div>
@@ -649,13 +651,8 @@ function fnCopy(){
 	</div>
 	<!-- 테이블 end -->
 
-
-	<div class="voc_info_input_btns">
-		<ul>
-			<li class="voc_info_input_btn1"><a href="#" onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">고객의
-					소리 등록 하기</a></li>
-		</ul>
-	</div>
+    <button type="submit" class="mybtn">고객의 소리 등록하기</button>
+	
 
 
 </form>

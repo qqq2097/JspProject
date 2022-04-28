@@ -19,7 +19,7 @@ public class VoclistDao {
 		{
 			Connection conn=db.getConnection();
 			PreparedStatement pstmt=null;
-			String sql="insert into voclist (myid, email, phonenum, subject, content, photo, writeday ) values (?,?,?,?,?,?now())";
+			String sql="insert into voclist (myid, email, phonenum, subject, content, photo, writeday, Expectwriteday ) values (?,?,?,?,?,?, now(), now())";
 			
 			try {
 				pstmt=conn.prepareStatement(sql);
