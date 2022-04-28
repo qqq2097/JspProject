@@ -220,6 +220,18 @@ border-bottom: 1px solid #d3d3d3;
 border-collapse: collapse;
 }
 
+.pagination li {
+display: inline-block;
+margin:0 5px;
+vertical-align: middle;
+}
+
+.active a{
+font-weight: bold;
+color: #0d5f34;
+border-bottom: 1px solid #0d5f34;
+}
+
 
 </style>
 
@@ -338,7 +350,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 <div class="tabcontainer">
 <!-- 탭 메뉴 상단 시작 -->
 	<ul class="tabs">
-		<li class="tab-link current" data-tab="tab-1">전체</li>
+		<li class="tab-link current" data-tab="tab-1">전체 (<%=totalCount %>)</li>
 		<li class="tab-link" data-tab="tab-2">접수 완료</li>
 		<li class="tab-link" data-tab="tab-3">답변 완료</li>
 	</ul>
@@ -406,7 +418,45 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
     
     
     
-    </table>
+    <!-- 페이징처리 -->
+<br><br>
+<div style="width: 600px; text-align: center;">
+  <ul class="pagination" style="height: 27px; margin-top:20px; margin-left: 300px; width:100%;">
+  	
+  	<%
+  	//이전
+  	if(startPage>1)
+  	{%>
+  		<li>
+  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=startPage-1%>">이전</a>
+  		</li>
+  	<%}
+  	
+  	for(int pp=startPage;pp<=endPage;pp++)
+  	{
+  		if(pp==currentPage)
+  		{%>
+  			<li class="active">
+  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
+  			</li>
+  		<%}else{%>
+  			<li >
+  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
+  			</li>
+  		<%}
+  	}
+  	
+  	//다음
+  	if(endPage<totalPage)
+  	{%>
+  		<li>
+  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=endPage+1%>">다음</a>
+  		</li>
+  	<%}
+  	%>
+  	
+  </ul>
+</div>	
     
 	</div>
 	<div id="tab-2" class="tab-content">
@@ -519,44 +569,6 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 					
 					
 	
-		<!-- 페이징처리 -->
-
-<div style="width: 600px; text-align: center;">
-  <ul class="pagination">
-  	
-  	<%
-  	//이전
-  	if(startPage>1)
-  	{%>
-  		<li>
-  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=startPage-1%>">이전</a>
-  		</li>
-  	<%}
-  	
-  	for(int pp=startPage;pp<=endPage;pp++)
-  	{
-  		if(pp==currentPage)
-  		{%>
-  			<li class="active">
-  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
-  			</li>
-  		<%}else{%>
-  			<li >
-  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
-  			</li>
-  		<%}
-  	}
-  	
-  	//다음
-  	if(endPage<totalPage)
-  	{%>
-  		<li>
-  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=endPage+1%>">다음</a>
-  		</li>
-  	<%}
-  	%>
-  	
-  </ul>
-</div>			
+				
 </body>
 </html>
