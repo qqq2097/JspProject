@@ -408,5 +408,80 @@ public class SangpumDao {
 		return list;
 	}
 	
+	//마이메뉴중복check 존재하면 true return
+	public boolean isMybeverageCheck(String sname) {
+		boolean b=false;
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mybeverage where sname=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, sname);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) b=true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return b;
+	}
+	
+	public boolean isMyfoodCheck(String sname) {
+		boolean b=false;
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from myfood where sname=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, sname);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) b=true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return b;
+	}
+	
+	public boolean isMygoodsCheck(String sname) {
+		boolean b=false;
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mygoods where sname=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, sname);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) b=true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return b;
+	}
 	
 }

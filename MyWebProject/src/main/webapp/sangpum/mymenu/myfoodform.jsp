@@ -40,8 +40,19 @@ img {
 </head>
 <%
 String snum=request.getParameter("snum");
+String sname=request.getParameter("sname");
 SangpumDao dao=new SangpumDao();
 SangpumDto dto=dao.getfoodData(snum);
+
+boolean b=dao.isMyfoodCheck(sname);
+if(b)
+{%>
+<script type="text/javascript">
+alert("이미 My메뉴에 존재합니다")
+window.close()
+</script>
+<%}
+
 %>
 <body>
 <form action="myfoodaction.jsp" method="post">
@@ -54,7 +65,16 @@ SangpumDto dto=dao.getfoodData(snum);
 <input type="hidden" name="imgsrc" value="<%=dto.getImgsrc()%>">
 <button type="submit">추가하기</button>
 <button type="button" onclick="window.close()">취소</button>
+<br>
+<button type="button" class="mymenubtn"
+onclick=goMymenu()>My메뉴</button>
 </div>
 </form>
+<script type="text/javascript">
+function goMymenu() {
+	window.opener.location='../testlist.jsp' //my menu로 이동시키면 됩니당
+		window.close()
+}
+</script>
 </body>
 </html>

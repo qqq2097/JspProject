@@ -70,7 +70,7 @@
 	         <div class="img">
 	           <div class="roastimg">
 	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
-	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>&sname=<%=dto.getSname() %>','',
 	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
@@ -92,7 +92,7 @@
 	         <div class="img">
 	           <div class="roastimg">
 	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
-	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>&sname=<%=dto.getSname() %>','',
 	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
@@ -126,7 +126,7 @@
 	         <div class="img">
 	           <div class="roastimg">
 	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
-	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>&sname=<%=dto.getSname() %>','',
 	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
@@ -148,7 +148,7 @@
 	         <div class="img">
 	           <div class="roastimg">
 	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
-	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>&sname=<%=dto.getSname() %>','',
 	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>
@@ -182,7 +182,7 @@
 	         <div class="img">
 	           <div class="roastimg">
 	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
-	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>','',
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>&sname=<%=dto.getSname() %>','',
 	             'left=500px,top=300px,width=300px,height=300px')">
 	           </div>
 	         </div>

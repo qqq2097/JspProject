@@ -31,7 +31,7 @@ SangpumDao dao=new SangpumDao();
 dao.insertMyfood(dto);
 %>
 <script type="text/javascript">
-window.opener.location='../testlist.jsp' //my menu로 이동시키면 됩니당
+alert("My메뉴에 추가되었습니다.")
 window.close()
 </script>
 </body>
