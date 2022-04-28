@@ -91,4 +91,30 @@ public class memberDao {
 		}
 		return b;
 	}
+	//ID 중복 확인
+		public boolean checkID(String id) {
+			boolean b =false;
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			String sql = "select * from member where id =?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next()) {
+					b = true;
+				}
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				 db.dbClose(rs, pstmt, conn);
+			}
+			return b;
+		}
 }

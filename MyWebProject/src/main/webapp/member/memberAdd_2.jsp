@@ -1,3 +1,4 @@
+<%@page import="StarBucksDao.memberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -38,8 +39,7 @@
   <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/normalize.css" />
   <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/reset.css" />
   <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/style.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <style type="text/css">
 	
@@ -164,6 +164,7 @@ function check() {
 	
 	
 	console.log(mybirthday);
+	
 	if(myid==""){
 		alert("아이디를 입력하세요");
 		document.getElementById("myid").focus();
