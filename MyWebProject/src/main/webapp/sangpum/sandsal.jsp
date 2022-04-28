@@ -1,3 +1,5 @@
+<%@page import="data.dto.SangpumDto"%>
+<%@page import="data.dao.SangpumDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,10 +12,12 @@
 <!-- CSS 링크 -->
 <link rel="stylesheet" href="../../sangpum/css/esspressoCSS.css"/>
 <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/style.css" />
+<style type="text/css"> div.footerinfo{ top: 2400px; } table.maintb{ margin-bottom: 50px; }</style>
 <!-- js -->
-<script src="../../sangpum/js/cakeFilter.js"></script>
+<script src="../../sangpum/js/coffeeFilter.js"></script>
 
 </head>
+<% SangpumDao dao=new SangpumDao(); %>
 <body>
 <div class="sangpum">
 	<p class="headname">샌드위치 & 샐러드</p>
@@ -52,41 +56,48 @@
 	         <td colspan="3" align="left" style="background-color: #f5f2eb;height: 60px;">
 	         <p class="roastname">샌드위치</p>
 	         </td>
+	       <tr style="float: left;">
+	       <%
+	       for(SangpumDto dto:dao.getfoodList(24, 3))
+	       {
+	       %>
+	         <td>
+	         <br>
+	         <br>
+	         <div class="img">
+	           <div class="roastimg">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	           </div>
+	         </div>
+	         <br>
+	         <p class="sangpumname"><%=dto.getSname() %></p>
+	         </td>
+	       <%
+	       }
+	       %>
 	       </tr>
-	        <%
-	           int m=0;
-	           
-	           for(int row=1;row<=2;row++)
-	           {
-	        	   %>
-	        	   <tr>
-	        	   <%
-	           		for(int col=1;col<=3;col++)
-	           		{
-		           		m++;
-	           		 %>
-	           		<td align="left">
-	        	    <br>
-	         	    <br>
-	         	    <div class="img">
-	          		  <div class="roastimg">
-	             		<img src="../../sangpum/image/sand<%=m %>.jpg" width="360" height="335">
-	           		  </div>
-	         		</div>
-	        		<br>
-	        		<!-- db로 저장된 이름 받아오기 -->
-	         		<p class=sangpumname>샌드위치</p>
-	         		</td>
-	           		
-	 	           <%}
-	           		%>
-	     	       </tr>
-	           <%}
-	           %>
+	       <tr style="float: left;">
+	       <%
+	       for(SangpumDto dto:dao.getfoodList(27, 3))
+	       {
+	       %>
+	         <td>
+	         <br>
+	         <br>
+	         <div class="img">
+	           <div class="roastimg">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	           </div>
+	         </div>
+	         <br>
+	         <p class="sangpumname"><%=dto.getSname() %></p>
+	         </td>
+	       <%
+	       }
+	       %>
+	       </tr>
 	     </table>
 	  </div>
-	  <br>
-	  <br>
 	  <!-- 샐러드 -->
 	  <div class="mediumtb">
 	     <table class="maintb">
@@ -95,36 +106,46 @@
 	         <p class="roastname">밀박스</p>
 	         </td>
 	       </tr>
+	       <tr style="float: left;">
 	       <%
-	           int n=0;
-	           
-	           for(int row=1;row<=2;row++)
-	           {
-	        	   %>
-	        	   <tr>
-	        	   <%
-	           		for(int col=1;col<=3;col++)
-	           		{
-		           		n++;
-	           		 %>
-	           		<td align="left">
-	        	    <br>
-	         	    <br>
-	         	    <div class="img">
-	          		  <div class="roastimg">
-	             		<img src="../../sangpum/image/mealbox<%=n %>.jpg" width="360" height="335">
-	           		  </div>
-	         		</div>
-	        		<br>
-	        		<!-- db로 저장된 이름 받아오기 -->
-	         		<p class=sangpumname>밀박스</p>
-	         		</td>
-	           		
-	 	           <%}
-	           		%>
-	     	       </tr>
-	           <%}
-	           %>
+	       for(SangpumDto dto:dao.getfoodList(30, 3))
+	       {
+	       %>
+	         <td>
+	         <br>
+	         <br>
+	         <div class="img">
+	           <div class="roastimg">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	           </div>
+	         </div>
+	         <br>
+	         <p class="sangpumname"><%=dto.getSname() %></p>
+	         </td>
+	       <%
+	       }
+	       %>
+	       </tr>
+	       <tr style="float: left;">
+	       <%
+	       for(SangpumDto dto:dao.getfoodList(33, 3))
+	       {
+	       %>
+	         <td>
+	         <br>
+	         <br>
+	         <div class="img">
+	           <div class="roastimg">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	           </div>
+	         </div>
+	         <br>
+	         <p class="sangpumname"><%=dto.getSname() %></p>
+	         </td>
+	       <%
+	       }
+	       %>
+	       </tr>
 	     </table>
 	  </div>
 </div>  

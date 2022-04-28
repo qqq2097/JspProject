@@ -35,7 +35,7 @@
             <span>playful.</span>
           </p>
           <figure class="visual__summer-latte">
-            <a href="#">
+            <a>
               <img src="assets/img/visual_bev2.png" alt="블론드 서머 라떼">
             </a>
             <figcaption class="visual__detail">
@@ -44,7 +44,7 @@
             </figcaption>
           </figure>
           <figure class="visual__grapefruit-lime">
-            <a href="#">
+            <a>
               <img src="assets/img/visual_bev1.png" alt="스위트 자몽과 라임 블렌디드">
             </a>
             <figcaption class="visual__detail">
@@ -53,7 +53,7 @@
             </figcaption>
           </figure>
           <figure class="visual__melon">
-            <a href="#">
+            <a>
               <img src="assets/img/visual_bev3.png" alt="스위트 멜론 블렌디드">
             </a>
             <figcaption class="visual__detail">
@@ -61,7 +61,7 @@
               <span>스위트 멜론 블렌디드</span>
             </figcaption>
           </figure>
-          <a href="#" aria-labelledby="visual" class="visual__more-btn comp-btn">자세히 보기</a>
+          <a href="index.jsp?main=../../sangpum/frappuccino.jsp" aria-labelledby="visual" class="visual__more-btn comp-btn">자세히 보기</a>
           <!-- <div class="visual__pin"><a href="#"><img src="assets/img/event_banner.png" alt="나만의 스타벅스 홈카페 자세히보기"></a>
           </div> -->
         </section>
@@ -92,14 +92,13 @@
             <div class="gift-box clearfix">
               <div class="gift-left-box">
                 <p>
-                  회원 가입 후, 스타벅스 e-Gift Card를
-                  <span>"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</span>
-                  카드를 등록하여 마이 스타벅스 리워드 회원이 되신 후,
-                  첫 구매를 하시면 무료 음료 쿠폰을 드립니다!
+                  회원 가입 후, 홈페이지 COFFEE 메뉴 중
+                  <span>"나와 어울리는 커피"로 나만의 원두를 찾아보세요!</span>
+                  질문에 대한 답을 선택하시면, 스타벅스가 여러분에게 딱 맞는 원두를 추천해드립니다!
                 </p>
               </div>
               <div class="gift-right-box">
-                <a href="#">e-Gift Card 선물하기</a>
+                <a href="#">나와 어울리는 커피 찾기</a>
               </div>
             </div>
           </div>
@@ -118,24 +117,7 @@
             <dd>비옥한 화산 토양, 높은 고도, 풍부한 강우량으로<br />이상적인 풍미를 자랑하는 르완다 블론드 로스트를 즐겨보세요.<br />시럽과 같은 부드러운 바디감을 갖고 있어 아이스커피로도
               좋습니다.</dd>
           </dl>
-          <a href="#" class="rwanda__more-btn comp-btn" aria-labelledby="rwanda">자세히 보기</a>
-        </section>
-      </div>
-      <!-- 자메이카 -->
-      <div class="reserve-bean-box">
-        <section class="reserve-bean">
-          <h2 id="jamaica" class="a11y-hidden">자메이카블루마운틴 소개</h2>
-          <p class="reserve-bean__title">
-            <span>NEW ARRIVAL</span>
-            <span>Jamaica</span>
-            <span>Blue Mountain</span>
-            <span>자메이카블루마운틴</span>
-          </p>
-          <ul class="reserve-bean__info">
-            <li>이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</li>
-            <li>해당 음료와 원두는 리저브 매장에서만 판매됩니다.</li>
-          </ul>
-          <a href="#" class="reserve-bean__more-btn comp-btn" aria-labelledby="jamaica">자세히 보기</a>
+          <a href="index.jsp?main=../../sangpum/coffee.jsp" class="rwanda__more-btn comp-btn" aria-labelledby="rwanda">자세히 보기</a>
         </section>
       </div>
       <!-- 페이보릿 -->
@@ -153,7 +135,6 @@
               <span>스타벅스만의 특별함을 경험할 수 있는 최상의 선택 음료</span>
               <span>스타벅스 커피와 완벽한 어울림을 자랑하는 푸드</span>
               <span>다양한 시도와 디자인으로 가치를 더하는 상품</span>
-              <span>소중한 사람에게 마음을 전하는 가장 좋은 방법 스타벅스 카드</span>
             </p>
             <a href="#" class="favorite-more-btn" aria-labelledby="favorite">자세히 보기</a>
           </div>

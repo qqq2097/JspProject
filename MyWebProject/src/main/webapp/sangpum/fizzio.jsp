@@ -1,3 +1,5 @@
+<%@page import="data.dto.SangpumDto"%>
+<%@page import="data.dao.SangpumDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,10 +12,11 @@
 <!-- CSS 링크 -->
 <link rel="stylesheet" href="../../sangpum/css/esspressoCSS.css"/>
 <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/style.css" />
+<style type="text/css"> div.footerinfo{ top: 1000px; } </style>
 <!-- js -->
 <script src="../../sangpum/js/coffeeFilter.js"></script>
-
 </head>
+<% SangpumDao dao=new SangpumDao(); %>
 <body>
 <div class="sangpum">
 	<p class="headname">스타벅스 피지오</p>
@@ -45,28 +48,26 @@
 	         <p class="decaf">디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</p>
 	         </td>
 	       </tr>
-	       <tr>
+	       <tr style="float: left;">
 	       <%
-	           int i=0;
-	           
-	           for(int row=1;row<=3;row++)
-	           {
-	        	   %>
-	        	   <td align="left">
-	        	    <br>
-	         	    <br>
-	         	    <div class="img">
-	          		  <div class="roastimg">
-	             		<img src="../../sangpum/image/fizzio<%=row %>.jpg" width="360" height="335">
-	           		  </div>
-	         		</div>
-	        		<br>
-	        		<!-- db로 저장된 이름 받아오기 -->
-	         		<p class=sangpumname>피지오</p>
-	         		</td>
-	           <%}
-	           %>
-	     	 </tr>
+	       for(SangpumDto dto:dao.getbeverageList(27, 3))
+	       {
+	       %>
+	         <td>
+	         <br>
+	         <br>
+	         <div class="img">
+	           <div class="roastimg">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335">
+	           </div>
+	         </div>
+	         <br>
+	         <p class="sangpumname"><%=dto.getSname() %></p>
+	         </td>
+	       <%
+	       }
+	       %>
+	       </tr>
 	     </table>
 	  </div>
 </div>  
