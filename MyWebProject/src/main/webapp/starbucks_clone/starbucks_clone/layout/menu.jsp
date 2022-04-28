@@ -37,7 +37,7 @@
         <nav class="utility clearfix">
           <h2 class="a11y-hidden">멤버 메뉴</h2>
           <ul class="utility-list clearfix" style="margin-left: 500px;">
-            <li><a href="#">Sign In</a></li>
+            <li><a href="index.jsp?main=../../member/loginform.jsp">Sign In</a></li>
             <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp">My Starbuck</a></li>
             <!--  onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'" -->
           </ul>
@@ -69,8 +69,7 @@
 <<<<<<< HEAD
                     <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
 =======
-                    <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+                  
                   </li>
                   
                 </ul>
