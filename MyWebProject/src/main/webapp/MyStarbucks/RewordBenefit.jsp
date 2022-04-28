@@ -14,7 +14,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-
+div.footerinfo {
+	width: 100%;
+	height: 500px;
+	top: 2000px;
+}
 
 div.onetitle{
    font-size: 20pt;
@@ -199,19 +203,19 @@ $(function(){
 	});
    
    
-   $(".formbtn1").click(function(){
+   $(".onetitle").click(function(){
       
       $(".onetitle").next().toggle("slow");
       
    });
    
-   $(".formbtn2").click(function(){
+   $(".twotitle").click(function(){
       
       $(".twotitle").next().toggle("slow");
       
    });
    
-   $(".formbtn3").click(function(){
+   $(".threetitle").click(function(){
       
       $(".threetitle").next().toggle("slow");
       

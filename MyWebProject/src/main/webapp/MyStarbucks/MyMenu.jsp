@@ -16,7 +16,11 @@
 
 <style type="text/css">
 
-
+div.footerinfo {
+	width: 100%;
+	height: 500px;
+	top: 1500px;
+}
 
 div.top{
    width : 100%;
