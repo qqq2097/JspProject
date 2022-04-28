@@ -43,10 +43,15 @@ span.toptitle{
 }
 
 div.container{
+<<<<<<< HEAD
 	position : fixed;
 	width:100%;
 	
 	
+=======
+	position : absolute;
+	right: 395px;
+>>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 }
 div.menuul{
    position : absolute;

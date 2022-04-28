@@ -16,6 +16,8 @@ ul.tabs{
 	padding: 0px;
 	list-style: none;
 	display: flex;
+	border: 0.2px solid #d3d3d3;
+
 
 }
 
@@ -114,6 +116,7 @@ width: 136px;
 background: #e2c383;
 border: 1px solid #bb9f65;
 position: relative;
+text-align: center;
 left: 40px;
 bottom: 17px;
 }
@@ -133,7 +136,7 @@ color: #222;
 .ms_nav {
 float: right;
 position: relative;
-right: 60px;
+right: 100px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;
@@ -162,16 +165,6 @@ position: relative;
 width: 175px;
 }
 
-
-.ms_nav > ul > li > ul > li > a {
-color:#444;
-display: block;
-font-size: 12px;
-padding: 6px 0 6px 15px;
-width: 205px;
-
-}
-
 a{
 margin: 0;
 text-decoration: none;
@@ -181,11 +174,35 @@ cursor: pointer;
 color: black;
 }
 
+
+.ms_nav > ul > li > ul > li > a  {
+color: #444;
+display: block;
+font-size: 12px;
+padding: 6px 0 6px 15px;
+width: 205px;
+}
 .tabcontainer{
 position: relative;
 left: 60px;
-width: 1100px;
+width: 600px;
 height: 174px;
+}
+
+table.suggestion_use_info_tbl{
+border-top: 1px solid #333;
+position: relative;
+font-size: 9px;
+text-align: center;
+width: 1100px;
+right: 10px;
+}
+
+table.suggestion_use_info_tbl thead tr th{
+border-bottom: 1px solid #333;
+color: #222;
+height: 40px;
+vertical-align: middle;
 }
 
 </style>
@@ -203,7 +220,6 @@ $(function () {
 	
 });
 
-//탭 이벤트
 $(document).ready(function(){
 	
 	$('ul.tabs li').click(function(){
@@ -247,7 +263,7 @@ $(document).ready(function(){
 	<dd>스타벅스에서는 고객 여러분의 즐겁고 행복한 시간을 위해 정성을 다하고 있습니다.<br>만족스러운 서비스였는지, 불만스러운 점은 없으셨는지 귀한 의견을 들려주시기 바랍니다.<br>보다 나은 서비스로 보답하겠습니다.
 	<br><br><b style="color: #666666; padding: 0px 0px 0px 12xp;">※고객의 소리 운영시간 : 09:00 ~ 18:00 (연중 무휴)</b></dd>
 	</dl>
-	<p class="btn_suggestion_inquiry"><a href="">고객의 소리 문의 하기</a></p>
+	<p class="btn_suggestion_inquiry"><a href="index.jsp?main=../../MyStarbucks/vocWrite.jsp">고객의 소리 문의 하기</a></p>
 	</section>
 </div>
 
@@ -259,24 +275,121 @@ $(document).ready(function(){
 		<li class="tab-link" data-tab="tab-2">접수 완료</li>
 		<li class="tab-link" data-tab="tab-3">답변 완료</li>
 	</ul>
-	
+	<br>
 <!-- 탭 메뉴 상단 끝 -->
 <!-- 탭 메뉴 내용 시작 -->
-	<div id="tab-1" class="tab-content current">
-    <h1>탭 메뉴 1 내용입니다.</h1>
+	<div id="tab-1" class="tab-content current" >
+    		<!-- 전체 -->
+										<!-- (고객의 소리) 목록 -->
+										<table class="suggestion_use_info_tbl"  summary="고객의 소리 구분, 분야, 제목, 첨부파일, 작성일, 답변여부에 대한 테이블">
+											<colgroup>
+												<col width="50">
+												
+												<col width="350">
+												<col width="113">
+												<col width="113">
+												<col width="204">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="en" scope="col">No</th>
+													
+													<th scope="col">제목</th>
+													<th scope="col">작성일</th>
+													<th scope="col">답변예정일</th>
+													<th scope="col">답변여부</th>
+												</tr>
+											</thead>
+											
+											<tbody id="all">	
+											
+											</tbody>
+										</table>
+    
+    
+    
+    </table>
     
 	</div>
 	<div id="tab-2" class="tab-content">
-  <h1>  탭 메뉴 2 내용입니다.  </h1>
+  		<!-- 전체 -->
+										<!-- (고객의 소리) 목록 -->
+										<table class="suggestion_use_info_tbl" summary="고객의 소리 구분, 분야, 제목, 첨부파일, 작성일, 답변여부에 대한 테이블">
+							
+											<colgroup>
+												<col width="50">
+												
+												<col width="350">
+												<col width="113">
+												<col width="113">
+												<col width="204">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="en" scope="col">No</th>
+													
+													<th scope="col">제목</th>
+													<th scope="col">작성일</th>
+													<th scope="col">답변예정일</th>
+													<th scope="col">답변여부</th>
+												</tr>
+											</thead>
+											
+											<tbody id="all">	
+											
+											</tbody>
+										</table>
 
 	</div>
 	<div id="tab-3" class="tab-content">
-  <h1>  탭 메뉴 3 내용입니다.  </h1>
+  		<!-- 전체 -->
+										<!-- (고객의 소리) 목록 -->
+										<table class="suggestion_use_info_tbl" summary="고객의 소리 구분, 분야, 제목, 첨부파일, 작성일, 답변여부에 대한 테이블">
+										
+											<colgroup>
+												<col width="50">
+												
+												<col width="350">
+												<col width="113">
+												<col width="113">
+												<col width="204">
+											</colgroup>
+											<thead>
+												<tr>
+													<th class="en" scope="col">No</th>
+													
+													<th scope="col">제목</th>
+													<th scope="col">작성일</th>
+													<th scope="col">답변예정일</th>
+													<th scope="col">답변여부</th>
+												</tr>
+											</thead>
+											
+											<tbody id="all">	
+											
+											</tbody>
+										</table>
 
 
 <!-- 탭 메뉴 내용 끝 -->
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -292,7 +405,7 @@ $(document).ready(function(){
 		</li>
 		
 		<li class="msRnb_btn"><a href="/my/my_menu.do" required="login">My 메뉴</a></li>
-		<li><a href="" required="login">My 고객의 소리</a></li>
+		<li><a href="#" required="login">My 고객의 소리</a></li>
 		
 		<li>
 			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>

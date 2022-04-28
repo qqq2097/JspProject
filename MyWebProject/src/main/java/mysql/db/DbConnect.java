@@ -12,38 +12,38 @@ public class DbConnect {
    //driver
    static final String MYSQLDRIVER="com.mysql.jdbc.Driver";
    //url
-   static final String MYSQL_URL="jdbc:mysql://localhost:3306/sist";
+   static final String MYSQL_URL="jdbc:mysql://webservice.c8yhcip2pbxe.ap-northeast-2.rds.amazonaws.com:3306/webservice";
    
    
-   //»ý¼ºÀÚ
+   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    public DbConnect() {
 
       try {
          Class.forName(MYSQLDRIVER);
       } catch (ClassNotFoundException e) {
          // TODO Auto-generated catch block
-         System.out.println("MySql µå¶óÀÌ¹ö ½ÇÆÐ: "+e.getMessage());
+         System.out.println("MySql ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½: "+e.getMessage());
       }
    }
    
    
    
-   //°èÁ¤¿¬°á
+   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    public Connection getConnection()
    {
       Connection conn=null;
       
       try {
-         conn=DriverManager.getConnection(MYSQL_URL, "root", "1234");
+         conn=DriverManager.getConnection(MYSQL_URL, "admin", "as1215as!");
       } catch (SQLException e) {
-         System.out.println("Mysql¿¬°á½ÇÆÐ: "+e.getMessage());
+         System.out.println("Mysqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: "+e.getMessage());
          e.printStackTrace();
       }
       
       return conn;
    }
    
-   //close ¸Þ¼­µå ÃÑ 4°³,¿À¹ö·Îµù ¸Þ¼­µå
+   //close ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ 4ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Îµï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
    public void dbClose(ResultSet rs,Statement stmt,Connection conn)
    {
       
