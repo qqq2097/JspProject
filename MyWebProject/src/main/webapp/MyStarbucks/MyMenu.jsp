@@ -5,7 +5,6 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <!-- 폰트 -->
 <link
   href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
@@ -17,10 +16,6 @@
 
 <style type="text/css">
 
-div.container
-{
-	position: inherit;
-}
 
 
 div.top{
@@ -80,7 +75,7 @@ ul.sub2{
 .ms_nav {
 float: right;
 position: relative;
-right: 100px;
+right: 300px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;
@@ -217,9 +212,9 @@ $(function(){
 	</div>
 
 	<div style="margin-left: 115px; margin-top: 100px; width : 850px; height: 50px;">
-   		<button type="button"  style="width:266px; height: 50px;" class="btn btn-default checkbtn" id="drinkbtn"> 나만의 음료</button>
-   		<button type="button" style="width:266px; height: 50px; " class="btn btn-default checkbtn" id="foodbtn"> 나만의 푸드</button>
-   		<button type="button" style="width:260px; height: 50px;" class="btn btn-default checkbtn" id="sangpumbtn"> 나만의 상품</button>
+   		<button type="button"  style="width:266px; height: 50px; border: 1px solid gray" class="btn btn-default checkbtn" id="drinkbtn"> 나만의 음료</button>
+   		<button type="button" style="width:266px; height: 50px; border: 1px solid gray" class="btn btn-default checkbtn" id="foodbtn"> 나만의 푸드</button>
+   		<button type="button" style="width:260px; height: 50px; border: 1px solid gray" class="btn btn-default checkbtn" id="sangpumbtn"> 나만의 상품</button>
 	</div>
 
 

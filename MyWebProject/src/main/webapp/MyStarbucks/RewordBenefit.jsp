@@ -5,7 +5,6 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <!-- 폰트 -->
 <link
   href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
@@ -16,10 +15,6 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-div.container
-{
-	position: inherit;
-}
 
 div.onetitle{
    font-size: 20pt;
@@ -76,16 +71,7 @@ span.toptitle{
    
 }
 
-div.container{
-	position : absolute;
-	right: 395px;
-}
-div.menuul{
-   position : absolute;
-   left : 1000px;
-   top : 300px;
-   font-size: 17pt;
-}
+
 
 li.mylist{
    border: 1px solid gray;
@@ -97,7 +83,7 @@ span.formbtn1{
    border-radius: 100%;
    background: #32CD32;
    color: #fff;
-   margin-left: 80px;
+   margin-left: 370px;
 }
 
 span.formbtn2{
@@ -127,7 +113,7 @@ ul.sub2{
 .ms_nav {
 float: right;
 position: relative;
-left : 100px;
+right: 300px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;

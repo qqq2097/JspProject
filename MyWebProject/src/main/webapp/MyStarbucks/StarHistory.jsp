@@ -10,17 +10,12 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
 <style type="text/css">
 
-div.container
-{
-	position: inherit;
-}
 
 div.top{
    width : 100%;
@@ -75,6 +70,7 @@ font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
 margin-top: -300px;
+right:  300px;
 }
 
 .ms_nav > ul{
@@ -146,6 +142,8 @@ vertical-align: middle;
 	//List<RewordDto> list2=dao.RadioOne();
 	//List<RewordDto> list3=dao.RadioTwo();
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+	
+	//int starcnt=Integer.parseInt(request.getParameter("starcnt"));
 %>
 <script type="text/javascript">
 $(function(){
@@ -211,10 +209,10 @@ $(function(){
 
 	<div class="mid">
 		<div class="first">
-		<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px;" >
-   			<tr>
-      			<td align="center">사용 가능한 별</td>
-      			<td align="center">총 누적 별</td>
+		<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px; border: 3px solid black;" >
+   			<tr bgcolor="black;" style="color: #fff; border-bottom: 3px solid black;">
+      			<th align="center">사용 가능한 별</th>
+      			<th align="center">총 누적 별</th>
    			</tr>
    
    			<tr>
@@ -241,7 +239,7 @@ $(function(){
 		</div>
    
 		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb1">
-   		<table class="table table-bordered" >
+   		<table class="table table-bordered" style="width : 800px;">
    		<caption>전체</caption>
    			<tr>
       			<th align="center"> No</th>
@@ -259,11 +257,11 @@ $(function(){
 	   				RewordDto dto=list.get(i);
 	  			 %>
 	   				<tr>
-	   					<td><%=i+1 %></td>
-	   					<td><%=dto.getCardnum() %></td>
-	   					<td><%=dto.getStarcnt() %></td>
-	   					<td><%=dto.getStoreaddr() %></td>
-	   					<td><%=sdf.format(dto.getBuyday()) %></td>
+	   					<td align="center"><%=i+1 %></td>
+	   					<td align="center"><%=dto.getCardnum() %></td>
+	   					<td align="center"><%=dto.getStarcnt() %></td>
+	   					<td align="center"><%=dto.getStoreaddr() %></td>
+	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
    						%> 

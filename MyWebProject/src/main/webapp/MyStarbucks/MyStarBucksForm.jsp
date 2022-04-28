@@ -5,7 +5,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <meta charset="UTF-8">
@@ -13,10 +13,7 @@
 
 <style type="text/css">
 
-div.container
-{
-	position: inherit;
-}
+
 
 div.left{
    position : absolute;
@@ -107,7 +104,7 @@ ul.sub2{
 .ms_nav {
 float: right;
 position: relative;
-right: 100px;
+right: 300px;
 bottom: 410px;
 font-weight: blod;
 width: 220px;
@@ -196,6 +193,16 @@ $(function(){
 });
 </script>
 </head>
+
+<<%-- %
+	memberDto mdto = new memberDto();
+	memberDao mdao = new memberDao();
+	
+	String grade=request.getParameter("grade");
+	String nickname=request.getParameter("nickname");
+	
+	
+%> --%>
 <body>
 
 
@@ -228,13 +235,13 @@ $(function(){
 
 <!-- right div -->
 	<div class="right">
-   		<span>님은<br>현재  이십니다.</span>
+   		<%-- <span><%=mdto.getNickname() %>님은<br>현재<%=mdto.getGrade() %> 이십니다.</span> --%>
    		<br><br>
-   		<button type="button" class="btn btn-default btnre" style="width : 130px; margin-left: 20px;  margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
-  		 <button type="button" class="btn btn-default btnre" style="width : 130px; margin-top: 20px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
+   		<button type="button" class="btn btn-default btnre" style=" width : 100px; height: 50px;  margin-left: 50px;  margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+  		 <button type="button" class="btn btn-default btnre" style=" width : 100px; height: 50px; margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
    		<br>
-   		<button type="button" class="btn btn-default btnsu" style="width : 130px; margin-left: 20px; margin-top: 10px;">개인정보 수정</button>
-   		<button type="button" class="btn btn-default btnbun" style="width : 130px; margin-top: 10px;">비밀번호 변경</button>
+   		<button type="button" class="btn btn-default btnsu" style=" width : 100px; height: 50px; margin-left: 50px; margin-top: 10px;">개인정보 수정</button>
+   		<button type="button" class="btn btn-default btnbun" style="width : 100px; height: 50px; margin-top: 10px;">비밀번호 변경</button>
 	</div>      
 </div>
 
