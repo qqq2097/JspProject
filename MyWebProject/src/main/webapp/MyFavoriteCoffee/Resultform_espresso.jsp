@@ -5,30 +5,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
 	div.title{
 		margin-left: 200px;
-		margin-top: 65px;
+		margin-top: 40px;
+	}
+
+	div.title img{
+		margin-top: 20px;
 	}
 
 	div.title span{
 	color: #808080;
 	margin-left: 700px;
-	
-	}
-	
-	div.back{
-		width: 100%;
-		background-image: url("../../MyFavoriteCoffee/image/background.jpg");
+	font-size: 1.3em;
+
 	}
 	
 	div.container{
-	
 		width: 100%;
-		height: 170px;
+		margin-top: -38px;
+		height: 120px;
 		background-image: url("../../MyFavoriteCoffee/image/background.jpg");
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -100,34 +99,31 @@
 <!-- container end div -->
 
 <div class="image">
-	<img alt="" src="../../MyFavoriteCoffee/resultimage/pikeplace.jpg" width="450px;" height="450px;">
+	<img alt="" src="../../MyFavoriteCoffee/resultimage/espresso.jpg" width="450px;" height="450px;">
 </div>
 
 <div class="detail">	
 	<div class="article">
 		<h3>
-			스타벅스 네스프레스 파이크플레이스 10개입
+			스타벅스 돌체구스토 에스프레소 12개입
 			<br>
 			<span></span>
 		</h3>
 	
 		<p class="title">
-		'스타벅스 커피를 집에서도 간편하게 즐기실 수 있는 캡슐타입의 커피로, 라틴 아메리카 커피의 부드럽고 조화로운 블렌딩에 초콜릿과 구운 견과의 풍미를 은은하게 더한 파이크 플레이스입니다. 
-		 파이크 플레이스는 시애틀에 위치한 스타벅스 1호점부터 전 세계 스타벅스 매장에 이르기까지 고객들에게 꾸준히 사랑받아 온 블렌드입니다.
-		 네스프레소 캡슐은 에스프레소에 특화된 상품이며, 알루미늄 캡슐의 커피는 900여종의 휘발되기 쉬운 아로마를 밀봉하여 담을 수 있도록 고안된 디자인으로 깊고 풍부한 원두 자체의 풍미를 즐기기에 좋은 상품입니다.
-		 *본 캡슐커피는 네스프레소 머신 전용 캡슐입니다. 전용 머신 없이는 캡슐 음용이 불가합니다. 구입 전 반드시 머신의 종류를 확인하시고 구매하시기 바랍니다.
+		스타벅스 커피를 집에서도 간편하게 즐기실 수 있는 캡슐 타입의 커피로, 커피의 강렬함과 캐러멜 향의 달콤함이 있는 상품입니다. 
+		풍부하고 조화로운 느낌으로 스타벅스 에스프레소 음료의 기본이 되는 커피를 표현하기 위해 수개월간 연구를 통해 제작되었습니다.
+		 돌체구스토 캡슐은 로스팅 되고 분쇄된 직후 곧바로 캡슐에 밀봉되어 공기 중의 습기나 산소로부터 보호막이 되어 커피의 산화를 막고, 커피의 맛과 아로마를 신선하게 보존해 줍니다. 
+		 *본 캡슐커피는 돌체구스토 머신 전용 캡슐입니다. 전용 머신 없이는 캡슐 음용이 불가합니다. 구입 전 반드시 머신의 종류를 확인하시고 구매하시기 바랍니다.
 		</p>
 	
 		<p class="text">
-		[스타벅스커피 앳 홈 by 네스프레소]
-		스타벅스 커피를 집에서도 간편하게 즐기실 수 있는 캡슐 타입의 커피로, 
-		라틴 아메리카 커피의 부드럽고 조화로운 블렌딩에 초콜릿과 구운 견과의 풍미를 은은하게 더한 파이크 플레이스입니다. 
+		[스타벅스커피 앳 홈 by 돌체구스토] 스타벅스 커피를 집에서도 간편하게 즐기실 수 있는 캡슐 타입의 커피로, 커피의 강렬함과 캐러멜 향의 달콤함이 있는 상품입니다. 
 		</p>
 
 	</div>
 
 </div>	
 
-<div class="back"></div>
 </body>
 </html>

@@ -38,7 +38,7 @@ div.main {
 div.footerinfo {
 	width: 100%;
 	height: 500px;
-	top: 3790px;
+	top: 750px;
 }
 </style>
 </head>

@@ -5,24 +5,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Insert title here</title>
 <style type="text/css">
 
 	div.title{
-		margin-left: 100px;
-		margin-top: 65px;
+		margin-left: 200px;
+		margin-top: 40px;
 	}
 
 	div.title span{
 	color: #808080;
 	margin-left: 800px;
+	font-size: 1.3em;
 	}
 
 	div.container{
 		width: 100%;
 		background-image: url("../../MyFavoriteCoffee/image/background.jpg");
+		
+	}
+	div.container p{
+		margin-top: 30px;
 	}
 	
 	 div.subject1 div.flavor{
@@ -100,7 +104,9 @@
         position: relative;
         animation: fadeInUp 2s;
     }
-	
+	dd b{
+	 	font-size: 11pt;
+	 }
 </style>
 <script type="text/javascript">
 
@@ -128,9 +134,15 @@ $(function () {
 
 	
 	
-	$(".strength dt img").click(function() {
+	$("img.soft").click(function() {
 		
-		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform.jsp';
+		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		
+	});
+	
+	$("img.weigth").click(function() {
+		
+		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
 		
 	});
 
@@ -156,11 +168,11 @@ $(function () {
 </div>
 
 
-<div class="container" style="margin-top: 30px;">
+<div class="container" style="height: 700px;">
 	
 		<div class="subject1">
 			<p>	
-				<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png">
+				<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png" style="margin-top: 70px;">
 			</p>
 			<div class="flavor">
 				<ul>
@@ -196,7 +208,7 @@ $(function () {
 		
 		<div class="subject2">
 			<p>	
-				<img alt="" src="../../MyFavoriteCoffee/image/2_어떤느낌.png">
+				<img alt="" src="../../MyFavoriteCoffee/image/2_어떤느낌.png" style="margin-top: 80px;">
 			</p>
 			<div class="feel">
 				<ul>
@@ -225,7 +237,7 @@ $(function () {
 		
 		<div class="subject3">
 			<p>	
-				<img alt="" src="../../MyFavoriteCoffee/image/3_어떤강도.png">
+				<img alt="" src="../../MyFavoriteCoffee/image/3_어떤강도.png" style="margin-top: 80px;">
 			</p>
 			<div class="strength">
 				<ul>
@@ -237,13 +249,13 @@ $(function () {
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_미디엄으로균형잡힘.png"></dt>			
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_미디엄으로균형잡힘.png" class="soft"></dt>			
 							<dd><b>부드러운 느낌</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_무게감을주는강렬함.png"></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_무게감을주는강렬함.png" class="weigthj"></dt>
 							<dd><b>무게감을 주는 강렬함</b></dd>
 						</dl>					
 					</li>
