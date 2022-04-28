@@ -86,7 +86,7 @@
               </div>
               <div class="member-right-box">
                 <a href="index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
-                <a href="#">로그인</a>
+                <a href="index.jsp?main=../../member/loginform.jsp">로그인</a>
               </div>
             </div>
             <div class="gift-box clearfix">
