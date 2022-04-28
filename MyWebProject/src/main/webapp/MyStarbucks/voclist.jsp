@@ -14,6 +14,13 @@
 <title>Insert title here</title>
 <style type="text/css">
 
+div.footerinfo{
+top: 1100px;
+width: 100%;
+height: 500px;
+
+}
+
 ul.tabs{
 	margin: 0px;
 	padding: 0px;
