@@ -65,7 +65,7 @@ if(key==null){
 <script type="text/javascript">
 	function goBack(email){
 		
-		opener.location.href="memberAdd_2.jsp?email="+email;
+		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_2.jsp?email="+email;
 		window.close();
 		
 	}

@@ -236,15 +236,15 @@ if(hp==null){
 
 %>
 <body>
-	
-      <form action="memaddAction.jsp"  method="post" class="form-inline" onsubmit="return check()" name="mfrm2">
+	<div style="height: 130px;"></div>
+      <form action="../../member/memaddAction.jsp"  method="post" class="form-inline" onsubmit="return check()" name="mfrm2">
       	<div align="center">
       		<p style="font-size:3em; font-weight: 500; padding-bottom: 20px; ">회원가입</p>
       		<br>
       		<table  style="width:70%; border: 1px solid #C1C1C1;">
       		<tr style="border-bottom: none;">
 	      		<td  align="center" style="padding-top:20px; ">
-	      			<img src="memberaddimg1.PNG">
+	      			<img src="../../member/memberaddimg1.PNG">
       			</td>
       		</tr>
       		<tr class="line">
@@ -309,7 +309,7 @@ if(hp==null){
      	<table style=" margin-top:50px; width:70%; border: 1px solid #C1C1C1;">
       		<tr>
 	      		<td colspan="2" align="center" width="100%" style="padding-top:20px;">
-	      			<img src="memberaddimg1.PNG">
+	      			<img src="../../member/memberaddimg1.PNG">
       			</td>
       		</tr>
       		<tr>
