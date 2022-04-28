@@ -118,13 +118,13 @@ button{
 			</tr>
 			<tr align="center" style="font-size: 1.7em; font-weight: lighter; " >
 				<td style=" border-right: 1px solid #848484; width:33.4%; margin-top: 15px; margin-bottom: 15px;  ">
-					<p >회원가입</p>
+					<a  href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
 				</td>
 				<td style=" border-right: 1px solid #848484; width:33.3%; margin-top: 15px; margin-bottom: 15px; ">
-					<p>아이디찾기</p>
+					<a>아이디찾기</a>
 				</td>
 				<td style="width:33.3%; margin-top: 15px; margin-bottom: 15px; ">
-					<p>비밀번호찾기</p>
+					<a>비밀번호찾기</a>
 				</td>
 			</tr>
 			<tr height="20px">
