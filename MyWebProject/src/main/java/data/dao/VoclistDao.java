@@ -114,4 +114,39 @@ public class VoclistDao {
 			return list;
 		}
 		
+		//num에해당하는 dto반환
+				public VoclistDto getData(String num)
+				{
+					VoclistDto dto=new VoclistDto();
+					Connection conn=db.getConnection();
+					PreparedStatement pstmt=null;
+					ResultSet rs=null;
+					
+					String sql="select * from voclist where num=?";
+					
+					try {
+						pstmt=conn.prepareStatement(sql);
+						pstmt.setString(1, num);
+						rs=pstmt.executeQuery();
+						
+						if(rs.next())
+						{
+							dto.setNum(rs.getString("num"));
+							dto.setSubject(rs.getString("subject"));
+							dto.setContent(rs.getString("content"));
+							dto.setPhoto(rs.getString("photo"));
+							dto.setWriteday(rs.getTimestamp("writeday"));
+						}
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}finally {
+						db.dbClose(rs, pstmt, conn);
+					}
+					
+					
+					return dto;
+				}
+		
+		
 }

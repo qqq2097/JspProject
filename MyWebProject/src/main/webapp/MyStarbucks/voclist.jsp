@@ -109,7 +109,7 @@ margin:3px;
 .suggestion {padding: 30px;}
 
 
-
+/*안내문*/
 .suggtext{
 width: 80%;
 height: auto;
@@ -118,7 +118,7 @@ background-size: auto 68%;
 }
 
 
-
+/*문의 버튼*/
 .btn_suggestion_inquiry{
 border-radius: 3px;
 height: 28px;
@@ -192,6 +192,8 @@ font-size: 12px;
 padding: 6px 0 6px 15px;
 width: 205px;
 }
+
+/*테이블*/
 .tabcontainer{
 position: relative;
 left: 60px;
@@ -226,6 +228,7 @@ margin:0 5px;
 vertical-align: middle;
 }
 
+/*해당 페이지 나타내는*/
 .active a{
 font-weight: bold;
 color: #0d5f34;
@@ -324,9 +327,9 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
    <br><br><br><br>
    <span class="toptitle">&nbsp;&nbsp; 고객의 소리</span>
    <ul class="smap">
-   <li><a href="/"><img src="../../MyStarbucks/image/home.png" alt="홈으로"></a></li>
+   <li><a href="index.jsp"><img src="../../MyStarbucks/image/home.png" alt="홈으로"></a></li>
    <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
-   <li><a href="" ><span class="kor">My Starbucks</a></li>
+   <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp" ><span class="kor">My Starbucks</a></li>
    <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
    <li><a href=""><span class="kor">참여 현황</span></a></li>
    <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
@@ -393,7 +396,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
 													<td>
-													<a href="#" style="color: #666;">
+													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" style="color: #666;">
 													<%=dto.getSubject() %></a>
 													</td>
 										
@@ -552,8 +555,8 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			</ul>
 		</li>
 		
-		<li class="msRnb_btn"><a href="/my/my_menu.do" required="login">My 메뉴</a></li>
-		<li><a href="#" required="login">My 고객의 소리</a></li>
+		<li class="msRnb_btn"><a href="index.jsp?main=../../MyStarbucks/MyMenu.jsp" required="login">My 메뉴</a></li>
+		<li><a href="index.jsp?main=../../MyStarbucks/voclist.jsp" required="login">My 고객의 소리</a></li>
 		
 		<li>
 			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
