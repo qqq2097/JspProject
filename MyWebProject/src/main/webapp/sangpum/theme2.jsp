@@ -10,6 +10,7 @@
 <!-- CSS 링크 -->
 <link rel="stylesheet" href="../../sangpum/css/themeCSS.css"/>
 <link rel="stylesheet" href="assets/css/style.css" />
+<style type="text/css"> div.footerinfo{ top: 700px; } </style>
 <!-- js -->
 <script src="../../sangpum/js/themebtn.js"></script>
 

@@ -1,3 +1,5 @@
+<%@page import="data.dto.SangpumDto"%>
+<%@page import="data.dao.SangpumDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,11 +12,12 @@
 <!-- CSS 링크 -->
 <link rel="stylesheet" href="../../sangpum/css/themeCSS.css"/>
 <link rel="stylesheet" href="assets/css/style.css" />
+<style type="text/css"> div.footerinfo{ top: 1000px; } </style>
 <!-- js -->
 <script src="../../sangpum/js/themebtn.js"></script>
 
-
 </head>
+<% SangpumDao dao=new SangpumDao(); %>
 <body>
 <div class="sangpum">
 	<p class="headname">시즌메뉴</p>
@@ -35,32 +38,35 @@
 	  <br>
 	  <br>
 	  <div class="banner">
-	    <img alt="" src="../../sangpum/image/theme_banner.jpg">
+	    <img alt="" src="../../sangpum/image/theme_banner5.jpg">
 	  </div>
 	</div>
 	<br>
 	<!-- 상품list -->
 	 <div class="blondtb">
 	     <table class="maintb">
-	       <tr>
+	       <tr style="float: left;">
 	       <%
-	       for(int row=1;row<=3;row++)
-	       {%>
-	        	 <td align="left">
-	        	 <br>
-	         	 <br>
-	         	 <div class="img">
-	          		<div class="roastimg">
-	             		<img src="../../sangpum/image/theme<%=row %>.jpg" width="360" height="335">
-	           		</div>
-	         	  </div>
-	        	  <br>
-	        	  <!-- db로 저장된 이름 받아오기 -->
-	         	  <p class=sangpumname>시즌 메뉴</p>
-	         	  </td>
-	       <%}
+	       for(SangpumDto dto:dao.getbeverageList(30, 3))
+	       {
 	       %>
-	     </tr>
+	         <td>
+	         <br>
+	         <br>
+	         <div class="img">
+	           <div class="roastimg">
+	             <img alt="" src="<%=dto.getImgsrc()%>" width="360" height="335"
+	             onclick="window.open('../../sangpum/mymenu/mybeverageform.jsp?snum=<%=dto.getSnum()%>&sname=<%=dto.getSname() %>','',
+	             'left=500px,top=300px,width=300px,height=300px')">
+	           </div>
+	         </div>
+	         <br>
+	         <p class="sangpumname"><%=dto.getSname() %></p>
+	         </td>
+	       <%
+	       }
+	       %>
+	       </tr>
 	     </table>
 	  </div>
 </div>  
