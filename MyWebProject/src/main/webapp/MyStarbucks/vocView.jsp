@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <title>Insert title here</title>
 
 <style type="text/css">
@@ -22,6 +23,9 @@ width: 100%;
 height: 500px;
 
 }
+
+div.footerinfo a{
+color: white; }
 
 div.topsub {
 	color: #fff;
@@ -57,58 +61,65 @@ margin:3px;
 
 
 
+/*네비*/
 .ms_nav {
-float: right;
-position: relative;
-right: 100px;
-bottom: 410px;
-font-weight: blod;
-width: 220px;
-margin-bottom: 90px;
+	float: right;
+	position: relative;
+	right: 100px;
+	bottom: -99px;
+	font-weight: blod;
+	width: 220px;
+	margin-bottom: 90px;
 }
 
-.ms_nav > ul{
-border-top: 2px solid #222;
+.ms_nav>ul {
+	border-top: 2px solid #222;
 }
 
-nav ul, li {list-style: none;}
-li{display: list-item;
-text-align: -webkit-match-parent;}
-
-.ms_nav >ul>li {
-border-bottom: 1px solid #ddd;
-width: 220px;
+nav ul, li {
+	list-style: none;
 }
 
-.ms_nav > ul>li>a {
-color: #444;
-display: block;
-font-size: 14px;
-padding: 20px 30px 20px 15px;
-position: relative;
-width: 175px;
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
 }
 
-a{
-margin: 0;
-text-decoration: none;
-vertical-align: baseline;
-background: transparent;
-cursor: pointer;
-color: black;
+.ms_nav>ul>li {
+	border-bottom: 1px solid #ddd;
+	width: 220px;
 }
 
+.ms_nav>ul>li>a {
+	color: #444;
+	display: block;
+	font-size: 14px;
+	padding: 20px 30px 20px 15px;
+	position: relative;
+	width: 175px;
+}
 
-.ms_nav > ul > li > ul > li > a  {
-color: #444;
-display: block;
-font-size: 12px;
-padding: 6px 0 6px 15px;
-width: 205px;
+a {
+	margin: 0;
+	text-decoration: none;
+	vertical-align: baseline;
+	background: transparent;
+	cursor: pointer;
+	color: black;
+}
+
+.ms_nav>ul>li>ul>li>a {
+	color: #444;
+	display: block;
+	font-size: 12px;
+	padding: 6px 0 6px 15px;
+	width: 205px;
 }
 
 .ms_cont {
 float: left;
+margin-left: 300px;
+margin-top: 100px;
 width: 830px;
 margin-bottom: 90px;
 }
@@ -116,7 +127,7 @@ margin-bottom: 90px;
 section.my_suggestion_view_top{
 border-top: 1px solid #222;
 border-bottom: 1px solid #222;
-padding: 20px;
+padding: 30px;
 }
 
 section.my_suggestion_view_top dl{
@@ -127,6 +138,7 @@ section.my_suggestion_view_top dl dd.text{
 float: left;
 font-size: 14px;
 color: #222;
+line-height: 2px;
 font-weight: bold;}
 
 section.my_suggestion_view_file{
@@ -186,21 +198,18 @@ border-bottom: 1px solid #dbdbdb;
 margin-bottom: 20px;
 }
 
-.btn{
-position: relative;
-top:210px;
-right: 350px;
+.btn {
 border: 1px solid #bb9f65;
 background: #e2c383;
 border-radius: 3px;
 width: 80px;
+height: 35px;
 margin-top: 20px;
 margin-right: 10px;
-height: 28px;
-line-height: 28px;
-text-align: center;
-width: 50%;
+float: right;
+font-size: 11px;
 }
+
 
 </style>
 
@@ -216,6 +225,7 @@ $(function () {
 	
 });
 </script>
+
 </head>
 <body>
 <%
@@ -274,14 +284,17 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 </dl>
 </section>
 
+<div>
+<button type="button" class="btn btn-default"
+onclick="location.href=''" >수정</button>
+<button type="button" class="btn btn-default"
+onclick="location.href=''">삭제</button>
+</div>
+
 </div>
 
 
 
-<button type="button" class="btn btn-default"
-onclick="location.href=''">목록</button>
-<button type="button" class="btn btn-default"
-onclick="location.href='">수정</button>
 
 
 
@@ -290,7 +303,7 @@ onclick="location.href='">수정</button>
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="#">My 리워드<span class="sbox_arrow_down1"></span></a>
+			<a>My 리워드<span class="sbox_arrow_down1"></span></a>
 			<ul class="sub1">
 				<li><a href="#" required="login" >· 리워드 및 혜택</a></li>
 				<li><a href="#" required="login">· 별 히스토리</a></li>
@@ -301,7 +314,7 @@ onclick="location.href='">수정</button>
 		<li><a href="index.jsp?main=../../MyStarbucks/voclist.jsp" required="login">My 고객의 소리</a></li>
 		
 		<li>
-			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
+			<a>개인정보관리<span class="sbox_arrow_down2"></span></a>
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
