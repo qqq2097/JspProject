@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 body{
-	background-image: url("../../member/loginback.jpg"); 
+	background-image: url("../../login/loginback.jpg"); 
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -149,10 +149,10 @@ String saveid= (String)session.getAttribute("saveid");
 					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
 				</td>
 				<td style=" border-right: 1px solid #848484; width:33.3%; margin-top: 15px; margin-bottom: 15px; ">
-					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../member/findID.jsp">아이디찾기</a>
+					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../login/findID.jsp">아이디찾기</a>
 				</td>
 				<td style="width:33.3%; margin-top: 15px; margin-bottom: 15px; ">
-					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../member/findPassword.jsp">비밀번호찾기</a>
+					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../login/findPassword.jsp">비밀번호찾기</a>
 				</td>
 			</tr>
 			<tr height="20px">

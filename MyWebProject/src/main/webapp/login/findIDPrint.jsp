@@ -43,7 +43,7 @@ session.setAttribute("saveid", "save");
 <body>
 	<div style="height: 100px;"></div>
 	
-	 <form action="index.jsp?main=../../member/loginform.jsp" method="post" class="form-inline" onsubmit="return check(this)" name="fidprint">
+	 <form action="index.jsp?main=../../login/loginform.jsp" method="post" class="form-inline" onsubmit="return check(this)" name="fidprint">
       
       	<div align="center">
       		<p style="font-size:3em; font-weight: 500; padding-bottom: 20px; ">아이디 찾기</p>
@@ -69,7 +69,7 @@ session.setAttribute("saveid", "save");
 	      		
 	      	</table>
 	      	<div style="height: 30px;"></div>
-	     	<button class="ebtn"onclick=" href" style="width:35%; height:60px;"><b style="font-size: 2.2em; font-weight: lighter;"> 로그인 </b></button>
+	     	<button class="ebtn" type="submit" style="width:35%; height:60px;"><b style="font-size: 2.2em; font-weight: lighter;"> 로그인 </b></button>
       	</div>
     
       </form>

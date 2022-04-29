@@ -99,13 +99,13 @@ height: 500px;
 
 function openHp() {
 	
-	window.open('../../member/findIDphoneCheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
+	window.open('../../login/findIDphoneCheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
 	
 	
 }
 function openEmail() {
 	
-	window.open('../../member/findIDemailCheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
+	window.open('../../login/findIDemailCheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
 	
 }
 
