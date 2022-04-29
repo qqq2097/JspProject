@@ -150,7 +150,7 @@ color: #222;
 float: right;
 position: relative;
 right: 100px;
-bottom: 410px;
+bottom: 425px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
