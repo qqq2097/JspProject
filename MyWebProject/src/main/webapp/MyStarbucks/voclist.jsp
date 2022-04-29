@@ -109,7 +109,7 @@ margin:3px;
 .suggestion {padding: 30px;}
 
 
-
+/*안내문*/
 .suggtext{
 width: 80%;
 height: auto;
@@ -118,7 +118,7 @@ background-size: auto 68%;
 }
 
 
-
+/*문의 버튼*/
 .btn_suggestion_inquiry{
 border-radius: 3px;
 height: 28px;
@@ -192,6 +192,8 @@ font-size: 12px;
 padding: 6px 0 6px 15px;
 width: 205px;
 }
+
+/*테이블*/
 .tabcontainer{
 position: relative;
 left: 60px;
@@ -218,6 +220,19 @@ vertical-align: middle;
 table.suggestion_use_info_tbl tr td{
 border-bottom: 1px solid #d3d3d3;
 border-collapse: collapse;
+}
+
+.pagination li {
+display: inline-block;
+margin:0 5px;
+vertical-align: middle;
+}
+
+/*해당 페이지 나타내는*/
+.active a{
+font-weight: bold;
+color: #0d5f34;
+border-bottom: 1px solid #0d5f34;
 }
 
 
@@ -312,9 +327,9 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
    <br><br><br><br>
    <span class="toptitle">&nbsp;&nbsp; 고객의 소리</span>
    <ul class="smap">
-   <li><a href="/"><img src="../../MyStarbucks/image/home.png" alt="홈으로"></a></li>
+   <li><a href="index.jsp"><img src="../../MyStarbucks/image/home.png" alt="홈으로"></a></li>
    <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
-   <li><a href="" ><span class="kor">My Starbucks</a></li>
+   <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp" ><span class="kor">My Starbucks</a></li>
    <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
    <li><a href=""><span class="kor">참여 현황</span></a></li>
    <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
@@ -338,7 +353,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 <div class="tabcontainer">
 <!-- 탭 메뉴 상단 시작 -->
 	<ul class="tabs">
-		<li class="tab-link current" data-tab="tab-1">전체</li>
+		<li class="tab-link current" data-tab="tab-1">전체 (<%=totalCount %>)</li>
 		<li class="tab-link" data-tab="tab-2">접수 완료</li>
 		<li class="tab-link" data-tab="tab-3">답변 완료</li>
 	</ul>
@@ -381,7 +396,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
 													<td>
-													<a href="#" style="color: #666;">
+													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" style="color: #666;">
 													<%=dto.getSubject() %></a>
 													</td>
 										
@@ -406,7 +421,45 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
     
     
     
-    </table>
+    <!-- 페이징처리 -->
+<br><br>
+<div style="width: 600px; text-align: center;">
+  <ul class="pagination" style="height: 27px; margin-top:20px; margin-left: 300px; width:100%;">
+  	
+  	<%
+  	//이전
+  	if(startPage>1)
+  	{%>
+  		<li>
+  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=startPage-1%>">이전</a>
+  		</li>
+  	<%}
+  	
+  	for(int pp=startPage;pp<=endPage;pp++)
+  	{
+  		if(pp==currentPage)
+  		{%>
+  			<li class="active">
+  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
+  			</li>
+  		<%}else{%>
+  			<li >
+  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
+  			</li>
+  		<%}
+  	}
+  	
+  	//다음
+  	if(endPage<totalPage)
+  	{%>
+  		<li>
+  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=endPage+1%>">다음</a>
+  		</li>
+  	<%}
+  	%>
+  	
+  </ul>
+</div>	
     
 	</div>
 	<div id="tab-2" class="tab-content">
@@ -502,8 +555,8 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			</ul>
 		</li>
 		
-		<li class="msRnb_btn"><a href="/my/my_menu.do" required="login">My 메뉴</a></li>
-		<li><a href="#" required="login">My 고객의 소리</a></li>
+		<li class="msRnb_btn"><a href="index.jsp?main=../../MyStarbucks/MyMenu.jsp" required="login">My 메뉴</a></li>
+		<li><a href="index.jsp?main=../../MyStarbucks/voclist.jsp" required="login">My 고객의 소리</a></li>
 		
 		<li>
 			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
@@ -519,44 +572,6 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 					
 					
 	
-		<!-- 페이징처리 -->
-
-<div style="width: 600px; text-align: center;">
-  <ul class="pagination">
-  	
-  	<%
-  	//이전
-  	if(startPage>1)
-  	{%>
-  		<li>
-  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=startPage-1%>">이전</a>
-  		</li>
-  	<%}
-  	
-  	for(int pp=startPage;pp<=endPage;pp++)
-  	{
-  		if(pp==currentPage)
-  		{%>
-  			<li class="active">
-  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
-  			</li>
-  		<%}else{%>
-  			<li >
-  			  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=pp%>"><%=pp %></a>
-  			</li>
-  		<%}
-  	}
-  	
-  	//다음
-  	if(endPage<totalPage)
-  	{%>
-  		<li>
-  		  <a href="index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=endPage+1%>">다음</a>
-  		</li>
-  	<%}
-  	%>
-  	
-  </ul>
-</div>			
+				
 </body>
 </html>

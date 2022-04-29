@@ -382,7 +382,7 @@ function fnCopy(){
 		<br> <br> <br> <br> <span class="toptitle">&nbsp;&nbsp;
 			고객의 소리</span>
 		<ul class="smap">
-			<li><a href="/"><img src="../../MyStarbucks/image/home.png"
+			<li><a href="index.jsp"><img src="../../MyStarbucks/image/home.png"
 					alt="홈으로"></a></li>
 			<li><img class="arrow" src="../../MyStarbucks/image/arrow.png"
 				alt="하위메뉴"></li>
@@ -532,7 +532,7 @@ function fnCopy(){
 						&nbsp;&nbsp; <input class="mail_input" id="DS_CSTMR_EMAIL2"
 							name="DS_CSTMR_EMAIL2" type="text" value='' required="required">&nbsp;
 						<p class="mail_sel_wrap">
-							&nbsp; <label for="mail">직접입력</label> <select id="mail">
+							&nbsp; <label for="mail"></label> <select id="mail">
 								<option selected="selected" value="_">직접입력</option>
 								<option value="naver.com">naver.com</option>
 								<option value="gmail.com">gmail.com</option>
