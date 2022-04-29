@@ -25,7 +25,10 @@
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
+<%
+String loginok = (String)session.getAttribute("loginok");
+String id = (String)session.getAttribute("id");
+%>
 <body>
   <div class="container">
     <!-- 헤더 -->
@@ -37,8 +40,21 @@
         <nav class="utility clearfix">
           <h2 class="a11y-hidden">멤버 메뉴</h2>
           <ul class="utility-list clearfix" style="margin-left: 500px;">
-            <li><a href="index.jsp?main=../../login/loginform.jsp">Sign In</a></li>
-            <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp">My Starbuck</a></li>
+          	<%
+          		if(loginok==null||loginok==" "){
+          			%>
+	            <li><a href="index.jsp?main=../../login/loginform.jsp">Sign In</a></li>
+	            <li><a href="">        </a></li>
+	            
+	            	<%
+          		}
+          		else{
+          			%>
+          		<li><a href="../../login/logoutAction.jsp">Sign Out</a></li>
+	    	     <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp">My Starbuck</a></li>
+    	            <%
+          		}
+             %>
             <!--  onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'" -->
           </ul>
         </nav>

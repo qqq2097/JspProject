@@ -229,4 +229,39 @@ public class memberDao {
 			}
 			
 		}
+		//로그인(1.아이디,비번이 둘다 맞다 2.비번이 틀렸다. 3.아이디가 없다.
+		public int getLogin(String id, String mypass) {
+			int idx=0;
+			
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt =null;
+			ResultSet rs = null;
+			
+			String sql ="select * from member where id=?";
+			
+			try {
+				pstmt =conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs=pstmt.executeQuery();
+				if(rs.next()) {
+					//비번 비교
+					if(rs.getString("pass").equals(mypass)) {
+						idx=1;
+					}
+					else {
+						idx=2;
+					}
+				}
+				else {
+					idx=3;
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			return idx;
+		}
 }
