@@ -199,7 +199,7 @@ width: 205px;
 /*테이블*/
 .tabcontainer{
 position: relative;
-left: 60px;
+left: 78px;
 width: 600px;
 height: 174px;
 }
