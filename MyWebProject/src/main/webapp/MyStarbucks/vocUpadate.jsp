@@ -230,9 +230,7 @@ $(function () {
 <body>
 <%
 String num = request.getParameter("num");
-String currentPage=request.getParameter("currentPage");
 VoclistDao dao = new VoclistDao();
-
 
 
 //데이터 가져오기
@@ -288,9 +286,9 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
 <div>
 <button type="button" class="btn btn-default"
-onClick="location.href='index.jsp?main=../../MyStarbucks/vocUpdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
+onclick="''" >수정</button>
 <button type="button" class="btn btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">목록</button>
+onclick="''">목록</button>
 </div>
 
 </div>
