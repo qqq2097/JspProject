@@ -49,7 +49,7 @@
 	}
 	.custom-select{
 		widht:100px;
-		height: 22px;
+		height: 30px;
 	}
 	button{
 		padding-right: 18px;
@@ -93,7 +93,11 @@ input[class="mem_agreeMent"]:checked +label {/*클릭하면 배경 색상 변경
     border: 2px solid #006236;
     background-color: #006236;
 }
-
+div.footerinfo {
+	width: 100%;
+	height: 500px;
+	top: 2500px;
+}
 
 </style>
 
@@ -242,7 +246,7 @@ if(hp==null){
       	<div align="center">
       		<p style="font-size:3em; font-weight: 500; padding-bottom: 20px; ">회원가입</p>
       		<br>
-      		<table  style="width:70%; border: 1px solid #C1C1C1;">
+      		<table  style="width:50%; border: 1px solid #C1C1C1;">
       		<tr style="border-bottom: none;">
 	      		<td  align="center" style="padding-top:20px; ">
 	      			<img src="../../member/memberaddimg1.PNG">
@@ -269,7 +273,7 @@ if(hp==null){
       		
       	</table>
      	<br><br><br>
-     	<table class="table table-bordered" style="width:70%; border: 1px solid #C1C1C1;">
+     	<table class="table table-bordered" style="width:50%; border: 1px solid #C1C1C1;">
      	<tr >
       		<td colspan="2" style="width:100%; font-size: 2em;padding-left: 20px; padding-top: 20px;text-align: left; " class="line">
       			<b>이름</b><b style="color:#006236;">(필수)</b>
@@ -283,7 +287,7 @@ if(hp==null){
       			<b>생년월일</b><b style="color:#006236;">(필수)</b>
       			<br><br>
       			<div style="padding-left: 20px;">
-      			<select name="myyear" id="year" title="년도" class="custom-select" size = "1"></select>
+      			<select name="myyear" id="year" title="년도" class="custom-select" size = "1" ></select>
 				&nbsp;&nbsp;
 				<select name="mymonth" id="month" title="월" class="custom-select" size = "1"></select>
 				&nbsp;&nbsp;
@@ -295,19 +299,19 @@ if(hp==null){
       		<td colspan="2" style="width:100%; font-size: 2em;padding-left: 20px; padding-top: 20px; padding-bottom:20px; text-align: left;" class="line">
       			<b>핸드폰</b><b style="color:#006236;">(필수)</b>
       			<br><br>
-      			 <b><input readonly="readonly" value="<%=hp %>" id="hpnum" name="hpnum"></b>  			
+      			 <b><input style="width:70%; height:50px;" readonly="readonly" value="<%=hp %>" id="hpnum" name="hpnum"></b>  			
       		</td>
  		</tr>
  		<tr>
-      		<td colspan="2" style="width:100%; font-size: 2em;padding-left: 20px; padding-top: 20px; text-align: left; " class="line">
+      		<td colspan="2" style="width:100%; font-size: 2em;padding-left: 20px; padding-top: 20px;  padding-bottom:20px; text-align: left; " class="line">
       			<b>메일</b><b style="color:#006236;">(필수)</b>
-      			<br>
-      			 <input name="email" readonly="readonly" id="email" value="<%=email %>" type="text" style="width:95%;height:50px;margin: 20px 20px 20px 5px;"  placeholder=" E-mail을 입력하세요.">
+      			<br><br>
+      			 <input style="width:70%; height:50px;" name="email" readonly="readonly" id="email" value="<%=email %>" type="text" style="width:95%;height:50px; margin: 20px 20px 20px 5px;"  placeholder=" E-mail을 입력하세요.">
       		</td>
  		</tr>
      	</table>
      	
-     	<table style=" margin-top:50px; width:70%; border: 1px solid #C1C1C1;">
+     	<table style=" margin-top:50px; width:50%; border: 1px solid #C1C1C1;">
       		<tr>
 	      		<td colspan="2" align="center" width="100%" style="padding-top:20px;">
 	      			<img src="../../member/memberaddimg1.PNG">
@@ -340,12 +344,12 @@ if(hp==null){
       		</tr>
       		<tr>
       			<td	colspan="2">
-      				<input  id="nickname" type="text" style="width:95%;height:50px;font-size:2em; margin: 20px 20px 20px 20px; background-color: #F7F7F7;"  placeholder=" 닉네임 입력을 위해 약관에 동의해주세요.">
+      				<input  id="nickname" type="text" style="width:90%;height:50px;font-size:2em; margin: 20px 20px 20px 50px; background-color: #F7F7F7;"  placeholder=" 닉네임 입력을 위해 약관에 동의해주세요.">
       			</td>
       		</tr>
      	</table>
      	
-     	<table style="width:70%;">
+     	<table style="width:50%;">
      		<tr style="height: 80px;"></tr>
 	      		<tr>
 	      			<td align="center" style="font-size: 2em;">
