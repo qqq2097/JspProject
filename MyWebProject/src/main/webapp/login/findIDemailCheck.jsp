@@ -18,7 +18,7 @@ if(key==null){
 	<div style="height: 80px;"></div>
 	<div style="margin:10px 30px;">
 	<form action="findIDemailCheck.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
-		<p align="center"><img src="memberaddimg1.PNG"></p>
+		<p align="center"><img src="../member/memberaddimg1.PNG"></p>
 		<p width ="100%" height="50px;" style="text-align: center;"><b style="font-size: 2em;color:gray;">E-MAIL를 입력하세요.</b></p>
 		<input type="text" name="email1" placeholder="이메일" size="8" required="required">
 		<b>@</b>
