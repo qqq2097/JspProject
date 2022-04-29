@@ -10,7 +10,7 @@ import mysql.db.DbConnect;
 
 public class memberDao {
 	DbConnect db = new DbConnect();
-	//�뜲�씠�꽣 異붽��븯湲�
+	
 	public void insertMember(memberDto dto) {
 		Connection conn = db.getConnection();
 		PreparedStatement pstmt = null;
@@ -38,7 +38,7 @@ public class memberDao {
 		}
 	}
 	
-	//�빖�뱶�룿 踰덊샇 �솗�씤
+	
 	public boolean checkHp(String hp) {
 		boolean b =false;
 		Connection conn = db.getConnection();
@@ -65,7 +65,7 @@ public class memberDao {
 		return b;
 	}
 	
-	//�씠硫붿씪 �솗�씤
+	
 	public boolean checkEmail(String email) {
 		boolean b =false;
 		Connection conn = db.getConnection();
@@ -91,7 +91,7 @@ public class memberDao {
 		}
 		return b;
 	}
-	//ID 以묐났 �솗�씤
+	
 		public boolean checkID(String id) {
 			boolean b =false;
 			Connection conn = db.getConnection();
@@ -117,6 +117,7 @@ public class memberDao {
 			}
 			return b;
 		}
+		
 		
 		public String getName(String id)
 		{
@@ -145,5 +146,34 @@ public class memberDao {
 			}
 			
 			return name;
+		}
+		
+		public String getGrade(String id)
+		{
+			String grade="";
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select * from member where id=?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+					grade=rs.getString("grade");
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			return grade;
 		}
 }
