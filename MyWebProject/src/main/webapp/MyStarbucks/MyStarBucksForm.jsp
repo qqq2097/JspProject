@@ -199,13 +199,11 @@ $(function(){
 </script>
 </head>
 
-<<%-- %
-	memberDto mdto = new memberDto();
-	memberDao mdao = new memberDao();
+<%-- <%
+	String id=request.getParameter("id");
+	memberDao mdao=new memberDao();
 	
-	String grade=request.getParameter("grade");
-	String nickname=request.getParameter("nickname");
-	
+	String name=mdao.getName(id);
 	
 %> --%>
 <body>
@@ -240,7 +238,7 @@ $(function(){
 
 <!-- right div -->
 	<div class="right">
-   		<%-- <span><%=mdto.getNickname() %>님은<br>현재<%=mdto.getGrade() %> 이십니다.</span> --%>
+   		 <!-- <span>님은<br>현재 이십니다.</span> -->
    		<br><br>
    		<button type="button" class="btn btn-default btnre" style=" width : 100px; height: 50px;  margin-left: 50px;  margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
   		 <button type="button" class="btn btn-default btnre" style=" width : 100px; height: 50px; margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
