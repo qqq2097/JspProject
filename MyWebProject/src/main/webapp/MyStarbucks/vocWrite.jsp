@@ -19,6 +19,13 @@ div.top {
 	background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
+div.footerinfo{
+top: 1500px;
+width: 100%;
+height: 500px;
+
+}
+
 div.topsub {
 	color: #fff;
 	font-size: 15pt;
@@ -210,8 +217,8 @@ img {
 	width: 64px;
 }
 
-.voc_info_input_btn1 {
-	background: #e2c383;
+.mybtn {
+background: #e2c383;
 	border: 1px solid #bb9f65;
 	color: #222;
 	height: 28px;
@@ -221,7 +228,10 @@ img {
 	position: relative;
 	left: 750px;
 	top: 19px;
+	font-weight: bold;
 }
+
+
 </style>
 
 
@@ -233,6 +243,21 @@ $(function () {
 	$(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
 	});
+	
+	
+	//이메일 선택 이벤트
+	$("#mail").change(function(){
+		
+		if($(this).val()=='_')
+		{
+		  $("#DS_CSTMR_EMAIL2").val(''); //지정된메일 지우기
+		}else
+		{
+			$("#DS_CSTMR_EMAIL2").val($(this).val());
+		}
+});
+	
+
 
 	
 });
@@ -351,13 +376,13 @@ function fnCopy(){
 
 </head>
 <body>
-
+<form action="../../MyStarbucks/vocaction.jsp" method="post" enctype="multipart/form-data">
 	<!-- top div -->
 	<div class="top">
 		<br> <br> <br> <br> <span class="toptitle">&nbsp;&nbsp;
 			고객의 소리</span>
 		<ul class="smap">
-			<li><a href="/"><img src="../../MyStarbucks/image/home.png"
+			<li><a href="index.jsp"><img src="../../MyStarbucks/image/home.png"
 					alt="홈으로"></a></li>
 			<li><img class="arrow" src="../../MyStarbucks/image/arrow.png"
 				alt="하위메뉴"></li>
@@ -507,8 +532,8 @@ function fnCopy(){
 						&nbsp;&nbsp; <input class="mail_input" id="DS_CSTMR_EMAIL2"
 							name="DS_CSTMR_EMAIL2" type="text" value='' required="required">&nbsp;
 						<p class="mail_sel_wrap">
-							&nbsp; <label for="mail">직접입력</label> <select id="mail">
-								<option selected="selected" value="">직접입력</option>
+							&nbsp; <label for="mail"></label> <select id="mail">
+								<option selected="selected" value="_">직접입력</option>
 								<option value="naver.com">naver.com</option>
 								<option value="gmail.com">gmail.com</option>
 								<option value="nate.com">nate.com</option>
@@ -544,7 +569,7 @@ function fnCopy(){
 			<tr>
 				<th scope="row">이용 매장<img alt="필수입력"
 					src="//image.istarbucks.co.kr/common/img/common/bullet_star_red.gif"></th>
-				<!-- 20210809 수정 -->
+				
 				<td>
 					<div class="tbl_radio_wrap">
 						<input id="HOW1" name="how" checked="checked" type="radio"
@@ -606,13 +631,10 @@ function fnCopy(){
 						<div class="file_wrap" id="file_wrap1">
 							<input class="voc_file_input" id="fileName1" readonly type="text">
 							<div class="voc_file_btn">
-								<br> <input class="voc_file_input_btn" type="button"
-									value="찾아보기"> <input class="voc_file_input_hidden"
+								<br> <input class="voc_file_input_hidden"
 									onchange="document.getElementById('fileName1').value = this.value;"
 									type="file" name="file_nm1" id="file_nm1">
 							</div>
-							<a class="file_add" href="javascript:void(0);"
-								onClick="$voc.fileInsert(); return false;">더하기 </a>
 						</div>
 
 					</div>
@@ -629,15 +651,10 @@ function fnCopy(){
 	</div>
 	<!-- 테이블 end -->
 
-
-	<div class="voc_info_input_btns">
-		<ul>
-			<li class="voc_info_input_btn1"><a href="#none" onclick="">고객의
-					소리 등록 하기</a></li>
-		</ul>
-	</div>
+    <button type="submit" class="mybtn">고객의 소리 등록하기</button>
+	
 
 
-
+</form>
 </body>
 </html>
