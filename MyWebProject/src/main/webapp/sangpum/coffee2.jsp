@@ -12,7 +12,7 @@
 <!-- CSS 링크 -->
 <link rel="stylesheet" href="../../sangpum/css/coffee2CSS.css"/>
 <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/style.css" />
-<style type="text/css"> div.footerinfo{ top: 1900px; } </style>
+<style type="text/css"> div.footerinfo{ top: 2000px; } </style>
 <!-- js -->
 <script src="../../sangpum/js/coffeeFilter.js"></script>
 <%

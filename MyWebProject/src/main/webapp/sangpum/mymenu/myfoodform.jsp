@@ -26,16 +26,24 @@ button {
 	border: none;
 	border-radius: 5px;
 }
-button:hover {
+button:hover, mymenubtn:hover {
 	background-color: #036635;
 	color: white;
 }
 img {
-	margin-top:50px;
+	margin-top:30px;
 	width: 130px;
 	height: 130px;
 }
-
+.mymenubtn {
+	margin-top:10px;
+	width: 160px;
+	height: 35px;
+	font-size: 10pt;
+	font-family: 'Noto Sans', sans-serif;
+	border: none;
+	border-radius: 5px;
+}
 </style>
 </head>
 <%

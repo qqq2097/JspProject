@@ -22,6 +22,7 @@ List<SangpumDto> list2=dao.mygoodsList();
 %>
 <body>
 <table style="width: 1100px">
+<caption>테스트페이지입니다ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ</caption>
   <tr>
     <th width="50">No.</th>
     <th width="70">상품명</th>
