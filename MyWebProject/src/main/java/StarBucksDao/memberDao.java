@@ -10,7 +10,7 @@ import mysql.db.DbConnect;
 
 public class memberDao {
 	DbConnect db = new DbConnect();
-	//�뜲�씠�꽣 異붽��븯湲�
+	//멤버 추가
 	public void insertMember(memberDto dto) {
 		Connection conn = db.getConnection();
 		PreparedStatement pstmt = null;
@@ -38,7 +38,8 @@ public class memberDao {
 		}
 	}
 	
-	//�빖�뱶�룿 踰덊샇 �솗�씤
+	//핸드폰번호 중복 체크
+	
 	public boolean checkHp(String hp) {
 		boolean b =false;
 		Connection conn = db.getConnection();
@@ -65,7 +66,7 @@ public class memberDao {
 		return b;
 	}
 	
-	//�씠硫붿씪 �솗�씤
+	//이메일 중복체크
 	public boolean checkEmail(String email) {
 		boolean b =false;
 		Connection conn = db.getConnection();
@@ -91,7 +92,7 @@ public class memberDao {
 		}
 		return b;
 	}
-	//ID 以묐났 �솗�씤
+	//ID 중복체크
 		public boolean checkID(String id) {
 			boolean b =false;
 			Connection conn = db.getConnection();
@@ -117,7 +118,7 @@ public class memberDao {
 			}
 			return b;
 		}
-		
+		//id에 따라서 이름 가져오기
 		public String getName(String id)
 		{
 			String name="";
@@ -126,7 +127,7 @@ public class memberDao {
 			PreparedStatement pstmt=null;
 			ResultSet rs=null;
 			
-			String sql="select * from member where id=?";
+			String sql="select name from member where id=?";
 			
 			try {
 				pstmt=conn.prepareStatement(sql);
@@ -145,5 +146,63 @@ public class memberDao {
 			}
 			
 			return name;
+		}
+		//핸드폰 번호로 ID 찾기
+		public String findIDhp(String hp)
+		{
+			String id="";
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select id from member where hp=?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, hp);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+					id=rs.getString("id");
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			return id;
+		}
+		//Email로 ID 찾기 
+		public String findIDemail(String email)
+		{
+			String id="";
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select id from member where email=?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, email);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+					id=rs.getString("id");
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			return id;
 		}
 }
