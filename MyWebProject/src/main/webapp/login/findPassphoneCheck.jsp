@@ -17,8 +17,8 @@ if(key==null){
 %>
 	<div style="height: 80px;"></div>
 	<div style="margin:10px 30px;">
-	<form action="memberphonecheck.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
-		<p align="center"><img src="memberaddimg1.PNG"></p>
+	<form action="findPassphoneCheck.jsp" method="post" class="form-inline" style="width : 450px;text-align: center;">
+		<p align="center"><img src="../member/memberaddimg1.PNG"></p>
 		<p width ="100%" height="50px;" style="text-align: center;"><b style="font-size: 2em;color:gray;">전화번호를 입력하세요.</b></p>
 		<br>
 		<select size="1" name="hp1" style="margin-top:3px; height:25px;font-size: 1.3em;">
@@ -33,7 +33,7 @@ if(key==null){
 		<input type="text" name="hp3" size="4" required="required">
 		<!--key값 넘기기..hidden  -->
 		<input type="hidden" name="key">
-		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">중복체크</button>
+		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">아이디 찾기</button>
 	</form>
 </div>
 <%
@@ -41,29 +41,32 @@ if(key==null){
 	String hp = request.getParameter("hp1")+"-"+request.getParameter("hp2")+"-"+request.getParameter("hp3");
 	memberDao dao = new memberDao();
 	boolean b = dao.checkHp(hp);
+	String id = dao.findIDhp(hp);
+	session.setAttribute("id", id);
 	if(b){
+	
 	%>
-		<script type="text/javascript">
-			alert("이미 가입된 핸드폰 번호 입니다");
-			location.href = "memberphonecheck.jsp";
-		</script>
+	<script type="text/javascript">
+		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../login/resetPass.jsp";
+		
+		window.close();
+	</script>
 	<%
 	}
 	else{
-	%>
-		<h3 class="alert alert-success"><%=hp %>은 사용 가능한 핸드폰 번호 입니다.</h3>
-		<button type="button" class="btn btn-warning btn-sm" id="btnuse"
-		style="margin-left: 200px;" hp="<%=hp %>" onclick="goBack('<%=hp%>')">사용하기</button>
+		%>
+		<h3 class="alert alert-danger">가입된 적 없는 핸드폰 번호입니다</h3>
 		<button type="button" class="btn btn-danger btn-sm"
-		onclick="location.href='memberphonecheck.jsp'">다시하기</button>
+		style="margin-left: 200px;"onclick="location.href='findPassphoneCheck.jsp'">다시하기</button>
+		<button type="button" class="btn btn-warning btn-sm" id="btnuse"
+		 onclick="goBack()">회원가입</button>
 	<%
 	}
 }
 %>
 <script type="text/javascript">
-	function goBack(hp){
-		
-		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_2.jsp?hp="+hp;
+	function goBack(){
+		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp";
 		window.close();
 		
 	}
