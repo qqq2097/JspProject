@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <style type="text/css">
 body{
-	background-image: url("../../member/loginback.jpg"); 
+	background-image: url("../../login/loginback.jpg"); 
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -73,7 +73,10 @@ button{
 </style>
 </head>
 <body>
-
+<%
+String id = (String)session.getAttribute("id");
+String saveid= (String)session.getAttribute("saveid");
+%>
 <form action="" method="post">
 	<div align="center">
 	<p style="color: white; font-size: 3em; margin-top: 70px; margin-bottom: 30px;">로그인</p>
@@ -85,20 +88,45 @@ button{
 			</tr>
 			<tr >
 				<td style="border-top: 1px solid #848484;" colspan="3">
-					<input type="text" id="myid" name="id" style="width:95%;font-size:1.3em; height:50px;margin: 10px 0px 10px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  아이디를 입력해주세요.">
+					<%
+					if(saveid==null){
+						%>
+						<input type="text" id="myid" name="id" style="width:95%;font-size:1.3em; height:50px;margin: 10px 0px 10px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  아이디를 입력해주세요.">
+      					<%
+					}else{
+						%>
+						<input type="text" value="<%=id %>" id="myid" name="id" style="width:95%;font-size:1.3em; height:50px;margin: 10px 0px 10px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  아이디를 입력해주세요.">
+						<%
+					}
+				%>
+      				
       			</td>
 			</tr>
 			<tr >
 				<td colspan="3">
-					<input type="text" id="mypass" name="id" style="width:95%;height:50px;font-size:1.3em; margin: 0px 0px 5px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  비밀번호를 입력해주세요.">
+					<input type="text" id="mypass" name="pass" style="width:95%;height:50px;font-size:1.3em; margin: 0px 0px 5px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  비밀번호를 입력해주세요.">
       			</td>
 			</tr>
 			<tr>
 				<td colspan="3">
 				<div style="margin-bottom: 20px; margin-left: 15px;">
-					<input type="checkbox"  name="saveid" id="saveid" value="2" class="saveid">
-				    <label for="saveid"  class="cb"></label>
-					<a style="font-size: 1.5em;">아이디저장</a>
+					
+					
+					<%
+					if(saveid==null){
+						%>
+						<input type="checkbox"  name="saveid" id="saveid" value="2" class="saveid">
+				    	<label for="saveid"  class="cb"></label>
+						<a style="font-size: 1.5em;">아이디저장</a>
+						<%
+					}else{
+						%>
+						<input type="checkbox" checked="checked"  name="saveid" id="saveid" value="2" class="saveid">
+				    	<label for="saveid"  class="cb"></label>
+						<a style="font-size: 1.5em;">아이디저장</a>
+						<%
+					}
+				%>
 				</div>	
 				</td>
 				
@@ -118,13 +146,13 @@ button{
 			</tr>
 			<tr align="center" style="font-size: 1.7em; font-weight: lighter; " >
 				<td style=" border-right: 1px solid #848484; width:33.4%; margin-top: 15px; margin-bottom: 15px;  ">
-					<a  href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
+					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
 				</td>
 				<td style=" border-right: 1px solid #848484; width:33.3%; margin-top: 15px; margin-bottom: 15px; ">
-					<a>아이디찾기</a>
+					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../login/findID.jsp">아이디찾기</a>
 				</td>
 				<td style="width:33.3%; margin-top: 15px; margin-bottom: 15px; ">
-					<a>비밀번호찾기</a>
+					<a href="../../starbucks_clone/starbucks_clone/index.jsp?main=../../login/findPassword.jsp">비밀번호찾기</a>
 				</td>
 			</tr>
 			<tr height="20px">
