@@ -27,7 +27,7 @@
 </head>
 <%
 String loginok = (String)session.getAttribute("loginok");
-String id = (String)session.getAttribute("id");
+String id = (String)session.getAttribute("id");//아이디
 %>
 <body>
   <div class="container">

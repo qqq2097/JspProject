@@ -74,7 +74,7 @@ button{
 </head>
 <body>
 <%
-String id = (String)session.getAttribute("id");
+String id = (String)session.getAttribute("id");//아이디
 String saveid= (String)session.getAttribute("saveid");
 %>
 <form action="../../login/loginAction.jsp" method="post">

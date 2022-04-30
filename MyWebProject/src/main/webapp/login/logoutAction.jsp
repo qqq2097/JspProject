@@ -10,7 +10,7 @@
 </head>
 <body>
 <%
-session.removeAttribute("loginok");
+session.removeAttribute("loginok");//로그인
 response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main.jsp");
 %>
 </body>

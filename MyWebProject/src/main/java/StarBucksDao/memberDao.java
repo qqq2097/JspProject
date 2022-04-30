@@ -147,7 +147,7 @@ public class memberDao {
 			
 			return name;
 		}
-		//핸드폰 번호로 ID 찾기
+		//핸드폰 번호로 ID 찾기!
 		public String findIDhp(String hp)
 		{
 			String id="";

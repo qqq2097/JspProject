@@ -22,7 +22,7 @@ String name = dao.getName(id);
 if(flag==1){
 	session.setAttribute("loginok", "ok");
 	session.setAttribute("id", id);
-	session.setAttribute("saveid", "save");//save==null?null:"yes"
+	session.setAttribute("saveid", "save");//save==null?null:"save"
 	
 	session.setMaxInactiveInterval(60*60*2);
 	%>
