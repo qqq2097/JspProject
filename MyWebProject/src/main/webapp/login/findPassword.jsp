@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -93,5 +94,22 @@ height: 500px;
       		<input type="hidden" name="key">
       	</div>
       </form>
+  <script type="text/javascript">
+
+//왜 오류나
+function openHp() {
+	
+	window.open('../../login/findPassphoneCheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
+	
+	
+}
+function openEmail() {
+	
+	window.open('../../login/findPassemailCheck.jsp',"","left=100px,top=100px,width=500px,height=500px");
+	
+}
+
+</script>      
+
 </body>
 </html>

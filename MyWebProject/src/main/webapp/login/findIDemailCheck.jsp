@@ -56,13 +56,13 @@ if(key==null){
 		<button type="button" class="btn btn-danger btn-sm"
 		style="margin-left: 200px;"onclick="location.href='findIDemailCheck.jsp'">다시하기</button>
 		<button type="button" class="btn btn-warning btn-sm" id="btnuse"
-		 onclick="goBack()">회원가입</button>
+		 onclick="goMember()">회원가입</button>
 	<%
 	}
 }
 %>
 <script type="text/javascript">
-	function goBack(){
+	function goMember(){
 		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp";
 		window.close();
 		

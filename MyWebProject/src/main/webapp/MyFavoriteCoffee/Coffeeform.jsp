@@ -16,7 +16,7 @@
 
 	div.title span{
 	color: #808080;
-	margin-left: 800px;
+	margin-left: 700px;
 	font-size: 1.3em;
 	}
 
@@ -107,6 +107,12 @@
 	dd b{
 	 	font-size: 11pt;
 	 }
+	 
+	div.footerinfo {
+	width: 100%;
+	height: 500px;
+	top: 750px;
+}
 </style>
 <script type="text/javascript">
 
@@ -134,23 +140,23 @@ $(function () {
 
 	
 	
-	$("img.soft").click(function() {
+	/* 
+	$("#strength2").click(function() {
 		
 		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
 		
 	});
 	
-	$("img.weigth").click(function() {
+	$("#strength3").click(function() {
 		
 		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
 		
-	});
+	}); */
 
 
 });  
 	
 </script>
-
 </head>
 <body>
 <div class="title" >
@@ -172,31 +178,31 @@ $(function () {
 	
 		<div class="subject1">
 			<p>	
-				<img alt="" src="../../MyFavoriteCoffee/image/1_어떤풍미.png" style="margin-top: 70px;">
+				<img alt="" src="../../MyFavoriteCoffee/image/1_title.png" style="margin-top: 70px;">
 			</p>
 			<div class="flavor">
 				<ul>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/1_짭짤.png" ></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_1.png"  id="flavor1"></dt>
 							<dd><b>짭짤한 맛</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/1_과일.png"></dt>			
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_2.png" id="flavor2"></dt>			
 							<dd><b>과일 맛</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/1_고소.png"></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_3.png" id="flavor3"></dt>
 							<dd><b>고소 맛</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/1_달콤함(캐러멜).png"></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_4.png" id="flavor4"></dt>
 							<dd><b>달콤한(캐러멜)맛</b></dd>
 						</dl>					
 					</li>
@@ -208,25 +214,25 @@ $(function () {
 		
 		<div class="subject2">
 			<p>	
-				<img alt="" src="../../MyFavoriteCoffee/image/2_어떤느낌.png" style="margin-top: 80px;">
+				<img alt="" src="../../MyFavoriteCoffee/image/2_title.png" style="margin-top: 80px;">
 			</p>
 			<div class="feel">
 				<ul>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/2_상쾌한느낌.png" ></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/feel2_1.png" id="feel1"></dt>
 							<dd><b>상쾌한 느낌	</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/2_부드러운느낌.png"></dt>			
-							<dd><b>부드러운 느낌222222</b></dd>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/feel2_2.png" id="feel2"></dt>			
+							<dd><b>부드러운 느낌</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/2_오랫동안여운이남는느낌.png"></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/feel2_3.png" id="feel3"></dt>
 							<dd><b>오랫동안 여운이 남는 느낌</b></dd>
 						</dl>					
 					</li>
@@ -237,25 +243,25 @@ $(function () {
 		
 		<div class="subject3">
 			<p>	
-				<img alt="" src="../../MyFavoriteCoffee/image/3_어떤강도.png" style="margin-top: 80px;">
+				<img alt="" src="../../MyFavoriteCoffee/image/3_title.png" style="margin-top: 80px;">
 			</p>
 			<div class="strength">
 				<ul>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_은은하고부드러움.png" ></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/strength3_1.png" id="strength1"></dt>
 							<dd><b>은은하고 부드러움</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_미디엄으로균형잡힘.png" class="soft"></dt>			
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/strength3_2.png" id="strength2"></dt>			
 							<dd><b>부드러운 느낌</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/3_무게감을주는강렬함.png" class="weigthj"></dt>
+							<dt><img alt="" src="../../MyFavoriteCoffee/image/strength3_3.png" id="strength3"></dt>
 							<dd><b>무게감을 주는 강렬함</b></dd>
 						</dl>					
 					</li>

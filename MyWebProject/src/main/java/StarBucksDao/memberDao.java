@@ -205,4 +205,28 @@ public class memberDao {
 			
 			return id;
 		}
+		//id로 비밀번호 바꾸기
+		public void changePass(String id,String npass)
+		{
+						
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+
+			
+			String sql="update member set pass = ? where id=?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, npass);
+				pstmt.setString(2, id);
+				pstmt.execute();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(pstmt, conn);
+			}
+			
+		}
 }

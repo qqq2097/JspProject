@@ -78,7 +78,12 @@
    	 color: #666;
    	 line-height: 1.6
 	}
-
+	
+	div.footerinfo {
+	width: 100%;
+	height: 500px;
+	top: 750px;
+}
 </style>
 </head>
 <body>
