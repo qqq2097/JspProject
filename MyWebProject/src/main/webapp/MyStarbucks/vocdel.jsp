@@ -30,7 +30,7 @@ File file=new File(realPath+"\\"+photo);
 file.delete();
 
 //보던페이지로 이동
-response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../MyStarbucks/voclist.jsp");
+response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage="+currentPage);
 
 %>
 </body>

@@ -290,7 +290,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 <button type="button" class="btn btn-default"
 onclick="location.href='index.jsp?main=../../MyStarbucks/vocupdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
 <button type="button" class="btn btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">목록</button>
+onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=currentPage %>'">목록</button>
 </div>
 
 </div>
