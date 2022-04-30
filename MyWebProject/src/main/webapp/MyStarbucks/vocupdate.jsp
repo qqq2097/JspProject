@@ -252,6 +252,15 @@ $(function () {
 
 	
 });
+
+function updatemybtn(){ 
+	if (confirm("고객의 소리를 수정하시겠습니까?") == true){  
+		alert("수정이 완료되었습니다.");//확인
+	    document.form.submit();
+	}else{   //취소
+		return false;
+	}
+	}
 </script>
 
 </head>
@@ -317,7 +326,7 @@ style="background:#fff; border:1px solid #ddd; border-radius:3px; height:173px; 
 <section class="my_suggestion_view_file">
 <dl id="dl_y" class="reg-page">
 <dt> 첨부파일 &nbsp;&nbsp;
-<input class="voc_file_input" name="fileName2" id="fileName2" type="text" value="<%=dto.getPhoto()%>"
+<input class="voc_file_input" name="fileName2" id="fileName2" type="text" readonly="readonly" value="<%=dto.getPhoto()%>"
 style="width: 70%; height: 30px; border: 1px solid #ddd;
 border-radius: 3px;"
 > <dt>
@@ -331,8 +340,7 @@ name="file_nm2" id="file_nm1">
 </section>
 
 <div>
-<button type="button" class="btn btn-default"
-onclick="''">수정</button>
+<button type="submit" class="btn btn-default" onclick="updatemybtn(); return false;">수정</button>
 <button type="button" class="btn btn-default"
 onclick="''">삭제</button>
 <button type="button" class="btn btn-default"
