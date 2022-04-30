@@ -260,7 +260,17 @@ function updatemybtn(){
 	}else{   //취소
 		return false;
 	}
+}
+
+function delfunc(num) {
+	if(confirm("고객의 소리를 삭제하시겠습니까?")) {
+		window.location.href="../../MyStarbucks/vocdel.jsp?num="+num;
+	}else {
+		window.location.href="#";
 	}
+
+}
+
 </script>
 
 </head>
@@ -341,8 +351,7 @@ name="file_nm2" id="file_nm1">
 
 <div>
 <button type="submit" class="btn btn-default" onclick="updatemybtn(); return false;">수정</button>
-<button type="button" class="btn btn-default"
-onclick="''">삭제</button>
+<button type="button" class="btn btn-default delbtn" onclick="delfunc(<%=dto.getNum() %>); return false;" >삭제</button>
 <button type="button" class="btn btn-default"
 onclick="history.back();">취소</button>
 <button type="button" class="btn btn-default"
