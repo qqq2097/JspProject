@@ -1,6 +1,3 @@
-<%@page import="java.util.List"%>
-<%@page import="data.dto.AnswerDto"%>
-<%@page import="data.dao.AnswerDao"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="data.dto.VoclistDto"%>
 <%@page import="data.dao.VoclistDao"%>
@@ -213,53 +210,14 @@ float: right;
 font-size: 11px;
 }
 
-section.admin_text_info_wrap {
-background: #f4f4f2;
-padding: 20px;
-border-radius: 3px;
-}
-
-article.admin_text_info{
-padding-bottom: 20px;
-border-bottom: 1px solid #dbdbdb;
-}
-
-article.admin_text_info dl.admin_info{
-float: left;}
-
-article.admin_text_info dl.admin_info dt{
-float: left;
-font-size: 12px;
-color: #222;
-font-weight: bold;
-padding: 0 5px 0 10px;
-}
-
-article.admin_text_info dl.admin_info dd{
-float: left;
-font-size: 12px;
-color: #444;
-}
-
-article.admin_text_info_box{
-font-size: 12px;
-color: #666;
-line-height: 1.6;
-padding-top: 20px;
-}
-
-.btnlist{
+.adminbtn{
 float: right;
-border: 1px solid #bb9f65;
-background: #e2c383;
+background: #006633;
 border-radius: 3px;
-width: 80px;
-height: 35px;
-margint-top: 20px;
-margin-right: 10px;
-font-size: 11px;
+color: #fff;
+text-align: center;
+padding: 5px 15px 5px 15px;
 }
-
 
 </style>
 
@@ -271,13 +229,7 @@ $(function () {
 	$(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
 	});
-
 	
-	if($(".admin_text_info_box").val()==null){
-		$(".admin_text_info_wrap").hide();
-	} else {
-		$(".btn").hide();
-	}
 	
 });
 </script>
@@ -288,13 +240,14 @@ $(function () {
 String num = request.getParameter("num");
 String currentPage=request.getParameter("currentPage");
 VoclistDao dao = new VoclistDao();
-AnswerDao adao = new AnswerDao();
+
+String loginok =(String) session.getAttribute("loginok");
+String id=(String)session.getAttribute("id");
 
 
 
 //데이터 가져오기
 VoclistDto dto = dao.getData(num);
-List<AnswerDto> alist=adao.getAllAnswer(dto.getNum());
 
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
@@ -344,53 +297,31 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 </dl>
 </section>
 
-<div>
-<button type="button" class="btn btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/vocupdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
-<button type="button" class="btn btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=currentPage %>'">목록</button>
-</div>
 
+
+<br><br>
+<%
+if(loginok!=null && id.equals("admin")){
+%>
+<form action="../../MyStarbucks/answeraction.jsp" method="post">
 <input type="hidden" name="num" value="<%=dto.getNum()%>">
 <input type="hidden" name="currentPage" value="<%=currentPage%>">
-
-<section class="admin_text_info_wrap">
-<article class="admin_text_info">
-<dl class="admin_info">
-<% 
-for(AnswerDto adto:alist){%>
+	<textarea style="width: 825px; height: 270px; font-size: 12pt;" placeholder="문의 답변을 작성해 주세요" name="adanswer" id="adanswer"></textarea>
+	<br><br>
+	<button type="submit" class="adminbtn">답변 등록하기</button>
+	</form>
 	
-	<dt>답변일:<%=adto.getAnswerday() %></dt>
-</dl>
-</article>
-<article class="admin_text_info_box" value="<%=adto.getAnswer()%>">
-<%=adto.getAnswer()%>
-</article>
+<%}else{%>
+	<div>
+	<button type="button" class="btn btn-default"
+	onclick="location.href='index.jsp?main=../../MyStarbucks/vocupdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
+	<button type="button" class="btn btn-default"
+	onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=currentPage %>'">목록</button>
+	</div>
 
-
-</section>
-<br><br>
-<button type="button" class="btnlist btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=currentPage %>'">목록</button>
-<%}
-
-%>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<nav class="ms_nav" id="msRnb">					
+	</div>
+	
+	<nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
 			<a>My 리워드<span class="sbox_arrow_down1"></span></a>
@@ -413,6 +344,19 @@ onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage
 		</li>
 	</ul>
 </nav>
+<%}
+
+
+%>
+
+
+
+
+
+
+
+
+
 					<!-- //네비 -->
 
 </body>

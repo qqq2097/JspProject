@@ -13,7 +13,7 @@
 <body>
 <%
 //세션으로부터 db저장할 id
-//String myid=(String)session.getAttribute("myid");
+String myid=(String)session.getAttribute("id");
 
 //실제경로
 String realPath=getServletContext().getRealPath("/save");
@@ -37,7 +37,7 @@ String photo=multi.getFilesystemName("file_nm1"); //""안에 form name값
 
 //dto에 저장
 VoclistDto dto=new VoclistDto();
-//dto.setMyid(myid);
+dto.setMyid(myid);
 dto.setEmail(email);
 dto.setPhonenum(phonenum);
 dto.setSubject(subject);

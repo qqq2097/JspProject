@@ -1,3 +1,5 @@
+<%@page import="StarBucksDto.memberDto"%>
+<%@page import="StarBucksDao.memberDao"%>
 <%@page import="data.dto.VoclistDto"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
@@ -274,7 +276,8 @@ $(document).ready(function(){
 </head>
 <%
 //로그인 상태 확인 후 입력폼 나타내기
-//String longinok =(String) session.getAttribute("loginok");
+String loginok =(String) session.getAttribute("loginok");
+String id=(String)session.getAttribute("id");
 
 VoclistDao dao = new VoclistDao();
 
@@ -395,7 +398,8 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													</tr>
 												<%}else {
 													for(VoclistDto dto:list){%>
-										
+									
+					
 													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
 													<td>
@@ -404,11 +408,23 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													</td>
 										
 													<td style="color: #666;"><%=sdf.format(dto.getWriteday()) %></td> 
-													<td style="color: #666;"><%=dto.getExpectwriteday() %><td>
-													</tr>
+													<td style="color: #666;"><%=dto.getExpectwriteday() %></td>
 													
+													<% 
+													if(loginok!=null && id.equals("admin")){%>
+														<td><a href="index.jsp?main=../../MyStarbucks/answerView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>"
+														style="background: #006633; border-radius: 3px; color: #fff; text-align: center; padding: 5px 15px 5px 15px;"
+														 >답변하기</a></td>
+													<%}else {%>
+														<td></td>
+													<%}
+													%>
+													</tr>
+													<%}
+													%>
+							
 												<%}
-												}
+						
 												
 												
 												
