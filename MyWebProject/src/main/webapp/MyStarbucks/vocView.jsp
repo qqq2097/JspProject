@@ -18,7 +18,7 @@ div.top {
 }
 
 div.footerinfo{
-top: 1500px;
+top: 1000px;
 width: 100%;
 height: 500px;
 
@@ -66,7 +66,7 @@ margin:3px;
 	float: right;
 	position: relative;
 	right: 100px;
-	bottom: -99px;
+	bottom: -96.5px;
 	font-weight: blod;
 	width: 220px;
 	margin-bottom: 90px;
@@ -118,7 +118,7 @@ a {
 
 .ms_cont {
 float: left;
-margin-left: 300px;
+margin-left: 195px;
 margin-top: 100px;
 width: 830px;
 margin-bottom: 90px;
@@ -288,7 +288,7 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
 <div>
 <button type="button" class="btn btn-default"
-onClick="location.href='index.jsp?main=../../MyStarbucks/vocUpdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
+onclick="location.href='index.jsp?main=../../MyStarbucks/vocupdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
 <button type="button" class="btn btn-default"
 onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">목록</button>
 </div>

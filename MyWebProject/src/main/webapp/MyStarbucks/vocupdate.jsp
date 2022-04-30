@@ -118,7 +118,7 @@ a {
 
 .ms_cont {
 float: left;
-margin-left: 300px;
+margin-left: 195px;
 margin-top: 100px;
 width: 830px;
 margin-bottom: 90px;
