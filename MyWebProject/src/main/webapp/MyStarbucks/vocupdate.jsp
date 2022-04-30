@@ -18,7 +18,7 @@ div.top {
 }
 
 div.footerinfo{
-top: 1000px;
+top: 1500px;
 width: 100%;
 height: 500px;
 
@@ -66,7 +66,7 @@ margin:3px;
 	float: right;
 	position: relative;
 	right: 100px;
-	bottom: -96.5px;
+	bottom: -99px;
 	font-weight: blod;
 	width: 220px;
 	margin-bottom: 90px;
@@ -142,7 +142,7 @@ line-height: 2px;
 font-weight: bold;}
 
 section.my_suggestion_view_file{
-padding: 18px 20px 25px 20px;
+padding: 20px 25px 25px 25px;
 border-bottom: 1px solid #dbdbdb;
 }
 
@@ -210,6 +210,34 @@ float: right;
 font-size: 11px;
 }
 
+.voc_file_btn{
+float: left;
+height: 28px;
+margin-left: 10px;
+overflow: hidden;
+position: relative;
+width: 62px;
+left: 600px;
+bottom: 28px;
+}
+
+.voc_file_input_btn{
+background: #777;
+border: none;
+border-radius: 3px;
+color: #fff;
+cursor: pointer;
+height: 28px;
+width: 62px;
+}
+
+.voc_file_input_hidden{
+left: 0;
+opacity: 0;
+position: absolute;
+top:0;}
+
+
 
 </style>
 
@@ -224,6 +252,25 @@ $(function () {
 
 	
 });
+
+function updatemybtn(){ 
+	if (confirm("고객의 소리를 수정하시겠습니까?") == true){  
+		alert("수정이 완료되었습니다.");//확인
+	    document.form.submit();
+	}else{   //취소
+		return false;
+	}
+}
+
+function delfunc(num, currentPage) {
+	if(confirm("고객의 소리를 삭제하시겠습니까?")) {
+		window.location.href="../../MyStarbucks/vocdel.jsp?num="+num+"&currentPage="+currentPage;
+	}else {
+		window.location.href="#";
+	}
+
+}
+
 </script>
 
 </head>
@@ -257,45 +304,63 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	</ul>
 </div>
 
+
+<form action="../../MyStarbucks/vocupdateaction.jsp" method="post" enctype="multipart/form-data">
 <div class="ms_cont">
+<!-- hidden -->
+<input type="hidden" name="num" value="<%=num%>">
+<input type="hidden" name="currentPage" value="<%=currentPage%>">
+
 <section class="my_suggestion_view_top" style="height: auto;">
-<dl>
-<dd class="text"><%=dto.getSubject() %></dd>
-</dl>
+
+<input class="voc_ttl_input1" id="DS_VOC_TITLE" 
+name="DS_VOC_TITLE" type="text" value="<%=dto.getSubject() %>" 
+style="border:1px solid #ddd;
+ border-radius:3px; font-size:14px;
+float:left; height:26px; padding:0; width:100%;
+position: relative; top: -14px;">
+
+
+
+
+</section>
+
+
+<section class="my_suggestion_content" style="height: auto;">
+<textarea class="textArea" id="DS_VOC_CN" name="DS_VOC_CN"
+style="background:#fff; border:1px solid #ddd; border-radius:3px; height:173px; width:97.5%; resize:none;"
+><%=dto.getContent() %>
+</textarea>
 </section>
 
 <section class="my_suggestion_view_file">
-<article class="view_file_info">
 <dl id="dl_y" class="reg-page">
-<dt> 첨부파일 <span>|</span> <dt>
-<dd class="first"><%=dto.getPhoto() %><dd>
+<dt> 첨부파일 &nbsp;&nbsp;
+<input class="voc_file_input" name="fileName2" id="fileName2" type="text" readonly="readonly" value="<%=dto.getPhoto()%>"
+style="width: 70%; height: 30px; border: 1px solid #ddd;
+border-radius: 3px;"
+> <dt>
 </dl>
+<div class="voc_file_btn">
+<input class="voc_file_input_btn" type="button" value="찾아보기">
+<input class="voc_file_input_hidden" onchange="document.getElementById('fileName2').value=this.value;" type="file"
+name="file_nm2" id="file_nm1">
+</div>
 
-
-<ul>
-<li style="margin-top: -7px;">
-<p class="date1"> 등 &nbsp;&nbsp;&nbsp; 록 &nbsp;&nbsp;&nbsp; 일: <%=sdf.format(dto.getWriteday()) %> </p>
-</li>
-</ul>
-</article>
-</section>
-
-<section class="my_suggestion_content" style="height: auto;">
-<dl>
-<dd class="text"><%=dto.getContent() %></dd>
-</dl>
 </section>
 
 <div>
+<button type="submit" class="btn btn-default" onclick="updatemybtn(); return false;">수정</button>
+<button type="button" class="btn btn-default delbtn" onclick="delfunc(<%=dto.getNum() %>, <%=currentPage%>); return false;" >삭제</button>
 <button type="button" class="btn btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/vocupdate.jsp?num=<%=dto.getNum()%>&currentPage=<%=currentPage%>'">수정</button>
+onclick="history.back();">취소</button>
 <button type="button" class="btn btn-default"
-onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp?currentPage=<%=currentPage %>'">목록</button>
+onclick="location.href='index.jsp?main=../../MyStarbucks/voclist.jsp'">목록</button>
 </div>
 
 </div>
 
-
+</form>
 
 
 
