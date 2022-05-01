@@ -1,6 +1,6 @@
 <%@page import="StarBucksDto.RewordDto"%>
-<%@page import="java.util.Vector"%>
 <%@page import="StarBucksDao.RewordDao"%>
+<%@page import="java.util.Vector"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -221,6 +221,8 @@ $(function(){
    			</tr>
    
    			<tr>
+   				<!-- <td align="center">1</td>
+      			<td align="center">1</td> -->
       			<td align="center">1</td>
       			<td align="center">1</td>
    	 		</tr>
@@ -255,7 +257,7 @@ $(function(){
    			</tr>
    
    
-   			 <%
+   			  <%
    				
    				for(int i=0;i<list.size();i++)
    				{
@@ -269,7 +271,7 @@ $(function(){
 	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
-   						%> 
+   				%> 
    
    
   

@@ -315,6 +315,7 @@ start=(currentPage-1)*perPage;
 //각페이지에서 필요한 게시글 가져오기
 List<VoclistDto>list=dao.getList(start, perPage);
 no = totalCount-(currentPage-1)*perPage;
+System.out.println(no + " " + totalCount + " " + currentPage + " " + perPage + " " +  list.size());
 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
 
