@@ -120,13 +120,14 @@ public class SangpumDao {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into mybeverage values(null,?,?,?)";
+		String sql="insert into mybeverage values(null,?,?,?,?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getSname());
 			pstmt.setString(2, dto.getSprice());
 			pstmt.setString(3, dto.getImgsrc());
+			pstmt.setString(4, dto.getId());
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -155,6 +156,7 @@ public class SangpumDao {
 				dto.setSname(rs.getString("sname"));
 				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
+				dto.setId(rs.getString("id"));
 				
 				list.add(dto);
 			}
@@ -239,13 +241,14 @@ public class SangpumDao {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into myfood values(null,?,?,?)";
+		String sql="insert into myfood values(null,?,?,?,?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getSname());
 			pstmt.setString(2, dto.getSprice());
 			pstmt.setString(3, dto.getImgsrc());
+			pstmt.setString(4, dto.getId());
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -274,6 +277,7 @@ public class SangpumDao {
 				dto.setSname(rs.getString("sname"));
 				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
+				dto.setId(rs.getString("id"));
 				
 				list.add(dto);
 			}
@@ -359,13 +363,14 @@ public class SangpumDao {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into mygoods values(null,?,?,?)";
+		String sql="insert into mygoods values(null,?,?,?,?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getSname());
 			pstmt.setString(2, dto.getSprice());
 			pstmt.setString(3, dto.getImgsrc());
+			pstmt.setString(4, dto.getId());
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -394,6 +399,7 @@ public class SangpumDao {
 				dto.setSname(rs.getString("sname"));
 				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
+				dto.setId(rs.getString("id"));
 				
 				list.add(dto);
 			}
