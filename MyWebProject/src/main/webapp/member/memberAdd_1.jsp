@@ -94,6 +94,11 @@ input[class="mem_agreeMent"]:checked +label {
     background-color: #006236;
   
 }
+div.footerinfo {
+	width: 100%;
+	height: 500px;
+	top: 2000px;
+}
 </style>
 
 </head>
@@ -104,7 +109,7 @@ input[class="mem_agreeMent"]:checked +label {
       	<div align="center">
       		<p style="font-size:3em; font-weight: 500; padding-bottom: 20px; ">회원가입</p>
       		<br>
-      		<table class="table table-bordered" style="width:70%; border: 1px solid #C1C1C1;">
+      		<table class="table table-bordered" style="width:50%; border: 1px solid #C1C1C1;">
       		<tr>
 	      		<td colspan="2" align="center" style="padding-top:20px;">
 	      			<img src="../../member/memberaddimg1.PNG">

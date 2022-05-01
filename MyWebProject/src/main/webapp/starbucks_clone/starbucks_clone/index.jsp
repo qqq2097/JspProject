@@ -39,9 +39,13 @@ div.main {
 div.footerinfo {
 	width: 100%;
 	height: 500px;
+<<<<<<< HEAD
 
 	top: 3700px;
 
+=======
+	top: 3350px;
+>>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 }
 </style>
 </head>

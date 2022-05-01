@@ -1,3 +1,5 @@
+<%@page import="StarBucksDto.memberDto"%>
+<%@page import="StarBucksDao.memberDao"%>
 <%@page import="data.dto.VoclistDto"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
@@ -20,6 +22,9 @@ width: 100%;
 height: 500px;
 
 }
+
+div.footerinfo a{
+color: white;}
 
 ul.tabs{
 	margin: 0px;
@@ -147,7 +152,7 @@ color: #222;
 float: right;
 position: relative;
 right: 100px;
-bottom: 410px;
+bottom: 405px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
@@ -196,7 +201,7 @@ width: 205px;
 /*테이블*/
 .tabcontainer{
 position: relative;
-left: 60px;
+left: 78px;
 width: 600px;
 height: 174px;
 }
@@ -271,7 +276,8 @@ $(document).ready(function(){
 </head>
 <%
 //로그인 상태 확인 후 입력폼 나타내기
-//String longinok =(String) session.getAttribute("loginok");
+String loginok =(String) session.getAttribute("loginok");
+String id=(String)session.getAttribute("id");
 
 VoclistDao dao = new VoclistDao();
 
@@ -393,7 +399,8 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													</tr>
 												<%}else {
 													for(VoclistDto dto:list){%>
-										
+									
+					
 													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
 													<td>
@@ -402,11 +409,23 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													</td>
 										
 													<td style="color: #666;"><%=sdf.format(dto.getWriteday()) %></td> 
-													<td style="color: #666;"><%=dto.getExpectwriteday() %><td>
-													</tr>
+													<td style="color: #666;"><%=dto.getExpectwriteday() %></td>
 													
+													<% 
+													if(loginok!=null && id.equals("admin")){%>
+														<td><a href="index.jsp?main=../../MyStarbucks/answerView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>"
+														style="background: #006633; border-radius: 3px; color: #fff; text-align: center; padding: 5px 15px 5px 15px;"
+														 >답변하기</a></td>
+													<%}else {%>
+														<td></td>
+													<%}
+													%>
+													</tr>
+													<%}
+													%>
+							
 												<%}
-												}
+						
 												
 												
 												
@@ -549,7 +568,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 <nav class="ms_nav" id="msRnb">					
 	<ul>
 		<li>
-			<a href="#">My 리워드<span class="sbox_arrow_down1"></span></a>
+			<a>My 리워드<span class="sbox_arrow_down1"></span></a>
 			<ul class="sub1">
 				<li><a href="#" required="login" >· 리워드 및 혜택</a></li>
 				<li><a href="#" required="login">· 별 히스토리</a></li>
@@ -560,11 +579,11 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		<li><a href="index.jsp?main=../../MyStarbucks/voclist.jsp" required="login">My 고객의 소리</a></li>
 		
 		<li>
-			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
+			<a>개인정보관리<span class="sbox_arrow_down2"></span></a>
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 			</ul>
 		</li>
 	</ul>

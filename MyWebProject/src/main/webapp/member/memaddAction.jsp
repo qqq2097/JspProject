@@ -37,7 +37,7 @@ dto.getEmail();
 
 dao.insertMember(dto);
 
-response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../member/memberAdd_1.jsp");
+response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../login/loginform.jsp");
 }
 else{
 	out.println("<script>");

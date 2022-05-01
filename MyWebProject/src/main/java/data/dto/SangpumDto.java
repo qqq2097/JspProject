@@ -6,6 +6,7 @@ public class SangpumDto {
 	private String sname;
 	private String sprice;
 	private String imgsrc;
+	private String id;
 	
 	public String getSnum() {
 		return snum;
@@ -30,6 +31,12 @@ public class SangpumDto {
 	}
 	public void setImgsrc(String imgsrc) {
 		this.imgsrc = imgsrc;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }
