@@ -24,6 +24,10 @@
   <link rel="stylesheet" href="assets/css/reset.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+<%
+String loginok = (String)session.getAttribute("loginok");
+String id = (String)session.getAttribute("id");//아이디
+%>
 <body>
 <div style="background-color: gold;">
 <section id="visual" class="visual">
@@ -84,9 +88,22 @@
                   <span>스타벅스 회원이 아니세요?</span> 가입을 통해 리워드 혜택을 즐기세요.
                 </p>
               </div>
+              
               <div class="member-right-box">
-                <a href="index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
-                <a href="index.jsp?main=../../login/loginform.jsp">로그인</a>
+                
+                <%
+          		if(loginok==null||loginok==" "){
+          		%>
+	          		<a href="index.jsp?main=../../member/memberAdd_1.jsp">회원가입</a>
+                	<a href="index.jsp?main=../../login/loginform.jsp">로그인</a>
+	            <%
+          		}//로그인 X
+          		else{
+          		%>
+          		
+    	        <%
+          		}//로그인 O
+            	 %>
               </div>
             </div>
             <div class="gift-box clearfix">

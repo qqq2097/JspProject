@@ -147,7 +147,7 @@ public class memberDao {
 			
 			return name;
 		}
-		//핸드폰 번호로 ID 찾기
+		//핸드폰 번호로 ID 찾기!
 		public String findIDhp(String hp)
 		{
 			String id="";
@@ -204,5 +204,64 @@ public class memberDao {
 			}
 			
 			return id;
+		}
+		//id로 비밀번호 바꾸기
+		public void changePass(String id,String npass)
+		{
+						
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+
+			
+			String sql="update member set pass = ? where id=?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, npass);
+				pstmt.setString(2, id);
+				pstmt.execute();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(pstmt, conn);
+			}
+			
+		}
+		//로그인(1.아이디,비번이 둘다 맞다 2.비번이 틀렸다. 3.아이디가 없다.
+		public int getLogin(String id, String mypass) {
+			int idx=0;
+			
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt =null;
+			ResultSet rs = null;
+			
+			String sql ="select * from member where id=?";
+			
+			try {
+				pstmt =conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs=pstmt.executeQuery();
+				if(rs.next()) {
+					//비번 비교
+					if(rs.getString("pass").equals(mypass)) {
+						idx=1;
+					}
+					else {
+						idx=2;
+					}
+				}
+				else {
+					idx=3;
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			return idx;
 		}
 }

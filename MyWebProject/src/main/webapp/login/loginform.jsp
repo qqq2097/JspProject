@@ -74,10 +74,10 @@ button{
 </head>
 <body>
 <%
-String id = (String)session.getAttribute("id");
+String id = (String)session.getAttribute("id");//아이디
 String saveid= (String)session.getAttribute("saveid");
 %>
-<form action="" method="post">
+<form action="../../login/loginAction.jsp" method="post">
 	<div align="center">
 	<p style="color: white; font-size: 3em; margin-top: 70px; margin-bottom: 30px;">로그인</p>
 		<table style=" width:600px;background-color: white; border-radius: 2px;">
@@ -104,7 +104,7 @@ String saveid= (String)session.getAttribute("saveid");
 			</tr>
 			<tr >
 				<td colspan="3">
-					<input type="text" id="mypass" name="pass" style="width:95%;height:50px;font-size:1.3em; margin: 0px 0px 5px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  비밀번호를 입력해주세요.">
+					<input type="password" id="mypass" name="pass" style="width:95%;height:50px;font-size:1.3em; margin: 0px 0px 5px 15px; border:1px solid #BDBDBD; border-radius: 3px;" placeholder="  비밀번호를 입력해주세요.">
       			</td>
 			</tr>
 			<tr>
