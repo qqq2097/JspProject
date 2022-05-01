@@ -44,7 +44,7 @@ String id = (String)session.getAttribute("id");//아이디
           		if(loginok==null||loginok==" "){
           			%>
 	            <li><a href="index.jsp?main=../../login/loginform.jsp">Sign In</a></li>
-	            <li><a href="">        </a></li>
+	            li><a href="index.jsp?main=../../login/loginform.jsp">My Starbuck</a></li>
 	            
 	            	<%
           		}
