@@ -1,4 +1,4 @@
-<%@page import="data.dto.SangpumDto"%>
+0<%@page import="data.dto.SangpumDto"%>
 <%@page import="data.dao.SangpumDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
