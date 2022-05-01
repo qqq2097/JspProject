@@ -57,7 +57,7 @@ onclick=goMymenu()>My메뉴</button>
 </form>
 <script type="text/javascript">
 function goMymenu() {
-	window.opener.location='../testlist.jsp' //my menu로 이동시키면 됩니당
+	window.opener.location='../../starbucks_clone/starbucks_clone/index.jsp?main=../../MyStarbucks/MyMenu.jsp' 
 		window.close()
 }
 </script>

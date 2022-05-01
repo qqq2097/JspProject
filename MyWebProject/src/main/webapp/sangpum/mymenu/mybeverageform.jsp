@@ -56,9 +56,18 @@ onclick=goMymenu()>My메뉴</button>
 </div>
 </form>
 <script type="text/javascript">
+<%
+//프로젝트 절대경로
+String root=request.getContextPath();
+String mainPage="layout/main.jsp";
+
+if(request.getParameter("main")!=null){
+	mainPage=request.getParameter("main");
+}
+%>
 function goMymenu() {
-	window.opener.location='../testlist.jsp' //my menu로 이동시키면 됩니당
-		window.close()
+	window.opener.location='../../starbucks_clone/starbucks_clone/index.jsp?main=../../MyStarbucks/MyMenu.jsp' 
+	window.close()
 }
 </script>
 <%}
