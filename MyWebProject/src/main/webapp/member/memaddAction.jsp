@@ -34,8 +34,12 @@ dto.setBirthday(birthday);
 dto.setHp(hp);
 dto.setEmail(email);
 dto.getEmail();
-
+session.setAttribute("id", id);//아이디 저장되서 보내기
 dao.insertMember(dto);
+
+out.println("<script>");
+out.println("alert("+name+"님회원가입이 완료되었습니다. 로그인 해주세요.')");
+out.println("</script>");
 
 response.sendRedirect("../starbucks_clone/starbucks_clone/index.jsp?main=../../login/loginform.jsp");
 }

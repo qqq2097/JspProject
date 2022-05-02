@@ -22,7 +22,7 @@ if(key==null){
 		<p align="center"><img src="../member/memberaddimg1.PNG"></p>
 		<p width ="100%" height="50px;" style="text-align: center;"><b style="font-size: 2em;color:gray;">전화번호를 입력하세요.</b></p>
 		<br>
-		<select size="1" name="hp1">
+		<select size="1" name="hp1" style="margin-top:3px; height:25px;font-size: 1.3em;">
 			<option value="010">010</option>
 			<option value="011">011</option>
 			<option value="019">019</option>
@@ -34,7 +34,7 @@ if(key==null){
 		<input type="text" name="hp3" size="4" required="required">
 		<!--key값 넘기기..hidden  -->
 		<input type="hidden" name="key">
-		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">아이디 찾기</button>
+		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">확인하기</button>
 	</form>
 </div>
 <%
