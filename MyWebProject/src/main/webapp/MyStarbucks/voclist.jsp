@@ -253,6 +253,8 @@ $(function () {
 	$(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
 	});
+	
+
 
 	
 });
@@ -324,6 +326,7 @@ start=(currentPage-1)*perPage;
 
 //각페이지에서 필요한 게시글 가져오기
 List<VoclistDto>list=dao.getList(start, perPage);
+
 no = totalCount-(currentPage-1)*perPage;
 System.out.println(no + " " + totalCount + " " + currentPage + " " + perPage + " " +  list.size());
 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
@@ -395,6 +398,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 												</tr>
 												
 												<%
+												
 												if(totalCount ==0){
 													%>
 													<tr height="40">
@@ -402,14 +406,20 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													<b>등록된 게시글이 없습니다</b>
 													</td>
 													</tr>
-												<%}else {
-													for(VoclistDto dto:list){%>
+												<%}else{
+													for(VoclistDto dto:list){
+														
+													%>
 									
 					
 													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
-													<td>
-													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" style="color: #666;">
+													
+													<td class="mysubject">
+													<%if(dto.getMyid().equals(id)){ %>
+													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" 
+													style="color: #666; font-weight: bold; text-decoration: underline; font-size: 7pt;">
+													<%}%>
 													<%=dto.getSubject() %></a>
 													</td>
 										
@@ -445,7 +455,9 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													%>
 													
 													</tr>
+													
 													<%}
+														
 													%>
 							
 												<%}
