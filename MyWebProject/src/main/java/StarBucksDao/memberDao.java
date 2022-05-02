@@ -264,4 +264,64 @@ public class memberDao {
 			
 			return idx;
 		}
+		//아이디와 핸드폰 번호가 맞는지 확인
+		public boolean checkHpfromID(String id,String hp) {
+			boolean b =false;
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			String sql = "select hp from member where id =?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next()) {
+					//비번 비교
+					if(rs.getString("hp").equals(hp)) {
+						b = true;
+					}
+					
+				}
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				 db.dbClose(rs, pstmt, conn);
+			}
+			return b;
+		}
+		//아이디와 이메일이 맞는지 확인
+		public boolean checkEmfromID(String id,String email) {
+			boolean b =false;
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			String sql = "select email from member where id =?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next()) {
+					//비번 비교
+					if(rs.getString("email").equals(email)) {
+						b = true;
+					}
+					
+				}
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				 db.dbClose(rs, pstmt, conn);
+			}
+			return b;
+		}
 }
