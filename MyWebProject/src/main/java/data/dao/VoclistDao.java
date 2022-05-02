@@ -100,6 +100,7 @@ public class VoclistDao {
 					dto.setPhoto(rs.getString("photo"));
 					dto.setWriteday(rs.getTimestamp("writeday"));
 					dto.setExpectwriteday(rs.getDate("expectwriteday"));
+					dto.setCommentYn(rs.getString("commentYn"));
 					
 					list.add(dto);
 				}

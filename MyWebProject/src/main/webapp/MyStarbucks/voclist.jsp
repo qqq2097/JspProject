@@ -279,7 +279,9 @@ $(document).ready(function(){
 String loginok =(String) session.getAttribute("loginok");
 String id=(String)session.getAttribute("id");
 
+
 VoclistDao dao = new VoclistDao();
+
 
 //페이징처리에 필요한 변수
 int totalCount; //총글수
@@ -295,6 +297,7 @@ int no;
 
 //총갯수
 totalCount=dao.getTotalCount();
+
 
 //현재 페이지번호 읽기(단 null일경우는 1페이지로 설정)
 if(request.getParameter("currentPage")==null)
@@ -323,9 +326,10 @@ List<VoclistDto>list=dao.getList(start, perPage);
 no = totalCount-(currentPage-1)*perPage;
 System.out.println(no + " " + totalCount + " " + currentPage + " " + perPage + " " +  list.size());
 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+
+
 %>
-
-
 
 <body>
 
@@ -410,16 +414,34 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 										
 													<td style="color: #666;"><%=sdf.format(dto.getWriteday()) %></td> 
 													<td style="color: #666;"><%=dto.getExpectwriteday() %></td>
-													
+												
 													<% 
+													
+				
 													if(loginok!=null && id.equals("admin")){%>
 														<td><a href="index.jsp?main=../../MyStarbucks/answerView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>"
 														style="background: #006633; border-radius: 3px; color: #fff; text-align: center; padding: 5px 15px 5px 15px;"
 														 >답변하기</a></td>
-													<%}else {%>
-														<td></td>
+														 
+													<%} else if(dto.getCommentYn().equals("N")){ %>
+												
+													
+														<td> 
+														<span style="background: #666; border-radius: 3px; color: white; text-align: center; padding: 5px 15px 5px 15px;">
+														접수완료</span>
+														
+														 </td>
+													
+													
+													<%}else if(dto.getCommentYn().equals("Y")){%>
+													<td>
+													<span style="background: #006633; border-radius: 3px; color: white; text-align: center; padding: 5px 15px 5px 15px;">
+													답변완료</span>
+													</td>
 													<%}
+													
 													%>
+													
 													</tr>
 													<%}
 													%>
