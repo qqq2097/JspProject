@@ -324,7 +324,7 @@ $(function(){
 <%
 	SangpumDao sdao=new SangpumDao();
 	String id = (String)session.getAttribute("id");
-	System.out.println(id);
+	//System.out.println(id);
 %>
 </head>
 <%

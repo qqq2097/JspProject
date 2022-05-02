@@ -113,50 +113,7 @@
 	height: 500px;
 	top: 750px;
 }
-</style>
-<script type="text/javascript">
-
-$(function () {
-	
-	
-	$(".subject2").hide();
-	$(".subject3").hide();
-
-
-	$(".flavor dt img").click(function() {
-	
-	$(".subject1").hide();
-	$(".subject2").show("slow");
-	
-});
-	
-
-	$(".feel dt img").click(function() {
-		
-		$(".subject2").hide();
-		$(".subject3").show("slow");
-		
-	});
-
-	
-	
-	/* 
-	$("#strength2").click(function() {
-		
-		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
-		
-	});
-	
-	$("#strength3").click(function() {
-		
-		location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
-		
-	}); */
-
-
-});  
-	
-</script>
+</style>  
 </head>
 <body>
 <div class="title" >
@@ -184,25 +141,39 @@ $(function () {
 				<ul>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_1.png"  id="flavor1"></dt>
+							<dt>
+								<img alt="" src="../../MyFavoriteCoffee/image/flavor1_1.png" onclick="document.frm.Coffee_flavor.value=10;" id="flavor1">	
+							</dt>
 							<dd><b>짭짤한 맛</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_2.png" id="flavor2"></dt>			
+							<dt>
+								<a onclick="document.frm.Coffee_flavor.value=20;">
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_2.png" id="flavor2">	
+								</a>
+							</dt>			
 							<dd><b>과일 맛</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_3.png" id="flavor3"></dt>
+							<dt>
+								<a onclick="document.frm.Coffee_flavor.value=30;">
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_3.png" id="flavor3">	
+								</a>
+							</dt>
 							<dd><b>고소 맛</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/flavor1_4.png" id="flavor4"></dt>
+							<dt>
+								<a onclick="document.frm.Coffee_flavor.value=40;" >
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_4.png" id="flavor4">	
+								</a>
+							</dt>
 							<dd><b>달콤한(캐러멜)맛</b></dd>
 						</dl>					
 					</li>
@@ -220,19 +191,29 @@ $(function () {
 				<ul>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/feel2_1.png" id="feel1"></dt>
+							<dt>
+								<img alt="" src="../../MyFavoriteCoffee/image/feel2_1.png" onclick="document.frm.Coffee_feel.value=10;" id="feel1">	
+							</dt>
 							<dd><b>상쾌한 느낌	</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/feel2_2.png" id="feel2"></dt>			
+							<dt>
+								<a onclick="document.frm.Coffee_feel.value=20;">
+									<img alt="" src="../../MyFavoriteCoffee/image/feel2_2.png" id="feel2">	
+								</a>
+							</dt>		
 							<dd><b>부드러운 느낌</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/feel2_3.png" id="feel3"></dt>
+							<dt>
+								<a onclick="document.frm.Coffee_feel.value=30;">
+									<img alt="" src="../../MyFavoriteCoffee/image/feel2_3.png" id="feel3">	
+								</a>
+							</dt>
 							<dd><b>오랫동안 여운이 남는 느낌</b></dd>
 						</dl>					
 					</li>
@@ -249,19 +230,29 @@ $(function () {
 				<ul>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/strength3_1.png" id="strength1"></dt>
+							<dt>
+								<img alt="" src="../../MyFavoriteCoffee/image/strength3_1.png" onclick="document.frm.Coffee_strength.value=10;" id="strength1">	
+							</dt>
 							<dd><b>은은하고 부드러움</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/strength3_2.png" id="strength2"></dt>			
+							<dt>
+								<a href="#" onclick="document.frm.Coffee_strength.value=20;">
+									<img alt="" src="../../MyFavoriteCoffee/image/strength3_2.png" id="strength2">	
+								</a>
+							</dt>			
 							<dd><b>부드러운 느낌</b></dd>
 						</dl>					
 					</li>
 					<li>
 						<dl>
-							<dt><img alt="" src="../../MyFavoriteCoffee/image/strength3_3.png" id="strength3"></dt>
+							<dt>
+								<a onclick="document.frm.Coffee_strength.value=30;">
+									<img alt="" src="../../MyFavoriteCoffee/image/strength3_3.png" id="strength3">	
+								</a>
+							</dt>
 							<dd><b>무게감을 주는 강렬함</b></dd>
 						</dl>					
 					</li>
@@ -271,5 +262,67 @@ $(function () {
 		</div>
 	
 </div>
+
+ <form action="#" name="frm" id="frm" >
+	<input type="hidden" name="Coffee_flavor">
+	<input type="hidden" name="Coffee_feel">
+	<input type="hidden" name="Coffee_strength">
+</form>
+<script type="text/javascript">
+/* 	var i= {
+			goSubmit : function (strength) {
+				document.frm.Coffee_strength.value= strength;
+				document.frm.submit();
+			}
+			
+	} */
+	
+	
+	var flavor1=document.getElementById("flavor1");
+	var flavor2=document.getElementById("flavor2");
+	var flavor3=document.getElementById("flavor3");
+	var flavor4=document.getElementById("flavor4");
+	
+	var feel1=document.getElementById("feel1");
+	var feel2=document.getElementById("feel2");
+	var feel3=document.getElementById("feel3");
+	
+	var strength1=document.getElementById("strength1");
+	var strength2=document.getElementById("strength2");
+	var strength3=document.getElementById("strength3");
+	
+	 $(".subject2").hide();
+		$(".subject3").hide();
+
+/* 첫번째 카테고리 이미지 클릭시 이벤트 */
+		$(".flavor dt img").click(function() {
+		
+		$(".subject1").hide();
+		$(".subject2").show("slow");
+		
+	});
+
+/* 두번째 카테고리 이미지 클릭시 이벤트 */
+
+		$(".feel dt img").click(function() {
+			
+			$(".subject2").hide();
+			$(".subject3").show("slow");
+			
+		}); 
+/* 세번째 이미지 클릭시 결과폼으로 location이벤트 */	
+
+	$(".strength dt img").click(function() {
+		if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_cenya.jsp';
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
+		}
+	});
+
+
+</script> 
 </body>
 </html>
