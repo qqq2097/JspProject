@@ -491,7 +491,7 @@ public class SangpumDao {
 	}
 	
 	//totalcount Beverage
-	public int getTotalCountBeverage()
+	public int getTotalCountBeverage(String id)
 	{
 		int n=0;
 		
@@ -499,7 +499,7 @@ public class SangpumDao {
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select count(*) from mybeverage";
+		String sql="select count(*) from mybeverage where id='"+id+"'";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
@@ -519,7 +519,7 @@ public class SangpumDao {
 	}
 	
 	//totalcount Food
-		public int getTotalCountFood()
+		public int getTotalCountFood(String id)
 		{
 			int n=0;
 			
@@ -527,7 +527,7 @@ public class SangpumDao {
 			PreparedStatement pstmt=null;
 			ResultSet rs=null;
 			
-			String sql="select count(*) from myfood";
+			String sql="select count(*) from myfood where id='"+id+"'";
 			
 			try {
 				pstmt=conn.prepareStatement(sql);
@@ -547,7 +547,7 @@ public class SangpumDao {
 		}
 		
 		//totalcount Goods
-		public int getTotalCountGoods()
+		public int getTotalCountGoods(String id)
 		{
 			int n=0;
 			
@@ -555,7 +555,7 @@ public class SangpumDao {
 			PreparedStatement pstmt=null;
 			ResultSet rs=null;
 			
-			String sql="select count(*) from mygoods";
+			String sql="select count(*) from mygoods where id='"+id+"'";
 			
 			try {
 				pstmt=conn.prepareStatement(sql);
@@ -574,14 +574,14 @@ public class SangpumDao {
 			return n;
 		}
 	
-	public List<SangpumDto> mybeverageList(int start,int perpage){
+	public List<SangpumDto> mybeverageList(int start,int perpage,String id){
 		List<SangpumDto> list=new Vector<SangpumDto>();
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from mybeverage order by snum desc limit ?,?";
+		String sql="select * from mybeverage where id='"+id+"' order by snum desc limit ?,?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
@@ -630,14 +630,14 @@ public class SangpumDao {
 	}
 	
 	
-	public List<SangpumDto> myFoodList(int start,int perpage){
+	public List<SangpumDto> myFoodList(int start,int perpage,String id){
 		List<SangpumDto> list=new Vector<SangpumDto>();
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from myfood order by snum desc limit ?,?";
+		String sql="select * from myfood where id='"+id+"' order by snum desc limit ?,?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
@@ -686,14 +686,14 @@ public class SangpumDao {
 	}
 	
 	
-	public List<SangpumDto> mygoodsList(int start,int perpage){
+	public List<SangpumDto> mygoodsList(int start,int perpage,String id){
 		List<SangpumDto> list=new Vector<SangpumDto>();
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from mygoods order by snum desc limit ?,?";
+		String sql="select * from mygoods where id='"+id+"' order by snum desc limit ?,?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
@@ -740,5 +740,95 @@ public class SangpumDao {
 			db.dbClose(pstmt, conn);
 		}
 		
+	}
+	
+	public SangpumDto getMybeverageData(String num) {
+		SangpumDto dto=new SangpumDto();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mybeverage where snum="+num;
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return dto;
+	}
+	
+	public SangpumDto getMyfoodData(String num) {
+		SangpumDto dto=new SangpumDto();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from myfood where snum="+num;
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return dto;
+	}
+	
+	public SangpumDto getMygoodsData(String num) {
+		SangpumDto dto=new SangpumDto();
+		
+		Connection conn=db.getConnection();
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mygoods where snum="+num;
+		
+		try {
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, stmt, conn);
+		}
+		
+		return dto;
 	}
 }

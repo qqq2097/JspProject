@@ -10,11 +10,11 @@ import mysql.db.DbConnect;
 
 public class memberDao {
 	DbConnect db = new DbConnect();
-<<<<<<< HEAD
+
 	
-=======
+
 	//멤버 추가
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+
 	public void insertMember(memberDto dto) {
 		Connection conn = db.getConnection();
 		PreparedStatement pstmt = null;
@@ -42,10 +42,8 @@ public class memberDao {
 		}
 	}
 	
-<<<<<<< HEAD
-=======
+
 	//핸드폰번호 중복 체크
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 	
 	public boolean checkHp(String hp) {
 		boolean b =false;
@@ -72,12 +70,9 @@ public class memberDao {
 		}
 		return b;
 	}
-	
-<<<<<<< HEAD
-	
-=======
+
 	//이메일 중복체크
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+
 	public boolean checkEmail(String email) {
 		boolean b =false;
 		Connection conn = db.getConnection();
@@ -103,11 +98,9 @@ public class memberDao {
 		}
 		return b;
 	}
-<<<<<<< HEAD
-	
-=======
+
 	//ID 중복체크
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+
 		public boolean checkID(String id) {
 			boolean b =false;
 			Connection conn = db.getConnection();
@@ -133,12 +126,9 @@ public class memberDao {
 			}
 			return b;
 		}
-<<<<<<< HEAD
-		
-		
-=======
+
 		//id에 따라서 이름 가져오기
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+
 		public String getName(String id)
 		{
 			String name="";
@@ -167,7 +157,7 @@ public class memberDao {
 			
 			return name;
 		}
-<<<<<<< HEAD
+
 		
 		public String getGrade(String id)
 		{
@@ -196,7 +186,8 @@ public class memberDao {
 			}
 			
 			return grade;
-=======
+		}
+
 		//핸드폰 번호로 ID 찾기!
 		public String findIDhp(String hp)
 		{
@@ -313,6 +304,42 @@ public class memberDao {
 			}
 			
 			return idx;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+
+		}
+		
+		public void  updateGradeGreen(memberDto dto,String id)
+		{
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			
+			String sql="update member set grade=? where id='"+id+"'";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, "그린");
+				
+				pstmt.execute();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}db.dbClose(pstmt, conn);
+		}
+		
+		public void  updateGradeGold(memberDto dto,String id)
+		{
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			
+			String sql="update member set grade=? where id='"+id+"'";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, "골드");
+				
+				pstmt.execute();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}db.dbClose(pstmt, conn);
 		}
 }

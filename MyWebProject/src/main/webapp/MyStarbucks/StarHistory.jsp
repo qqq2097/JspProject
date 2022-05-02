@@ -142,13 +142,19 @@ vertical-align: middle;
 </style>
 
 <%
+	String id = (String)session.getAttribute("id");
+	//System.out.println(id);
 	RewordDao dao=new RewordDao();
-	List<RewordDto> list=dao.getAllRewords();
-	//List<RewordDto> list2=dao.RadioOne();
-	//List<RewordDto> list3=dao.RadioTwo();
+	List<RewordDto> list=dao.getAllRewords(id);
+	//System.out.println(list);
+	List<RewordDto> list2=dao.RadioOne(id);
+	//System.out.println(list2);
+	List<RewordDto> list3=dao.RadioTwo(id);
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-	
-	//int starcnt=Integer.parseInt(request.getParameter("starcnt"));
+	int starcnt=dao.getTotalCountStar(id);
+	//System.out.println(starcnt);
+	String d1="";
+	String d2="";
 %>
 <script type="text/javascript">
 $(function(){
@@ -157,6 +163,7 @@ $(function(){
    $(".sub2").hide();
    $("#tb2").hide();
    $("#tb3").hide();
+   $("#tb4").hide();
    
    $(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
@@ -168,9 +175,18 @@ $(function(){
 	   
 	   //alert(1);
 	   var d1=$("#date1").val();
+	   
 	   var d2=$("#date2").val();
+	   	
+	   <%
+		
+	   	List<RewordDto> list4=dao.getAllRewordsBtn(id, d1, d2);
 	   
-	   
+	   %>
+	   $("#tb1").hide();
+	   $("#tb3").hide();
+	   $("#tb2").hide();
+	   $("#tb4").show();
    });
    
    $("#onemonth").click(function(){
@@ -178,7 +194,8 @@ $(function(){
 	   //alert(1);
 	   $("#tb1").hide();
 	   $("#tb3").hide();
-	   $("#tb2").show();	   
+	   $("#tb2").show();
+	   $("#tb4").hide();
    });
    
 	$("#oneyear").click(function(){
@@ -186,7 +203,8 @@ $(function(){
 	   //alert(1);
 	   $("#tb1").hide();
 	   $("#tb2").hide();
-	   $("#tb3").show();	   
+	   $("#tb3").show();
+	   $("#tb4").hide();
    });
    
 });
@@ -216,15 +234,31 @@ $(function(){
 		<div class="first">
 		<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px; border: 3px solid black;" >
    			<tr bgcolor="black;" style="color: #fff; border-bottom: 3px solid black;">
-      			<th align="center">사용 가능한 별</th>
-      			<th align="center">총 누적 별</th>
+      			<th align="center">누적 별</th>
+      			<th align="center">다음 등급까지 남은 별</th>
    			</tr>
    
    			<tr>
    				<!-- <td align="center">1</td>
       			<td align="center">1</td> -->
-      			<td align="center">1</td>
-      			<td align="center">1</td>
+      			<td align="center"><%=starcnt %></td>
+      			<td align="center">
+      			<%
+      				if(starcnt<5)
+      				{	
+      					int n=5-starcnt;
+      					%>
+      					<%=n %>개 남았습니다!
+      					
+      				<%}
+      				else if(starcnt<30)
+      				{
+      					int n=30-starcnt;
+      					%>
+      					<%=n %>개 남았습니다!
+      				<%}
+      			%>
+      			</td>
    	 		</tr>
 	 	</table>
 		</div>
@@ -278,8 +312,8 @@ $(function(){
    		</table>
 		</div>
 		
-		<%-- <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb2">
-   		<table class="table table-bordered" >
+		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb2">
+   		<table class="table table-bordered" style="width : 800px;" >
    		<caption>1개월</caption>
    			<tr>
       			<th align="center"> No</th>
@@ -297,11 +331,11 @@ $(function(){
 	   				RewordDto dto=list2.get(i);
 	  			 %>
 	   				<tr>
-	   					<td><%=i+1 %></td>
-	   					<td><%=dto.getCardnum() %></td>
-	   					<td><%=dto.getStarcnt() %></td>
-	   					<td><%=dto.getStoreaddr() %></td>
-	   					<td><%=sdf.format(dto.getBuyday()) %></td>
+	   					<td align="center"><%=i+1 %></td>
+	   					<td align="center"><%=dto.getCardnum() %></td>
+	   					<td align="center"><%=dto.getStarcnt() %></td>
+	   					<td align="center"><%=dto.getStoreaddr() %></td>
+	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
    						%> 
@@ -309,11 +343,11 @@ $(function(){
    
   
    		</table>
-		</div> --%>
+		</div>
 		
-		<%-- <div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb3">
-   		<table class="table table-bordered" >
-   		<caption>전체</caption>
+		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb3">
+   		<table class="table table-bordered" style="width : 800px;">
+   		<caption>1년</caption>
    			<tr>
       			<th align="center"> No</th>
       			<th align="center"> 카드번호</th>
@@ -330,11 +364,11 @@ $(function(){
 	   				RewordDto dto=list3.get(i);
 	  			 %>
 	   				<tr>
-	   					<td><%=i+1 %></td>
-	   					<td><%=dto.getCardnum() %></td>
-	   					<td><%=dto.getStarcnt() %></td>
-	   					<td><%=dto.getStoreaddr() %></td>
-	   					<td><%=sdf.format(dto.getBuyday()) %></td>
+	   					<td align="center"><%=i+1 %></td>
+	   					<td align="center"><%=dto.getCardnum() %></td>
+	   					<td align="center"><%=dto.getStarcnt() %></td>
+	   					<td align="center"><%=dto.getStoreaddr() %></td>
+	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
    						%> 
@@ -342,9 +376,42 @@ $(function(){
    
   
    		</table>
-		</div> --%>
-
 		</div>
+		
+		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb4">
+   		<table class="table table-bordered" style="width : 800px;">
+   		<caption>검색한 기간</caption>
+   			<tr>
+      			<th align="center"> No</th>
+      			<th align="center"> 카드번호</th>
+      			<th align="center"> 적립별</th>
+     			<th align="center"> 매장명</th>
+      			<th align="center"> 적립일</th>     
+   			</tr>
+   
+   
+   			 <%
+   				
+   				for(int i=0;i<list4.size();i++)
+   				{
+	   				RewordDto dto=list4.get(i);
+	  			 %>
+	   				<tr>
+	   					<td align="center"><%=i+1 %></td>
+	   					<td align="center"><%=dto.getCardnum() %></td>
+	   					<td align="center"><%=dto.getStarcnt() %></td>
+	   					<td align="center"><%=dto.getStoreaddr() %></td>
+	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
+	  				 </tr>
+   					<%}
+   						%> 
+   
+   
+  
+   		</table>
+		</div>
+
+</div>
 
 <nav class="ms_nav" id="msRnb">					
 	<ul>

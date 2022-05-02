@@ -9,8 +9,15 @@ public class RewordDto {
 	private int starcnt;
 	private String storeaddr;
 	private Timestamp buyday;
+	private String id;
 	
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getNum() {
 		return num;
 	}
@@ -41,6 +48,7 @@ public class RewordDto {
 	public void setBuyday(Timestamp buyday) {
 		this.buyday = buyday;
 	}
+	
 	@Override
 	public String toString() {
 		return "RewordDto [num=" + num + ", cardnum=" + cardnum + ", starcnt=" + starcnt + ", storeaddr=" + storeaddr

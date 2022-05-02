@@ -323,7 +323,8 @@ $(function(){
 
 <%
 	SangpumDao sdao=new SangpumDao();
-	
+	String id = (String)session.getAttribute("id");
+	System.out.println(id);
 %>
 </head>
 <%
@@ -342,7 +343,7 @@ int currentPage1; //현재페이지
 int no1;
 
 //총개수
-totalCount1=sdao.getTotalCountBeverage();
+totalCount1=sdao.getTotalCountBeverage(id);
 
 //현재 페이지번호 읽기 단 null일경우는 1페이지로 설정
 if(request.getParameter("currentPage")==null)
@@ -371,7 +372,7 @@ if(endPage1>totalPage1)
 start1=(currentPage1-1)*perPage1;
 
 //각페이지에서 필요한 게시글 가져오기
-List<SangpumDto> pagelist=sdao.mybeverageList(start1, perPage1);
+List<SangpumDto> pagelist=sdao.mybeverageList(start1, perPage1, id);
 
 //각 글앞에 붙일 시작번호 구하기
 
@@ -397,7 +398,7 @@ int currentPage2; //현재페이지
 int no2;
 
 //총개수
-totalCount2=sdao.getTotalCountFood();
+totalCount2=sdao.getTotalCountFood(id);
 
 //현재 페이지번호 읽기 단 null일경우는 1페이지로 설정
 if(request.getParameter("currentPage")==null)
@@ -426,7 +427,7 @@ if(endPage2>totalPage2)
 start2=(currentPage2-1)*perPage2;
 
 //각페이지에서 필요한 게시글 가져오기
-List<SangpumDto> foodlist=sdao.myFoodList(start2, perPage2);
+List<SangpumDto> foodlist=sdao.myFoodList(start2, perPage2,id);
 
 //각 글앞에 붙일 시작번호 구하기
 
@@ -453,7 +454,7 @@ int currentPage3; //현재페이지
 int no3;
 
 //총개수
-totalCount3=sdao.getTotalCountGoods();
+totalCount3=sdao.getTotalCountGoods(id);
 
 //현재 페이지번호 읽기 단 null일경우는 1페이지로 설정
 if(request.getParameter("currentPage")==null)
@@ -482,7 +483,7 @@ if(endPage3>totalPage3)
 start3=(currentPage3-1)*perPage3;
 
 //각페이지에서 필요한 게시글 가져오기
-List<SangpumDto> goodslist=sdao.mygoodsList(start3, perPage3);
+List<SangpumDto> goodslist=sdao.mygoodsList(start3, perPage3,id);
 
 //각 글앞에 붙일 시작번호 구하기
 
@@ -552,11 +553,14 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    						<td align="center">
    							<input type="checkbox" class="idx"  name="idx" idx="<%=dto.getSnum()%>">
    						</td>
-   						<td><%=no1-- %></td>
+   						<td align="center"><%=no1-- %></td>
    						<td align="center"><%=dto.getSname() %></td>
    						<td align="center"><%=dto.getSprice() %>원</td>
    						<td align="center">
    							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 70px; height: 40px;">
+   						</td>
+   						<td>
+   							<button type="button" class="btn btn-info btn xs" onclick="location.href='index.jsp?main=../../MyStarbucks/buycofform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
    						</td>
    					</tr>	
    				<%}
@@ -617,8 +621,8 @@ no3=totalCount3-(currentPage3-1)*perPage3;
       		</th>
       		<th>No</th>
       		<th>푸드명</th>
-     		 <th>워밍 옵션</th>
-      		<th>등록일</th>
+     		 <th>가격</th>
+      		<th>이미지</th>
   		 </tr>
    
    		<%
@@ -641,11 +645,14 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    						<td align="center">
    							<input type="checkbox" class="idx"  name="idx" idx="<%=dto.getSnum()%>">
    						</td>
-   						<td><%=no2-- %></td>
+   						<td align="center"><%=no2-- %></td>
    						<td align="center"><%=dto.getSname() %></td>
    						<td align="center"><%=dto.getSprice() %>원</td>
    						<td align="center">
    							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 70px; height: 40px;">
+   						</td>
+   						<td>
+   							<button type="button" class="btn btn-info btn xs" onclick="location.href='index.jsp?main=../../MyStarbucks/buyfoodform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
    						</td>
    					</tr>	
    				<%}
@@ -729,11 +736,14 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    						<td align="center">
    							<input type="checkbox" class="idx"  name="idx" idx="<%=dto.getSnum()%>">
    						</td>
-   						<td><%=no3-- %></td>
+   						<td align="center"><%=no3-- %></td>
    						<td align="center"><%=dto.getSname() %></td>
    						<td align="center"><%=dto.getSprice() %>원</td>
    						<td align="center">
    							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 70px; height: 40px;">
+   						</td>
+   						<td>
+   							<button type="button" class="btn btn-info btn xs" onclick="location.href='index.jsp?main=../../MyStarbucks/buygoodsform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
    						</td>
    					</tr>	
    				<%}
@@ -769,12 +779,9 @@ no3=totalCount3-(currentPage3-1)*perPage3;
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-<<<<<<< HEAD
 				<li><a href="#" required="login">· 비밀번호 변경</a></li>
-=======
 				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 			</ul>
 		</li>
 	</ul>

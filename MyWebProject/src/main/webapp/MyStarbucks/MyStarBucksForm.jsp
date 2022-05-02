@@ -1,4 +1,8 @@
 <%-- <%@page import="StarBucksDao.memberDao"%> --%>
+<%@page import="StarBucksDao.RewordDao"%>
+<%@page import="data.dao.SangpumDao"%>
+<%@page import="StarBucksDao.memberDao"%>
+<%@page import="StarBucksDto.memberDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -202,16 +206,29 @@ $(function(){
 </script>
 </head>
 
-<%-- <%
-	String id= request.getParameter("id");
-	String grade = request.getParameter("id");
+<%
+	String id = (String)session.getAttribute("id");
+	//System.out.println(id);
+	memberDao mdao=new memberDao();
+	String grade = mdao.getGrade(id);
+	String name = mdao.getName(id);
+	memberDto mdto=new memberDto();
+	//System.out.println(grade);
+	RewordDao rdao=new RewordDao();
+	int starcnt = rdao.getTotalCountStar(id);
 	
-	memberDao mdao= new memberDao();	
-	
-	String name=mdao.getName(id);
-	String reword =mdao.getGrade(id);
-	
-%>  --%>
+	if(starcnt>=5 && starcnt<30)
+	{
+		//업데이트 grade 그린등급
+		mdao.updateGradeGreen(mdto, id);
+	}
+	else if(starcnt>=30)
+	{
+		//업데이트 gold 골드등급
+		mdao.updateGradeGold(mdto, id);
+	}
+		
+%>
 <body>
 
 
@@ -229,22 +246,11 @@ $(function(){
 	</div>
 </div>
 
-<!-- left div -->
-<div class="mid">
-	<div class="left">
-   		<span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My 리워드</span>
-   		<br>
-  		 <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
-	</div>
 
-	<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
-	<div class="leftsu">
-   		<span>3</span>
-	</div>
 
 <!-- right div -->
 	<div class="right">
-   		 <%--  <span><%=name %>님은<br>현재 <%=reword %>이십니다.</span> --%>
+   		   <span style="font-size: 10pt; "><b style="color: green;"><%=name %></b>&nbsp;님은<br>현재 <b style="color: green;"><%=grade %></b>&nbsp;이십니다.</span>
    		<br><br>
    		<button type="button" class="btn btn-default btnre" id="btn" style=" width : 100px; height: 50px;  margin-left: 50px;  margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
   		 <button type="button" class="btn btn-default btnre" id="btn" style=" width : 100px; height: 50px; margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
@@ -253,6 +259,23 @@ $(function(){
    		<button type="button" class="btn btn-default btnbun" id="btn" style="width : 100px; height: 50px; margin-top: 10px;">비밀번호 변경</button>
 	</div>      
 </div>
+
+
+<!-- left div -->
+<div class="mid">
+	<div class="left">
+   		<span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My Star</span>
+   		<br>
+  		 <img alt="" src="../../MyStarbucks/image/ms07.png" style="width : 300px; height : 150px;">   
+	</div>
+
+	<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
+	<div class="leftsu">
+	<span style="margin-left: -15px; margin-top: 10px;"><b><%=starcnt %></b></span>
+   		
+	</div>
+
+
 
 
 <nav class="ms_nav" id="msRnb">					
@@ -273,13 +296,9 @@ $(function(){
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-<<<<<<< HEAD
 				<li><a href="#" required="login">· 비밀번호 변경</a></li>
-				
-=======
 				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 			</ul>
 		</li>
 	</ul>
