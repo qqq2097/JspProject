@@ -14,7 +14,7 @@
 	}
 
 	div.title img{
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 
 	div.title span{
@@ -105,24 +105,23 @@
 <!-- container end div -->
 
 <div class="image">
-	<img alt="" src="../../MyFavoriteCoffee/resultimage/placelost.jpg" width="450px;" height="450px;">
+	<img alt="" src="../../MyFavoriteCoffee/resultimage/cenya.jpg" width="450px;" height="450px;">
 </div>
 
 <div class="detail">	
 	<div class="article">
 		<h3>
-			파이크 플레이스™ 로스트 250g
+			케냐 250g
 			<br>
 			<span></span>
 		</h3>
 	
 		<p class="title">
-		파이크 플레이스™ 로스트는 코코아와 구운 견과류의 은은하고 풍부한 향으로 가벼운 산도를 조화시킴으로써 스타벅스의 다양성을 강조했습니다. 
-		이 블렌드는 크림과 설탕이 첨가된 커피를 포함하여 광범위한 고객의 기호를 충족시키기 위해 고안되었습니다
+		케냐 커피는 주로 상큼하고 깔끔한 맛과 함께 자몽과 와인의 풍미를 지니며, 입 안에 꽉찬 무게감을 가지고 있습니다.
 		</p>
 	
 		<p class="text">
-		부드러운 뒷맛이 특징이며 은은한 코코아와 구운 견과류 향이 특징인 커피 
+		열대성 과일의 향기와 신비로움으로 깔끔한 주스와 같은 느낌을 가진 커피
 		</p>
 
 	</div>

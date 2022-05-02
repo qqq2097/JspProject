@@ -14,7 +14,7 @@
 	}
 
 	div.title img{
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 
 	div.title span{
@@ -89,7 +89,7 @@
 <body>
 <div class="container">
  	<div class="title" >
-		<img alt="" src="../../MyFavoriteCoffee/image/어울리는커피.png">
+		<img alt="" src="../../MyFavoriteCoffee/image/어울리는커피.png" style="margin-top: 30px;">
 			<span>  
 				<img alt="" src="../../MyFavoriteCoffee/image/home.png" style="cursor: pointer;" onclick="location.href='../starbucks_clone/index.jsp'">
 				<img alt="" src="../../MyFavoriteCoffee/image/arrow.png">
