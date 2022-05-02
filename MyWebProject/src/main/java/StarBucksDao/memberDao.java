@@ -402,4 +402,35 @@ public class memberDao {
 			}
 			return b;
 		}
+		//아이디로 모든 데이터 가져오기
+		public memberDto getData(String num) {
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			memberDto dto = new memberDto();
+			String sql = "select * from member where num = ?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, num);
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					dto.setNum(rs.getString("num"));
+					dto.setId(rs.getString("id"));
+					dto.setPass(rs.getString("pass"));
+					dto.setName(rs.getString("name"));
+					dto.setHp(rs.getString("hp"));
+					dto.setEmail(rs.getString("email"));
+					dto.setNickname(rs.getString("nickname"));
+					
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			return dto;
+		}
 }
