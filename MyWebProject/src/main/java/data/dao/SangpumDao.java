@@ -835,5 +835,3 @@ public class SangpumDao {
 		return dto;
 	}
 }
-
-//test
