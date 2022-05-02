@@ -17,7 +17,7 @@
 div.footerinfo {
 	width: 100%;
 	height: 500px;
-	top: 2000px;
+	top: 2500px;
 }
 
 div.onetitle{
@@ -84,22 +84,16 @@ li.mylist{
    cursor: pointer;
 }
 span.formbtn1{
-   border-radius: 100%;
-   background: #32CD32;
-   color: #fff;
    margin-left: 370px;
 }
 
 span.formbtn2{
-   border-radius: 100%;
-   background: #32CD32;
-   color: #fff;
+   
    margin-left: 370px;
 }
 span.formbtn3{
-   border-radius: 100%;
-   background: #32CD32;
-   color: #fff;
+  
+   
    margin-left: 380px;
 }
 
@@ -186,6 +180,8 @@ color: #222;
 height: 40px;
 vertical-align: middle;
 }
+
+
 </style>
 </head>
 
@@ -241,8 +237,11 @@ $(function(){
 
 <div class="mid">
 <div class="one">
-   <div class="onetitle" style="margin-left: 100px; margin-top: 100px;  width: 600px; background: #F9F9F9;">스타벅스 리워드 (Starbucks Rewards)란?
-   <span class="glyphicon glyphicon-menu-down formbtn1"></span></div>
+   <div class="onetitle" style="font-family:Rowdies;  padding-top: 30px; margin-left: 100px; margin-top: 100px;  width: 600px; height:100px; background: #F9F9F9;">스타벅스 리워드 (Starbucks Rewards)란?
+   <!-- <span class="formbtn1">
+   		<img class="sbimg1" alt="" src="../../MyStarbucks/image/logo.png" style="width: 50px;">
+   </span> -->
+   </div>
       
       <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 100px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
           <li style="margin-left: 100px;">스타벅스 리워드는 스타벅스를 사랑해주시는 고객님을 위해 별을 적립하여 혜택으로 돌려드리는 특별한 리워드 프로그램입니다.</li>
@@ -251,8 +250,11 @@ $(function(){
 </div>
 
 <div class="two">
-   <div class="twotitle" style="margin-left: 100px;  width: 600px; margin-top: 30px; border: 1px solid #F9F9F9;">스타벅스 별이란?
-   <span class="glyphicon glyphicon-menu-down formbtn2"></span></div>
+   <div class="twotitle" style="font-family:Rowdies; padding-top:30px; margin-left: 100px;  width: 600px; height:100px; margin-top: 30px; border: 1px solid #F9F9F9;">스타벅스 별이란?
+  
+   		<!-- <img class="sbimg2" alt="" src="../../MyStarbucks/image/logo.png" style="width: 50px;"> -->
+  
+   </div>
    <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 130px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
           <li style="margin-left: 130px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
           <li style="margin-left: 130px;">적립된 별★은 스타벅스 리워드 (Starbucks Rewards) 프로그램을 통해 다양한 혜택으로 돌려드립니다.</li>
@@ -285,8 +287,11 @@ $(function(){
 </div>
 
 <div class="three">
-   <div class="threetitle" style="margin-left: 100px;  width: 600px; background: #F9F9F9; margin-top: 30px; ">회원 등급별 혜택
-   <span class="glyphicon glyphicon-menu-down formbtn3"></span></div>
+   <div class="threetitle" style="font-family:Rowdies; padding-top:30px; margin-left: 100px;  width: 600px; height:100px; background: #F9F9F9; margin-top: 30px; ">회원 등급별 혜택
+   <!-- <span class="formbtn3" style="padding: 0px;">
+   		<img  class="sbimg3" alt="" src="../../MyStarbucks/image/logo.png" style="width: 50px;">
+   </span> -->
+   </div>
    <ul class="subthree">
       <img alt="" src="../../MyStarbucks/image/ms08.png">
       <img alt="" src="../../MyStarbucks/image/ms09.png">
@@ -301,7 +306,7 @@ $(function(){
        <span style="margin-left: 210px; font-weight: bold; font-size: 12pt;">별★을 30개 모았을 경우</span>
                 
       
-      <table style="width: 1050px; height: 500px; border: 1px solid black;  margin-left: 20px; text-align: center;">
+      <table style="width: 1050px; height: 500px; border: 1px solid black; font-size:13pt;  margin-left: 20px; text-align: center;">
          <tr>
             <td>
                
@@ -367,7 +372,7 @@ $(function(){
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
 			</ul>
 		</li>

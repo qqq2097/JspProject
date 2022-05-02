@@ -20,12 +20,14 @@ String snum=request.getParameter("snum");
 String sname=request.getParameter("sname");
 String sprice=request.getParameter("sprice");
 String imgsrc=request.getParameter("imgsrc");
+String id = request.getParameter("id");
 
 SangpumDto dto=new SangpumDto();
 dto.setSnum(snum);
 dto.setSname(sname);
 dto.setSprice(sprice);
 dto.setImgsrc(imgsrc);
+dto.setId(id);
 
 SangpumDao dao=new SangpumDao();
 dao.insertMyfood(dto);

@@ -44,16 +44,16 @@ String id = (String)session.getAttribute("id");//아이디
           		if(loginok==null||loginok==" "){
           			%>
 	            <li><a href="index.jsp?main=../../login/loginform.jsp">Sign In</a></li>
-	            <li><a href="">        </a></li>
+	            <li><a href="index.jsp?main=../../login/loginform.jsp">My Starbuck</a></li>
 	            
 	            	<%
-          		}
+          		}//로그인 X
           		else{
           			%>
           		<li><a href="../../login/logoutAction.jsp">Sign Out</a></li>
 	    	     <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp">My Starbuck</a></li>
     	            <%
-          		}
+          		}//로그인 O
              %>
             <!--  onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'" -->
           </ul>

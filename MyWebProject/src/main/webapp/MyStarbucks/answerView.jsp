@@ -339,7 +339,7 @@ if(loginok!=null && id.equals("admin")){
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 			</ul>
 		</li>
 	</ul>

@@ -120,13 +120,14 @@ public class SangpumDao {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into mybeverage values(null,?,?,?)";
+		String sql="insert into mybeverage values(null,?,?,?,?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getSname());
 			pstmt.setString(2, dto.getSprice());
 			pstmt.setString(3, dto.getImgsrc());
+			pstmt.setString(4, dto.getId());
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -155,6 +156,7 @@ public class SangpumDao {
 				dto.setSname(rs.getString("sname"));
 				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
+				dto.setId(rs.getString("id"));
 				
 				list.add(dto);
 			}
@@ -239,13 +241,14 @@ public class SangpumDao {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into myfood values(null,?,?,?)";
+		String sql="insert into myfood values(null,?,?,?,?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getSname());
 			pstmt.setString(2, dto.getSprice());
 			pstmt.setString(3, dto.getImgsrc());
+			pstmt.setString(4, dto.getId());
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -274,6 +277,7 @@ public class SangpumDao {
 				dto.setSname(rs.getString("sname"));
 				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
+				dto.setId(rs.getString("id"));
 				
 				list.add(dto);
 			}
@@ -359,13 +363,14 @@ public class SangpumDao {
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		
-		String sql="insert into mygoods values(null,?,?,?)";
+		String sql="insert into mygoods values(null,?,?,?,?)";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getSname());
 			pstmt.setString(2, dto.getSprice());
 			pstmt.setString(3, dto.getImgsrc());
+			pstmt.setString(4, dto.getId());
 			pstmt.execute();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -394,6 +399,7 @@ public class SangpumDao {
 				dto.setSname(rs.getString("sname"));
 				dto.setSprice(rs.getString("sprice"));
 				dto.setImgsrc(rs.getString("imgsrc"));
+				dto.setId(rs.getString("id"));
 				
 				list.add(dto);
 			}
@@ -484,4 +490,255 @@ public class SangpumDao {
 		return b;
 	}
 	
+	//totalcount Beverage
+	public int getTotalCountBeverage()
+	{
+		int n=0;
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select count(*) from mybeverage";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next())
+				n=rs.getInt(1);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		
+		return n;
+	}
+	
+	//totalcount Food
+		public int getTotalCountFood()
+		{
+			int n=0;
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select count(*) from myfood";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+					n=rs.getInt(1);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			
+			return n;
+		}
+		
+		//totalcount Goods
+		public int getTotalCountGoods()
+		{
+			int n=0;
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select count(*) from mygoods";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+					n=rs.getInt(1);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			
+			return n;
+		}
+	
+	public List<SangpumDto> mybeverageList(int start,int perpage){
+		List<SangpumDto> list=new Vector<SangpumDto>();
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mybeverage order by snum desc limit ?,?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, perpage);
+			rs=pstmt.executeQuery();
+			
+			while (rs.next()) {
+				SangpumDto dto=new SangpumDto();
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+				
+				list.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return list;
+	}
+	
+	public void deleteMybeverage(String snum)
+	{
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		String sql="delete from mybeverage where snum=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, snum);
+			pstmt.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+		
+	}
+	
+	
+	public List<SangpumDto> myFoodList(int start,int perpage){
+		List<SangpumDto> list=new Vector<SangpumDto>();
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from myfood order by snum desc limit ?,?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, perpage);
+			rs=pstmt.executeQuery();
+			
+			while (rs.next()) {
+				SangpumDto dto=new SangpumDto();
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+				
+				list.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return list;
+	}
+	
+	public void deleteFood(String snum)
+	{
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		String sql="delete from myfood where snum=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, snum);
+			pstmt.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+		
+	}
+	
+	
+	public List<SangpumDto> mygoodsList(int start,int perpage){
+		List<SangpumDto> list=new Vector<SangpumDto>();
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from mygoods order by snum desc limit ?,?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, perpage);
+			rs=pstmt.executeQuery();
+			
+			while (rs.next()) {
+				SangpumDto dto=new SangpumDto();
+				dto.setSnum(rs.getString("snum"));
+				dto.setSname(rs.getString("sname"));
+				dto.setSprice(rs.getString("sprice"));
+				dto.setImgsrc(rs.getString("imgsrc"));
+				
+				list.add(dto);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			db.dbClose(rs, pstmt, conn);
+		}
+		
+		return list;
+	}
+	
+	
+	public void deleteGoods(String snum)
+	{
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		String sql="delete from mygoods where snum=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, snum);
+			pstmt.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			db.dbClose(pstmt, conn);
+		}
+		
+	}
 }

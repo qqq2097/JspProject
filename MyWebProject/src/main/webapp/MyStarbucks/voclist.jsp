@@ -321,6 +321,7 @@ start=(currentPage-1)*perPage;
 //각페이지에서 필요한 게시글 가져오기
 List<VoclistDto>list=dao.getList(start, perPage);
 no = totalCount-(currentPage-1)*perPage;
+System.out.println(no + " " + totalCount + " " + currentPage + " " + perPage + " " +  list.size());
 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
 
@@ -582,7 +583,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 			</ul>
 		</li>
 	</ul>

@@ -1,0 +1,38 @@
+form {
+	width: 400px;
+}
+p {
+	margin-top:20px;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 13pt;
+}
+button {
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 95px;
+	height: 40px;
+	font-size: 12pt;
+	font-family: 'Oswald', sans-serif;
+	border: none;
+	border-radius: 5px;
+}
+button:hover, mymenubtn:hover {
+	background-color: #036635;
+	color: white;
+}
+img {
+	margin-top:50px;
+	width: 200px;
+	height: 200px;
+}
+.mymenubtn {
+	margin-top:10px;
+	width: 200px;
+	height: 40px;
+	font-size: 12pt;
+	font-family: 'Oswald', sans-serif;
+	border: none;
+	border-radius: 5px;
+}
+div.form{padding-left: 25px;}

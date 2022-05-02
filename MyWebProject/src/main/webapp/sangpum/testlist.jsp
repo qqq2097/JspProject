@@ -28,6 +28,7 @@ List<SangpumDto> list2=dao.mygoodsList();
     <th width="70">상품명</th>
     <th width="180">가격</th>
     <th width="80">이미지</th>
+    <th width="80">id</th>
   </tr>
 <%
 for(int i=0;i<list.size();i++){
@@ -40,6 +41,7 @@ for(int i=0;i<list.size();i++){
 	<td>
 	  <img alt="" src="MyWebProject/<%=dto.getImgsrc()%>">
 	</td>
+	<td><%=dto.getId() %></td>
 	</tr>
 <%
 }
@@ -55,6 +57,7 @@ for(int i=0;i<list1.size();i++){
 	<td>
 	  <img alt="" src="MyWebProject/<%=dto.getImgsrc()%>">
 	</td>
+	<td><%=dto.getId() %></td>
 	</tr>
 <%
 }
@@ -70,6 +73,7 @@ for(int i=0;i<list2.size();i++){
 	<td>
 	  <img alt="" src="MyWebProject/<%=dto.getImgsrc()%>">
 	</td>
+	<td><%=dto.getId() %></td>
 	</tr>
 <%
 }

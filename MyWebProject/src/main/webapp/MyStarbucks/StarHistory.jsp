@@ -1,6 +1,6 @@
 <%@page import="StarBucksDto.RewordDto"%>
-<%@page import="java.util.Vector"%>
 <%@page import="StarBucksDao.RewordDao"%>
+<%@page import="java.util.Vector"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -221,6 +221,8 @@ $(function(){
    			</tr>
    
    			<tr>
+   				<!-- <td align="center">1</td>
+      			<td align="center">1</td> -->
       			<td align="center">1</td>
       			<td align="center">1</td>
    	 		</tr>
@@ -255,7 +257,7 @@ $(function(){
    			</tr>
    
    
-   			 <%
+   			  <%
    				
    				for(int i=0;i<list.size();i++)
    				{
@@ -269,7 +271,7 @@ $(function(){
 	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
-   						%> 
+   				%> 
    
    
   
@@ -362,7 +364,7 @@ $(function(){
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
 			</ul>
 		</li>

@@ -10,6 +10,12 @@
 <meta charset="UTF-8" />
 <title>Starbucks Coffee Korea</title>
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<!-- 폰트 -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 
 <!-- CSS 링크 -->
 <link rel="stylesheet" href="../../sangpum/css/coffeeCSS.css"/>
@@ -25,7 +31,7 @@ SangpumDao dao=new SangpumDao();
 <div class="sangpum">
 	<p class="headname">커피</p>
 	<br>
-	<hr color="#BDBDBD" width="1100px">
+	<hr color="#BDBDBD" width="1100px" align="left">
 	<br>
 	<div style="border: 1px solid #BDBDBD;width: 1100px;height: 230px;padding: 30px;">
 	  <h1>분류 보기</h1>

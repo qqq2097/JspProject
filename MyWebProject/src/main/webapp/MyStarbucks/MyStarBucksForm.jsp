@@ -1,3 +1,4 @@
+<%-- <%@page import="StarBucksDao.memberDao"%> --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,6 +13,9 @@
 
 <style type="text/css">
 
+#btn{
+border-radius: 50%;
+}
 div.footerinfo {
 	width: 100%;
 	height: 500px;
@@ -198,13 +202,16 @@ $(function(){
 </script>
 </head>
 
-<%
+<%-- <%
+	String id= request.getParameter("id");
+	String grade = request.getParameter("id");
 	
+	memberDao mdao= new memberDao();	
 	
+	String name=mdao.getName(id);
+	String reword =mdao.getGrade(id);
 	
-	
-	
-%> 
+%>  --%>
 <body>
 
 
@@ -237,13 +244,13 @@ $(function(){
 
 <!-- right div -->
 	<div class="right">
-   		 <!-- <span>님은<br>현재 이십니다.</span> -->
+   		 <%--  <span><%=name %>님은<br>현재 <%=reword %>이십니다.</span> --%>
    		<br><br>
-   		<button type="button" class="btn btn-default btnre" style=" width : 100px; height: 50px;  margin-left: 50px;  margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
-  		 <button type="button" class="btn btn-default btnre" style=" width : 100px; height: 50px; margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
+   		<button type="button" class="btn btn-default btnre" id="btn" style=" width : 100px; height: 50px;  margin-left: 50px;  margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+  		 <button type="button" class="btn btn-default btnre" id="btn" style=" width : 100px; height: 50px; margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
    		<br>
-   		<button type="button" class="btn btn-default btnsu" style=" width : 100px; height: 50px; margin-left: 50px; margin-top: 10px;">개인정보 수정</button>
-   		<button type="button" class="btn btn-default btnbun" style="width : 100px; height: 50px; margin-top: 10px;">비밀번호 변경</button>
+   		<button type="button" class="btn btn-default btnsu" id="btn" style=" width : 100px; height: 50px; margin-left: 50px; margin-top: 10px;">개인정보 수정</button>
+   		<button type="button" class="btn btn-default btnbun" id="btn" style="width : 100px; height: 50px; margin-top: 10px;">비밀번호 변경</button>
 	</div>      
 </div>
 
@@ -266,8 +273,13 @@ $(function(){
 			<ul class="sub2">
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
+<<<<<<< HEAD
 				<li><a href="#" required="login">· 비밀번호 변경</a></li>
+				
+=======
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
+>>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 			</ul>
 		</li>
 	</ul>
