@@ -261,6 +261,10 @@ $(function () {
 		}
 });
 	
+	$("#phone1").change(function () {
+		$("phone1").val($(this).val());
+	});
+	
 
 
 	
@@ -552,7 +556,7 @@ function fnCopy(){
 				<td>
 					<div class="sel_wrap">
 						<p class="phone_sel_wrap">
-							<label for="phone1"></label> <select id="phone1">
+							<label for="phone1"></label> <select id="phone1" name="phone1">
 								<option value="010" selected="selected">010</option>
 								<option value="011">011</option>
 								<option value="016">016</option>
