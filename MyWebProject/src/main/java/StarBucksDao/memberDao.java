@@ -11,6 +11,7 @@ import mysql.db.DbConnect;
 public class memberDao {
 	DbConnect db = new DbConnect();
 
+
 	public void insertMember(memberDto dto) {
 		Connection conn = db.getConnection();
 		PreparedStatement pstmt = null;
@@ -39,7 +40,6 @@ public class memberDao {
 	}
 	
 
-	//핸드폰번호 중복 체크
 
 	
 	public boolean checkHp(String hp) {
@@ -183,9 +183,11 @@ public class memberDao {
 			}
 			
 			return grade;
+
 			
 		}
 			
+
 		//핸드폰 번호로 ID 찾기!
 		public String findIDhp(String hp)
 		{
@@ -301,7 +303,48 @@ public class memberDao {
 				db.dbClose(rs, pstmt, conn);
 			}
 			
+
 			return idx;
+
+
+
+		}
+		
+		public void  updateGradeGreen(memberDto dto,String id)
+		{
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			
+			String sql="update member set grade=? where id='"+id+"'";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, "그린");
+				
+				pstmt.execute();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}db.dbClose(pstmt, conn);
+		}
+		
+		public void  updateGradeGold(memberDto dto,String id)
+		{
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			
+			String sql="update member set grade=? where id='"+id+"'";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, "골드");
+				
+				pstmt.execute();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}db.dbClose(pstmt, conn);
+
 		}
 		//아이디와 핸드폰 번호가 맞는지 확인
 		public boolean checkHpfromID(String id,String hp) {
