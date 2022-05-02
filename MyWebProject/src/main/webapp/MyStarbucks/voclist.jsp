@@ -241,6 +241,7 @@ border-bottom: 1px solid #0d5f34;
 }
 
 
+
 </style>
 
 
@@ -418,9 +419,10 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													<% 
 													
 				
-													if(loginok!=null && id.equals("admin")){%>
+													if(loginok!=null && id.equals("admin") && dto.getCommentYn().equals("N")){%>
 														<td><a href="index.jsp?main=../../MyStarbucks/answerView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>"
-														style="background: #006633; border-radius: 3px; color: #fff; text-align: center; padding: 5px 15px 5px 15px;"
+														style="background: #e2c383; border-radius: 3px; color: #black; text-align: center; padding: 5px 15px 5px 15px; display: block;
+														width: 66.81px;  height: 24px; font-size: 7pt; margin: 0 auto; font-wigth: bold;"
 														 >답변하기</a></td>
 														 
 													<%} else if(dto.getCommentYn().equals("N")){ %>
