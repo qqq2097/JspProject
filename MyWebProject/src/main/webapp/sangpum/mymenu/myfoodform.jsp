@@ -28,7 +28,7 @@ String loginok=(String)session.getAttribute("loginok");
 String id=(String)session.getAttribute("id");
 if(loginok!=null){
 
-boolean b=dao.isMyfoodCheck(sname);
+boolean b=dao.isMyfoodCheck(sname, id);
 if(b)
 {%>
 <script type="text/javascript">

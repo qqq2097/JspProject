@@ -28,7 +28,7 @@ SangpumDto dto=dao.getbeverageData(snum);
 String loginok=(String)session.getAttribute("loginok");
 String id=(String)session.getAttribute("id");
 if(loginok!=null){
-boolean b=dao.isMybeverageCheck(sname);
+boolean b=dao.isMybeverageCheck(sname, id);
 if(b)
 {%>
 <script type="text/javascript">
