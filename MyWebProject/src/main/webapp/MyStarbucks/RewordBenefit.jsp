@@ -110,9 +110,9 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: relative;
+position: absolute;
 right: 300px;
-bottom: 410px;
+bottom: 0px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
@@ -180,7 +180,19 @@ color: #222;
 height: 40px;
 vertical-align: middle;
 }
+div.img1
+{
+	position: absolute;
+	left: 630px;
+	top: 320px;
+}
 
+div.img2
+{
+	position: absolute;
+	left: 630px;
+	top: 450px;
+}
 
 </style>
 </head>
@@ -199,21 +211,21 @@ $(function(){
 	});
    
    
-   $(".onetitle").click(function(){
+   $(".sbimg1").click(function(){
       
-      $(".onetitle").next().toggle("slow");
-      
-   });
-   
-   $(".twotitle").click(function(){
-      
-      $(".twotitle").next().toggle("slow");
+      $(".onetitle").next().toggle("fast");
       
    });
    
-   $(".threetitle").click(function(){
+   $(".sbimg2").click(function(){
       
-      $(".threetitle").next().toggle("slow");
+      $(".twotitle").next().toggle("fast");
+      
+   });
+   
+   $(".sbimg3").click(function(){
+      
+      $(".threetitle").next().toggle("fast");
       
    });
    
@@ -238,9 +250,9 @@ $(function(){
 <div class="mid">
 <div class="one">
    <div class="onetitle" style="font-family:Rowdies;  padding-top: 30px; margin-left: 100px; margin-top: 100px;  width: 600px; height:100px; background: #F9F9F9;">스타벅스 리워드 (Starbucks Rewards)란?
-   <!-- <span class="formbtn1">
-   		<img class="sbimg1" alt="" src="../../MyStarbucks/image/logo.png" style="width: 50px;">
-   </span> -->
+   		
+   		<img class="sbimg1" alt="" src="../../MyStarbucks/image/logo.png" style="width: 30px; margin-left: 50px;">
+   		
    </div>
       
       <ul class="subone"><br><b style="font-size: 15pt; color: green; margin-left: 100px;">스타벅스만의 특별한 혜택,스타벅스 리워드를 이용해보세요!</b>
@@ -251,9 +263,9 @@ $(function(){
 
 <div class="two">
    <div class="twotitle" style="font-family:Rowdies; padding-top:30px; margin-left: 100px;  width: 600px; height:100px; margin-top: 30px; border: 1px solid #F9F9F9;">스타벅스 별이란?
-  
-   		<!-- <img class="sbimg2" alt="" src="../../MyStarbucks/image/logo.png" style="width: 50px;"> -->
-  
+  	
+   	 <img class="sbimg2" alt="" src="../../MyStarbucks/image/logo.png" style="width: 30px; margin-left: 350px;">
+  	
    </div>
    <ul class="subtwo"><b style="font-size: 15pt; color: green; margin-left: 130px;">계정에 등록하신 스타벅스 카드로 결제를 하셨나요?</b>
           <li style="margin-left: 130px;">등록된 카드로 결제 시마다 계정으로 별★을 적립해드립니다.</li>
@@ -288,9 +300,9 @@ $(function(){
 
 <div class="three">
    <div class="threetitle" style="font-family:Rowdies; padding-top:30px; margin-left: 100px;  width: 600px; height:100px; background: #F9F9F9; margin-top: 30px; ">회원 등급별 혜택
-   <!-- <span class="formbtn3" style="padding: 0px;">
-   		<img  class="sbimg3" alt="" src="../../MyStarbucks/image/logo.png" style="width: 50px;">
-   </span> -->
+   	
+   		<img  class="sbimg3" alt="" src="../../MyStarbucks/image/logo.png" style="width: 30px; margin-left: 360px;">
+   
    </div>
    <ul class="subthree">
       <img alt="" src="../../MyStarbucks/image/ms08.png">

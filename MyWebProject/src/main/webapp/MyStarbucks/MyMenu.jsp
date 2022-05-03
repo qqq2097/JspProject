@@ -20,7 +20,11 @@
 <title>Insert title here</title>
 
 <style type="text/css">
-
+table.menutb th
+{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
 div.footerinfo {
 	width: 100%;
 	height: 500px;
@@ -83,9 +87,9 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: relative;
-right: 300px;
-bottom: 410px;
+position: absolute;
+right: 400px;
+bottom: -100px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
@@ -166,6 +170,18 @@ font-weight: bold;
 color: #0d5f34;
 border-bottom: 1px solid #0d5f34;
 }
+.btndel
+{
+	border: 1px solid gray;
+	border-radius: 3px;
+	
+}
+.btnbuy
+{
+	border: 1px solid gray;
+	border-radius: 3px;
+	width: 50px;
+}
 </style>
 
 
@@ -239,7 +255,7 @@ $(function(){
 		  //선택한 나의 커피 모두삭제
 		  $.ajax({
 			 type:"get",
-			 url:"./CoffeeDelete.jsp",
+			 url:"../../MyStarbucks/CoffeeDelete.jsp",
 			 dataType:"html",
 			 data:{"idx":idx},
 			 success:function(res){
@@ -271,7 +287,7 @@ $(function(){
 		  //선택한 나의 푸드 모두삭제
 		  $.ajax({
 			 type:"get",
-			 url:"./FoodDelete.jsp",
+			 url:"../../MyStarbucks/FoodDelete.jsp",
 			 dataType:"html",
 			 data:{"idx":idx},
 			 success:function(){
@@ -303,7 +319,7 @@ $(function(){
 		  //선택한 나의 푸드 모두삭제
 		  $.ajax({
 			 type:"get",
-			 url:"./GoodsDelete.jsp",
+			 url:"../../MyStarbucks/GoodsDelete.jsp",
 			 dataType:"html",
 			 data:{"idx":idx},
 			 success:function(){
@@ -522,7 +538,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
 
 
 	<div class="mymenulist">
-   		<table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   		<table class="table table-striped menutb" style="width : 800px; margin-left: 120px; margin-top: 50px;">
    		<tr>
      		 <th>
         		 <input type="checkbox"  id="allcheck">         
@@ -531,6 +547,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
     		  <th>음료명</th>
     		  <th>가격</th>
     		  <th>이미지</th>
+    		  <th></th>
   	   </tr>
    
    		 <%
@@ -557,10 +574,10 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    						<td align="center"><%=dto.getSname() %></td>
    						<td align="center"><%=dto.getSprice() %>원</td>
    						<td align="center">
-   							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 70px; height: 40px;">
+   							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 100px; height: 100px;">
    						</td>
-   						<td>
-   							<button type="button" class="btn btn-info btn xs" onclick="location.href='index.jsp?main=../../MyStarbucks/buycofform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
+   						<td align="center">
+   							<button type="button"  class="btn btn-info btn-xs btnbuy" onclick="location.href='index.jsp?main=../../MyStarbucks/buycofform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
    						</td>
    					</tr>	
    				<%}
@@ -569,7 +586,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    		 %> 
    
   	</table>
-   		<button type="button" class="btn btn-sm" id="delcoffee" style=" width: 100px; margin-left: 100px;">선택삭제</button>
+   		<button type="button" class="btn btn-sm btndel" id="delcoffee" style=" width: 50px; margin-left: 120px;">선택삭제</button>
    		
    		
    	<!-- 페이징처리 -->
@@ -614,7 +631,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
 	</div>
 
 	<div class="myfoodlist">
-   		<table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   		<table class="table table-striped menutb" style="width : 800px; margin-left: 120px; margin-top: 50px;">
    		<tr>
      		 <th>
         		 <input type="checkbox" id="allcheck">         
@@ -623,6 +640,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
       		<th>푸드명</th>
      		 <th>가격</th>
       		<th>이미지</th>
+      		<th></th>
   		 </tr>
    
    		<%
@@ -649,10 +667,10 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    						<td align="center"><%=dto.getSname() %></td>
    						<td align="center"><%=dto.getSprice() %>원</td>
    						<td align="center">
-   							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 70px; height: 40px;">
+   							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 100px; height: 100px;">
    						</td>
-   						<td>
-   							<button type="button" class="btn btn-info btn xs" onclick="location.href='index.jsp?main=../../MyStarbucks/buyfoodform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
+   						<td align="center">
+   							<button type="button" class="btn btn-info btn-xs btnbuy" onclick="location.href='index.jsp?main=../../MyStarbucks/buyfoodform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
    						</td>
    					</tr>	
    				<%}
@@ -661,7 +679,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    		 %>
    
    		</table>
-   		<button type="button" class="btn btn-sm" id="delfood" style=" width: 100px; margin-left: 100px;">선택삭제</button>
+   		<button type="button" class="btn btn-sm btndel" id="delfood" style=" width: 50px; margin-left: 120px;">선택삭제</button>
    		
    		<!-- 페이징처리 -->
 
@@ -705,7 +723,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
 	</div>
 
 	<div class="mysangpumlist">
-   		<table class="table table-striped" style="width : 800px; margin-left: 120px; margin-top: 50px;">
+   		<table class="table table-striped menutb" style="width : 800px; margin-left: 120px; margin-top: 50px;">
   		 <tr>
     		  <th>
      		    <input type="checkbox" id="allcheck">         
@@ -714,6 +732,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
      		 <th>상품명</th>
       		<th>가격</th>
       		<th>이미지</th>
+      		<th></th>
   		 </tr>
    
  		 <%
@@ -740,10 +759,10 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    						<td align="center"><%=dto.getSname() %></td>
    						<td align="center"><%=dto.getSprice() %>원</td>
    						<td align="center">
-   							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 70px; height: 40px;">
+   							<img alt="" src="<%=dto.getImgsrc()%>" style="width: 100px; height: 100px;">
    						</td>
-   						<td>
-   							<button type="button" class="btn btn-info btn xs" onclick="location.href='index.jsp?main=../../MyStarbucks/buygoodsform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
+   						<td align="center">
+   							<button type="button" class="btn btn-info btn-xs btnbuy" onclick="location.href='index.jsp?main=../../MyStarbucks/buygoodsform.jsp?snum=<%=dto.getSnum()%>'">구입</button>
    						</td>
    					</tr>	
    				<%}
@@ -753,7 +772,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
    
    		</table>
   		 	
-   			<button type="button" class="btn btn-sm" id="delgoods" style=" width: 100px; margin-left: 100px;">선택삭제</button>
+   			<button type="button" class="btn btn-sm btndel" id="delgoods" style=" width: 50px; margin-left: 120px;">선택삭제</button>
 	</div>
 
 </div>
@@ -780,8 +799,7 @@ no3=totalCount3-(currentPage3-1)*perPage3;
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
 				<li><a href="#" required="login">· 비밀번호 변경</a></li>
-				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
-				<input type="hidden">
+				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>			
 			</ul>
 		</li>
 	</ul>

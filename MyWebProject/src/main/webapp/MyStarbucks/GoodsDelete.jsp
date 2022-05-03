@@ -16,8 +16,8 @@
 	String idx=request.getParameter("idx");
 
 	SangpumDao dao=new SangpumDao();
-	
-	dao.deleteFood(idx);
+	//System.out.println(idx);
+	dao.deleteGoods(idx);
 %>
 </body>
 </html>

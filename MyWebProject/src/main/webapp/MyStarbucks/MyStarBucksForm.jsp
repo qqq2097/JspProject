@@ -18,14 +18,66 @@
 <style type="text/css">
 
 #btn{
-border-radius: 50%;
+
+}
+button.btnst
+{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	background-color: #deb887;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+}
+button.btnre
+{
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	background-color: #deb887;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+}
+button.btnsu
+{
+	position: absolute;
+	left: 30px;
+	top: 150px;
+	background-color: black;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+}
+button.btnbun
+{
+	position: absolute;
+	left: 200px;
+	top: 150px;
+	background-color: #a9a9a9;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+}
+div.rank{
+	position: absolute;
+	top: 150px;
+	left: -40px;
 }
 div.footerinfo {
 	width: 100%;
 	height: 500px;
 	top: 1500px;
 }
-
+div.mid{
+	
+	 background : #F5F5F5;
+	 width : 750px;
+	 height: 300px;
+	 margin-left: 100px;
+	 margin-top: 80px;
+}
 
 div.left{
    position : absolute;
@@ -45,23 +97,6 @@ div.right{
    width : 300px;
    height : 200px;
    border-radius: 20px;
-}
-button.btnre{
-   background-color: #deb887;
-   font-weight: bold;
-   color: black;
-}
-
-button.btnsu{
-   background-color: black;
-   font-weight: bold;
-   color: #fff;
-}
-
-button.btnbun{
-   background-color: #a9a9a9;
-   font-weight: bold;
-   color: #fff;
 }
 
 div.top{
@@ -93,7 +128,7 @@ div.topsub{
 }
 div.leftsu{
    position : absolute;
-   width : 100px;
+   width : 200px;
    height: 100px;
    top : 360px;
    left : 230px;
@@ -115,9 +150,9 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: relative;
-right: 300px;
-bottom: 410px;
+position: absolute;
+right: 400px;
+bottom: -30px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
@@ -242,27 +277,28 @@ $(function(){
 
 	<div class="topsub">
       <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
-      <span onclick=""> > My Starbucks</span>
+      <span style="margin-left: 100px;"> > My Starbucks</span>
 	</div>
 </div>
 
 
-
+<div class="mid">
 <!-- right div -->
 	<div class="right">
-   		   <span style="font-size: 10pt; "><b style="color: green;"><%=name %></b>&nbsp;님은<br>현재 <b style="color: green;"><%=grade %></b>&nbsp;이십니다.</span>
+   		   <span style="font-size: 10pt; margin-left: 50px; "><b style="color: green;"><%=name %></b>&nbsp;님은<br>&nbsp;&nbsp;&nbsp;
+   		   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;현재 <b style="color: green;"><%=grade %></b>&nbsp;이십니다.</span>
    		<br><br>
-   		<button type="button" class="btn btn-default btnre" id="btn" style=" width : 100px; height: 50px;  margin-left: 50px;  margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
-  		 <button type="button" class="btn btn-default btnre" id="btn" style=" width : 100px; height: 50px; margin-top: 50px;" onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
-   		<br>
-   		<button type="button" class="btn btn-default btnsu" id="btn" style=" width : 100px; height: 50px; margin-left: 50px; margin-top: 10px;">개인정보 수정</button>
-   		<button type="button" class="btn btn-default btnbun" id="btn" style="width : 100px; height: 50px; margin-top: 10px;">비밀번호 변경</button>
+   		<button type="button" class="btn btn-default btnre" id="btn" style=" width : 150px; height: 30px;  " onclick="location.href='index.jsp?main=../../MyStarbucks/RewordBenefit.jsp'">리워드 및 혜택</button>
+  		 <button type="button" class="btn btn-default btnst" id="btn" style=" width : 150px; height: 30px; " onclick="location.href='index.jsp?main=../../MyStarbucks/StarHistory.jsp'">별 히스토리</button>
+   		
+   		<button type="button" class="btn btn-default btnsu" id="btn" style=" width : 150px; height: 30px; ">개인정보 수정</button>
+   		<button type="button" class="btn btn-default btnbun" id="btn" style="width : 150px; height: 30px; ">비밀번호 변경</button>
 	</div>      
-</div>
+
 
 
 <!-- left div -->
-<div class="mid">
+
 	<div class="left">
    		<span style="font-weight : blod; font-size: 15pt;">&nbsp;&nbsp;My Star</span>
    		<br>
@@ -271,10 +307,27 @@ $(function(){
 
 	<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
 	<div class="leftsu">
-	<span style="margin-left: -15px; margin-top: 10px;"><b><%=starcnt %></b></span>
+	<span style="margin-left: 0px; margin-top: 10px;"><b><%=starcnt %></b></span>
+   	<br><br>
+   	<div class="rank">
+   	<span style="font-size: 9pt;">
+   	<%if(starcnt<5)
+   	  {%>
+   			<p><%=5-starcnt %>개의 별★이 더 모이면<br>
+   			<b style="color: green;">Green Level</b>만의 특별한 혜택이!</p>
+   			
+   	  <%}
+   	  else if(starcnt>=5 && starcnt<30)
+   	  {%>
+   		  <p><%=30-starcnt %>개의 별★이 더 모이면<br>
+   		  <b style=" color: gold;">Gold Level</b>만의 특별한 혜택이!</p>
+   	  <%}
    		
+   %>
+   	</span>
+   	</div>
 	</div>
-
+</div>
 
 
 
@@ -296,7 +349,6 @@ $(function(){
 			<ul class="sub2">
 				<li><a href="index.jsp?main=../../MyStarbucks/updateInfocheck.jsp" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
-				<li><a href="#" required="login">· 비밀번호 변경</a></li>
 				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
 			</ul>
