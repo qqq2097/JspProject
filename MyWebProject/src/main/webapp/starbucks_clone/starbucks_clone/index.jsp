@@ -41,7 +41,7 @@ div.footerinfo {
 	height: 500px;
 
 
-	top: 3700px;
+	top: 3350px;
 
 }
 </style>
@@ -65,6 +65,6 @@ if(request.getParameter("main")!=null){
 <div class="layout main">
   <jsp:include page="<%=mainPage %>"/>
 </div>
-<!-- pushtest -->
+
 </body>
 </html>

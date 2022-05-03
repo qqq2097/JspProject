@@ -16,7 +16,7 @@
 String myid=(String)session.getAttribute("id");
 
 //실제경로
-String realPath=getServletContext().getRealPath("/save");
+String realPath=getServletContext().getRealPath("/");
 System.out.println(realPath);
 
 int uploadSize=1024*1024*2;
