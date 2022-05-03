@@ -14,6 +14,7 @@ public class VoclistDto {
 	private String photo;
 	private Timestamp writeday;
 	private Date Expectwriteday;
+	private String commentYn;
 	
 	
 	
@@ -71,6 +72,12 @@ public class VoclistDto {
 	}
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+	public String getCommentYn() {
+		return commentYn;
+	}
+	public void setCommentYn(String commentYn) {
+		this.commentYn = commentYn;
 	}
 
 	

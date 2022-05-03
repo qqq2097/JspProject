@@ -261,6 +261,10 @@ $(function () {
 		}
 });
 	
+	$("#phone1").change(function () {
+		$("phone1").val($(this).val());
+	});
+	
 
 
 	
@@ -421,11 +425,11 @@ function fnCopy(){
 		<ul>
 			<li><a>My 리워드<span class="sbox_arrow_down1"></span></a>
 				<ul class="sub1">
-					<li><a href="#" required="login">· 리워드 및 혜택</a></li>
-					<li><a href="#" required="login">· 별 히스토리</a></li>
+					<li><a href="index.jsp?main=../../MyStarbucks/RewordBenefit.jsp" required="login">· 리워드 및 혜택</a></li>
+					<li><a href="index.jsp?main=../../MyStarbucks/StarHistory.jsp" required="login">· 별 히스토리</a></li>
 				</ul></li>
 
-			<li class="msRnb_btn"><a href="/my/my_menu.do" required="login">My
+			<li class="msRnb_btn"><a href="index.jsp?main=../../MyStarbucks/MyMenu.jsp" required="login">My
 					메뉴</a></li>
 			<li><a href="#" required="login">My 고객의 소리</a></li>
 
@@ -552,7 +556,7 @@ function fnCopy(){
 				<td>
 					<div class="sel_wrap">
 						<p class="phone_sel_wrap">
-							<label for="phone1"></label> <select id="phone1">
+							<label for="phone1"></label> <select id="phone1" name="phone1">
 								<option value="010" selected="selected">010</option>
 								<option value="011">011</option>
 								<option value="016">016</option>

@@ -100,6 +100,7 @@ public class VoclistDao {
 					dto.setPhoto(rs.getString("photo"));
 					dto.setWriteday(rs.getTimestamp("writeday"));
 					dto.setExpectwriteday(rs.getDate("expectwriteday"));
+					dto.setCommentYn(rs.getString("commentYn"));
 					
 					list.add(dto);
 				}
@@ -146,6 +147,60 @@ public class VoclistDao {
 					
 					
 					return dto;
+				}
+				
+				
+				//수정
+				
+				public void updatevoc(VoclistDto dto)
+				{
+					Connection conn=db.getConnection();
+					PreparedStatement pstmt=null;
+					
+					String sql="update voclist set subject=?,content=?, photo=? where num=?";
+					
+					try {
+						pstmt=conn.prepareStatement(sql);
+						
+						pstmt.setString(1, dto.getSubject());
+						pstmt.setString(2, dto.getContent());
+						pstmt.setString(3, dto.getPhoto());
+						pstmt.setString(4, dto.getNum());
+						
+						pstmt.execute();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}finally {
+						db.dbClose(pstmt, conn);
+					}
+					
+				}
+				
+				
+				//삭제
+				
+				public void deleteVoc(String num)
+				{
+					Connection conn=db.getConnection();
+					PreparedStatement pstmt=null;
+					
+					String sql="delete from voclist where num=?";
+					
+					try {
+						pstmt=conn.prepareStatement(sql);
+						
+						pstmt.setString(1, num);
+						
+						pstmt.execute();
+						
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}finally {
+						db.dbClose(pstmt, conn);
+					}
+					
 				}
 		
 		

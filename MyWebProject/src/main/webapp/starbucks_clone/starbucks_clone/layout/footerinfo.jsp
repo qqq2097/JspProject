@@ -33,42 +33,42 @@
           <li class="footer-list-item" style="float: left;">
             <h3><a href="#">COMPANY</a></h3>
             <ul>
-              <li><a href="#">한눈에보기</a></li>
-              <li><a href="#">스타벅스 사명</a></li>
-              <li><a href="#">스타벅스 소개</a></li>
-              <li><a href="#">국내 뉴스룸</a></li>
-              <li><a href="#">세계의 스타벅스</a></li>
-              <li><a href="#">블로벌 뉴스룸</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/company/index.do">한눈에보기</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/company/mission.do">스타벅스 사명</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/company/starbucks_information.do">스타벅스 소개</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/company/news_list.do">국내 뉴스룸</a></li>
+              <li><a href="">세계의 스타벅스</a></li>
+              <li><a href="https://stories.starbucks.com/">블로벌 뉴스룸</a></li>
             </ul>
           </li>
           <li class="footer-list-item" style="float: left;">
             <h3><a href="#">CORPORATE SALES</a></h3>
             <ul>
-              <li><a href="#">단체 및 기업 구매 안내</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/co_sales/index.do">단체 및 기업 구매 안내</a></li>
             </ul>
           </li>
           <li class="footer-list-item" style="float: left;">
             <h3><a href="#">PARTNERSHIP</a></h3>
             <ul>
-              <li><a href="#">신규 입점 제의</a></li>
-              <li><a href="#">협력 고객사 등록신청</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/partnership/new_partner.do">신규 입점 제의</a></li>
+              <li><a href="https://www.starbucks.co.kr/srm/login.do">협력 고객사 등록신청</a></li>
             </ul>
           </li>
           <li class="footer-list-item" style="float: left;">
             <h3><a href="#">ONLINE COMMUNITY</a></h3>
             <ul>
-              <li><a href="#">페이스북</a></li>
-              <li><a href="#">트위터</a></li>
-              <li><a href="#">유튜브</a></li>
+              <li><a href="https://www.facebook.com/starbuckskorea">페이스북</a></li>
+              <li><a href="https://twitter.com/StarbucksKorea">트위터</a></li>
+              <li><a href="https://www.youtube.com/user/starbuckskorea">유튜브</a></li>
               <li><a href="#">블로그</a></li>
-              <li><a href="#">인스타그램</a></li>
+              <li><a href="https://www.instagram.com/starbuckskorea/">인스타그램</a></li>
             </ul>
           </li>
           <li class="footer-list-item">
             <h3><a href="#">RECRUIT</a></h3>
             <ul>
-              <li><a href="#">채용소개</a></li>
-              <li><a href="#">채용 지원하기</a></li>
+              <li><a href="https://www.starbucks.co.kr/footer/recruit/index.do">채용소개</a></li>
+              <li><a href="http://job.shinsegae.com/recruit_info/notice/notice02_view.jsp?notino=5924">채용 지원하기</a></li>
             </ul>
           </li>
         </ul>

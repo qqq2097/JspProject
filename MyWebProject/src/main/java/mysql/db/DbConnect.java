@@ -11,7 +11,10 @@ public class DbConnect {
 
    //driver
    static final String MYSQLDRIVER="com.mysql.cj.jdbc.Driver";
-   //url
+
+
+
+
    static final String MYSQL_URL="jdbc:mysql://webservice.c8yhcip2pbxe.ap-northeast-2.rds.amazonaws.com:3306/webservice";
    
    //생성자

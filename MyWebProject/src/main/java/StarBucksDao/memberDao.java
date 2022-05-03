@@ -11,9 +11,6 @@ import mysql.db.DbConnect;
 public class memberDao {
 	DbConnect db = new DbConnect();
 
-	
-
-	//멤버 추가
 
 	public void insertMember(memberDto dto) {
 		Connection conn = db.getConnection();
@@ -43,7 +40,7 @@ public class memberDao {
 	}
 	
 
-	//핸드폰번호 중복 체크
+
 	
 	public boolean checkHp(String hp) {
 		boolean b =false;
@@ -186,7 +183,10 @@ public class memberDao {
 			}
 			
 			return grade;
+
+			
 		}
+			
 
 		//핸드폰 번호로 ID 찾기!
 		public String findIDhp(String hp)
@@ -303,7 +303,10 @@ public class memberDao {
 				db.dbClose(rs, pstmt, conn);
 			}
 			
+
 			return idx;
+
+
 
 		}
 		
@@ -341,6 +344,7 @@ public class memberDao {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}db.dbClose(pstmt, conn);
+
 		}
 		//아이디와 핸드폰 번호가 맞는지 확인
 		public boolean checkHpfromID(String id,String hp) {

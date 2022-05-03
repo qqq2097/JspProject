@@ -18,8 +18,10 @@ public class AnswerDao {
 		{
 			Connection conn=db.getConnection();
 			PreparedStatement pstmt=null;
+			PreparedStatement pstmt2=null;
 			
 			String sql="insert into answer (num,id,answer,answerday) values (?,?,?,now())";
+			String sql2="update voclist set commentYn = 'Y' where num = ?";
 			
 			try {
 				pstmt=conn.prepareStatement(sql);
@@ -28,11 +30,18 @@ public class AnswerDao {
 				pstmt.setString(2, dto.getId());
 				pstmt.setString(3, dto.getAnswer());
 				pstmt.execute();
+				
+				pstmt2=conn.prepareStatement(sql2);
+				
+				pstmt2.setString(1, dto.getNum());
+				pstmt2.execute();
+				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}finally {
 				db.dbClose(pstmt, conn);
+				db.dbClose(pstmt2, conn);
 			}
 			
 		}
@@ -72,6 +81,23 @@ public class AnswerDao {
 			
 			return list;
 		}
+		
+		/*
+		 * public void updateAnswer(AnswerDto dto) { Connection conn=db.getConnection();
+		 * PreparedStatement pstmt=null;
+		 * 
+		 * String
+		 * sql="insert into answer (num,id,answer,answerday) values (?,?,?,now())";
+		 * 
+		 * try { pstmt=conn.prepareStatement(sql);
+		 * 
+		 * pstmt.setString(1, dto.getNum()); pstmt.setString(2, dto.getId());
+		 * pstmt.setString(3, dto.getAnswer()); pstmt.execute(); } catch (SQLException
+		 * e) { // TODO Auto-generated catch block e.printStackTrace(); }finally {
+		 * db.dbClose(pstmt, conn); }
+		 * 
+		 * }
+		 */
 		
 		
 }
