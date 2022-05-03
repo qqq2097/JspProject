@@ -16,7 +16,7 @@
 String myid=(String)session.getAttribute("id");
 
 //실제경로
-String realPath=getServletContext().getRealPath("/save");
+String realPath=getServletContext().getRealPath("/");
 System.out.println(realPath);
 
 int uploadSize=1024*1024*2;
@@ -47,7 +47,8 @@ dto.setPhoto(photo);
 
 //dao선언
 VoclistDao dao=new VoclistDao();
-//insert
+
+dto.setPhoto(photo==null?"선택된 사진이 없음":photo);
 dao.insertVoc(dto);
 
 //

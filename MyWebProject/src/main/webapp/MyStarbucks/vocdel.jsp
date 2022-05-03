@@ -22,7 +22,7 @@ String photo=dao.getData(num).getPhoto();
 dao.deleteVoc(num);
 
 //프로젝트 실제경로
-String realPath=getServletContext().getRealPath("/save");
+String realPath=getServletContext().getRealPath("/");
 
 //파일객체생성
 File file=new File(realPath+"\\"+photo);

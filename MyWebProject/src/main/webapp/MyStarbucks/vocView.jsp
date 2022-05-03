@@ -171,7 +171,7 @@ margin: 0px 10px;
 
 article.view_file_info dl dd{
 float: left;
-width: 80px;
+width: 110px;
 margin-bottom: 5px;
 font-size: 12px;
 color: #666;
@@ -326,7 +326,8 @@ SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 <article class="view_file_info">
 <dl id="dl_y" class="reg-page">
 <dt> 첨부파일 <span>|</span> <dt>
-<dd class="first"><%=dto.getPhoto() %><dd>
+<dd class="first">
+<%=dto.getPhoto() %><dd>
 </dl>
 
 
