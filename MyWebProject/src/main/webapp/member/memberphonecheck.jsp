@@ -28,9 +28,9 @@ if(key==null){
 			<option value="02">02</option>
 		</select>
 		<b>-</b>
-		<input type="text" name="hp2" size="4" onkeyup="goFocus(this)" required="required">
+		<input type="text" maxlength="4" name="hp2" size="4" onkeyup="goFocus(this)" required="required">
 		<b>-</b>
-		<input type="text" name="hp3" size="4" required="required">
+		<input type="text" maxlength="4" name="hp3" size="4" required="required">
 		<!--key값 넘기기..hidden  -->
 		<input type="hidden" name="key">
 		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">중복체크</button>

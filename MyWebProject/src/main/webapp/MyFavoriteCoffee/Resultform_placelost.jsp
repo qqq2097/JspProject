@@ -14,7 +14,7 @@
 	}
 
 	div.title img{
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 
 	div.title span{

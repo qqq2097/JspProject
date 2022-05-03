@@ -47,14 +47,13 @@ span.toptitle{
    
 }
 
-
-
-li.mylist{
-   border: 1px solid gray;
-   width : 300px;
-   border-radius: 100px;
-   cursor: pointer;
+.dbtable th
+{
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	height: 30px;
 }
+
 
 ul.sub1{
    font-size: 0.6em;
@@ -69,13 +68,13 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: relative;
-bottom: 410px;
+position: absolute;
+bottom: -300px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
 margin-top: -300px;
-right:  300px;
+right:  500px;
 }
 
 .ms_nav > ul{
@@ -139,6 +138,39 @@ color: #222;
 height: 40px;
 vertical-align: middle;
 }
+
+div.second
+{
+	position: absolute;
+	width: 500px;
+	top : 450px;
+	left: 200px;
+}
+div.dbtb
+{
+	position: absolute;
+	top: 530px;
+}
+table.firsttb 
+{
+	border: 1px solid black;
+	
+}
+
+table.firsttb th
+{	
+	border-top : 1px solid black;
+	border-left : 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+table.firsttb td
+{	
+	border-top : 1px solid black;
+	border-left : 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
 </style>
 
 <%
@@ -153,8 +185,7 @@ vertical-align: middle;
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	int starcnt=dao.getTotalCountStar(id);
 	//System.out.println(starcnt);
-	String d1="";
-	String d2="";
+	
 %>
 <script type="text/javascript">
 $(function(){
@@ -171,23 +202,21 @@ $(function(){
    
    
    
-   $("#search").click(function(){
-	   
-	   //alert(1);
+    /*  $("#search").click(function(){
+    	
 	   var d1=$("#date1").val();
-	   
 	   var d2=$("#date2").val();
-	   	
-	   <%
-		
-	   	List<RewordDto> list4=dao.getAllRewordsBtn(id, d1, d2);
+	   //alert(d1);
+	    
 	   
-	   %>
+	   
+	   
+	   
 	   $("#tb1").hide();
 	   $("#tb3").hide();
 	   $("#tb2").hide();
 	   $("#tb4").show();
-   });
+   });  */
    
    $("#onemonth").click(function(){
 	   
@@ -232,15 +261,13 @@ $(function(){
 
 	<div class="mid">
 		<div class="first">
-		<table class="table table-striped" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px; border: 3px solid black;" >
-   			<tr bgcolor="black;" style="color: #fff; border-bottom: 3px solid black;">
+		<table class="table table-boreded firsttb" style="width : 400px; height: 100px; margin-left: 250px; margin-top: 100px;" >
+   			<tr>
       			<th align="center">누적 별</th>
       			<th align="center">다음 등급까지 남은 별</th>
    			</tr>
    
    			<tr>
-   				<!-- <td align="center">1</td>
-      			<td align="center">1</td> -->
       			<td align="center"><%=starcnt %></td>
       			<td align="center">
       			<%
@@ -263,24 +290,26 @@ $(function(){
 	 	</table>
 		</div>
 
-		<div class="second" style="width : 700px; height: 50px; margin-left: 100px; margin-top: 100px; background: #DCDCDC; text-align: center;">
-
+		<div class="second" style=" background: #fafafa; text-align: center;">
+		<form action="../../MyStarbucks/SearchCalindar.jsp">
    			<br>
    			기간별&nbsp;&nbsp;| 
    			<input type="radio" id="onemonth" name="radioone">1개월
    			<input type="radio" id="oneyear" name="radioone">1년
    			&nbsp;&nbsp;&nbsp;&nbsp;
    			일자별 &nbsp;&nbsp;
-   			<input type="date" name="date1" id="date1" required="required">~
+   			
+   			<input type="date" name="date1" id="date1" required="required"> &nbsp;~&nbsp;
    			<input type="date" name="date2" id="date2" required="required">
-   			<input type="button" style="width : 50px; background: #C0C0C0; color:#fff;" value="검색" id="search">
-   			<br>
+   			<button type="submit" style="width : 50px; background: #C0C0C0; color:#fff;"id="search">검색</button>
+   		</form>
+   			<br><br>
    
    
 		</div>
-   
+   		<div class="dbtb">
 		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb1">
-   		<table class="table table-bordered" style="width : 800px;">
+   		<table class="table table-bordered dbtable" style="width : 800px; ">
    		<caption>전체</caption>
    			<tr>
       			<th align="center"> No</th>
@@ -313,7 +342,7 @@ $(function(){
 		</div>
 		
 		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb2">
-   		<table class="table table-bordered" style="width : 800px;" >
+   		<table class="table table-bordered dbtable" style="width : 800px;" >
    		<caption>1개월</caption>
    			<tr>
       			<th align="center"> No</th>
@@ -346,7 +375,7 @@ $(function(){
 		</div>
 		
 		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb3">
-   		<table class="table table-bordered" style="width : 800px;">
+   		<table class="table table-bordered dbtable" style="width : 800px;">
    		<caption>1년</caption>
    			<tr>
       			<th align="center"> No</th>
@@ -379,7 +408,7 @@ $(function(){
 		</div>
 		
 		<div class="third" style="width: 800px; height: 600px; margin-left: 50px; border: 1px solid black;" id="tb4">
-   		<table class="table table-bordered" style="width : 800px;">
+   		<table class="table table-bordered dbtable" style="width : 800px;">
    		<caption>검색한 기간</caption>
    			<tr>
       			<th align="center"> No</th>
@@ -390,7 +419,7 @@ $(function(){
    			</tr>
    
    
-   			 <%
+   			 <%--  <%
    				
    				for(int i=0;i<list4.size();i++)
    				{
@@ -404,11 +433,12 @@ $(function(){
 	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
-   						%> 
+   						%> --%>
    
    
   
    		</table>
+		</div>
 		</div>
 
 </div>
@@ -432,7 +462,7 @@ $(function(){
 				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="#" required="login">· 회원 탈퇴</a></li>
 				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
-				<input type="hidden">
+				
 			</ul>
 		</li>
 	</ul>
