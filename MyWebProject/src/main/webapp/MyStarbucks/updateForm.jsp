@@ -157,29 +157,17 @@ $(function() {
 
   } 
   function updatecheck(){
-
-	  
 	  var value = document.getElementsByName("agreeMent");
 	  var nick = $("#mynickname").val();
-	  var fnmae=$("#myname").val();
-	  var exname =$("#exname").val();
-	/* if(nick!=""){
-		if(value[0].checked){
-				
-		}
-		else{
+
+	 if(nick!=""){
+		if(!value.checked){
 			alert("선택적 개인정보 수집동의 및 이용약관에 동의를 해주세요.");
-			document.upfrm.agreeMent.focus();
-			
+			document.getElementById("mem_agreeMent1").focus();
+			return false;
 		}
-	} */
-	alert(fname.val());
-	/* if(fname[1].value=="*"){
-		alert("으으으");
-		$("#myname").val(exname);
-	} */
-	//*표시된 부분을 원래대로 돌리기 위한 함수
-	
+	} 
+	return true;
   }
  </script>
 </head>
@@ -239,7 +227,7 @@ $(function() {
       		<table style=" margin-top:50px; width:50%;border: 1px solid #C1C1C1;">
       		<tr>
 	      		<td colspan="2" align="center" width="100%" >
-	      			<img src="../../member/starimg.jpg">
+	      			<img style="width:100%;" src="../../member/starimg.jpg">
       			</td>
       		</tr>
       		<tr>
@@ -304,6 +292,8 @@ $(function() {
       	
       	<div style="height: 130px;">
       	<input type="hidden" id="exname" name ="exname" value="<%=name%>"><!--*값을 원래대로 돌리기 위해서 사용  -->
+      	<input type="hidden" id="exemail" name ="exemail" value="<%=email%>">
+      	<input type="hidden" id="exhp" name ="exhp" value="<%=phone%>">
       	</div>
       </form>
 

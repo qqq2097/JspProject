@@ -437,5 +437,28 @@ public class memberDao {
 			return dto;
 		}
 		//아이디에 맞는 정보 업데이트
-		
+		public void updateInfo(memberDto dto) {
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt = null;
+			
+			String sql = "update member set name =?,hp=?,email=?,birthday=?,nickname =? where id=?";
+			try {
+				pstmt =conn.prepareStatement(sql);
+				
+				pstmt.setString(1, dto.getName());
+				pstmt.setString(2, dto.getHp());
+				pstmt.setString(3, dto.getEmail());
+				pstmt.setString(4, dto.getBirthday());
+				pstmt.setString(5, dto.getNickname());
+				pstmt.setString(6, dto.getId());
+				
+				pstmt.execute();
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(pstmt, conn);
+			}
+		}
 }
