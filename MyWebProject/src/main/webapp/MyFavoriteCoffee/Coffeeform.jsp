@@ -313,13 +313,103 @@
 /* 세번째 이미지 클릭시 결과폼으로 location이벤트 */	
 
 	$(".strength dt img").click(function() {
+	
+		/* 짭짤한 맛 */
 		if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="10"){
 			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
 		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="20"){
 			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_cenya.jsp';
 		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="30"){
 			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
+		
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_colombia.jsp';
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
 		}
+		
+		else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="10" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
+		}
+		
+		/* 과일 맛 */
+		if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_cenya.jsp';
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_cenya.jsp';
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_gerafarm.jsp';
+		
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_gerafarm.jsp';
+		}
+		
+		else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_gerafarm.jsp';
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="20" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_gerafarm.jsp';
+		}
+		
+		/* 고소한맛 */
+		if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
+		
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_colombia.jsp';
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
+		}
+		
+		else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="30" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_placelost.jsp';
+		}
+		
+		/* 달콤한 맛 */
+		if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="10" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_espresso.jsp';
+		
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_pikeplace.jsp';
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_cenya.jsp';
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="20" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_westjava.jsp';
+		}
+		
+		else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="10"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_espresso.jsp';
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="20"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_dabang.jsp';
+		}else if(frm.Coffee_flavor.value=="40" && frm.Coffee_feel.value=="30" && frm.Coffee_strength.value=="30"){
+			location.href='index.jsp?main=../../MyFavoriteCoffee/Resultform_espresso.jsp';
+		}
+		
 	});
 
 
