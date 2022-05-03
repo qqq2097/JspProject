@@ -66,12 +66,12 @@ width: 100%;
 height: 500px;
 
 }
-li{
+li.mylist{
 		list-style: disc;
 		margin-bottom: 6px;
 		color:#848484;
 }
-ul{
+ul.mylist{
 	padding-left: 30px;
 }
 </style>
@@ -135,10 +135,10 @@ String id = (String)session.getAttribute("id");
 	      		</tr>
 	      		<tr>
 	      			<td style="background-color:#F4F4F2;padding-top: 20px;padding-left: 20px; padding-right: 20px; ">
-	      				<ul class = "noticelist"style="font-size: 1.58em; padding-bottom: 30px; list-style-type: circle;" >
-	      				  <li style="padding-bottom: 5px;">영문, 숫자 혼합하여 10 ~ 20자리 이내로 입력하세요.</li>
-	      				  <li style="padding-bottom: 5px;">아이디와 같은 비밀번호, 생일, 학번, 전화번호 등 개인 정보와 관련된 숫자, 연속된 숫자, 동일하게 반복된 숫자 등 다른 사람이 쉽게 알아낼 수 있는 비밀번호는 유출 위험이 높아 사용하지 않는 것이 좋습니다.</li>
-	      				  <li style="padding-bottom: 5px;">이전에 사용하셨던 비밀번호를 재사용할 경우 도용의 우려가 있으니, 가급적 새로운 비밀번호를 사용해 주세요.</li>
+	      				<ul class="mylist" style="font-size: 1.58em; padding-bottom: 30px; list-style-type: circle;" >
+	      				  <li class="mylist" style="padding-bottom: 5px;">영문, 숫자 혼합하여 10 ~ 20자리 이내로 입력하세요.</li>
+	      				  <li class="mylist" style="padding-bottom: 5px;">아이디와 같은 비밀번호, 생일, 학번, 전화번호 등 개인 정보와 관련된 숫자, 연속된 숫자, 동일하게 반복된 숫자 등 다른 사람이 쉽게 알아낼 수 있는 비밀번호는 유출 위험이 높아 사용하지 않는 것이 좋습니다.</li>
+	      				  <li class="mylist" style="padding-bottom: 5px;">이전에 사용하셨던 비밀번호를 재사용할 경우 도용의 우려가 있으니, 가급적 새로운 비밀번호를 사용해 주세요.</li>
 	      				</ul>
 	      			</td>
       		</tr>
