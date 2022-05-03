@@ -241,6 +241,7 @@ border-bottom: 1px solid #0d5f34;
 }
 
 
+
 </style>
 
 
@@ -252,6 +253,8 @@ $(function () {
 	$(".ms_nav > ul>li>a").click(function () {
 		$(this).next().toggle("fast");
 	});
+	
+
 
 	
 });
@@ -279,7 +282,9 @@ $(document).ready(function(){
 String loginok =(String) session.getAttribute("loginok");
 String id=(String)session.getAttribute("id");
 
+
 VoclistDao dao = new VoclistDao();
+
 
 //페이징처리에 필요한 변수
 int totalCount; //총글수
@@ -295,6 +300,7 @@ int no;
 
 //총갯수
 totalCount=dao.getTotalCount();
+
 
 //현재 페이지번호 읽기(단 null일경우는 1페이지로 설정)
 if(request.getParameter("currentPage")==null)
@@ -320,12 +326,14 @@ start=(currentPage-1)*perPage;
 
 //각페이지에서 필요한 게시글 가져오기
 List<VoclistDto>list=dao.getList(start, perPage);
+
 no = totalCount-(currentPage-1)*perPage;
 System.out.println(no + " " + totalCount + " " + currentPage + " " + perPage + " " +  list.size());
 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+
+
 %>
-
-
 
 <body>
 
@@ -390,6 +398,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 												</tr>
 												
 												<%
+												
 												if(totalCount ==0){
 													%>
 													<tr height="40">
@@ -397,31 +406,58 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													<b>등록된 게시글이 없습니다</b>
 													</td>
 													</tr>
-												<%}else {
-													for(VoclistDto dto:list){%>
+												<%}else{
+													for(VoclistDto dto:list){
+														
+													%>
 									
 					
 													<tr height="40" style="color: #666;">
 													<td align="center"><%=no-- %></td>
-													<td>
-													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" style="color: #666;">
+													
+													<td class="mysubject">
+													<%if(dto.getMyid().equals(id) || id.equals("admin") ){ %>
+													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" 
+													style="color: #666; font-weight: bold; text-decoration: underline; font-size: 7pt;">
+													<%}%>
 													<%=dto.getSubject() %></a>
 													</td>
 										
 													<td style="color: #666;"><%=sdf.format(dto.getWriteday()) %></td> 
 													<td style="color: #666;"><%=dto.getExpectwriteday() %></td>
-													
+												
 													<% 
-													if(loginok!=null && id.equals("admin")){%>
+													
+				
+													if(loginok!=null && id.equals("admin") && dto.getCommentYn().equals("N")){%>
 														<td><a href="index.jsp?main=../../MyStarbucks/answerView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>"
-														style="background: #006633; border-radius: 3px; color: #fff; text-align: center; padding: 5px 15px 5px 15px;"
+														style="background: #e2c383; border-radius: 3px; color: #black; text-align: center; padding: 5px 15px 5px 15px; display: block;
+														width: 66.81px;  height: 24px; font-size: 7pt; margin: 0 auto; font-wigth: bold;"
 														 >답변하기</a></td>
-													<%}else {%>
-														<td></td>
+														 
+													<%} else if(dto.getCommentYn().equals("N")){ %>
+												
+													
+														<td> 
+														<span style="background: #666; border-radius: 3px; color: white; text-align: center; padding: 5px 15px 5px 15px;">
+														접수완료</span>
+														
+														 </td>
+													
+													
+													<%}else if(dto.getCommentYn().equals("Y")){%>
+													<td>
+													<span style="background: #006633; border-radius: 3px; color: white; text-align: center; padding: 5px 15px 5px 15px;">
+													답변완료</span>
+													</td>
 													<%}
+													
 													%>
+													
 													</tr>
+													
 													<%}
+														
 													%>
 							
 												<%}

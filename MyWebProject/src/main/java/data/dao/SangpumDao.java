@@ -415,18 +415,19 @@ public class SangpumDao {
 	}
 	
 	//마이메뉴중복check 존재하면 true return
-	public boolean isMybeverageCheck(String sname) {
+	public boolean isMybeverageCheck(String sname, String id) {
 		boolean b=false;
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from mybeverage where sname=?";
+		String sql="select * from mybeverage where sname=? and id=?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, sname);
+			pstmt.setString(2, id);
 			rs=pstmt.executeQuery();
 			
 			if(rs.next()) b=true;
@@ -440,18 +441,19 @@ public class SangpumDao {
 		return b;
 	}
 	
-	public boolean isMyfoodCheck(String sname) {
+	public boolean isMyfoodCheck(String sname,String id) {
 		boolean b=false;
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from myfood where sname=?";
+		String sql="select * from myfood where sname=? and id=?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, sname);
+			pstmt.setString(2, id);
 			rs=pstmt.executeQuery();
 			
 			if(rs.next()) b=true;
@@ -465,18 +467,19 @@ public class SangpumDao {
 		return b;
 	}
 	
-	public boolean isMygoodsCheck(String sname) {
+	public boolean isMygoodsCheck(String sname, String id) {
 		boolean b=false;
 		
 		Connection conn=db.getConnection();
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from mygoods where sname=?";
+		String sql="select * from mygoods where sname=? and id=?";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, sname);
+			pstmt.setString(2, id);
 			rs=pstmt.executeQuery();
 			
 			if(rs.next()) b=true;

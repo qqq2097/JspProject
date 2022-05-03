@@ -28,7 +28,7 @@ SangpumDto dto=dao.getgoodsData(snum);
 String loginok=(String)session.getAttribute("loginok");
 String id=(String)session.getAttribute("id");
 if(loginok!=null){
-boolean b=dao.isMygoodsCheck(sname);
+boolean b=dao.isMygoodsCheck(sname, id);
 if(b)
 {%>
 <script type="text/javascript">

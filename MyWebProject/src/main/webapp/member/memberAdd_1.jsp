@@ -40,11 +40,11 @@
   <link rel="stylesheet" href="../starbucks_clone/starbucks_clone/assets/css/style.css" />
 	
 <style type="text/css">
-	li{
+	li.noticelist{
 		list-style: disc;
 		margin-bottom: 6px;
 	}
-	ul{
+	ul.noticelist{
 		padding-left: 30px;
 	}
 	button{
@@ -187,9 +187,9 @@ div.footerinfo {
       		<tr>
       			<td colspan="2"style="padding-top: 20px;padding-left: 20px; ">
       				<ul class = "noticelist"style="font-size: 1.7em; padding-bottom: 5px; list-style-type: circle;" >
-      				  <li style="padding-bottom: 5px;">반드시 회원님 명의로 된 휴대폰, 아이핀을 이용해주세요.</li>
-      				  <li style="padding-bottom: 5px;">타인의 개인정보를 도용하여 가입할 경우 향후 적발 시 서비스 이용제한 및 법적 제재를 받으실 수 있습니다.</li>
-      				  <li style="padding-bottom: 5px;">스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
+      				  <li class = "noticelist" style="padding-bottom: 5px;">반드시 회원님 명의로 된 휴대폰, 아이핀을 이용해주세요.</li>
+      				  <li class = "noticelist" style="padding-bottom: 5px;">타인의 개인정보를 도용하여 가입할 경우 향후 적발 시 서비스 이용제한 및 법적 제재를 받으실 수 있습니다.</li>
+      				  <li class = "noticelist" style="padding-bottom: 5px;">스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
       				</ul>
       			</td>
       		</tr>

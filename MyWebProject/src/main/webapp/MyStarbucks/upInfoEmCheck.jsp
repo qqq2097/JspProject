@@ -31,7 +31,7 @@ if(key==null){
 		</select>
 		<!--key값 넘기기..hidden  -->
 		<input type="hidden" name="key">
-		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">아이디 찾기</button>
+		<button type="submit" class="btn btn-success btn-sm" style="margin-left: 10px;">확인하기</button>
 	</form>
 </div>
 <%
