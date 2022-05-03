@@ -21,7 +21,7 @@ if(key==null){
 		<p align="center"><img src="../member/memberaddimg1.PNG"></p>
 		<p width ="100%" height="50px;" style="text-align: center;"><b style="font-size: 2em;color:gray;">전화번호를 입력하세요.</b></p>
 		<br>
-		<select size="1" name="hp1">
+		<select size="1" name="hp1" style="margin-top:3px; height:25px;font-size: 1.3em;">
 			<option value="010">010</option>
 			<option value="011">011</option>
 			<option value="019">019</option>
