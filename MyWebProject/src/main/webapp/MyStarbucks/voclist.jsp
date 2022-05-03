@@ -416,7 +416,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 													<td align="center"><%=no-- %></td>
 													
 													<td class="mysubject">
-													<%if(dto.getMyid().equals(id)){ %>
+													<%if(dto.getMyid().equals(id) || id.equals("admin") ){ %>
 													<a href="index.jsp?main=../../MyStarbucks/vocView.jsp?num=<%=dto.getNum() %>&currentPage=<%=currentPage %>" 
 													style="color: #666; font-weight: bold; text-decoration: underline; font-size: 7pt;">
 													<%}%>
