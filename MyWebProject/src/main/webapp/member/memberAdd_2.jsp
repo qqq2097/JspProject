@@ -314,7 +314,7 @@ if(hp==null){
      	<table style=" margin-top:50px; width:50%; border: 1px solid #C1C1C1;">
       		<tr>
 	      		<td colspan="2" align="center" width="100%" style="padding-top:20px;">
-	      			<img src="../../member/memberaddimg1.PNG">
+	      			<img src="../../member/starimg.jpg">
       			</td>
       		</tr>
       		<tr>

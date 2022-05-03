@@ -406,4 +406,36 @@ public class memberDao {
 			}
 			return b;
 		}
+		//아이디랑 맞는 모든 데이터 가져오기
+		public memberDto getDataID(String id) {
+			Connection conn = db.getConnection();
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			memberDto dto = new memberDto();
+			String sql = "select * from member where id = ?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setString(1, id);
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					dto.setId(rs.getString("id"));
+					dto.setPass(rs.getString("pass"));
+					dto.setName(rs.getString("name"));
+					dto.setHp(rs.getString("hp"));
+					dto.setEmail(rs.getString("email"));
+					dto.setNickname(rs.getString("nickname"));
+					dto.setBirthday(rs.getString("birthday"));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			return dto;
+		}
+		//아이디에 맞는 정보 업데이트
+		
 }
