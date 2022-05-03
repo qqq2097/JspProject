@@ -328,6 +328,8 @@ public class memberDao {
 			}db.dbClose(pstmt, conn);
 		}
 		
+		
+		
 		public void  updateGradeGold(memberDto dto,String id)
 		{
 			Connection conn=db.getConnection();

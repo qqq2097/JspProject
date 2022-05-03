@@ -186,7 +186,7 @@ public class RewordDao {
 		Statement stmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from reword  where between '"+d1+"' and '"+d2+"'";
+		String sql="select * from reword  where (buyday between '"+d1+"' and '"+d2+"') and id='"+id+"'";
 		
 		try {
 			stmt=conn.createStatement();
@@ -214,4 +214,69 @@ public class RewordDao {
 		
 		return list;
 	}
+	
+	//검색 버튼을 통한 날짜 검색 카운트 뽑기 (범위지정)
+		public int getAllRewordsCnt(String id,String d1,String d2)
+		{
+			int n=0;
+			
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select count(*) from reword  where (buyday between '"+d1+"' and '"+d2+"') and id='"+id+"'";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				rs=pstmt.executeQuery();
+				
+				if(rs.next())
+					n=rs.getInt(1);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			return n;
+		}
+		
+		//검색 버튼을 통한 날짜 검색 (범위지정)
+		public Vector<RewordDto> getAllRewordsBtnList(String id,String d1,String d2,int start,int perpage)
+		{
+			Vector<RewordDto> list=new Vector<RewordDto>();
+			Connection conn=db.getConnection();
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			String sql="select * from reword  where (buyday between '"+d1+"' and '"+d2+"') and id='"+id+"' order by num desc limit ?,?";
+			
+			try {
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setInt(1, start);
+				pstmt.setInt(2, perpage);
+				rs=pstmt.executeQuery();
+				
+				while(rs.next())
+				{
+					RewordDto dto=new RewordDto();
+					
+					dto.setNum(rs.getString("num"));
+					dto.setCardnum(rs.getString("cardnum"));
+					dto.setStarcnt(rs.getInt("starcnt"));
+					dto.setStoreaddr(rs.getString("storeaddr"));
+					dto.setBuyday(rs.getTimestamp("buyday"));
+					dto.setId(rs.getString("id"));
+					
+					list.add(dto);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				db.dbClose(rs, pstmt, conn);
+			}
+			
+			return list;
+		}
 }

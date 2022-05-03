@@ -185,8 +185,7 @@ table.firsttb td
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	int starcnt=dao.getTotalCountStar(id);
 	//System.out.println(starcnt);
-	String d1="";
-	String d2="";
+	
 %>
 <script type="text/javascript">
 $(function(){
@@ -203,18 +202,21 @@ $(function(){
    
    
    
-    $("#search").click(function(){
+    /*  $("#search").click(function(){
+    	
 	   var d1=$("#date1").val();
 	   var d2=$("#date2").val();
 	   //alert(d1);
+	    
 	   
-	  
+	   
+	   
 	   
 	   $("#tb1").hide();
 	   $("#tb3").hide();
 	   $("#tb2").hide();
 	   $("#tb4").show();
-   }); 
+   });  */
    
    $("#onemonth").click(function(){
 	   
@@ -289,7 +291,7 @@ $(function(){
 		</div>
 
 		<div class="second" style=" background: #fafafa; text-align: center;">
-
+		<form action="../../MyStarbucks/SearchCalindar.jsp">
    			<br>
    			기간별&nbsp;&nbsp;| 
    			<input type="radio" id="onemonth" name="radioone">1개월
@@ -297,9 +299,10 @@ $(function(){
    			&nbsp;&nbsp;&nbsp;&nbsp;
    			일자별 &nbsp;&nbsp;
    			
-   			<input type="date" name="date1" id="date1" required="required">~
+   			<input type="date" name="date1" id="date1" required="required"> &nbsp;~&nbsp;
    			<input type="date" name="date2" id="date2" required="required">
-   			<input type="button" style="width : 50px; background: #C0C0C0; color:#fff;" value="검색" id="search">
+   			<button type="submit" style="width : 50px; background: #C0C0C0; color:#fff;"id="search">검색</button>
+   		</form>
    			<br><br>
    
    
@@ -416,7 +419,7 @@ $(function(){
    			</tr>
    
    
-   			 <%-- <%
+   			 <%--  <%
    				
    				for(int i=0;i<list4.size();i++)
    				{
@@ -430,7 +433,7 @@ $(function(){
 	   					<td align="center"><%=sdf.format(dto.getBuyday()) %></td>
 	  				 </tr>
    					<%}
-   						%>  --%>
+   						%> --%>
    
    
   
