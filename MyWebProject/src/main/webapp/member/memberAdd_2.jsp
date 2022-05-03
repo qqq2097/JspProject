@@ -161,13 +161,12 @@ function check() {
 	var hp =$("input[name=hpnum]").val();
 	var mybirthday =$("select[name=myyear]").val()+"-"+$("select[name=mymonth]").val()+"-"+$("select[name=myday]").val();
 	var email =  $("input[name=email]").val();
-	var nickname =  $("input[name=nickname]").val();
+	var nickname = $("#nickname").val();
+	var value = document.getElementsByName("agreeMent");
 	
 	var reghp =  /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;//숫자와- 입력하는 정규식 
 	var regemail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
-	
-	
-	console.log(mybirthday);
+
 	
 	if(myid==""){
 		alert("아이디를 입력하세요");
@@ -220,6 +219,20 @@ function check() {
 		document.getElementById("email").focus();
 		return false;
 	}  
+	
+	
+	
+	 if(!value[0].checked){
+		 if(nickname!=""){
+			alert("선택적 개인정보 수집동의 및 이용약관에 동의를 해주세요.");
+			document.getElementById("mem_agreeMent1").focus();
+			return false;
+		}
+		 else{
+			return true;
+		 } 
+	} 
+	
 return true;
 }
 //데이터 추가 전 필수 항목 비어있는지 확인
@@ -238,7 +251,7 @@ if(hp==null){
 	hp="";
 	
 }//email값을 받아온 경우 hp값은 null이기 때문에 공백처리
-
+//
 %>
 <body>
 	<div style="height: 130px;"></div>
@@ -313,8 +326,8 @@ if(hp==null){
      	
      	<table style=" margin-top:50px; width:50%; border: 1px solid #C1C1C1;">
       		<tr>
-	      		<td colspan="2" align="center" width="100%" style="padding-top:20px;">
-	      			<img src="../../member/starimg.jpg">
+	      		<td colspan="2" align="center" width="100%" >
+	      			<img style="width:100%;" src="../../member/starimg.jpg">
       			</td>
       		</tr>
       		<tr>
@@ -344,7 +357,7 @@ if(hp==null){
       		</tr>
       		<tr>
       			<td	colspan="2">
-      				<input  id="nickname" type="text" style="width:90%;height:50px;font-size:2em; margin: 20px 20px 20px 50px; background-color: #F7F7F7;"  placeholder=" 닉네임 입력을 위해 약관에 동의해주세요.">
+      				<input  id="nickname" name="nickname" type="text" style="width:90%;height:50px;font-size:2em; margin: 10px 10px 10px 25px; background-color: #F7F7F7;"  placeholder=" 닉네임 입력을 위해 약관에 동의해주세요.">
       			</td>
       		</tr>
      	</table>
