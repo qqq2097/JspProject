@@ -110,13 +110,12 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: absolute;
-right: 300px;
-bottom: 0px;
+position: relative;
+right: 100px;
+bottom: 300px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
-margin-top: 200px;
 }
 
 .ms_nav > ul{
@@ -382,8 +381,7 @@ $(function(){
 		<li>
 			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
 			<ul class="sub2">
-				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
-				<li><a href="#" required="login">· 회원 탈퇴</a></li>
+				<li><a href="index.jsp?main=../../MyStarbucks/updateInfocheck.jsp" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				<input type="hidden">
 			</ul>

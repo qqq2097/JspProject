@@ -249,7 +249,8 @@ public class RewordDao {
 			PreparedStatement pstmt=null;
 			ResultSet rs=null;
 			
-			String sql="select * from reword  where (buyday between '"+d1+"' and '"+d2+"') and id='"+id+"' order by num desc limit ?,?";
+			String sql="select * from reword  where (buyday between '"+d1+"' and '"+d2+"') and id='"+id+"' "
+					+ "order by num desc limit ?,?";
 			
 			try {
 				pstmt=conn.prepareStatement(sql);

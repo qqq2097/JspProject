@@ -1,3 +1,8 @@
+<%@page import="javax.swing.text.Document"%>
+<%@page import="java.io.IOException"%>
+<%@page import="java.io.FileNotFoundException"%>
+<%@page import="java.io.FileReader"%>
+<%@page import="java.io.BufferedReader"%>
 <%@page import="StarBucksDao.memberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -96,7 +101,7 @@ input[class="mem_agreeMent"]:checked +label {/*클릭하면 배경 색상 변경
 div.footerinfo {
 	width: 100%;
 	height: 500px;
-	top: 2500px;
+	top: 2650px;
 }
 
 </style>
@@ -106,6 +111,7 @@ div.footerinfo {
 
 $(function() {
 	setDateBox();//파일 시작 전에 연도,월,일 표시 함수 실행.
+	
 	var myemail = $("#email").val();//email 값 읽어오기
 	var myhp = $("#hpnum").val();//hp값 읽어오기
 	if(myhp==""){
@@ -251,6 +257,7 @@ if(hp==null){
 	hp="";
 	
 }//email값을 받아온 경우 hp값은 null이기 때문에 공백처리
+
 //
 %>
 <body>
@@ -348,9 +355,22 @@ if(hp==null){
       		</tr>
       		<tr>
       			<td colspan="2" align="center" style="padding-top: 20px;">
-      				<textarea style="background-color:#F7F7F7; border:1px solid #C1C1C1;padding-bottom:150px; resize:none; width:90%; height:200px; font-size: 2em;" readonly="readonly">
-      					<!-- 선택적 이용약관 입력 -->
-      				</textarea>
+      				<textarea  style="background-color:#F7F7F7; border:1px solid #C1C1C1;padding-bottom:150px; resize:none; width:90%; height:200px; font-size: 2em;" readonly="readonly" id="nickrule">  본인은 스타벅스 코리아를 운영하는 주식회사 에스씨케이컴퍼니(이하 “회사”라 합니다)가 제공하는 콜 마이 네임 서비스(이하 “서비스”라 합니다)를 이용하기 위해, 다음과 같이 “회사”가 본인의 개인정보를 수집·이용하는 것에 동의합니다.
+※ 귀하께서는 개인정보 수집·이용에 대한 동의를 거부하실 수 있으나, 동의를 거부하실 경우 서비스 이용을 하실 수 없습니다.
+						
+1. 개인정보 항목·목적·보유기간
+구분	내역
+항목	닉네임
+목적	콜 마이 네임 서비스
+보유 및 이용기간	회원 탈퇴 시 까지 또는 관계법령에 의한 별도 보존기간 (2. 관계법령에 의한 개인정보 보존기간 참고)
+2. 관계법령에 의한 개인정보 보존기간
+- 서비스이용기록, 접속로그, 접속IP정보 (통신비밀보호법 : 3개월)
+- 표시/광고에 관한 기록 (전자상거래법 : 6개월)
+- 계약 또는 청약철회 등에 관한 기록 (전자상거래법 : 5년)
+- 대금결제 및 재화 등의 공급에 관한 기록 (전자상거래법 : 5년)
+- 소비자의 불만 또는 분쟁처리에 관한 기록 (전자상거래법 : 3년)
+3. 서비스 이용과정 및 사업 처리과정에서 수집될 수 있는 개인정보의 범위
+서비스 이용기록, 접속 로그, 쿠키, 접속 IP 정보, 결제기록</textarea>
       			</td>
       		</tr>
       		<tr style="height: 30px;">

@@ -55,7 +55,7 @@ String id = (String)session.getAttribute("id");//아이디
     	            <%
           		}//로그인 O
              %>
-            <!--  onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'" -->
+            
           </ul>
         </nav>
         <nav class="navigation">
@@ -82,9 +82,9 @@ String id = (String)session.getAttribute("id");//아이디
                     </ul>
                   </li>
                   <li>
-<<<<<<< HEAD
+
                     <h4><a href="index.jsp?main=../../MyFavoriteCoffee/Coffeeform.jsp">나와 어울리는 커피 찾기</a></h4>
-=======
+
                   
                   </li>
                   

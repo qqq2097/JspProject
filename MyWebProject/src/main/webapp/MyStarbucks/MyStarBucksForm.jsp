@@ -17,13 +17,11 @@
 
 <style type="text/css">
 
-#btn{
 
-}
 button.btnst
 {
-	position: absolute;
-	top: 100px;
+	position: relative;
+	top: 70px;
 	left: 200px;
 	background-color: #deb887;
     font-weight: bold;
@@ -32,7 +30,7 @@ button.btnst
 }
 button.btnre
 {
-	position: absolute;
+	position: relative;
 	top: 100px;
 	left: 30px;
 	background-color: #deb887;
@@ -42,9 +40,9 @@ button.btnre
 }
 button.btnsu
 {
-	position: absolute;
+	position: relative;
 	left: 30px;
-	top: 150px;
+	top: 100px;
 	background-color: black;
     font-weight: bold;
     color: #fff;
@@ -52,37 +50,31 @@ button.btnsu
 }
 button.btnbun
 {
-	position: absolute;
+	position: relative;
 	left: 200px;
-	top: 150px;
+	top: 70px;
 	background-color: #a9a9a9;
     font-weight: bold;
     color: #fff;
     border-radius: 5px;
 }
 div.rank{
-	position: absolute;
-	top: 150px;
+	position: relative;
+	top: 0px;
 	left: -40px;
+	border-radius: 50%;
 }
 div.footerinfo {
 	width: 100%;
 	height: 500px;
 	top: 1500px;
 }
-div.mid{
-	
-	 background : #F5F5F5;
-	 width : 750px;
-	 height: 300px;
-	 margin-left: 100px;
-	 margin-top: 80px;
-}
+
 
 div.left{
    position : absolute;
-   left : 100px;
-   top : 300px;
+   left : 0px;
+   top : 0px;
    background : #F5F5F5;
    width : 300px;
    height : 200px;
@@ -91,8 +83,8 @@ div.left{
 
 div.right{
    position : absolute;
-   left : 450px;
-   top : 300px;
+   left : 400px;
+   top : 0px;
    background : #F5F5F5;
    width : 300px;
    height : 200px;
@@ -130,8 +122,8 @@ div.leftsu{
    position : absolute;
    width : 200px;
    height: 100px;
-   top : 360px;
-   left : 230px;
+   top : 50px;
+   left : 130px;
    font-size: 40pt;
    font-weight: bold;
 
@@ -145,18 +137,25 @@ ul.sub2{
 	font-size: 0.6em;
 	text-align: center;
 }
+div.mid{
+	position : absolute;
+	left : 100px;
+	background : #F5F5F5;
+	width: 800px;
+	height: 300px;
+	top: 300px;
+}
 
 
 /*네비*/
 .ms_nav {
 float: right;
 position: absolute;
-right: 400px;
-bottom: -30px;
+right: 100px;
+top : 300px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
-margin-top: 500px;
 }
 
 .ms_nav > ul{
@@ -308,7 +307,7 @@ $(function(){
 	<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
 	<div class="leftsu">
 	<span style="margin-left: 0px; margin-top: 10px;"><b><%=starcnt %></b></span>
-   	<br><br>
+   	<br><br><br>
    	<div class="rank">
    	<span style="font-size: 9pt;">
    	<%if(starcnt<5)
