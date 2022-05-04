@@ -44,7 +44,7 @@ if(key==null){
 	
 	%>
 	<script type="text/javascript">
-		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../member/findIDPrint.jsp";
+		opener.location.href="../starbucks_clone/starbucks_clone/index.jsp?main=../../login/findIDPrint.jsp";
 		
 		window.close();
 	</script>

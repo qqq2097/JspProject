@@ -18,66 +18,14 @@
 <style type="text/css">
 
 #btn{
-
-}
-button.btnst
-{
-	position: absolute;
-	top: 100px;
-	left: 200px;
-	background-color: #deb887;
-    font-weight: bold;
-    color: black;
-    border-radius: 5px;
-}
-button.btnre
-{
-	position: absolute;
-	top: 100px;
-	left: 30px;
-	background-color: #deb887;
-    font-weight: bold;
-    color: black;
-    border-radius: 5px;
-}
-button.btnsu
-{
-	position: absolute;
-	left: 30px;
-	top: 150px;
-	background-color: black;
-    font-weight: bold;
-    color: #fff;
-    border-radius: 5px;
-}
-button.btnbun
-{
-	position: absolute;
-	left: 200px;
-	top: 150px;
-	background-color: #a9a9a9;
-    font-weight: bold;
-    color: #fff;
-    border-radius: 5px;
-}
-div.rank{
-	position: absolute;
-	top: 150px;
-	left: -40px;
+border-radius: 50%;
 }
 div.footerinfo {
 	width: 100%;
 	height: 500px;
 	top: 1500px;
 }
-div.mid{
-	
-	 background : #F5F5F5;
-	 width : 750px;
-	 height: 300px;
-	 margin-left: 100px;
-	 margin-top: 80px;
-}
+
 
 div.left{
    position : absolute;

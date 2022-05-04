@@ -47,13 +47,14 @@ span.toptitle{
    
 }
 
-.dbtable th
-{
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
-	height: 30px;
-}
 
+
+li.mylist{
+   border: 1px solid gray;
+   width : 300px;
+   border-radius: 100px;
+   cursor: pointer;
+}
 
 ul.sub1{
    font-size: 0.6em;
@@ -459,8 +460,7 @@ $(function(){
 		<li>
 			<a href="#">개인정보관리<span class="sbox_arrow_down2"></span></a>
 			<ul class="sub2">
-				<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
-				<li><a href="#" required="login">· 회원 탈퇴</a></li>
+				<li><a href="index.jsp?main=../../MyStarbucks/updateInfocheck.jsp" required="login">· 개인정보확인 및 수정</a></li>
 				<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
 				
 			</ul>

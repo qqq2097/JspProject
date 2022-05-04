@@ -63,11 +63,11 @@ button{
 		border: 1px solid #006633; 
 		color: white;
 	}
-	li{
+	li.mylist{
 		list-style: "* ";
 		margin-bottom: 6px;
 	}
-	ul{
+	ul.mylist{
 		padding-left: 30px;
 	}
 </style>
@@ -139,8 +139,8 @@ String saveid= (String)session.getAttribute("saveid");
 			<tr>
 				<td colspan="3">
 					<ul class = "noticelist"style="font-size: 1.45em;padding-top: 10px; padding-bottom:50px; color:#006633;  list-style-type: circle;" >
-      				  <li >타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.</li>
-      				  <li >스타벅스 코리아의 공식홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
+      				  <li class="mylist">타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.</li>
+      				  <li class="mylist">스타벅스 코리아의 공식홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
       				</ul>
 				</td>
 			</tr>
