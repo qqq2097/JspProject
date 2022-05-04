@@ -28,6 +28,34 @@ div.top{
    background-image: url("../../MyStarbucks/image/ms03.jpg");
 }
 
+span.toptitle{
+   
+   color: #fff;
+   font-size: 20pt;
+   font-weight: bold;
+   top: 200px; 
+   margin: 30px;
+   
+}
+
+ul.smap {
+list-style: none;
+margin: 30px;
+padding: 10;
+text-align: right;
+}
+ul.smap li{
+display: inline;
+margin:3px;
+}
+div.footerinfo a{
+color: white;}
+
+span.kor, a{
+color:#ffffff;
+font-size: 12px;
+}
+
 div.topsub{
    position: absolute;
    width : 300px;
@@ -247,16 +275,19 @@ $(function(){
         
 <div class="container">
 <!-- top div -->
-	<div class="top">
-   		<br><br><br><br>
-   		<span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
-   
-
-		<div class="topsub">
-      		<span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
-      		<span onclick=""> > My Starbucks > 별 히스토리</span>
-		</div>
-	</div>
+	
+	<!-- top div -->
+<div class="top">
+   <br><br><br><br>
+   <span class="toptitle">&nbsp;&nbsp; 별 히스토리</span>
+   <ul class="smap">
+   <li><a href="index.jsp"><img src="../../MyStarbucks/image/home.png" alt="홈으로"></a></li>
+   <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
+   <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp" ><span class="kor">My Starbucks</a></li>
+   <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
+   <li><a href=""><span class="kor">별 히스토리</span></a></li>
+	</ul>
+</div>
 
 
 	<div class="mid">

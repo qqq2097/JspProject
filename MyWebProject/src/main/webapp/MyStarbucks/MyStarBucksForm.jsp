@@ -100,12 +100,31 @@ div.top{
 span.toptitle{
    
    color: #fff;
-   
-   font-size: 30pt;
+   font-size: 20pt;
    font-weight: bold;
-   top: 200px;
+   top: 200px; 
+   margin: 30px;
    
 }
+
+ul.smap {
+list-style: none;
+margin: 30px;
+padding: 10;
+text-align: right;
+}
+ul.smap li{
+display: inline;
+margin:3px;
+}
+div.footerinfo a{
+color: white;}
+
+span.kor, a{
+color:#ffffff;
+font-size: 12px;
+}
+
 
 div.topsub{
    position : absolute;
@@ -157,6 +176,8 @@ font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
 }
+
+
 
 .ms_nav > ul{
 border-top: 2px solid #222;
@@ -270,14 +291,16 @@ $(function(){
 <div class="container">
 
 
+<!-- top div -->
 <div class="top">
    <br><br><br><br>
    <span class="toptitle">&nbsp;&nbsp; My Starbucks</span>
+   <ul class="smap">
+   <li><a href="index.jsp"><img src="../../MyStarbucks/image/home.png" alt="홈으로"></a></li>
+   <li><img class="arrow" src="../../MyStarbucks/image/arrow.png" alt="하위메뉴"></li>
+   <li><a href="index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp" ><span class="kor">My Starbucks</a></li>
 
-	<div class="topsub">
-      <span class="glyphicon glyphicon-home" onclick="location.href='index.jsp?main=../../MyStarbucks/MyStarBucksForm.jsp'"></span>
-      <span style="margin-left: 100px;"> > My Starbucks</span>
-	</div>
+	</ul>
 </div>
 
 
