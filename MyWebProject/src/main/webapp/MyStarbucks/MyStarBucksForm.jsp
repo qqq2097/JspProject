@@ -22,8 +22,8 @@
 }
 button.btnst
 {
-	position: absolute;
-	top: 100px;
+	position: relative;
+	top: 70px;
 	left: 200px;
 	background-color: #deb887;
     font-weight: bold;
@@ -32,7 +32,7 @@ button.btnst
 }
 button.btnre
 {
-	position: absolute;
+	position: relative;
 	top: 100px;
 	left: 30px;
 	background-color: #deb887;
@@ -42,9 +42,9 @@ button.btnre
 }
 button.btnsu
 {
-	position: absolute;
+	position: relative;
 	left: 30px;
-	top: 150px;
+	top: 100px;
 	background-color: black;
     font-weight: bold;
     color: #fff;
@@ -52,17 +52,17 @@ button.btnsu
 }
 button.btnbun
 {
-	position: absolute;
+	position: relative;
 	left: 200px;
-	top: 150px;
+	top: 70px;
 	background-color: #a9a9a9;
     font-weight: bold;
     color: #fff;
     border-radius: 5px;
 }
 div.rank{
-	position: absolute;
-	top: 150px;
+	position: relative;
+	top: 0px;
 	left: -40px;
 }
 div.footerinfo {
@@ -150,13 +150,12 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: absolute;
-right: 400px;
-bottom: -30px;
+position: relative;
+right: 100px;
+bottom: 300px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
-margin-top: 500px;
 }
 
 .ms_nav > ul{

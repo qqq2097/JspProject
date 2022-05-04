@@ -110,13 +110,12 @@ ul.sub2{
 /*네비*/
 .ms_nav {
 float: right;
-position: absolute;
-right: 300px;
-bottom: 0px;
+position: relative;
+right: 100px;
+bottom: 300px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
-margin-top: 200px;
 }
 
 .ms_nav > ul{
