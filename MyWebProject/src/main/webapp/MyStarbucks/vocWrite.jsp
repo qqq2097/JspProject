@@ -435,10 +435,10 @@ function fnCopy(){
 
 			<li><a>개인정보관리<span class="sbox_arrow_down2"></span></a>
 				<ul class="sub2">
-					<li><a href="#" required="login">· 개인정보확인 및 수정</a></li>
-					<li><a href="#" required="login">· 회원 탈퇴</a></li>
-					<li><a href="#" required="login">· 비밀번호 변경</a></li>
-				</ul></li>
+					<li><a href="index.jsp?main=../../MyStarbucks/updateInfocheck.jsp" required="login">· 개인정보확인 및 수정</a></li>
+					<li><a href="index.jsp?main=../../login/findPassword.jsp" required="login">· 비밀번호 변경</a></li>
+				</ul>
+			</li>
 		</ul>
 	</nav>
 	<!-- //네비 -->

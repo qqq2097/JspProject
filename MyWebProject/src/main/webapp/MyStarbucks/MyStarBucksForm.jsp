@@ -18,6 +18,7 @@
 <style type="text/css">
 
 #btn{
+<<<<<<< HEAD
 
 }
 button.btnst
@@ -64,20 +65,16 @@ div.rank{
 	position: relative;
 	top: 0px;
 	left: -40px;
+=======
+border-radius: 50%;
+>>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
 }
 div.footerinfo {
 	width: 100%;
 	height: 500px;
 	top: 1500px;
 }
-div.mid{
-	
-	 background : #F5F5F5;
-	 width : 750px;
-	 height: 300px;
-	 margin-left: 100px;
-	 margin-top: 80px;
-}
+
 
 div.left{
    position : absolute;

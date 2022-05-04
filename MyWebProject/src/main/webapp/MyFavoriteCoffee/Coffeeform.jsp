@@ -142,7 +142,9 @@
 					<li>
 						<dl>
 							<dt>
-								<img alt="" src="../../MyFavoriteCoffee/image/flavor1_1.png" onclick="document.frm.Coffee_flavor.value=10;" id="flavor1">	
+								<a href="#" onclick="document.frm.Coffee_flavor.value=10;">	
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_1.png">	
+								</a>
 							</dt>
 							<dd><b>짭짤한 맛</b></dd>
 						</dl>					
@@ -150,8 +152,8 @@
 					<li>
 						<dl>
 							<dt>
-								<a onclick="document.frm.Coffee_flavor.value=20;">
-									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_2.png" id="flavor2">	
+								<a href="#" onclick="document.frm.Coffee_flavor.value=20;">
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_2.png">	
 								</a>
 							</dt>			
 							<dd><b>과일 맛</b></dd>
@@ -160,8 +162,8 @@
 					<li>
 						<dl>
 							<dt>
-								<a onclick="document.frm.Coffee_flavor.value=30;">
-									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_3.png" id="flavor3">	
+								<a href="#" onclick="document.frm.Coffee_flavor.value=30;">
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_3.png">	
 								</a>
 							</dt>
 							<dd><b>고소 맛</b></dd>
@@ -170,8 +172,8 @@
 					<li>
 						<dl>
 							<dt>
-								<a onclick="document.frm.Coffee_flavor.value=40;" >
-									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_4.png" id="flavor4">	
+								<a href="#" onclick="document.frm.Coffee_flavor.value=40;">
+									<img alt="" src="../../MyFavoriteCoffee/image/flavor1_4.png">	
 								</a>
 							</dt>
 							<dd><b>달콤한(캐러멜)맛</b></dd>
@@ -192,7 +194,9 @@
 					<li>
 						<dl>
 							<dt>
-								<img alt="" src="../../MyFavoriteCoffee/image/feel2_1.png" onclick="document.frm.Coffee_feel.value=10;" id="feel1">	
+								<a href="#" onclick="document.frm.Coffee_feel.value=10;">
+									<img alt="" src="../../MyFavoriteCoffee/image/feel2_1.png">	
+								</a>
 							</dt>
 							<dd><b>상쾌한 느낌	</b></dd>
 						</dl>					
@@ -200,8 +204,8 @@
 					<li>
 						<dl>
 							<dt>
-								<a onclick="document.frm.Coffee_feel.value=20;">
-									<img alt="" src="../../MyFavoriteCoffee/image/feel2_2.png" id="feel2">	
+								<a href="#" onclick="document.frm.Coffee_feel.value=20;">
+									<img alt="" src="../../MyFavoriteCoffee/image/feel2_2.png">	
 								</a>
 							</dt>		
 							<dd><b>부드러운 느낌</b></dd>
@@ -210,8 +214,8 @@
 					<li>
 						<dl>
 							<dt>
-								<a onclick="document.frm.Coffee_feel.value=30;">
-									<img alt="" src="../../MyFavoriteCoffee/image/feel2_3.png" id="feel3">	
+								<a href="#" onclick="document.frm.Coffee_feel.value=30;">
+									<img alt="" src="../../MyFavoriteCoffee/image/feel2_3.png">	
 								</a>
 							</dt>
 							<dd><b>오랫동안 여운이 남는 느낌</b></dd>
@@ -231,7 +235,9 @@
 					<li>
 						<dl>
 							<dt>
-								<img alt="" src="../../MyFavoriteCoffee/image/strength3_1.png" onclick="document.frm.Coffee_strength.value=10;" id="strength1">	
+								<a href="#" onclick="document.frm.Coffee_strength.value=10;">
+									<img alt="" src="../../MyFavoriteCoffee/image/strength3_1.png">	
+								</a>
 							</dt>
 							<dd><b>은은하고 부드러움</b></dd>
 						</dl>					
@@ -240,7 +246,7 @@
 						<dl>
 							<dt>
 								<a href="#" onclick="document.frm.Coffee_strength.value=20;">
-									<img alt="" src="../../MyFavoriteCoffee/image/strength3_2.png" id="strength2">	
+									<img alt="" src="../../MyFavoriteCoffee/image/strength3_2.png">	
 								</a>
 							</dt>			
 							<dd><b>부드러운 느낌</b></dd>
@@ -249,8 +255,8 @@
 					<li>
 						<dl>
 							<dt>
-								<a onclick="document.frm.Coffee_strength.value=30;">
-									<img alt="" src="../../MyFavoriteCoffee/image/strength3_3.png" id="strength3">	
+								<a href="#" onclick="document.frm.Coffee_strength.value=30;">
+									<img alt="" src="../../MyFavoriteCoffee/image/strength3_3.png">	
 								</a>
 							</dt>
 							<dd><b>무게감을 주는 강렬함</b></dd>
@@ -276,20 +282,7 @@
 			}
 			
 	} */
-	
-	
-	var flavor1=document.getElementById("flavor1");
-	var flavor2=document.getElementById("flavor2");
-	var flavor3=document.getElementById("flavor3");
-	var flavor4=document.getElementById("flavor4");
-	
-	var feel1=document.getElementById("feel1");
-	var feel2=document.getElementById("feel2");
-	var feel3=document.getElementById("feel3");
-	
-	var strength1=document.getElementById("strength1");
-	var strength2=document.getElementById("strength2");
-	var strength3=document.getElementById("strength3");
+
 	
 	 $(".subject2").hide();
 		$(".subject3").hide();

@@ -101,7 +101,7 @@ input[class="mem_agreeMent"]:checked +label {/*클릭하면 배경 색상 변경
 div.footerinfo {
 	width: 100%;
 	height: 500px;
-	top: 2500px;
+	top: 2650px;
 }
 
 </style>
