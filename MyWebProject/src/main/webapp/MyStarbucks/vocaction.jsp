@@ -48,7 +48,7 @@ dto.setPhoto(photo);
 //dao선언
 VoclistDao dao=new VoclistDao();
 
-dto.setPhoto(photo==null?"선택된 사진이 없음":photo);
+dto.setPhoto(photo==null?"선택된 파일이 없음.":photo);
 dao.insertVoc(dto);
 
 //
