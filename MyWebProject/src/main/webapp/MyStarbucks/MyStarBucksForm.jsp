@@ -17,10 +17,7 @@
 
 <style type="text/css">
 
-#btn{
-<<<<<<< HEAD
 
-}
 button.btnst
 {
 	position: relative;
@@ -65,9 +62,7 @@ div.rank{
 	position: relative;
 	top: 0px;
 	left: -40px;
-=======
-border-radius: 50%;
->>>>>>> branch 'master' of https://github.com/qqq2097/JspProject.git
+	border-radius: 50%;
 }
 div.footerinfo {
 	width: 100%;
@@ -78,8 +73,8 @@ div.footerinfo {
 
 div.left{
    position : absolute;
-   left : 100px;
-   top : 300px;
+   left : 0px;
+   top : 0px;
    background : #F5F5F5;
    width : 300px;
    height : 200px;
@@ -88,8 +83,8 @@ div.left{
 
 div.right{
    position : absolute;
-   left : 450px;
-   top : 300px;
+   left : 400px;
+   top : 0px;
    background : #F5F5F5;
    width : 300px;
    height : 200px;
@@ -127,8 +122,8 @@ div.leftsu{
    position : absolute;
    width : 200px;
    height: 100px;
-   top : 360px;
-   left : 230px;
+   top : 50px;
+   left : 130px;
    font-size: 40pt;
    font-weight: bold;
 
@@ -142,14 +137,22 @@ ul.sub2{
 	font-size: 0.6em;
 	text-align: center;
 }
+div.mid{
+	position : absolute;
+	left : 100px;
+	background : #F5F5F5;
+	width: 800px;
+	height: 300px;
+	top: 300px;
+}
 
 
 /*네비*/
 .ms_nav {
 float: right;
-position: relative;
+position: absolute;
 right: 100px;
-bottom: 300px;
+top : 300px;
 font-weight: blod;
 width: 220px;
 margin-bottom: 90px;
@@ -304,7 +307,7 @@ $(function(){
 	<!-- if 회원 등급이 웰컴이면 1 그린등급이면 2 골드 등급이면 3 이 나오게 출력 해야함 -->
 	<div class="leftsu">
 	<span style="margin-left: 0px; margin-top: 10px;"><b><%=starcnt %></b></span>
-   	<br><br>
+   	<br><br><br>
    	<div class="rank">
    	<span style="font-size: 9pt;">
    	<%if(starcnt<5)
